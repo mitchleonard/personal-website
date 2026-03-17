@@ -54,13 +54,7 @@ const platformConfig = {
 
 export default function MediaBlock({ media }: { media: MediaItem[] }) {
   if (!media || media.length === 0) {
-    return (
-      <div className="mt-16 border-2 border-dashed border-near-black/20 rounded-sm p-12 text-center">
-        <p className="font-sans text-sm text-near-black/40 italic">
-          [ Media: screenshots / video / embeds — add assets here ]
-        </p>
-      </div>
-    )
+    return null
   }
 
   return (
