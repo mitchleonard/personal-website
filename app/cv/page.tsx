@@ -22,7 +22,8 @@ export default function CVPage() {
               <p className="font-sans text-lg text-near-black/50">Mitch Leonard</p>
             </div>
             <a
-              href="#"
+              href="/MitchLeonard_Resume_Feb2026.pdf"
+              download
               className="font-sans text-sm font-medium text-near-black border border-near-black/20 px-5 py-2.5 hover:bg-near-black hover:text-off-white transition-colors inline-block"
             >
               Download PDF ↓
