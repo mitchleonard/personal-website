@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { DM_Serif_Display, Roboto } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -36,6 +37,7 @@ export default function RootLayout({
     <html lang="en" className={`${dmSerifDisplay.variable} ${roboto.variable}`}>
       <body className="bg-off-white text-near-black font-sans antialiased">
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
