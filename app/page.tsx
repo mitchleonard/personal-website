@@ -224,7 +224,7 @@ export default function HomePage() {
             )
 
             return isExternal ? (
-              <a key={item.slug} href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+              <a key={item.slug} href={item.href} className="block">
                 {cardContent}
               </a>
             ) : (

@@ -181,8 +181,6 @@ export default function HirePage() {
               <a
                 key={p.name}
                 href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group block bg-white border border-[#1a0533]/10 hover:border-[#6001d2]/40 rounded-lg p-6 transition-colors"
               >
                 <h3 className="font-serif text-xl text-[#1a0533] group-hover:text-[#6001d2] transition-colors mb-2">
