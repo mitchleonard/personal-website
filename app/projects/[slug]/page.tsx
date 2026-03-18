@@ -46,7 +46,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </a>
 
           <div className="flex flex-wrap gap-2 mb-10">
-            {project.tags.map((tag) => (
+            {project.tags.map((tag: string) => (
               <span key={tag} className="font-sans text-xs text-off-white/40 border border-off-white/15 px-2 py-0.5 rounded-sm">
                 {tag}
               </span>
