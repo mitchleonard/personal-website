@@ -9,7 +9,7 @@ import { projects } from '@/data/projects'
 const currentRole = {
   company: 'RTX',
   title: 'Integrated Communications & AI Lead',
-  dates: 'Dec 2025 – Present',
+  dates: 'Aug 2022 – Present',
   prose: "I'm focused on blending integrated communications campaigns with AI-powered transformation — leading a 300+ person global communications function to move faster, think smarter, and deliver sharper stories at enterprise scale.",
   wins: [
     '+153% AI adoption in 8 months',
