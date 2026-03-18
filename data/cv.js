@@ -3,7 +3,7 @@ export const cvData = {
     {
       company: 'RTX (Formerly Raytheon Technologies)',
       title: 'Integrated Communications & AI Lead',
-      dates: 'August 2022 – Present',
+      dates: 'December 2025 – Present',
       location: '',
       bullets: [
         'Lead Global Communications AI strategy for a 300+ person function, scaling responsible integration across storytelling, media monitoring, and reporting while defining the roadmap for near- and long-term priorities.',
@@ -17,7 +17,7 @@ export const cvData = {
     {
       company: 'RTX (Formerly Raytheon Technologies)',
       title: 'Social Media Specialist',
-      dates: 'August 2022 – Present',
+      dates: 'August 2022 – November 2025',
       location: '',
       note: 'Previous role',
       bullets: [
