@@ -54,6 +54,8 @@ const WORK_ORDER = [
   'baking-day',
 ]
 
+const PERSONAL_SLUGS = new Set(['daily', 'pebble-path', 'astro-jump', 'baking-day'])
+
 const csBySlug = Object.fromEntries(
   caseStudies.filter((cs) => cs.published !== false).map((cs) => [cs.slug, cs])
 )
@@ -72,7 +74,8 @@ type WorkItem = {
 const allWork: WorkItem[] = WORK_ORDER.flatMap((slug): WorkItem[] => {
   if (csBySlug[slug]) {
     const cs = csBySlug[slug]
-    return [{ type: 'case-study', slug: cs.slug, title: cs.title, subtitle: cs.subtitle, company: cs.company, tags: cs.tags, href: `/work/${cs.slug}` }]
+    const type = PERSONAL_SLUGS.has(slug) ? 'project' : 'case-study'
+    return [{ type, slug: cs.slug, title: cs.title, subtitle: cs.description || cs.subtitle, company: cs.company, tags: cs.tags, href: `/work/${cs.slug}` }]
   }
   if (projBySlug[slug]) {
     const p = projBySlug[slug]

@@ -35,17 +35,18 @@ export default function ContactPage() {
   }
 
   return (
-    <main>
+    <main className="bg-off-white">
       <Nav />
-      <section className="pt-28 pb-20 px-6 min-h-screen">
-        <div className="max-w-xl mx-auto">
+      <section className="pt-32 pb-20 px-6 min-h-screen">
+        <div className="max-w-4xl mx-auto">
           <p className="font-sans text-xs uppercase tracking-widest text-near-black/40 mb-4">Get in touch</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-near-black leading-tight mb-4">
+          <h1 className="font-serif text-5xl md:text-7xl text-near-black leading-tight mb-6">
             Let&apos;s talk.
           </h1>
-          <p className="font-sans text-lg text-near-black/60 mb-12">
+          <p className="font-sans text-xl md:text-2xl text-near-black/65 leading-relaxed font-light mb-12 max-w-2xl">
             Whether it&apos;s an opportunity, a collaboration, or just a hello — reach out and I&apos;ll get back to you.
           </p>
+        <div className="max-w-xl">
 
           {status === 'success' ? (
             <div className="bg-accent/10 border border-accent/20 rounded-lg px-6 py-8 text-center">
@@ -126,10 +127,11 @@ export default function ContactPage() {
                 <HighlightLink href="mailto:mitch@mitchleonard.com">mitch@mitchleonard.com</HighlightLink>
               </span>
               <span className="font-sans text-sm">
-                <HighlightLink href="https://linkedin.com/in/mitchellleonard">LinkedIn ↗</HighlightLink>
+                <HighlightLink href="https://www.linkedin.com/in/mitchleonard/">LinkedIn ↗</HighlightLink>
               </span>
             </div>
           </div>
+        </div>
         </div>
       </section>
       <Footer />
