@@ -38,8 +38,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </h1>
           <a
             href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className="font-sans text-sm text-accent hover:text-off-white transition-colors mb-8 block"
           >
             {project.url} ↗

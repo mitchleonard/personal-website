@@ -468,8 +468,6 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
               <div className="mt-6">
                 <RandomHoverButton
                   href={cs.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="font-sans text-sm font-medium bg-near-black text-off-white px-5 py-2.5 rounded-full border border-near-black transition-colors inline-flex items-center gap-2"
                 >
                   Visit live site →
