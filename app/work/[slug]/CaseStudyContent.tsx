@@ -36,10 +36,10 @@ const SECTION_ACCENT: Record<string, string> = {
 }
 
 const TAG_COLORS = [
-  'bg-cornflower/10 border-cornflower/25 text-cornflower',
-  'bg-tangerine/10 border-tangerine/25 text-tangerine',
-  'bg-banana/35    border-banana/50    text-near-black',
-  'bg-yellow-green/15 border-yellow-green/30 text-near-black',
+  'bg-near-black/5 border-near-black/10 text-near-black/50',
+  'bg-near-black/5 border-near-black/10 text-near-black/50',
+  'bg-near-black/5 border-near-black/10 text-near-black/50',
+  'bg-near-black/5 border-near-black/10 text-near-black/50',
 ]
 
 // ─────────────────────────────────────────────────────────────

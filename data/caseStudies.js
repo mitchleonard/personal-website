@@ -199,6 +199,7 @@ export const caseStudies = [
   },
   {
     slug: 'rtx-rebrand',
+    published: false,
     title: 'From Four Brands to oneRTX',
     subtitle: 'Helping the world meet RTX.',
     company: 'RTX',
@@ -246,6 +247,7 @@ export const caseStudies = [
   },
   {
     slug: 'global-aerospace-summit',
+    published: false,
     title: 'Turning Summit Attention Into Targeted Influence',
     subtitle: 'Translating a high-stakes industry event into an integrated influence campaign.',
     company: 'RTX',

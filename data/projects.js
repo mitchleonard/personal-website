@@ -7,8 +7,8 @@ export const projects = [
     tags: ['JavaScript', 'Game Dev', 'Custom Web', 'UI/UX'],
   },
   {
-    slug: 'moon-runner',
-    name: 'Moon Runner',
+    slug: 'astro-jump',
+    name: 'Astro Jump',
     url: 'https://mitchleonard.github.io/moonrunner/',
     description: 'An endless runner game with a live leaderboard and genuine game theory built in. Not a template — designed and built from scratch.',
     tags: ['JavaScript', 'Game Design', 'Leaderboard', 'Animation'],

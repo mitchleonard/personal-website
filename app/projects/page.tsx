@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
 import ProjectCard from '@/components/ProjectCard'
 import { projects } from '@/data/projects'
 
@@ -37,6 +38,7 @@ export default function ProjectsPage() {
       </div>
 
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }

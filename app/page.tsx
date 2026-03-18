@@ -1,5 +1,7 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
+import { HighlightLink, RandomHoverButton } from '@/components/BrandAccent'
 import Link from 'next/link'
 import { caseStudies } from '@/data/caseStudies'
 import { projects } from '@/data/projects'
@@ -7,8 +9,8 @@ import { projects } from '@/data/projects'
 const currentRole = {
   company: 'RTX',
   title: 'Integrated Communications & AI Lead',
-  dates: 'Aug 2022 – Present',
-  prose: "Currently, I'm focused on blending integrated communications campaigns with AI-powered transformation — leading a 300+ person global communications function to move faster, think smarter, and deliver sharper stories at enterprise scale.",
+  dates: 'Dec 2025 – Present',
+  prose: "I'm focused on blending integrated communications campaigns with AI-powered transformation — leading a 300+ person global communications function to move faster, think smarter, and deliver sharper stories at enterprise scale.",
   wins: [
     '+153% AI adoption in 8 months',
     'Trained 100+ communicators across 7 Centers of Excellence',
@@ -20,41 +22,64 @@ const currentRole = {
 const pastRoles = [
   {
     company: "Land O'Lakes",
-    title: 'Social Media Associate',
+    title: 'Digital Engagement & Content Operations',
     dates: 'Apr 2021 – Jul 2022',
     description: 'Led social strategy and creator partnerships across consumer and agribusiness brands. Spearheaded TikTok rollout, drove 30% YoY inbound growth, and delivered campaigns that set brand organic reach records.',
-    color: 'bg-banana/40 border-banana/60 text-near-black',
+    highlight: 'banana' as const,
   },
   {
     company: 'Colle McVoy & Exponent PR',
-    title: 'Account Executive',
+    title: 'Account Management',
     dates: 'Jan 2019 – Apr 2021',
     description: 'Managed integrated communications programs for agricultural and consumer brands at a leading Minneapolis agency. Promoted twice. Contributed to $650K in sales tied directly to social efforts.',
-    color: 'bg-frozen-lake/30 border-frozen-lake/60 text-cornflower',
+    highlight: 'frozen-lake' as const,
   },
 ]
 
-// Combine case studies and projects into one feed
-const allWork = [
-  ...caseStudies.map((cs) => ({
-    type: 'case-study' as const,
-    slug: cs.slug,
-    title: cs.title,
-    subtitle: cs.subtitle,
-    company: cs.company,
-    tags: cs.tags,
-    href: `/work/${cs.slug}`,
-  })),
-  ...projects.map((p) => ({
-    type: 'project' as const,
-    slug: p.slug,
-    title: p.name,
-    subtitle: p.description,
-    company: null,
-    tags: p.tags,
-    href: p.url,
-  })),
+// Highlight stripe (matches CV OrgHighlight logic)
+const highlightClass: Record<'banana' | 'frozen-lake', string> = {
+  'banana':      'bg-banana/65',
+  'frozen-lake': 'bg-frozen-lake/55',
+}
+
+// Ordered, published-only work feed
+const WORK_ORDER = [
+  'ai-at-rtx',
+  'daily',
+  'pebble-path',
+  'farnborough',
+  'astro-jump',
+  'lawnual-report',
+  'eat-it-like-you-own-it',
+  'baking-day',
 ]
+
+const csBySlug = Object.fromEntries(
+  caseStudies.filter((cs) => cs.published !== false).map((cs) => [cs.slug, cs])
+)
+const projBySlug = Object.fromEntries(projects.map((p) => [p.slug, p]))
+
+type WorkItem = {
+  type: 'case-study' | 'project'
+  slug: string
+  title: string
+  subtitle: string
+  company: string | null
+  tags: string[]
+  href: string
+}
+
+const allWork: WorkItem[] = WORK_ORDER.flatMap((slug): WorkItem[] => {
+  if (csBySlug[slug]) {
+    const cs = csBySlug[slug]
+    return [{ type: 'case-study', slug: cs.slug, title: cs.title, subtitle: cs.subtitle, company: cs.company, tags: cs.tags, href: `/work/${cs.slug}` }]
+  }
+  if (projBySlug[slug]) {
+    const p = projBySlug[slug]
+    return [{ type: 'project', slug: p.slug, title: p.name, subtitle: p.description, company: null, tags: p.tags, href: p.url }]
+  }
+  return []
+})
 
 export default function HomePage() {
   return (
@@ -64,11 +89,10 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="px-6 pt-32 pb-20 max-w-4xl mx-auto">
         <h1 className="font-serif text-5xl md:text-7xl text-near-black leading-tight mb-7">
-          Hey, I&apos;m Mitch.
+          Hey, I&apos;m Mitch!
         </h1>
 
-        {/* Tagline with highlights */}
-        <p className="font-sans text-xl md:text-2xl text-near-black/70 leading-relaxed font-light max-w-2xl mb-10">
+        <p className="font-sans text-xl md:text-2xl text-near-black/70 leading-relaxed font-light mb-10">
           A communications strategist leading{' '}
           <span className="relative inline-block font-medium text-near-black">
             <span className="relative z-10">AI-powered transformation</span>
@@ -81,67 +105,55 @@ export default function HomePage() {
           insight-driven stories.
         </p>
 
-        {/* CTAs */}
         <div className="flex flex-wrap gap-3">
-          <Link
-            href="/work"
-            className="font-sans text-sm font-medium bg-near-black text-off-white px-6 py-3 rounded-full hover:bg-near-black/80 transition-colors"
+          <RandomHoverButton
+            href="/#work"
+            className="font-sans text-sm font-medium bg-near-black text-off-white px-6 py-3 rounded-full border border-near-black transition-colors"
           >
             View my work →
-          </Link>
-          <Link
-            href="/cv"
-            className="font-sans text-sm font-medium text-near-black border border-near-black/25 px-6 py-3 rounded-full hover:border-near-black/50 transition-colors"
-          >
-            Full CV
-          </Link>
-          <a
-            href="/MitchLeonard_Resume_Feb2026.pdf"
-            download
-            className="font-sans text-sm font-medium text-near-black/60 border border-near-black/15 px-6 py-3 rounded-full hover:border-near-black/30 hover:text-near-black transition-colors"
-          >
-            Download PDF ↓
-          </a>
+          </RandomHoverButton>
         </div>
       </section>
 
       {/* ── CURRENTLY ── */}
       <section className="px-6 pb-20 max-w-4xl mx-auto">
-        <div className="bg-white rounded-2xl border border-near-black/10 p-8 md:p-10 shadow-sm">
+        <div className="bg-white rounded-xl border border-near-black/8 p-6 hover:border-near-black/15 transition-colors">
 
-          {/* Header row */}
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6">
-            <div>
-              {/* Label */}
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-base">📍</span>
-                <span className="font-sans text-xs uppercase tracking-widest text-cornflower font-medium">Currently</span>
-                <span className="inline-block w-2 h-2 rounded-full bg-yellow-green animate-pulse" />
-              </div>
-              <h2 className="font-serif text-2xl md:text-3xl text-near-black leading-snug">{currentRole.title}</h2>
-              <p className="font-sans text-sm text-near-black/50 mt-1">{currentRole.company} · {currentRole.dates}</p>
+          {/* Label row */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">📍</span>
+              <span className="font-sans text-xs uppercase tracking-widest text-near-black/40 font-medium">Currently</span>
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-yellow-green animate-pulse" />
             </div>
-            <Link
-              href="/cv"
-              className="font-sans text-sm font-medium text-near-black/50 hover:text-near-black transition-colors underline underline-offset-4 shrink-0 mt-1"
-            >
-              Full CV →
-            </Link>
+            <HighlightLink href="/cv">Full CV →</HighlightLink>
+          </div>
+
+          {/* Title + company + date — same structure as CV RoleCard */}
+          <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+            <div>
+              <h2 className="font-sans text-lg font-semibold text-near-black mb-1.5">{currentRole.title}</h2>
+              <span className="font-sans text-sm font-normal text-near-black relative inline-block">
+                <span className="relative z-10">{currentRole.company}</span>
+                <span className="absolute bottom-0 left-0 right-0 h-2.5 bg-banana/65 z-0 rounded-sm" />
+              </span>
+            </div>
+            <span className="font-sans text-xs text-near-black/40 bg-near-black/5 px-3 py-1 rounded-full shrink-0">{currentRole.dates}</span>
           </div>
 
           {/* Prose */}
-          <p className="font-sans text-base text-near-black/70 leading-relaxed mb-8 max-w-2xl">
+          <p className="font-sans text-sm text-near-black/65 leading-relaxed mb-6">
             {currentRole.prose}
           </p>
 
           {/* Recent wins */}
           <div>
-            <p className="font-sans text-xs uppercase tracking-widest text-near-black/30 mb-4">Recent wins</p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+            <p className="font-sans text-xs uppercase tracking-widest text-near-black/30 mb-3">Recent wins</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
               {currentRole.wins.map((w) => (
                 <li key={w} className="flex items-start gap-3">
-                  <span className="shrink-0 mt-0.5 text-sm font-bold text-yellow-green">✓</span>
-                  <span className="font-sans text-sm text-near-black/70">{w}</span>
+                  <span className="shrink-0 w-1 h-1 rounded-full bg-tangerine mt-2 block" />
+                  <span className="font-sans text-sm text-near-black/65">{w}</span>
                 </li>
               ))}
             </ul>
@@ -150,20 +162,19 @@ export default function HomePage() {
       </section>
 
       {/* ── PAST ROLES ── */}
-      <section className="px-6 pb-20 border-t border-near-black/8 pt-16 max-w-4xl mx-auto">
-        <div className="flex items-end justify-between mb-8">
+      <section id="experience" className="px-6 pb-20 border-t border-near-black/8 pt-16 max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-8">
           <h2 className="font-serif text-2xl md:text-3xl text-near-black">Past Experience</h2>
-          <Link href="/cv" className="font-sans text-sm font-medium text-near-black/50 hover:text-near-black transition-colors underline underline-offset-4">
-            See full experience →
-          </Link>
+          <HighlightLink href="/cv">See full experience →</HighlightLink>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {pastRoles.map((role) => (
-            <div key={role.company} className="bg-white rounded-xl border border-near-black/10 p-7 hover:shadow-sm hover:border-near-black/20 transition-all">
-              <span className={`font-sans text-xs font-medium border px-3 py-1 rounded-full inline-block mb-4 ${role.color}`}>
-                {role.company}
+            <div key={role.company} className="bg-white rounded-xl border border-near-black/8 p-6 hover:border-near-black/15 transition-colors">
+              <h3 className="font-sans text-lg font-semibold text-near-black mb-1.5">{role.title}</h3>
+              <span className="font-sans text-sm font-normal text-near-black relative inline-block mb-3">
+                <span className="relative z-10">{role.company}</span>
+                <span className={`absolute bottom-0 left-0 right-0 h-2.5 z-0 rounded-sm ${highlightClass[role.highlight]}`} />
               </span>
-              <h3 className="font-serif text-xl text-near-black mb-1 leading-snug">{role.title}</h3>
               <p className="font-sans text-xs text-near-black/40 mb-4">{role.dates}</p>
               <p className="font-sans text-sm text-near-black/65 leading-relaxed">{role.description}</p>
             </div>
@@ -172,36 +183,31 @@ export default function HomePage() {
       </section>
 
       {/* ── WORK ── */}
-      <section className="px-6 pb-24 border-t border-near-black/8 pt-16 max-w-4xl mx-auto">
+      <section id="work" className="px-6 pb-24 border-t border-near-black/8 pt-16 max-w-4xl mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl text-near-black mb-8">Work &amp; Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {allWork.map((item) => {
             const isExternal = item.type === 'project'
             const cardContent = (
-              <div className="bg-white rounded-xl border border-near-black/10 p-5 hover:shadow-sm hover:border-near-black/20 transition-all h-full flex flex-col group">
-                {/* Type badge */}
+              <div className="bg-white rounded-xl border border-near-black/8 p-5 hover:border-near-black/20 transition-all h-full flex flex-col group">
                 <div className="flex items-center justify-between mb-3">
-                  <span
-                    className={`font-sans text-xs font-medium px-3 py-1 rounded-full ${
-                      item.type === 'case-study'
-                        ? 'bg-frozen-lake/40 text-cornflower'
-                        : 'bg-banana/50 text-near-black/70'
-                    }`}
-                  >
+                  <span className={`font-sans text-xs font-medium px-3 py-1 rounded-full ${
+                    item.type === 'case-study'
+                      ? 'bg-frozen-lake/40 text-cornflower'
+                      : 'bg-banana/50 text-near-black/70'
+                  }`}>
                     {item.type === 'case-study' ? 'Case Study' : 'Project'}
                   </span>
                   {item.company && (
                     <span className="font-sans text-xs text-near-black/40">{item.company}</span>
                   )}
                 </div>
-
                 <h3 className="font-serif text-lg text-near-black leading-snug mb-2 group-hover:text-cornflower transition-colors">
                   {item.title}
                 </h3>
                 <p className="font-sans text-xs text-near-black/55 leading-relaxed mb-4 flex-1">
                   {item.subtitle}
                 </p>
-
                 {item.tags && item.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1.5 mt-auto">
                     {item.tags.slice(0, 3).map((tag: string) => (
@@ -215,13 +221,7 @@ export default function HomePage() {
             )
 
             return isExternal ? (
-              <a
-                key={item.slug}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
+              <a key={item.slug} href={item.href} target="_blank" rel="noopener noreferrer" className="block">
                 {cardContent}
               </a>
             ) : (
@@ -234,6 +234,7 @@ export default function HomePage() {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }
