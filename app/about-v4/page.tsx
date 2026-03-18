@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
 
 // V4 — V1 + V2 blend with new brand palette
 // Split hero (V1 structure) + statement text with highlights (V2 weight) + new colors
@@ -138,6 +139,7 @@ export default function AboutV4() {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }

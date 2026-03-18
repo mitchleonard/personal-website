@@ -33,7 +33,7 @@ export const cvData = {
     },
     {
       company: 'Land O\'Lakes, Inc.',
-      title: 'Social Media Associate',
+      title: 'Digital Engagement & Content Operations',
       dates: 'April 2021 – July 2022',
       location: '',
       bullets: [
@@ -46,7 +46,7 @@ export const cvData = {
     },
     {
       company: 'Colle McVoy & Exponent PR',
-      title: 'Account Executive',
+      title: 'Account Management',
       dates: 'January 2019 – April 2021',
       location: '',
       note: 'Promoted twice: Assistant Account Executive, Public Relations Intern',

@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
+import { HighlightLink } from '@/components/BrandAccent'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -103,7 +105,7 @@ export default function ContactPage() {
               {status === 'error' && (
                 <p className="font-sans text-sm text-red-600">
                   Something went wrong. Try emailing me directly at{' '}
-                  <a href="mailto:mitch@mitchleonard.com" className="underline">mitch@mitchleonard.com</a>.
+                  <HighlightLink href="mailto:mitch@mitchleonard.com">mitch@mitchleonard.com</HighlightLink>.
                 </p>
               )}
 
@@ -120,25 +122,18 @@ export default function ContactPage() {
           <div className="mt-16 pt-10 border-t border-near-black/10">
             <p className="font-sans text-sm text-near-black/50 mb-4">Or reach me directly:</p>
             <div className="flex flex-wrap gap-6">
-              <a
-                href="mailto:mitch@mitchleonard.com"
-                className="font-sans text-sm text-near-black hover:text-accent transition-colors"
-              >
-                mitch@mitchleonard.com
-              </a>
-              <a
-                href="https://linkedin.com/in/mitchellleonard"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-sans text-sm text-near-black hover:text-accent transition-colors"
-              >
-                LinkedIn
-              </a>
+              <span className="font-sans text-sm">
+                <HighlightLink href="mailto:mitch@mitchleonard.com">mitch@mitchleonard.com</HighlightLink>
+              </span>
+              <span className="font-sans text-sm">
+                <HighlightLink href="https://linkedin.com/in/mitchellleonard">LinkedIn ↗</HighlightLink>
+              </span>
             </div>
           </div>
         </div>
       </section>
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }

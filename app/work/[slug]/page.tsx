@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import ScrollToTop from '@/components/ScrollToTop'
 import { caseStudies, getCaseStudy, getAdjacentCaseStudy } from '@/data/caseStudies'
 import CaseStudyContent from './CaseStudyContent'
 
@@ -28,6 +29,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       <Nav />
       <CaseStudyContent cs={cs} next={next} />
       <Footer />
+      <ScrollToTop />
     </main>
   )
 }
