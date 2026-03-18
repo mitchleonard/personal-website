@@ -325,7 +325,7 @@ export const caseStudies = [
       { type: 'image', src: '/personal-daily/Daily_Mockup_Habit_List.png', description: 'Build your habit list with custom icons, colors, and schedules. Drag to reorder anytime.', annotated: true },
       { type: 'image', src: '/personal-daily/Daily_Mockup_Analytics.png', description: 'Completion rates across 7, 30, and 90-day windows for every habit you track.', annotated: true },
       { type: 'image', src: '/personal-daily/Daily_Mockup_Analytics_Habit_Connections.png', description: 'Habit connections surface which routines tend to cluster together — the streaks you didn\'t know you had.', annotated: true },
-      { type: 'image', src: '/personal-daily/Daily_Mockup_Analytics_Individual_Habit.PNG', description: 'Drill into any single habit for a full day-by-day breakdown and streak history.', annotated: true },
+      { type: 'image', src: '/personal-daily/Daily_Mockup_Analytics_Individual_Habit.png', description: 'Drill into any single habit for a full day-by-day breakdown and streak history.', annotated: true },
     ],
     next: 'pebble-path',
   },
