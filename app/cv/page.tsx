@@ -2,6 +2,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import { HighlightLink, RandomHoverButton } from '@/components/BrandAccent'
+import EarlyCareerToggle from '@/components/EarlyCareerToggle'
 import { cvData } from '@/data/cv'
 
 export const metadata = {
@@ -166,10 +167,11 @@ export default function CVPage() {
               Work Experience
             </h2>
             <div className="space-y-5">
-              {cvData.workExperience.map((role, i) => (
+              {cvData.workExperience.filter((r) => !r.earlyCareer).map((role, i) => (
                 <RoleCard key={i} role={role} />
               ))}
             </div>
+            <EarlyCareerToggle roles={cvData.workExperience.filter((r) => r.earlyCareer)} />
           </section>
 
           {/* ── Volunteer Experience ── */}

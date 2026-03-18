@@ -61,6 +61,7 @@ export const cvData = {
       ],
     },
     {
+      earlyCareer: true,
       company: 'University of Northern Iowa, Department of Recreation Services',
       title: 'Student Website Designer',
       dates: 'May 2015 – December 2018',
@@ -73,6 +74,7 @@ export const cvData = {
       ],
     },
     {
+      earlyCareer: true,
       company: 'AMPERAGE Marketing & Fundraising',
       title: 'Public Relations Associate Intern',
       dates: 'June 2018 – August 2018',
@@ -84,6 +86,7 @@ export const cvData = {
       ],
     },
     {
+      earlyCareer: true,
       company: 'Mississippi Valley Regional Blood Center',
       title: 'Donor Relations Intern',
       dates: 'June 2016 – August 2016 · December 2016 – January 2017 · June 2017 – August 2017',
