@@ -55,11 +55,15 @@ export function RandomHoverButton({
   children,
   className,
   download,
+  target,
+  rel,
 }: {
   href: string
   children: React.ReactNode
   className: string
   download?: boolean
+  target?: string
+  rel?: string
 }) {
   const colorRef = useRef(pickRandom(FILL_COLORS))
   const [hovered, setHovered] = useState(false)
@@ -76,6 +80,8 @@ export function RandomHoverButton({
     <a
       href={href}
       download={download}
+      target={target}
+      rel={rel}
       className={className}
       style={style}
       onMouseEnter={() => setHovered(true)}

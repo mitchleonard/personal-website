@@ -122,14 +122,14 @@ export default function CVPage() {
   return (
     <main className="bg-off-white">
       <Nav />
-      <div className="pt-28 pb-20 px-6">
-        <div className="max-w-3xl mx-auto">
+      <div className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto">
 
           {/* ── Page header ── */}
           <div className="mb-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <div>
               <p className="font-sans text-xs uppercase tracking-widest text-cornflower mb-3">Career overview</p>
-              <h1 className="font-serif text-5xl md:text-6xl text-near-black mb-3">Mitch Leonard</h1>
+              <h1 className="font-serif text-5xl md:text-7xl text-near-black leading-tight mb-3">Mitch Leonard</h1>
               <p className="font-sans text-base text-near-black/50">
                 Communications strategist · AI lead · Digital builder
               </p>

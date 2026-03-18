@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import AutoplayVideo from '@/components/AutoplayVideo'
 import ResultsBlock from '@/components/ResultsBlock'
+import { RandomHoverButton } from '@/components/BrandAccent'
 
 // ─────────────────────────────────────────────────────────────
 // Types
@@ -12,8 +13,10 @@ type Visual = {
   type: 'video' | 'image' | 'gif'
   src: string
   caption?: string
+  description?: string
   featured?: boolean
   portrait?: boolean
+  annotated?: boolean
   silent?: boolean
   tall?: boolean
   section?: string
@@ -22,6 +25,7 @@ type Visual = {
 type VisualGroup =
   | { kind: 'full'; item: Visual }
   | { kind: 'masonry'; items: Visual[] }
+  | { kind: 'split'; item: Visual; index: number }
 
 // ─────────────────────────────────────────────────────────────
 // Color maps
@@ -170,19 +174,53 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
 }
 
 // ─────────────────────────────────────────────────────────────
+// SplitMedia — portrait screenshot on one side, short descriptor on the other
+// Alternates image-left / image-right based on index
+// ─────────────────────────────────────────────────────────────
+function SplitMedia({ item, index }: { item: Visual; index: number }) {
+  const imageRight = index % 2 !== 0
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+      {imageRight && (
+        <p className="font-sans text-lg text-near-black/65 leading-relaxed hidden md:block">
+          {item.description}
+        </p>
+      )}
+      <div className="max-w-xs mx-auto md:mx-0">
+        <VisualMedia item={item} />
+      </div>
+      {!imageRight && (
+        <p className="font-sans text-lg text-near-black/65 leading-relaxed">
+          {item.description}
+        </p>
+      )}
+      {imageRight && (
+        <p className="font-sans text-lg text-near-black/65 leading-relaxed md:hidden">
+          {item.description}
+        </p>
+      )}
+    </div>
+  )
+}
+
+// ─────────────────────────────────────────────────────────────
 // groupItems — all consecutive portrait items form one masonry block,
 // regardless of media type, so no gap appears between videos and images
 // ─────────────────────────────────────────────────────────────
 function groupItems(items: Visual[]): VisualGroup[] {
   const groups: VisualGroup[] = []
   let i = 0
+  let splitCount = 0
   while (i < items.length) {
-    if (!items[i].portrait) {
+    if (items[i].annotated) {
+      groups.push({ kind: 'split', item: items[i], index: splitCount++ })
+      i++
+    } else if (!items[i].portrait) {
       groups.push({ kind: 'full', item: items[i] })
       i++
     } else {
       const portraitItems: Visual[] = []
-      while (i < items.length && items[i].portrait) {
+      while (i < items.length && items[i].portrait && !items[i].annotated) {
         portraitItems.push(items[i])
         i++
       }
@@ -277,10 +315,12 @@ function VisualsGallery({ visuals }: { visuals: Visual[] }) {
                 </div>
               </AnimateIn>
             )}
-            <div className="space-y-4">
+            <div className="space-y-10">
               {groups.map((group, idx) => (
                 <AnimateIn key={idx} delay={30}>
-                  {group.kind === 'masonry' ? (
+                  {group.kind === 'split' ? (
+                    <SplitMedia item={group.item} index={group.index} />
+                  ) : group.kind === 'masonry' ? (
                     <MasonryGrid items={group.items} />
                   ) : (
                     <VisualMedia item={group.item} />
@@ -422,11 +462,26 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
           <AnimateIn delay={180}>
             <p className="font-sans text-xl text-near-black/60 italic">{cs.subtitle}</p>
           </AnimateIn>
+
+          {cs.url && (
+            <AnimateIn delay={210}>
+              <div className="mt-6">
+                <RandomHoverButton
+                  href={cs.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-sm font-medium bg-near-black text-off-white px-5 py-2.5 rounded-full border border-near-black transition-colors inline-flex items-center gap-2"
+                >
+                  Visit live site →
+                </RandomHoverButton>
+              </div>
+            </AnimateIn>
+          )}
         </div>
 
         {/* Results */}
         {cs.results && cs.results.length > 0 && (
-          <AnimateIn delay={220} className="mb-16">
+          <AnimateIn delay={240} className="mb-16">
             <ResultsBlock results={cs.results} />
           </AnimateIn>
         )}
