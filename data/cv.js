@@ -110,10 +110,16 @@ export const cvData = {
       description: '',
     },
     {
+      organization: 'Northern Star Scouting',
+      title: 'Marketing Committee Member',
+      dates: 'May 2025 – Present',
+      description: 'I advise and provide counsel to professional staff on marketing communication efforts of the Northern Star Council.\n\nNorthern Star Scouting serves central and northeast Minnesota and western Wisconsin. In 2024, more than 42,000 youth participated in BSA and Community Scouting programs.',
+    },
+    {
       organization: 'Scouting America',
       title: 'Northern Tier High Adventure Programs Board Member',
       dates: 'September 2020 – Present',
-      description: '',
+      description: 'Chair of the Marketing Subcommittee as a member of Northern Tier High Adventure Programs Board of Directors. In this role, I strengthen local and national staff efforts to grow program attendance for the next generation of transformative wilderness experiences.\n\nNorthern Tier National High Adventure Base is one of four nationally recognized Scouting America high adventure bases, annually providing ~6,000 youth with life-changing expeditions in the north woods of Minnesota and Canada.',
     },
     {
       organization: '4A\'s Pitch Boot Camp',
@@ -175,7 +181,7 @@ export const cvData = {
       name: 'Classics Awards',
       org: 'Minnesota PRSA',
       year: 'June 2020',
-      description: 'Presented annually to public relations practitioners who have successfully addressed a communications challenge with exemplary professional skill, creativity and resourcefulness. Clients: Cub Cadet and Proof Alliance.',
+      description: 'Annually awarded to public relations practitioners who have successfully addressed a communications challenge with exemplary professional skill, creativity and resourcefulness. Clients: Cub Cadet and Proof Alliance.',
     },
     {
       name: 'Distinguished Service Award',
