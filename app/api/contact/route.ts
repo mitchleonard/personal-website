@@ -3,7 +3,18 @@ import { Resend } from 'resend'
 
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY)
-  const { name, email, message } = await req.json()
+  const { name, email, message, _trap, _t } = await req.json()
+
+  // Honeypot: bots fill hidden fields, humans don't
+  if (_trap) {
+    return NextResponse.json({ success: true })
+  }
+
+  // Time check: reject submissions faster than 3 seconds (bot behavior)
+  const elapsed = Date.now() - Number(_t)
+  if (!_t || elapsed < 3000) {
+    return NextResponse.json({ success: true })
+  }
 
   if (!name || !email || !message) {
     return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })

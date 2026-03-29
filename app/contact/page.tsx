@@ -8,6 +8,8 @@ import { HighlightLink } from '@/components/BrandAccent'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [honeypot, setHoneypot] = useState('')
+  const [loadedAt] = useState(() => Date.now())
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,7 +23,7 @@ export default function ContactPage() {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, _trap: honeypot, _t: loadedAt }),
       })
       if (res.ok) {
         setStatus('success')
@@ -55,6 +57,19 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Honeypot field — hidden from real users, bots fill it in */}
+              <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }} aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
               <div>
                 <label htmlFor="name" className="block font-sans text-xs uppercase tracking-widest text-near-black/50 mb-2">
                   Name
