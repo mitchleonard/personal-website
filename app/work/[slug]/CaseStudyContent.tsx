@@ -20,6 +20,7 @@ type Visual = {
   silent?: boolean
   tall?: boolean
   section?: string
+  gridLayout?: boolean
 }
 
 type VisualGroup =
@@ -243,6 +244,19 @@ function MasonryGrid({ items }: { items: Visual[] }) {
       </div>
     )
   }
+  // gridLayout: true → use CSS grid (row-by-row, consistent on all screen sizes)
+  const isGrid = items.some(i => i.gridLayout)
+  if (isGrid) {
+    return (
+      <div className="grid grid-cols-2 gap-2">
+        {items.map((item, i) => (
+          <div key={i}>
+            <VisualMedia item={item} />
+          </div>
+        ))}
+      </div>
+    )
+  }
   // tall: true items → always 2-col (LinkedIn full-post recordings etc.)
   // fewer than 3 items → 2-col (avoids empty columns in a 3-col layout)
   // everything else → 2-col mobile, 3-col desktop
@@ -273,7 +287,7 @@ function MasonryGrid({ items }: { items: Visual[] }) {
 // ─────────────────────────────────────────────────────────────
 // VisualsGallery
 // ─────────────────────────────────────────────────────────────
-function VisualsGallery({ visuals }: { visuals: Visual[] }) {
+function VisualsGallery({ visuals, showWorkLabel = true }: { visuals: Visual[]; showWorkLabel?: boolean }) {
   const featured = visuals.find(v => v.featured)
   const rest = visuals.filter(v => !v.featured)
 
@@ -288,12 +302,14 @@ function VisualsGallery({ visuals }: { visuals: Visual[] }) {
 
   return (
     <div className="mt-20">
-      <AnimateIn>
-        <div className="flex items-center gap-2 mb-8">
-          <span className="shrink-0 w-1.5 h-4 rounded-full bg-cornflower" />
-          <p className="font-sans text-xs uppercase tracking-[0.15em] text-near-black/50">Work</p>
-        </div>
-      </AnimateIn>
+      {showWorkLabel && (
+        <AnimateIn>
+          <div className="flex items-center gap-2 mb-8">
+            <span className="shrink-0 w-1.5 h-4 rounded-full bg-cornflower" />
+            <p className="font-sans text-xs uppercase tracking-[0.15em] text-near-black/50">Work</p>
+          </div>
+        </AnimateIn>
+      )}
 
       {featured && (
         <AnimateIn delay={80}>
@@ -558,7 +574,7 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
 
         {/* Visuals gallery */}
         {cs.visuals && cs.visuals.length > 0 && (
-          <VisualsGallery visuals={cs.visuals} />
+          <VisualsGallery visuals={cs.visuals} showWorkLabel={cs.showWorkLabel !== false} />
         )}
 
         {/* Media links hidden — shown only when explicitly enabled */}
