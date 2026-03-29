@@ -50,6 +50,7 @@ const WORK_ORDER = [
   'global-aerospace-summit',
   'farnborough',
   'astro-jump',
+  'rtx-rebrand',
   'lawnual-report',
   'eat-it-like-you-own-it',
   'baking-day',
@@ -189,12 +190,12 @@ export default function HomePage() {
       {/* ── WORK ── */}
       <section id="work" className="px-6 pb-24 border-t border-near-black/8 pt-16 max-w-4xl mx-auto">
         <h2 className="font-serif text-2xl md:text-3xl text-near-black mb-8">Work &amp; Projects</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           {allWork.map((item) => {
             const isExternal = item.type === 'project'
             const cardContent = (
               <div className="bg-white rounded-xl border border-near-black/8 p-5 hover:border-near-black/20 transition-all h-full flex flex-col group">
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
                   <span className={`font-sans text-xs font-medium px-3 py-1 rounded-full ${
                     item.type === 'case-study'
                       ? 'bg-frozen-lake/40 text-cornflower'
