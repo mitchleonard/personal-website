@@ -272,7 +272,7 @@ export const caseStudies = [
   },
   {
     slug: 'rtx-rebrand',
-    published: false,
+    published: true,
     title: 'From Four Brands to oneRTX',
     subtitle: 'Helping the world meet RTX.',
     company: 'RTX',
@@ -295,24 +295,23 @@ export const caseStudies = [
     ],
     impact: `The work helped make a structural change feel intentional instead of confusing. Rather than simply renaming accounts, the campaign gave audiences a clear path into the new brand and started building recognition for RTX as a unified enterprise.`,
     visuals: [
-      // Instagram — business unit spotlight reels (2-col tall portrait grid)
-      { type: 'image', src: '/rtx-rebrand/RTXRebrand_Instagram_AirPowerStrategicBizUnit.png',        section: 'Instagram', portrait: true, tall: true, caption: 'Air Power strategic business unit' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_NewBrandParisAirShow.mp4',            section: 'Instagram', portrait: true, tall: true, caption: 'New brand at Paris Air Show' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_CollinsAerospace.mp4',                section: 'Instagram', portrait: true, tall: true, caption: 'Collins Aerospace' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_PrattWhitneyPoweringFreedom.mp4',     section: 'Instagram', portrait: true, tall: true, caption: 'Pratt & Whitney — powering freedom' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_RaytheonBusinessSpotlight.mp4',       section: 'Instagram', portrait: true, tall: true, caption: 'Raytheon business spotlight' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_DetectTrackDefeat.mp4',               section: 'Instagram', portrait: true, tall: true, caption: 'Detect, track, defeat' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_MaritimeSensors.mp4',                 section: 'Instagram', portrait: true, tall: true, caption: 'Maritime sensors' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_WhenSecondsCount.mp4',                section: 'Instagram', portrait: true, tall: true, caption: 'When seconds count' },
-      // LinkedIn — brand launch and welcome posts
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WeAreRTX.mp4',                  section: 'LinkedIn', portrait: true, caption: 'We Are RTX' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WelcomeToRTX.mp4',              section: 'LinkedIn', portrait: true, caption: 'Welcome to RTX' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WelcomeToRTXCommunity.mp4',     section: 'LinkedIn', portrait: true, caption: 'Welcome to the RTX community' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WeAreRaytheon.mp4',             section: 'LinkedIn', portrait: true, caption: 'We Are Raytheon' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_SolvingToughestChallenges.mp4', section: 'LinkedIn', portrait: true, caption: 'Solving the toughest challenges' },
-      // X — account migration and brand announcements
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_X_RTXMoreThanABrand.mp4',              section: 'X', portrait: true, caption: 'RTX — more than a brand' },
-      { type: 'video', src: '/rtx-rebrand/RTXRebrand_X_RaytheonDefenseHandleMove.mp4',      section: 'X', portrait: true, caption: 'Raytheon Defense handle move' },
+      // Channel Consolidation — rebrand launch, welcome, and account migration posts
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_NewBrandParisAirShow.mp4',        section: 'Channel Consolidation', portrait: true, tall: true, caption: 'New brand at Paris Air Show' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WeAreRTX.mp4',                    section: 'Channel Consolidation', portrait: true, silent: true, caption: 'We Are RTX' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WelcomeToRTX.mp4',                section: 'Channel Consolidation', portrait: true, silent: true, caption: 'Welcome to RTX' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WelcomeToRTXCommunity.mp4',       section: 'Channel Consolidation', portrait: true, silent: true, caption: 'Welcome to the RTX community' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_X_RaytheonDefenseHandleMove.mp4',          section: 'Channel Consolidation', portrait: true, silent: true, caption: 'Raytheon Defense handle move' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_X_RTXMoreThanABrand.mp4',                  section: 'Channel Consolidation', portrait: true, silent: true, caption: 'RTX — more than a brand' },
+      // Thematic Content — business unit spotlights and brand storytelling
+      { type: 'image', src: '/rtx-rebrand/RTXRebrand_Instagram_AirPowerStrategicBizUnit.png',    section: 'Thematic Content', portrait: true, tall: true, caption: 'Air Power strategic business unit' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_CollinsAerospace.mp4',            section: 'Thematic Content', portrait: true, tall: true, caption: 'Collins Aerospace' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_DetectTrackDefeat.mp4',           section: 'Thematic Content', portrait: true, tall: true, caption: 'Detect, track, defeat' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_MaritimeSensors.mp4',             section: 'Thematic Content', portrait: true, tall: true, caption: 'Maritime sensors' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_PrattWhitneyPoweringFreedom.mp4', section: 'Thematic Content', portrait: true, tall: true, caption: 'Pratt & Whitney — powering freedom' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_RaytheonBusinessSpotlight.mp4',   section: 'Thematic Content', portrait: true, tall: true, caption: 'Raytheon business spotlight' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_Instagram_WhenSecondsCount.mp4',            section: 'Thematic Content', portrait: true, tall: true, caption: 'When seconds count' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_SolvingToughestChallenges.mp4',    section: 'Thematic Content', portrait: true, caption: 'Solving the toughest challenges' },
+      { type: 'video', src: '/rtx-rebrand/RTXRebrand_LinkedIn_WeAreRaytheon.mp4',                section: 'Thematic Content', portrait: true, caption: 'We Are Raytheon' },
     ],
     media: [
       {
