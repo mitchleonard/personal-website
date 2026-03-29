@@ -47,6 +47,7 @@ const WORK_ORDER = [
   'ai-at-rtx',
   'daily',
   'pebble-path',
+  'global-aerospace-summit',
   'farnborough',
   'astro-jump',
   'lawnual-report',
