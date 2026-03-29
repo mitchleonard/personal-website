@@ -35,7 +35,7 @@ export const caseStudies = [
     subtitle: 'Translating a high-stakes industry event into an integrated influence campaign.',
     company: 'RTX',
     client: null,
-    tags: ['Paid Social', 'Executive Communications', 'Event Marketing'],
+    tags: ['Integrated Campaign', 'Executive Communications', 'Event Marketing'],
     results: [
       { value: '1,500+', label: 'Executive engagements' },
       { value: '2x', label: 'LinkedIn CTR benchmark' },
