@@ -54,13 +54,13 @@ export const caseStudies = [
     ],
     impact: `This work transformed RTX's presence from a sponsorship into a coordinated influence campaign. Instead of relying on event visibility alone, RTX extended its message into the channels where policymakers, airline leaders, and industry stakeholders were already consuming information.\n\nThe campaign drove above-benchmark engagement and reached a highly qualified audience, with 15% of the thought leadership ad audience made up of C-suite leaders from target airline partners. That gave RTX stronger visibility with the senior decision-makers most relevant to its commercial priorities.`,
     visuals: [
-      // Event space — branded venue presence (2-col portrait grid, no section label)
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_GalleryHall.png',                  portrait: true, tall: true, caption: 'Gallery hall' },
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_SponsorshipInstallation.png',      portrait: true, tall: true, caption: 'Sponsorship installation' },
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_RTXAirbusBooth.jpg',              portrait: true, tall: true, caption: 'RTX Airbus booth' },
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_BoothBlurred.jpg',                portrait: true, tall: true, caption: 'RTX booth' },
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_SponsorshipRegistrationTable.png',portrait: true, tall: true, caption: 'Registration' },
-      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_BarbaraBorgonoviPanel.jpeg',      portrait: true, tall: true, caption: 'Barbara Borgonovi panel' },
+      // Event space — branded venue presence (2-col grid, row-by-row order: left then right)
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_GalleryHall.png',                  portrait: true, tall: true, gridLayout: true, caption: 'Gallery hall' },
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_BoothBlurred.jpg',                portrait: true, tall: true, gridLayout: true, caption: 'RTX booth' },
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_SponsorshipInstallation.png',      portrait: true, tall: true, gridLayout: true, caption: 'Sponsorship installation' },
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_SponsorshipRegistrationTable.png',portrait: true, tall: true, gridLayout: true, caption: 'Registration' },
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_RTXAirbusBooth.jpg',              portrait: true, tall: true, gridLayout: true, caption: 'RTX Airbus booth' },
+      { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_BarbaraBorgonoviPanel.jpeg',      portrait: true, tall: true, gridLayout: true, caption: 'Barbara Borgonovi panel' },
       // Executive Amplification — exec and policy posts (4-up portrait grid)
       { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_PhilipJasper_GoldenDomePanel.png',                  section: 'Executive Amplification', portrait: true, caption: 'Philip Jasper — Golden Dome for America' },
       { type: 'image', src: '/global-aerospace-summit/RTXGlobalAerospaceSummit_JillAlbertelli_NextGenPropulsionPost.png',          section: 'Executive Amplification', portrait: true, caption: 'Jill Albertelli — next-gen propulsion' },
@@ -273,6 +273,7 @@ export const caseStudies = [
   {
     slug: 'rtx-rebrand',
     published: true,
+    showWorkLabel: false,
     title: 'From Four Brands to oneRTX',
     subtitle: 'Helping the world meet RTX.',
     company: 'RTX',
