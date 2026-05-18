@@ -85,7 +85,7 @@ export default function AboutV2() {
             { value: '10+', label: 'Years of experience' },
             { value: '145+', label: 'Ice creams rated' },
             { value: '6', label: 'Major campaigns led' },
-            { value: '100+', label: 'Communicators trained' },
+            { value: '200+', label: 'Communicators trained' },
           ].map((stat) => (
             <div key={stat.label}>
               <p className="font-serif text-4xl md:text-5xl text-off-white mb-2">{stat.value}</p>
