@@ -7,7 +7,7 @@ const featuredWork = [
     company: 'RTX',
     title: 'Building the AI Operating Model for Global Communications',
     subtitle: 'Turned early experimentation into a structured adoption model for a global communications function.',
-    results: ['+153% AI adoption', '100+ trained', '+80% working group growth'],
+    results: ['+207% AI adoption', '200+ trained', '+100% working group growth'],
     tags: ['AI Enablement', 'Change Leadership', 'Enterprise Strategy'],
   },
   {
