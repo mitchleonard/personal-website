@@ -12,7 +12,7 @@ const currentRole = {
   dates: 'Aug 2022 – Present',
   prose: "I'm focused on blending integrated communications campaigns with AI-powered transformation — leading a 300+ person global communications function to move faster, think smarter, and deliver sharper stories at enterprise scale.",
   wins: [
-    '+207% AI adoption in 8 months',
+    'Grew AI adoption 207% in a year — #1 across all departments company-wide',
     'Trained 200+ communicators across 7 Centers of Excellence',
     'Led $400K+ integrated enterprise campaigns',
     'Co-lead of bi-weekly AI Labs community of practice',
