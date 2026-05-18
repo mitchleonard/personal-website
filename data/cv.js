@@ -7,7 +7,7 @@ export const cvData = {
       location: '',
       bullets: [
         'Lead Global Communications AI strategy for a 300+ person function, scaling responsible integration across storytelling, media monitoring, and reporting while defining the roadmap for near- and long-term priorities.',
-        'Increased AI adoption by 153% and community participation by 80% by scaling a cross-functional working group, training 100+ communicators, and deploying governance standards across 7 Centers of Excellence.',
+        'Increased AI adoption by 207% and doubled community participation by scaling a cross-functional working group, training 200+ communicators, and deploying governance standards across 7 Centers of Excellence.',
         'Designed GenAI-enabled experimentation frameworks across owned and social channels, improving engagement by up to 45% and accelerating outcome-driven content optimization.',
         'Co-hosted "AI Labs," a bi-weekly community of practice with 50+ participants driving peer learning and experimentation.',
         'Led $400K+ integrated enterprise campaigns, aligning creative, media, executive comms, and PR to deliver cohesive, data-driven storytelling across digital, social, and experiential channels.',

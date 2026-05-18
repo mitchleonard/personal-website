@@ -77,7 +77,7 @@ export default function AboutV3() {
               {[
                 { value: '10+', label: 'Years leading strategy' },
                 { value: '145+', label: 'Ice creams rated' },
-                { value: '100+', label: 'Communicators trained' },
+                { value: '200+', label: 'Communicators trained' },
               ].map((s) => (
                 <div key={s.label}>
                   <p className="font-serif text-4xl text-near-black mb-1">{s.value}</p>
