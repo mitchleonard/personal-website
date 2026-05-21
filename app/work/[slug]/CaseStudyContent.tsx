@@ -479,15 +479,26 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
             <p className="font-sans text-xl text-near-black/60 italic">{cs.subtitle}</p>
           </AnimateIn>
 
-          {cs.url && (
+          {(cs.url || cs.downloadUrl) && (
             <AnimateIn delay={210}>
-              <div className="mt-6">
-                <RandomHoverButton
-                  href={cs.url}
-                  className="font-sans text-sm font-medium bg-near-black text-off-white px-5 py-2.5 rounded-full border border-near-black transition-colors inline-flex items-center gap-2"
-                >
-                  Visit live site →
-                </RandomHoverButton>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {cs.url && (
+                  <RandomHoverButton
+                    href={cs.url}
+                    className="font-sans text-sm font-medium bg-near-black text-off-white px-5 py-2.5 rounded-full border border-near-black transition-colors inline-flex items-center gap-2"
+                  >
+                    Visit live site →
+                  </RandomHoverButton>
+                )}
+                {cs.downloadUrl && (
+                  <a
+                    href={cs.downloadUrl}
+                    download
+                    className="font-sans text-sm font-medium px-5 py-2.5 rounded-full border border-near-black/30 text-near-black/70 hover:border-near-black hover:text-near-black transition-colors inline-flex items-center gap-2"
+                  >
+                    Download skill ↓
+                  </a>
+                )}
               </div>
             </AnimateIn>
           )}
