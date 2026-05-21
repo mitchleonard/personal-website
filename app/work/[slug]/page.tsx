@@ -10,11 +10,33 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const cs = getCaseStudy(params.slug)
+  const cs = getCaseStudy(params.slug) as any
   if (!cs) return {}
+  const ogImage = cs.ogImage || '/og-default.png'
+  const url = `https://www.mitchleonard.com/work/${cs.slug}`
   return {
     title: `${cs.title} — Mitch Leonard`,
     description: cs.subtitle,
+    openGraph: {
+      title: `${cs.title} — Mitch Leonard`,
+      description: cs.subtitle,
+      url,
+      type: 'article',
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: cs.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: cs.title,
+      description: cs.subtitle,
+      images: [ogImage],
+    },
   }
 }
 
