@@ -347,6 +347,7 @@ export const caseStudies = [
     client: null,
     tags: ['Claude Skills', 'Documentation', 'Hackathon'],
     url: '',
+    ogImage: '/hackathon-skill/og.png',
     results: [
       { value: '38 min', label: 'Start to ship' },
       { value: '7', label: 'Commits' },
@@ -366,10 +367,11 @@ export const caseStudies = [
     ],
     impact: null,
     visuals: [
-      { type: 'image', src: '/hackathon-skill/00-kickoff.png', caption: 'Kickoff card', featured: true },
-      { type: 'image', src: '/hackathon-skill/01-skill-md.png', description: 'SKILL.md is the source of truth. Every Claude surface reads it and executes the same flow.', annotated: true },
-      { type: 'image', src: '/hackathon-skill/02-templates.png', description: 'Templates and bash helpers — the scaffolding that makes a kickoff a one-line operation.', annotated: true },
-      { type: 'image', src: '/hackathon-skill/03-dogfood.png', description: 'Hackathon #001 was building this skill. The first portfolio entry is the system that produces portfolio entries.', annotated: true },
+      { type: 'image', src: '/hackathon-skill/01-prompt.png', caption: 'It started with one prompt', featured: true },
+      { type: 'image', src: '/hackathon-skill/02-research.png', description: 'Step one was reverse-engineering the schema. The skill had to slot into the existing portfolio without changing anything around it.', annotated: true },
+      { type: 'image', src: '/hackathon-skill/hero.png', description: 'Sketched four phases — Kickoff, Build, Ship, Publish. Each one a single prompt apart. Each one captured automatically.', annotated: true },
+      { type: 'image', src: '/hackathon-skill/03-dogfood.png', description: 'Dogfooded by documenting this very build as Hackathon #001. Every prompt, pivot, and decision stamped to the second — the log wrote itself.', annotated: true },
+      { type: 'image', src: '/hackathon-skill/05-shipped.png', description: 'One push to main. Vercel deployed in under a minute. Thirty-eight minutes from first prompt to live URL.', annotated: true },
     ],
     next: 'daily',
   },
