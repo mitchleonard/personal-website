@@ -137,7 +137,7 @@ export default function CVPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3 shrink-0">
               <RandomHoverButton
-                href="/MitchLeonard_Resume_Feb2026.pdf"
+                href="/MitchLeonard_Resume_May2026.pdf"
                 download
                 className="font-sans text-sm font-medium text-near-black border border-near-black/20 px-5 py-2.5 rounded-full transition-colors inline-block text-center"
               >
