@@ -41,7 +41,7 @@ export default function ContactPage() {
       <Nav />
       <section className="pt-32 pb-20 px-6 min-h-screen">
         <div className="max-w-4xl mx-auto">
-          <p className="font-sans text-xs uppercase tracking-widest text-near-black/40 mb-4">Get in touch</p>
+          <p className="font-sans text-xs uppercase tracking-widest text-cornflower mb-4">Get in touch</p>
           <h1 className="font-serif text-5xl md:text-7xl text-near-black leading-tight mb-6">
             Let&apos;s talk.
           </h1>
