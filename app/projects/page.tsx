@@ -9,7 +9,7 @@ export const metadata = {
   description: 'Personal projects built outside of work — habit trackers, games, microsites, and health apps.',
 }
 
-const PERSONAL_SLUGS = ['hackathon-skill', 'daily', 'pebble-path', 'astro-jump', 'baking-day']
+const PERSONAL_SLUGS = ['strava-dashboard', 'hackathon-skill', 'daily', 'pebble-path', 'astro-jump', 'baking-day']
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const personalProjects: any[] = PERSONAL_SLUGS.flatMap((slug) => {

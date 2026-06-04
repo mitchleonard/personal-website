@@ -27,6 +27,8 @@ export const PROJECT_TAGS = {
   'Claude Skills':  'cornflower',
   'Documentation':  'neutral',
   'Hackathon':      'tangerine',
+  'MCP Servers':    'cornflower',
+  'Dashboard':      'yellow-green',
   'Full Stack':     'cornflower',
   'React':          'frozen-lake',
   'PWA':            'yellow-green',

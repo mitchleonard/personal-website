@@ -339,7 +339,14 @@ function VisualsGallery({ visuals, showWorkLabel = true }: { visuals: Visual[]; 
                   ) : group.kind === 'masonry' ? (
                     <MasonryGrid items={group.items} />
                   ) : (
-                    <VisualMedia item={group.item} />
+                    <figure>
+                      <VisualMedia item={group.item} />
+                      {group.item.caption && (
+                        <figcaption className="font-sans text-sm text-near-black/55 leading-relaxed mt-3">
+                          {group.item.caption}
+                        </figcaption>
+                      )}
+                    </figure>
                   )}
                 </AnimateIn>
               ))}
