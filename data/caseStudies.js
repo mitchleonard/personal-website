@@ -359,7 +359,7 @@ export const caseStudies = [
     role: null,
     execution: [
       'Built a custom Strava MCP server (5 tools) so Claude can pull real workout data in real time instead of guessing.',
-      'AI workout analysis via the Anthropic Claude API, prompted to give a quick read before you are even home from the sweat session.',
+      'Added individual workout analysis so any completed session can be selected and reviewed by a Claude-powered coach that explains how the workout went and what to adjust next time.',
       'Parse a 16+ week Google Sheet (every mesocycle, weekly workout, and long run) into a week-keyed map you can page through, forward to any planned week or back across the season.',
       'Each week\'s mileage goal comes straight from the coach\'s "percent of peak" in the sheet, scaled to my peak, so an 80% week reads as a 20-mile target. That one number kept every week personal and focused on exactly what I needed right then, instead of getting lost in the sauce or staring too far down the season.',
       'Hardened three live integrations against real-world failure modes: credential formatting, server-side URL resolution, and API rate limits.',
@@ -369,7 +369,8 @@ export const caseStudies = [
       { type: 'image', src: '/strava-dashboard/brief.png', caption: 'It started with one brief and a race on the calendar', featured: true },
       { type: 'image', src: '/strava-dashboard/architecture.svg', caption: 'Three sources that never talked to each other, wired into one Next.js dashboard: Garmin and Strava for the actual workouts, a season-long Google Sheet for the plan, and weekly coach emails for the adjustments.' },
       { type: 'image', src: '/strava-dashboard/milestones.svg', caption: 'Six milestones, kickoff to live in under two days: the Strava MCP server, plan vs actual, AI workout analysis, history backfill, week navigation, and the season view.' },
-      { type: 'image', src: '/strava-dashboard/plan-vs-actual.png', caption: 'The payoff view: the week\'s % of peak target, the coach\'s reps, my own daily plan, and the actual Strava workout, all in one row.' },
+      { type: 'image', src: '/strava-dashboard/plan-vs-actual_compressed.jpeg', caption: 'The payoff view: the week\'s % of peak target, the coach\'s reps, my own daily plan, and the actual Strava workout, all in one row.' },
+      { type: 'image', src: '/strava-dashboard/workout-analysis_compressed.jpeg', caption: 'Individual workouts can be selected and analyzed by a Claude-powered coach, with a plain-language read on how the workout went and recommendations for next time.' },
       { type: 'image', src: '/strava-dashboard/this-week.png', caption: 'The week at a glance, plus the 12-week mileage trend and a countdown to race day.' },
       { type: 'image', src: '/strava-dashboard/history.png', caption: 'Every tracked week, rendered from the same clean source as the live dashboard.' },
     ],
