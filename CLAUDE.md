@@ -6,9 +6,9 @@
 - `data/caseStudies.js` — single source of truth for all case studies and personal projects. Each entry has a `slug`, `title`, `description`, `tags`, etc.
 - `data/projects.js` — currently empty; legacy hook kept for the homepage merge logic.
 - `data/tags.js` — **canonical tag list** for both Work and Projects (see below).
-- `components/TagPill.tsx` — pill primitive. Quiet outlined at rest, fills with brand color on hover or when active.
-- `components/FilterableWorkGrid.tsx` — home page Work & Projects grid with click-to-filter.
-- `components/FilterableProjectsGrid.tsx` — /projects grid with click-to-filter.
+- `components/TagPill.tsx` — pill primitive. Quiet outlined at rest, fills with brand color on hover or when active. Supports `onClick` for filtering, but no caller currently uses it.
+- `components/FilterableWorkGrid.tsx` — home page Work & Projects grid. Filter bar is intentionally absent for now; rendering only.
+- `components/FilterableProjectsGrid.tsx` — /projects grid. Same — filter bar removed for now, can be re-added by mapping a `<TagPill onClick=…>` row above the grid.
 
 ## Canonical Tags
 
@@ -54,8 +54,8 @@ If you skip the explicit mapping, `colorKeyForTag()` falls back to a stable hash
 
 ## Tag behavior
 - Tags render via `<TagPill />`. Pass an `onClick` to make them filter buttons; omit it for static display.
-- Filter state is local per-page (`useState`), not URL-based. Clicking a tag toggles it; click again or use the **Clear** button to reset.
 - At rest: quiet outlined pill. On hover OR when active: filled with the tag's brand color — matches the chip style on `/about`.
+- Filter UI is currently off — a previous version showed a full filter bar at the top of each grid, but with the current dataset many tags only had a single result and the bar felt noisy. The capability remains in `TagPill`; re-add a `<TagPill onClick=…>` row above the grid + local `useState` to bring it back.
 
 ## Conventions
 - Keep `data/caseStudies.js` ordered roughly chronologically; the homepage WORK_ORDER array controls explicit display order.

@@ -39,7 +39,15 @@ export function TagPill({
   const state = lit ? activeCls : REST_CLASSES
 
   if (!onClick) {
-    return <span className={`${base} ${state}`}>{tag}</span>
+    return (
+      <span
+        className={`${base} ${state}`}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        {tag}
+      </span>
+    )
   }
 
   return (
