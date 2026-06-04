@@ -466,7 +466,7 @@ export const caseStudies = [
     description: 'A family event microsite for our annual Christmas baking day — with a hidden mini-game at the bottom.',
     company: null,
     client: null,
-    tags: ['JavaScript', 'Microsite', 'AI-Assisted', 'Game Dev'],
+    tags: ['JavaScript', 'Microsite', 'Game Dev'],
     url: 'https://2025bakingday.mitchleonard.com',
     results: [],
     context: `My wife and I host her family every year for a Christmas Baking Day. Usually a group text does the job. This year I built a microsite instead — event details, photos from previous years, and a mini-game hidden at the very bottom that immediately sparked group-chat competition.`,
