@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 510" font-family="system-ui,-apple-system,sans-serif">
+
+  <rect width="1200" height="510" fill="#F9F9F7"/>
+
+  <!-- Title -->
+  <text x="600" y="40" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#0f0f0f" fill-opacity="0.65" text-anchor="middle">Build Milestones</text>
+
+  <!-- ── ROW 1 ── -->
+
+  <!-- 1: MCP Server -->
+  <rect x="40" y="68" width="340" height="188" rx="12" fill="white" stroke="#0f0f0f" stroke-width="1" stroke-opacity="0.1"/>
+  <circle cx="72" cy="106" r="19" fill="#0f0f0f"/>
+  <text x="72" y="112" font-size="14" font-weight="700" fill="white" text-anchor="middle">1</text>
+  <text x="104" y="111" font-size="15" font-weight="700" fill="#0f0f0f">Strava MCP Server</text>
+  <text x="58" y="143" font-size="12" fill="#0f0f0f" fill-opacity="0.48">5 tools so Claude can answer "what did</text>
+  <text x="58" y="161" font-size="12" fill="#0f0f0f" fill-opacity="0.48">I run this week?" with real data, not</text>
+  <text x="58" y="179" font-size="12" fill="#0f0f0f" fill-opacity="0.48">a guess.</text>
+  <rect x="40" y="244" width="340" height="3" rx="1.5" fill="#0f0f0f" fill-opacity="0.08"/>
+
+  <!-- 2: Plan vs Actual -->
+  <rect x="430" y="68" width="340" height="188" rx="12" fill="white" stroke="#85d4ff" stroke-width="1.5"/>
+  <circle cx="462" cy="106" r="19" fill="#85d4ff"/>
+  <text x="462" y="112" font-size="14" font-weight="700" fill="#0f0f0f" text-anchor="middle">2</text>
+  <text x="494" y="111" font-size="15" font-weight="700" fill="#0f0f0f">Plan vs Actual</text>
+  <text x="448" y="143" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Coach plan + Strava actuals in one table.</text>
+  <text x="448" y="161" font-size="12" fill="#0f0f0f" fill-opacity="0.48">The week's % of peak target sits on</text>
+  <text x="448" y="179" font-size="12" fill="#0f0f0f" fill-opacity="0.48">top, scaled to my 25-mile peak.</text>
+  <rect x="430" y="244" width="340" height="3" rx="1.5" fill="#85d4ff" fill-opacity="0.6"/>
+
+  <!-- 3: AI Analysis -->
+  <rect x="820" y="68" width="340" height="188" rx="12" fill="white" stroke="#7C3AED" stroke-width="1.5"/>
+  <circle cx="852" cy="106" r="19" fill="#7C3AED"/>
+  <text x="852" y="112" font-size="14" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="884" y="111" font-size="15" font-weight="700" fill="#0f0f0f">AI Workout Analysis</text>
+  <text x="838" y="143" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Every workout opens to Claude streaming</text>
+  <text x="838" y="161" font-size="12" fill="#0f0f0f" fill-opacity="0.48">analysis: How It Went, then Next Time.</text>
+  <text x="838" y="179" font-size="12" fill="#0f0f0f" fill-opacity="0.48">2 sections, 2 sentences each.</text>
+  <rect x="820" y="244" width="340" height="3" rx="1.5" fill="#7C3AED" fill-opacity="0.5"/>
+
+  <!-- ── ROW 2 ── -->
+
+  <!-- 4: 6-Week Backfill -->
+  <rect x="40" y="278" width="340" height="188" rx="12" fill="white" stroke="#FC4C02" stroke-width="1.5"/>
+  <circle cx="72" cy="316" r="19" fill="#FC4C02"/>
+  <text x="72" y="322" font-size="14" font-weight="700" fill="white" text-anchor="middle">4</text>
+  <text x="104" y="321" font-size="15" font-weight="700" fill="#0f0f0f">6-Week Backfill</text>
+  <text x="58" y="353" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Past 6 weeks auto-populated from Strava</text>
+  <text x="58" y="371" font-size="12" fill="#0f0f0f" fill-opacity="0.48">in parallel on first load, cached to disk.</text>
+  <text x="58" y="389" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Weeks older than 14 days never re-fetch.</text>
+  <rect x="40" y="454" width="340" height="3" rx="1.5" fill="#FC4C02" fill-opacity="0.5"/>
+
+  <!-- 5: Week Navigation -->
+  <rect x="430" y="278" width="340" height="188" rx="12" fill="white" stroke="#34A853" stroke-width="1.5"/>
+  <circle cx="462" cy="316" r="19" fill="#34A853"/>
+  <text x="462" y="322" font-size="14" font-weight="700" fill="white" text-anchor="middle">5</text>
+  <text x="494" y="321" font-size="15" font-weight="700" fill="#0f0f0f">Week Navigation</text>
+  <text x="448" y="353" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Arrow-navigate any week. Future weeks</text>
+  <text x="448" y="371" font-size="12" fill="#0f0f0f" fill-opacity="0.48">pull from Google Sheet. Past weeks show</text>
+  <text x="448" y="389" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Strava actuals from the backfill.</text>
+  <rect x="430" y="454" width="340" height="3" rx="1.5" fill="#34A853" fill-opacity="0.5"/>
+
+  <!-- 6: Season History -->
+  <rect x="820" y="278" width="340" height="188" rx="12" fill="white" stroke="#f56e3d" stroke-width="1.5"/>
+  <circle cx="852" cy="316" r="19" fill="#f56e3d"/>
+  <text x="852" y="322" font-size="14" font-weight="700" fill="white" text-anchor="middle">6</text>
+  <text x="884" y="321" font-size="15" font-weight="700" fill="#0f0f0f">Season History</text>
+  <text x="838" y="353" font-size="12" fill="#0f0f0f" fill-opacity="0.48">Total miles and workout breakdowns</text>
+  <text x="838" y="371" font-size="12" fill="#0f0f0f" fill-opacity="0.48">across every tracked week, plan and</text>
+  <text x="838" y="389" font-size="12" fill="#0f0f0f" fill-opacity="0.48">actuals from the same clean source.</text>
+  <rect x="820" y="454" width="340" height="3" rx="1.5" fill="#f56e3d" fill-opacity="0.5"/>
+
+</svg>

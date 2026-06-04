@@ -8,7 +8,7 @@ interface Result {
 }
 
 function parseResultValue(value: string) {
-  const match = value.match(/^([+]?)([\d,]+(?:\.\d+)?)(.*?)$/)
+  const match = value.match(/^([+<>~]?)([\d,]+(?:\.\d+)?)(.*?)$/)
   if (!match) return { prefix: '', num: 0, suffix: value, decimals: 0, hasCommas: false }
   const [, prefix, rawNum, suffix] = match
   const hasCommas = rawNum.includes(',')
