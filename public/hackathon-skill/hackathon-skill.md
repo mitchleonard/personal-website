@@ -78,6 +78,7 @@ NNN-{slug}-YYYYMMDD/
 ├── src/                # the actual build artifacts go here
 └── project-page/
     ├── content.md      # mitchleonard.com-style page (templates/project-page.md.tmpl)
+    ├── preview.png     # visual card thumbnail (generated at ship time)
     └── card.json       # index card meta (templates/card.json.tmpl)
 ```
 
@@ -199,9 +200,28 @@ Triggered by "ship it", "wrap the hackathon", "close the project", or when the t
 - `mcps_used` = count of INVENTORY.md entries
 - `screenshots` = count in `assets/screenshots/`
 
+### C2.5. Generate the preview image
+
+Every project page needs a visual thumbnail — it's what shows up on mitchleonard.com cards and in social shares. Generate it before writing the project page so the file path is ready for `card.json`.
+
+Use `mcp__visualize__show_widget` to render an SVG preview card (aim for ~600×400) containing:
+- Project title — large, prominent
+- One-sentence pitch — medium weight, below the title
+- Tech tags as pill/chip elements
+- Key stat: "Built in {elapsed_min} min"
+- Dark or neutral background that reads well as a small card thumbnail
+
+Then use `mcp__computer-use__screenshot` + zoom to capture the rendered widget and save it to `project-page/preview.png`.
+
+If computer-use isn't available (Claude Code), write the SVG directly to `project-page/preview.svg` instead — the user can screenshot or export it.
+
+The preview image is a required deliverable. Don't skip it.
+
 ### C3. Generate the project page
 
-Open `project-page/content.md` (already templated) and fill it with content drawn from LOG.md + the original brief, following the mitchleonard.com structure exactly:
+Open `project-page/content.md` and **replace every placeholder** with real content drawn from LOG.md and the original brief. Check before saving: no bare `{TOKEN}` strings should remain in the final file.
+
+Follow the mitchleonard.com structure:
 
 ```
 # {Project Name}
@@ -212,15 +232,15 @@ Open `project-page/content.md` (already templated) and fill it with content draw
 Quick read
 
 ## Context
-{Problem being solved — 2–4 sentences from the brief}
+{2–4 sentences — see voice guidance below}
 
 ## Challenge
-{The specific tension or constraint — derive from the kickoff brief + any pivots logged}
+{1 paragraph — see voice guidance below}
 
 ## Execution
-- {3–6 bullets summarizing what was built, drawn from LOG.md entries}
-- {Include the timebox: "Built in {elapsed_min} minutes."}
-- {Include the tooling: "Tools: {comma-separated INVENTORY.md entries}"}
+{3–6 bullets — see voice guidance below}
+- Built in {elapsed_min} minutes across {commits} commits.
+- Tools: {comma-separated INVENTORY.md entries}.
 
 ## Work
 {Screenshot embeds with captions — one per milestone PNG, captioned from the LOG.md entry that matches}
@@ -231,11 +251,58 @@ Built {date} · {elapsed_min} min · {commits} commits · {mcps_used} tools
 [GitHub →]({repo_url}) [optional]
 ```
 
-Voice rules — match mitchleonard.com:
+---
+
+#### Voice guidance — Context
+
+Open with the **specific situation** — a real person, place, or pain point. Not a problem statement, not a product brief. Write it like you're explaining it to a colleague.
+
+**Strong:**
+> "My wife is a Caitlin Clark and Indiana Fever superfan. Keeping up with every game means jumping between ESPN, Yahoo Sports, the team site, and her own calendar — and none of those apps are built for one team or one fan. She isn't techy. She just wants the right info to land in front of her at the right time."
+
+**Weak:**
+> "The challenge was managing sports schedules across multiple platforms for dedicated fans who need timely information."
+
+The weak version could describe a hundred products. The strong version is only ever true of this one.
+
+---
+
+#### Voice guidance — Challenge
+
+One paragraph, one real constraint. Ask: *what made this non-trivial?* What would have killed the whole thing if you'd gotten it wrong? That's the Challenge. Don't restate the goal, don't list features, don't describe the tech stack.
+
+**Strong:**
+> "Build something that updates itself, lives inside the tools she already opens every day, and never asks her to install anything. Auto-update was the real constraint — the WNBA schedule shifts mid-season (channel swaps, postponements, playoff seeding), so a one-time data dump wouldn't survive a week."
+
+**Weak:**
+> "The project required integrating multiple data sources and handling real-time schedule changes while maintaining a simple user experience across different platforms."
+
+---
+
+#### Voice guidance — Execution bullets
+
+Past-tense action verbs. Each bullet = one shipped thing + what it does or proved. Not "Used X" — built/wrote/wired/deployed/extracted something specific.
+
+**Strong:**
+> - Wrote a pure-Python ICS generator with stable per-game UIDs and a 12-hour refresh trigger so Google Calendar auto-updates on schedule changes.
+> - Deployed to Vercel with a `text/calendar` content-type header and CORS allow-* so the feed subscribes directly from any calendar app.
+> - × Pivot: abandoned a Cowork dashboard mid-build — it required a paid Claude account on her side. Switched to a static Vercel deploy that works with any free tool she already has.
+
+**Weak:**
+> - Used Python to create an ICS file for calendar integration.
+> - Set up Vercel deployment for hosting the file.
+> - Changed approach due to technical constraints with the original plan.
+
+Pull bullets directly from `LOG.md` entries, especially pivots. 3–6 bullets covering the major build decisions and the final outcome.
+
+---
+
+#### General voice rules — all sections
+
 - Plain, declarative, no buzzwords
 - Banned phrases: "leveraged", "utilized", "harnessed", "drove engagement", "not just X, but Y", "what made this work", "the opportunity was"
-- Em-dashes are fine. Em-dashes for emphasis are fine.
-- Bullets in Execution can be short fragments. Other sections in prose.
+- Em-dashes are fine
+- Bullets in Execution can be short fragments; Context and Challenge are prose
 
 ### C3a. Generate `project-page/site-entry.js` (Phase D fuel)
 
@@ -289,6 +356,7 @@ For mitchleonard.com today (Next.js `data/caseStudies.js`), the schema is:
   "slug": "{slug}",
   "elapsed_min": {N},
   "date_iso": "YYYY-MM-DD",
+  "preview_image": "preview.png",
   "live_url": "{optional}",
   "repo_url": "{optional}"
 }
@@ -313,9 +381,10 @@ If `gh` isn't installed, fall back to plain `git remote add` + `git push` instru
 In Cowork, call `mcp__cowork__present_files` for:
 
 1. `project-page/content.md` — drop into mitchleonard.com
-2. `project-page/card.json` — for the projects index
-3. `README.md` — the public-facing project README
-4. The whole folder as a `.zip` for easy archive
+2. `project-page/preview.png` — thumbnail for the project card
+3. `project-page/card.json` — for the projects index
+4. `README.md` — the public-facing project README
+5. The whole folder as a `.zip` for easy archive
 
 Print a closeout card:
 
@@ -326,6 +395,7 @@ Commits:   {N}
 Tools:     {N} ({comma-separated})
 Pivots:    {N}
 Page:      {path to content.md}
+Preview:   {path to preview.png}
 Repo:      gh repo create hackathon-NNN-{slug} --public --source=. --remote=origin --push
 ```
 
@@ -446,3 +516,4 @@ The helper:
 5. **Git commits are the receipt.** Every milestone screenshot has a paired commit with the same `[+MM:SS]` prefix.
 6. **Skill stays in the background.** During build phase, do not narrate every log append. The user is building, not watching Claude file paperwork.
 7. **Ask before destructive ops.** Never `rm`, never overwrite a non-template file, never force-push.
+8. **No bare placeholders in shipped files.** Every `{TOKEN}` in `content.md` and `card.json` must be replaced before presenting. Scan both files before calling `present_files`.
