@@ -28,6 +28,8 @@ export const PROJECT_TAGS = {
   'Documentation':  'neutral',
   'Hackathon':      'tangerine',
   'MCP Servers':    'cornflower',
+  'AI Chatbot':     'cornflower',
+  'API':            'cornflower',
   'Dashboard':      'yellow-green',
   'Full Stack':     'cornflower',
   'React':          'frozen-lake',
