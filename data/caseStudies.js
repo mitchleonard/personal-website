@@ -372,7 +372,7 @@ export const caseStudies = [
       { type: 'image', src: '/fever-hq/03-pivot.png', caption: 'The pivot. From a text bot dream to a custom installable web app on my own domain.' },
       { type: 'image', src: '/fever-hq/icon-512.png', caption: 'The app icon, generated in OpenAI\'s gpt-image-2 model.', description: 'The icon ships with the PWA when she installs it to her home screen. Generated in OpenAI\'s gpt-image-2 image model on a Fever-coded palette, then resized into the standard PWA icon set (192, 512, 180 for Apple touch, 16 and 32 for favicons).', annotated: true },
       { type: 'image', src: '/fever-hq/preview.png', caption: 'The shipped app. Next-game card up top with a live countdown, chat surface below, schedule and calendar one tap away.', featured: true },
-      { type: 'image', src: '/fever-hq/06-chat.png', caption: 'A real-time conversation. She asks plain English. The bot answers in sports-radio voice, with the channel and the Central-Time tipoff baked in.' },
+      { type: 'image', src: '/fever-hq/06-chat.jpg', caption: 'A real-time conversation. She asks plain English. The bot answers in sports-radio voice, with the channel and the Central-Time tipoff baked in.' },
     ],
     next: 'strava-dashboard',
   },
