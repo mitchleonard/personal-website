@@ -167,8 +167,9 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
   if (item.type === 'video') {
     return <AutoplayVideo src={item.src} silent={item.silent} className={className} />
   }
-  // next/image strips GIF animation (converts to static WebP); keep plain <img> for those
-  if (item.type === 'gif') {
+  // next/image strips GIF animation (converts to static WebP); keep plain <img> for those.
+  // Also skip optimization for external URLs — next/image requires domain allowlisting in next.config.js.
+  if (item.type === 'gif' || item.src.startsWith('http')) {
     return (
       <div className={className}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
