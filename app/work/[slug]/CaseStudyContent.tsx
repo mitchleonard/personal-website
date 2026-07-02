@@ -167,6 +167,15 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
   if (item.type === 'video') {
     return <AutoplayVideo src={item.src} silent={item.silent} className={className} />
   }
+  // next/image strips GIF animation (converts to static WebP); keep plain <img> for those
+  if (item.type === 'gif') {
+    return (
+      <div className={className}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={item.src} alt={item.caption || ''} className="w-full" loading="lazy" />
+      </div>
+    )
+  }
   return (
     <div className={className}>
       <Image
