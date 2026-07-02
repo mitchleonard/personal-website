@@ -500,7 +500,7 @@ export const caseStudies = [
     ],
     impact: null,
     visuals: [
-      { type: 'video', src: '/personal-pebblepath/PebblePath_AppDemo_DailyCheckinBuddy.mp4', caption: 'App demo', featured: true, silent: true },
+      { type: 'video', src: '/personal-pebblepath/PebblePath_AppDemo_DailyCheckinBuddy.mp4', caption: 'Full app walkthrough — daily check-in, food logging, and the dashboard in action.', silent: true },
       { type: 'image', src: '/personal-pebblepath/PebblePath_Home_HealthTracking.png', description: 'One home screen for mood, water, workouts, and notes. The whole check-in in under two minutes.', annotated: true },
       { type: 'image', src: '/personal-pebblepath/PebblePath_Home_FoodLog.png', description: 'Log what you ate without counting anything — flexible enough to actually be honest with.', annotated: true },
       { type: 'image', src: '/personal-pebblepath/PebblePath_Dashboard_InsightsSummary.png', description: 'High-level read on how your week shaped up across all tracked signals.', annotated: true },

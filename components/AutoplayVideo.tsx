@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 interface AutoplayVideoProps {
   src: string
@@ -10,7 +10,25 @@ interface AutoplayVideoProps {
 
 export default function AutoplayVideo({ src, silent = false, className = '' }: AutoplayVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const [unlocked, setUnlocked] = useState(false)
+  const [activeSrc, setActiveSrc] = useState<string | null>(null)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setActiveSrc(src)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [src])
 
   const unlock = () => {
     const v = videoRef.current
@@ -23,10 +41,10 @@ export default function AutoplayVideo({ src, silent = false, className = '' }: A
   }
 
   return (
-    <div className={`relative group ${className}`}>
+    <div ref={containerRef} className={`relative group ${className}`}>
       <video
         ref={videoRef}
-        src={src}
+        src={activeSrc ?? undefined}
         autoPlay
         muted
         loop

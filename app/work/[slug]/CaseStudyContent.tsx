@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import AutoplayVideo from '@/components/AutoplayVideo'
 import ResultsBlock from '@/components/ResultsBlock'
 import { RandomHoverButton } from '@/components/BrandAccent'
@@ -166,10 +167,26 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
   if (item.type === 'video') {
     return <AutoplayVideo src={item.src} silent={item.silent} className={className} />
   }
+  // next/image strips GIF animation (converts to static WebP); keep plain <img> for those.
+  // Also skip optimization for external URLs — next/image requires domain allowlisting in next.config.js.
+  if (item.type === 'gif' || item.src.startsWith('http')) {
+    return (
+      <div className={className}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={item.src} alt={item.caption || ''} className="w-full" loading="lazy" />
+      </div>
+    )
+  }
   return (
     <div className={className}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={item.src} alt={item.caption || ''} className="w-full" loading="lazy" />
+      <Image
+        src={item.src}
+        alt={item.caption || ''}
+        width={1200}
+        height={900}
+        sizes="(min-width: 768px) 800px, 100vw"
+        style={{ width: '100%', height: 'auto' }}
+      />
     </div>
   )
 }
@@ -187,7 +204,7 @@ function SplitMedia({ item, index }: { item: Visual; index: number }) {
           {item.description}
         </p>
       )}
-      <div className="max-w-xs mx-auto md:mx-0">
+      <div className="w-full">
         <VisualMedia item={item} />
       </div>
       {!imageRight && (

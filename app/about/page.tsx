@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -29,12 +30,13 @@ export default function AboutPage() {
           </div>
 
           {/* Right — hero photo */}
-          <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="relative w-full rounded-sm overflow-hidden h-80 md:h-auto md:aspect-[3/4]">
+            <Image
               src="/photos-mitch/Mitch-RaganHeadshot.jpg"
               alt="Mitch Leonard"
-              className="w-full rounded-sm object-cover object-top max-h-80 md:max-h-none"
+              fill
+              priority
+              className="object-cover object-top"
             />
           </div>
         </div>
@@ -111,29 +113,41 @@ export default function AboutPage() {
 
           {/* Right: staggered photo grid */}
           <div className="grid grid-cols-2 gap-4 items-start">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/photos-mitch/Mitch-BallPit.JPG"
               alt="Mitch in a ball pit"
+              width={600}
+              height={800}
+              sizes="(min-width: 768px) 25vw, 50vw"
               className="w-full rounded-sm"
+              style={{ height: 'auto' }}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/photos-mitch/Mitch-Helicopter.JPG"
               alt="Mitch in a helicopter"
+              width={600}
+              height={800}
+              sizes="(min-width: 768px) 25vw, 50vw"
               className="w-full rounded-sm mt-10"
+              style={{ height: 'auto' }}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/photos-mitch/Mitch-Magnolia.jpg"
               alt="Mitch at Magnolia"
+              width={600}
+              height={800}
+              sizes="(min-width: 768px) 25vw, 50vw"
               className="w-full rounded-sm"
+              style={{ height: 'auto' }}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/photos-mitch/Mitch.Leonard.jpeg"
               alt="Mitch Leonard"
+              width={600}
+              height={800}
+              sizes="(min-width: 768px) 25vw, 50vw"
               className="w-full rounded-sm mt-10"
+              style={{ height: 'auto' }}
             />
           </div>
         </div>
