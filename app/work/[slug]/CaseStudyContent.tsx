@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import AutoplayVideo from '@/components/AutoplayVideo'
 import ResultsBlock from '@/components/ResultsBlock'
 import { RandomHoverButton } from '@/components/BrandAccent'
@@ -168,8 +169,14 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
   }
   return (
     <div className={className}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={item.src} alt={item.caption || ''} className="w-full" loading="lazy" />
+      <Image
+        src={item.src}
+        alt={item.caption || ''}
+        width={1200}
+        height={900}
+        sizes="(min-width: 768px) 800px, 100vw"
+        style={{ width: '100%', height: 'auto' }}
+      />
     </div>
   )
 }
