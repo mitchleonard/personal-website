@@ -204,7 +204,7 @@ function SplitMedia({ item, index }: { item: Visual; index: number }) {
           {item.description}
         </p>
       )}
-      <div className="max-w-xs mx-auto md:mx-0">
+      <div className="w-full">
         <VisualMedia item={item} />
       </div>
       {!imageRight && (
