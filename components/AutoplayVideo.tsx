@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
+import { videoUrl } from '@/lib/videoUrl'
 
 interface AutoplayVideoProps {
   src: string
@@ -44,7 +45,7 @@ export default function AutoplayVideo({ src, silent = false, className = '' }: A
     <div ref={containerRef} className={`relative group ${className}`}>
       <video
         ref={videoRef}
-        src={activeSrc ?? undefined}
+        src={activeSrc ? videoUrl(activeSrc) : undefined}
         autoPlay
         muted
         loop

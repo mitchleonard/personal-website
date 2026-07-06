@@ -1,5 +1,8 @@
 # Personal Website — Working Notes
 
+## ⏳ DEFERRED — Path B: move committed videos off git (do next time you touch this repo)
+The `.git` here is ~236 MB because ~15 raw `.mp4` reels are committed into history (Vercel flags this as `NEXTJS_NO_SELF_HOSTED_VIDEOS`). Plan: upload the `public/` videos to Vercel Blob, swap each `<video src>` to the Blob URL, confirm playback, THEN `git filter-repo --path-glob 'public/**/*.mp4' --path-glob 'public/**/*.MP4' --invert-paths` + force-push + `git gc`. Videos keep playing throughout (serving ≠ versioning). Full steps: `~/Documents/Mac-Storage-Runbook.md`.
+
 ## Project structure quick-ref
 
 - `app/` — Next.js App Router pages. `app/page.tsx` is the home (hero + Work & Projects grid). `app/projects/page.tsx` is the personal-projects index.

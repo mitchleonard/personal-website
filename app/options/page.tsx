@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 import Nav from '@/components/Nav'
+import { videoUrl } from '@/lib/videoUrl'
 
 // ─────────────────────────────────────────────────────────────
 // Shared counter hook (for animated results)
@@ -405,7 +406,7 @@ const FARN_IMAGES = [
 function FarnVideo({ src }: { src: string }) {
   return (
     <video
-      src={src}
+      src={videoUrl(src)}
       autoPlay
       muted
       loop
