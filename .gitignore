@@ -37,3 +37,7 @@ next-env.d.ts
 
 # Editor / IDE local state
 .claude/
+
+# Videos live in Vercel Blob, not git
+public/**/*.mp4
+public/**/*.MP4
