@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+The dev server binds to `0.0.0.0` so hosted preview tools can forward port `3000`. In a remote container, open the environment-provided forwarded URL for port `3000` instead of typing `127.0.0.1:3000` in your local browser.
 
 ## Environment Variables
 
