@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
   "buildCommand": "next build",
-  "devCommand": "next dev",
+  "devCommand": "next dev -H 0.0.0.0",
   "installCommand": "npm install"
 }
