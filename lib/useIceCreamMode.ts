@@ -62,7 +62,19 @@ export function useIceCreamMode(): [boolean, () => void] {
     }
   }, [])
 
-  const toggle = () => setIceCream(!isIceCreamOn())
+  const toggle = () => {
+    const turningOn = !isIceCreamOn()
+    // iOS 13+ gates gyroscope data behind a permission that can only be
+    // requested from a user gesture — this click is one. Denied/unsupported
+    // just means sprinkles fall straight down.
+    if (turningOn) {
+      const doe = window.DeviceOrientationEvent as unknown as
+        | { requestPermission?: () => Promise<string> }
+        | undefined
+      doe?.requestPermission?.().catch(() => {})
+    }
+    setIceCream(turningOn)
+  }
 
   return [on, toggle]
 }

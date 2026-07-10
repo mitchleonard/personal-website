@@ -221,27 +221,6 @@ html[data-icecream] body::after {
   filter: drop-shadow(0 3px 2px rgb(74 35 23 / 0.12));
 }
 
-/* Cherry on top — nestled into the cream at top-center, gently bobbing */
-html[data-icecream] body::before {
-  content: '🍒';
-  position: fixed;
-  top: 8px;
-  left: 50%;
-  margin-left: -15px;
-  font-size: 30px;
-  line-height: 1;
-  pointer-events: none;
-  z-index: 103;
-  transform-origin: 50% -8px;
-  animation: cherry-bob 2.4s ease-in-out infinite;
-  filter: drop-shadow(0 2px 2px rgb(74 35 23 / 0.25));
-}
-
-@keyframes cherry-bob {
-  0%, 100% { transform: rotate(-6deg); }
-  50%      { transform: rotate(6deg); }
-}
-
 /* The 🍦 in the toggle buttons wiggles while the mode is on */
 html[data-icecream] .ic-cone {
   display: inline-block;
@@ -260,7 +239,17 @@ html[data-icecream] .ic-cone {
   inset: 0;
   overflow: hidden;      /* sway near the edges must never cause horizontal scroll */
   pointer-events: none;
-  z-index: 90;           /* above content + nav (z-50), below mobile menu (z-100) */
+  z-index: 110;          /* above everything — mobile menu (z-100/101) and cream (z-102) */
+}
+
+/* Gyro layer — rotated by the phone's left/right tilt so sprinkles fall
+   toward the low side. Oversized so the rotated field still covers the
+   viewport; the transition smooths the ~60Hz sensor stream. */
+.sprinkle-tilt {
+  position: absolute;
+  inset: -25%;
+  transition: transform 300ms ease-out;
+  will-change: transform;
 }
 
 .sprinkle {
@@ -282,10 +271,11 @@ html[data-icecream] .ic-cone {
   height: 7px;
 }
 
-/* Fall and sway both animate transform, so they live on nested elements */
+/* Fall and sway both animate transform, so they live on nested elements.
+   Travel spans the oversized .sprinkle-tilt layer (starts at -25vh). */
 @keyframes sprinkle-fall {
   from { transform: translateY(-8vh); }
-  to   { transform: translateY(108vh); }
+  to   { transform: translateY(160vh); }
 }
 
 @keyframes sprinkle-sway {
@@ -318,10 +308,10 @@ html[data-icecream] .ic-cone {
 
 /* Lighter flurry on phones */
 @media (max-width: 640px) {
-  .sprinkle-field .sprinkle:nth-child(n + 21) {
+  .sprinkle-field .sprinkle:nth-child(n + 37) {
     display: none;
   }
-  .sprinkle-blizzard .sprinkle:nth-child(n + 61) {
+  .sprinkle-blizzard .sprinkle:nth-child(n + 101) {
     display: none;
   }
 }
@@ -330,8 +320,7 @@ html[data-icecream] .ic-cone {
   .sprinkle-overlay {
     display: none;
   }
-  html[data-icecream] .ic-cone,
-  html[data-icecream] body::before {
+  html[data-icecream] .ic-cone {
     animation: none;
   }
 }

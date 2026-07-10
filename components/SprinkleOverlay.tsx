@@ -108,9 +108,10 @@ export default function SprinkleOverlay() {
   const [blizzard, setBlizzard] = useState(false)
 
   // Only generated client-side after toggle-on, so Math.random() never
-  // participates in hydration.
-  const sprinkles = useMemo(() => makeSprinkles(36), [])
-  const blizzardSprinkles = useMemo(() => (blizzard ? makeSprinkles(130, 1.5, 1.5) : []), [blizzard])
+  // participates in hydration. Counts/durations are sized for the oversized
+  // .sprinkle-tilt layer (~2x the fall distance of the bare viewport).
+  const sprinkles = useMemo(() => makeSprinkles(60, 5.5, 6.5), [])
+  const blizzardSprinkles = useMemo(() => (blizzard ? makeSprinkles(170, 2, 2) : []), [blizzard])
 
   // Click bursts — a pop of mini sprinkles wherever the pointer goes down
   const burstTimeouts = useRef<ReturnType<typeof setTimeout>[]>([])
@@ -150,6 +151,23 @@ export default function SprinkleOverlay() {
     }
   }, [])
 
+  // Gyro tilt — rotate the sprinkle field opposite the phone's left/right
+  // tilt (gamma) so sprinkles fall toward the low side. Desktop never fires
+  // deviceorientation, so the transform stays identity there. iOS motion
+  // permission is requested from the toggle tap (see lib/useIceCreamMode.ts).
+  const tiltRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (!on) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const onOrientation = (e: DeviceOrientationEvent) => {
+      if (e.gamma == null || !tiltRef.current) return
+      const gamma = Math.max(-28, Math.min(28, e.gamma))
+      tiltRef.current.style.transform = `rotate(${(-gamma).toFixed(1)}deg)`
+    }
+    window.addEventListener('deviceorientation', onOrientation)
+    return () => window.removeEventListener('deviceorientation', onOrientation)
+  }, [on])
+
   // Tab chrome — 🍦 title prefix + cone favicon while the mode is on.
   // Next.js rewrites <title> (and may re-render head links) on navigation,
   // so a MutationObserver re-applies both; the guards make re-runs no-ops.
@@ -184,8 +202,10 @@ export default function SprinkleOverlay() {
 
   return (
     <div className="sprinkle-overlay" aria-hidden>
-      <SprinkleField sprinkles={sprinkles} />
-      {blizzard && <SprinkleField sprinkles={blizzardSprinkles} className="sprinkle-blizzard" />}
+      <div className="sprinkle-tilt" ref={tiltRef}>
+        <SprinkleField sprinkles={sprinkles} />
+        {blizzard && <SprinkleField sprinkles={blizzardSprinkles} className="sprinkle-blizzard" />}
+      </div>
       {bursts.map((burst) =>
         burst.pieces.map((p, i) => (
           <span

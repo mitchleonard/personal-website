@@ -172,10 +172,7 @@ export default function Nav() {
             />
           ))}
           {/* Stays open on toggle so the palette swap is visible live */}
-          <IceCreamToggle
-            label="Ice cream mode"
-            className="flex items-center gap-4 py-4 px-4 rounded-xl font-sans text-sm text-near-black/60 text-left"
-          />
+          <IceCreamToggle className="py-4 px-4 text-3xl leading-none w-fit" />
         </nav>
       </div>
     </>
