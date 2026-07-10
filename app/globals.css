@@ -242,13 +242,18 @@ html[data-icecream] .ic-cone {
   z-index: 110;          /* above everything — mobile menu (z-100/101) and cream (z-102) */
 }
 
-/* Gyro layer — rotated by the phone's left/right tilt so sprinkles fall
-   toward the low side. Oversized so the rotated field still covers the
-   viewport; the transition smooths the ~60Hz sensor stream. */
+/* Gyro layer — rotated by the phone's tilt so sprinkles fall toward the low
+   side (see SprinkleOverlay.tsx). A square centered on the viewport and sized
+   past its diagonal (150vmax ≥ √2·vmax) so it keeps covering the screen at any
+   rotation, even a full flip. Rotation happens about its own centre; smoothing
+   lives in JS now, so there is no CSS transition to fight the sensor stream. */
 .sprinkle-tilt {
   position: absolute;
-  inset: -25%;
-  transition: transform 300ms ease-out;
+  top: 50%;
+  left: 50%;
+  width: 150vmax;
+  height: 150vmax;
+  margin: -75vmax 0 0 -75vmax;
   will-change: transform;
 }
 
@@ -272,7 +277,8 @@ html[data-icecream] .ic-cone {
 }
 
 /* Fall and sway both animate transform, so they live on nested elements.
-   Travel spans the oversized .sprinkle-tilt layer (starts at -25vh). */
+   The field top sits above the viewport, so this carries a sprinkle from just
+   overhead down through the screen and off the bottom before it loops. */
 @keyframes sprinkle-fall {
   from { transform: translateY(-8vh); }
   to   { transform: translateY(160vh); }
@@ -308,10 +314,10 @@ html[data-icecream] .ic-cone {
 
 /* Lighter flurry on phones */
 @media (max-width: 640px) {
-  .sprinkle-field .sprinkle:nth-child(n + 37) {
+  .sprinkle-field .sprinkle:nth-child(n + 61) {
     display: none;
   }
-  .sprinkle-blizzard .sprinkle:nth-child(n + 101) {
+  .sprinkle-blizzard .sprinkle:nth-child(n + 151) {
     display: none;
   }
 }
