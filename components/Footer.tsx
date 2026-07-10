@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 import Link from 'next/link'
+import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
 const HIGHLIGHT_COLORS = [
   { rgba: 'rgba(253,231,76,0.80)',  hex: '#fde74c' },
@@ -50,6 +51,8 @@ function FooterLink({ href, label, external }: { href: string; label: string; ex
 }
 
 export default function Footer() {
+  const [iceCreamOn, toggleIceCream] = useIceCreamMode()
+
   return (
     <footer className="bg-off-white border-t border-near-black/8 py-12 px-6">
       <div className="max-w-6xl mx-auto">
@@ -71,9 +74,16 @@ export default function Footer() {
           <span className="font-sans text-sm font-medium text-near-black inline-flex items-center gap-1.5 bg-cornflower/15 border border-cornflower/30 px-3 py-1.5 rounded-full w-fit">
             📍 Minneapolis
           </span>
-          <span className="font-sans text-sm font-medium text-near-black inline-flex items-center gap-1.5 bg-banana/50 border border-banana px-3 py-1.5 rounded-full w-fit">
-            Powered by 🍦
-          </span>
+          <button
+            type="button"
+            onClick={toggleIceCream}
+            aria-pressed={iceCreamOn}
+            aria-label={iceCreamOn ? 'Turn off ice cream mode' : 'Turn on ice cream mode'}
+            title="Ice cream mode"
+            className="font-sans text-sm font-medium text-near-black inline-flex items-center gap-1.5 bg-banana/50 border border-banana px-3 py-1.5 rounded-full w-fit ic-waffle cursor-pointer transition-transform hover:scale-105 active:scale-95"
+          >
+            Powered by <span className="ic-cone">🍦</span>
+          </button>
         </div>
       </div>
     </footer>

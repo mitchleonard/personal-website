@@ -20,6 +20,18 @@
   --color-near-black: #0f0f0f;
   --color-off-white: #f7f5f2;
   --color-accent: #C27D38;
+
+  /* RGB channel triplets consumed by tailwind.config.js via
+     rgb(var(--c-*) / <alpha-value>) — override under html[data-icecream]
+     to re-theme the whole site. */
+  --c-near-black: 15 15 15;
+  --c-off-white: 247 245 242;
+  --c-white: 255 255 255;
+  --c-accent: 0 111 171;
+  --c-frozen-lake: 133 212 255;
+  --c-tangerine: 245 110 61;
+  --c-banana: 253 231 76;
+  --c-yellow-green: 155 197 61;
 }
 
 * {
@@ -134,5 +146,181 @@ body {
 @keyframes dot-matrix-fade {
   50% {
     opacity: 1;
+  }
+}
+
+/* ============================================================
+   ICE CREAM MODE 🍦
+   Toggled by setting data-icecream="on" on <html>
+   (see lib/useIceCreamMode.ts). Everything below is scoped so
+   removing the attribute restores the site exactly.
+   ============================================================ */
+
+html[data-icecream] {
+  /* Dessert palette — swaps every Tailwind color utility at once */
+  --c-near-black: 74 35 23;      /* chocolate fudge — all text */
+  --c-off-white: 255 240 246;    /* strawberry cream — body, nav, footer */
+  --c-accent: 230 57 155;        /* bubblegum — links, CTAs */
+  --c-frozen-lake: 126 232 195;  /* mint chip */
+  --c-tangerine: 255 138 61;     /* orange sherbet */
+  --c-banana: 255 233 92;        /* lemon sorbet */
+  --c-yellow-green: 134 217 124; /* pistachio */
+  --c-white: 255 248 231;        /* vanilla — cards */
+
+  /* Keep legacy vars (body, loader, scrollbar track) in sync */
+  --color-off-white: #fff0f6;
+  --color-near-black: #4a2317;
+  --color-accent: #e6399b;
+}
+
+/* Neapolitan wash — soft strawberry / mint / lemon pools behind everything */
+html[data-icecream] body {
+  background-image:
+    radial-gradient(circle at 12% 15%, rgb(255 111 163 / 0.16), transparent 30%),
+    radial-gradient(circle at 88% 30%, rgb(126 232 195 / 0.18), transparent 32%),
+    radial-gradient(circle at 50% 90%, rgb(255 233 92 / 0.16), transparent 34%);
+  background-attachment: fixed;
+}
+
+/* Waffle-cone texture — criss-cross lattice over golden gradient */
+html[data-icecream] footer,
+html[data-icecream] .ic-waffle {
+  background:
+    repeating-linear-gradient(45deg, rgb(139 84 35 / 0.22) 0 4px, transparent 4px 20px),
+    repeating-linear-gradient(-45deg, rgb(139 84 35 / 0.22) 0 4px, transparent 4px 20px),
+    linear-gradient(180deg, #f6c98a, #e0a054);
+}
+
+/* Bubblegum serif headings (0-1-2 specificity beats .text-near-black) */
+html[data-icecream] h1,
+html[data-icecream] h2 {
+  color: #e6399b;
+}
+
+/* Candy chrome */
+html[data-icecream] ::-webkit-scrollbar-thumb {
+  background: #ff9ec7;
+}
+html[data-icecream] ::selection {
+  background: #ffd0e6;
+}
+
+/* Whipped cream dripping from the top of the viewport — two offset
+   scallop layers (blush shadow under vanilla cream) for a piped look.
+   Decorative and click-through, above everything incl. the mobile menu. */
+html[data-icecream] body::after {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 44px;
+  pointer-events: none;
+  z-index: 102;
+  background:
+    radial-gradient(circle at 50% 0, #ffd9e8 0 52%, transparent 54%) 26px -22px / 88px 52px repeat-x,
+    radial-gradient(circle at 50% 0, #fff6e9 0 55%, transparent 57%) 0 -16px / 64px 44px repeat-x;
+  filter: drop-shadow(0 3px 2px rgb(74 35 23 / 0.12));
+}
+
+/* The 🍦 in the toggle buttons wiggles while the mode is on */
+html[data-icecream] .ic-cone {
+  display: inline-block;
+  animation: ic-wiggle 1.2s ease-in-out infinite;
+}
+
+@keyframes ic-wiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50%      { transform: rotate(8deg); }
+}
+
+/* --- Sprinkles ------------------------------------------------ */
+
+.sprinkle-overlay {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;      /* sway near the edges must never cause horizontal scroll */
+  pointer-events: none;
+  z-index: 110;          /* above everything — mobile menu (z-100/101) and cream (z-102) */
+}
+
+/* Gyro layer — rotated by the phone's left/right tilt so sprinkles fall
+   toward the low side. Oversized so the rotated field still covers the
+   viewport; the transition smooths the ~60Hz sensor stream. */
+.sprinkle-tilt {
+  position: absolute;
+  inset: -25%;
+  transition: transform 300ms ease-out;
+  will-change: transform;
+}
+
+.sprinkle {
+  position: absolute;
+  top: 0;
+  animation: sprinkle-fall linear infinite;
+}
+
+.sprinkle-piece {
+  display: block;
+  width: 5px;
+  height: 15px;
+  border-radius: 9999px;
+  animation: sprinkle-sway ease-in-out infinite;
+}
+
+.sprinkle-dot {
+  width: 7px;
+  height: 7px;
+}
+
+/* Fall and sway both animate transform, so they live on nested elements.
+   Travel spans the oversized .sprinkle-tilt layer (starts at -25vh). */
+@keyframes sprinkle-fall {
+  from { transform: translateY(-8vh); }
+  to   { transform: translateY(160vh); }
+}
+
+@keyframes sprinkle-sway {
+  0%, 100% { transform: translateX(-7px) rotate(35deg); }
+  50%      { transform: translateX(7px) rotate(215deg); }
+}
+
+/* Click bursts — one-shot scatter of mini sprinkles at the pointer */
+.sprinkle-burst-piece {
+  position: absolute;
+  border-radius: 9999px;
+  animation: sprinkle-burst 0.7s ease-out forwards;
+}
+
+@keyframes sprinkle-burst {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0;
+  }
+}
+
+.sprinkle-field {
+  position: absolute;
+  inset: 0;
+}
+
+/* Lighter flurry on phones */
+@media (max-width: 640px) {
+  .sprinkle-field .sprinkle:nth-child(n + 37) {
+    display: none;
+  }
+  .sprinkle-blizzard .sprinkle:nth-child(n + 101) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sprinkle-overlay {
+    display: none;
+  }
+  html[data-icecream] .ic-cone {
+    animation: none;
   }
 }

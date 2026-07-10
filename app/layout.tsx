@@ -3,6 +3,7 @@ import { DM_Serif_Display, Roboto } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import SprinkleOverlay from '@/components/SprinkleOverlay'
 import './globals.css'
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -36,9 +37,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${dmSerifDisplay.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${dmSerifDisplay.variable} ${roboto.variable}`} suppressHydrationWarning>
       <body className="bg-off-white text-near-black font-sans antialiased">
+        {/* Restore ice cream mode pre-paint so a reload never flashes the normal palette */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(localStorage.getItem('icecream-mode')==='on')document.documentElement.dataset.icecream='on'}catch(e){}",
+          }}
+        />
         {children}
+        <SprinkleOverlay />
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics gaId="G-ZQPZY66RZG" />

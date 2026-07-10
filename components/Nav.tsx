@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import IceCreamToggle from './IceCreamToggle'
 
 // Same brand colors as HighlightLink in BrandAccent.tsx
 const HIGHLIGHT_COLORS = [
@@ -134,6 +135,7 @@ export default function Nav() {
                 active={isActive(link.href, pathname)}
               />
             ))}
+            <IceCreamToggle className="text-lg leading-none hover:scale-125 transition-transform" />
           </nav>
 
           {/* Mobile hamburger — morphs to ✕ */}
@@ -169,6 +171,8 @@ export default function Nav() {
               onClose={() => setMenuOpen(false)}
             />
           ))}
+          {/* Stays open on toggle so the palette swap is visible live */}
+          <IceCreamToggle className="py-4 px-4 text-3xl leading-none w-fit" />
         </nav>
       </div>
     </>
