@@ -205,6 +205,43 @@ html[data-icecream] ::selection {
   background: #ffd0e6;
 }
 
+/* Whipped cream dripping from the top of the viewport — two offset
+   scallop layers (blush shadow under vanilla cream) for a piped look.
+   Decorative and click-through, above everything incl. the mobile menu. */
+html[data-icecream] body::after {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 44px;
+  pointer-events: none;
+  z-index: 102;
+  background:
+    radial-gradient(circle at 50% 0, #ffd9e8 0 52%, transparent 54%) 26px -22px / 88px 52px repeat-x,
+    radial-gradient(circle at 50% 0, #fff6e9 0 55%, transparent 57%) 0 -16px / 64px 44px repeat-x;
+  filter: drop-shadow(0 3px 2px rgb(74 35 23 / 0.12));
+}
+
+/* Cherry on top — nestled into the cream at top-center, gently bobbing */
+html[data-icecream] body::before {
+  content: '🍒';
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  margin-left: -15px;
+  font-size: 30px;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 103;
+  transform-origin: 50% -8px;
+  animation: cherry-bob 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 2px rgb(74 35 23 / 0.25));
+}
+
+@keyframes cherry-bob {
+  0%, 100% { transform: rotate(-6deg); }
+  50%      { transform: rotate(6deg); }
+}
+
 /* The 🍦 in the toggle buttons wiggles while the mode is on */
 html[data-icecream] .ic-cone {
   display: inline-block;
@@ -256,9 +293,35 @@ html[data-icecream] .ic-cone {
   50%      { transform: translateX(7px) rotate(215deg); }
 }
 
+/* Click bursts — one-shot scatter of mini sprinkles at the pointer */
+.sprinkle-burst-piece {
+  position: absolute;
+  border-radius: 9999px;
+  animation: sprinkle-burst 0.7s ease-out forwards;
+}
+
+@keyframes sprinkle-burst {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0;
+  }
+}
+
+.sprinkle-field {
+  position: absolute;
+  inset: 0;
+}
+
 /* Lighter flurry on phones */
 @media (max-width: 640px) {
-  .sprinkle:nth-child(n + 21) {
+  .sprinkle-field .sprinkle:nth-child(n + 21) {
+    display: none;
+  }
+  .sprinkle-blizzard .sprinkle:nth-child(n + 61) {
     display: none;
   }
 }
@@ -267,7 +330,8 @@ html[data-icecream] .ic-cone {
   .sprinkle-overlay {
     display: none;
   }
-  html[data-icecream] .ic-cone {
+  html[data-icecream] .ic-cone,
+  html[data-icecream] body::before {
     animation: none;
   }
 }

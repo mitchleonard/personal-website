@@ -9,6 +9,12 @@ import { useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'icecream-mode'
 const EVENT = 'icecreamchange'
+export const BLIZZARD_EVENT = 'icecreamblizzard'
+
+// Brain freeze: 3 toggles within this window (ending on) trigger a blizzard
+const BLIZZARD_TOGGLES = 3
+const BLIZZARD_WINDOW_MS = 2500
+let toggleTimes: number[] = []
 
 export function isIceCreamOn(): boolean {
   if (typeof document === 'undefined') return false
@@ -27,6 +33,13 @@ export function setIceCream(on: boolean) {
     // localStorage unavailable (private mode) — mode still works for the session
   }
   window.dispatchEvent(new Event(EVENT))
+
+  const now = Date.now()
+  toggleTimes = [...toggleTimes, now].filter((t) => now - t < BLIZZARD_WINDOW_MS)
+  if (on && toggleTimes.length >= BLIZZARD_TOGGLES) {
+    toggleTimes = []
+    window.dispatchEvent(new Event(BLIZZARD_EVENT))
+  }
 }
 
 export function useIceCreamMode(): [boolean, () => void] {
