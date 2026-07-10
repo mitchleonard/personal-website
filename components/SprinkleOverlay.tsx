@@ -108,10 +108,12 @@ export default function SprinkleOverlay() {
   const [blizzard, setBlizzard] = useState(false)
 
   // Only generated client-side after toggle-on, so Math.random() never
-  // participates in hydration. Counts/durations are sized for the oversized
-  // .sprinkle-tilt layer (~2x the fall distance of the bare viewport).
-  const sprinkles = useMemo(() => makeSprinkles(60, 5.5, 6.5), [])
-  const blizzardSprinkles = useMemo(() => (blizzard ? makeSprinkles(170, 2, 2) : []), [blizzard])
+  // participates in hydration. Counts are sized for the .sprinkle-tilt layer,
+  // an oversized square that can rotate a full turn (see globals.css) — the
+  // wider field means fewer sprinkles land on screen, so the counts run higher
+  // than the visible density suggests.
+  const sprinkles = useMemo(() => makeSprinkles(100, 5.5, 6.5), [])
+  const blizzardSprinkles = useMemo(() => (blizzard ? makeSprinkles(260, 2, 2) : []), [blizzard])
 
   // Click bursts — a pop of mini sprinkles wherever the pointer goes down
   const burstTimeouts = useRef<ReturnType<typeof setTimeout>[]>([])
@@ -135,7 +137,7 @@ export default function SprinkleOverlay() {
     }
   }, [on])
 
-  // Brain freeze — 3 rapid toggles (see lib/useIceCreamMode.ts) rain 130
+  // Brain freeze — 3 rapid toggles (see lib/useIceCreamMode.ts) rain 260
   // extra fast sprinkles for 5 seconds
   useEffect(() => {
     let timeout: ReturnType<typeof setTimeout> | undefined
@@ -151,21 +153,47 @@ export default function SprinkleOverlay() {
     }
   }, [])
 
-  // Gyro tilt — rotate the sprinkle field opposite the phone's left/right
-  // tilt (gamma) so sprinkles fall toward the low side. Desktop never fires
-  // deviceorientation, so the transform stays identity there. iOS motion
-  // permission is requested from the toggle tap (see lib/useIceCreamMode.ts).
+  // Gyro tilt — spin the whole sprinkle field so its local "down" follows
+  // real-world gravity. From beta + gamma we get the direction gravity points
+  // within the screen plane; atan2 turns that into a continuous, unclamped
+  // angle, so tilting past sideways or flipping the phone right over keeps the
+  // sprinkles flowing "downhill" (upside-down → they fall upward). A per-frame
+  // ease toward that angle absorbs the ~60Hz sensor jitter so the motion reads
+  // as one fluid drift instead of snapping to each reading. Desktop never fires
+  // deviceorientation, so the field stays upright. iOS motion permission is
+  // requested from the toggle tap (see lib/useIceCreamMode.ts).
   const tiltRef = useRef<HTMLDivElement>(null)
+  const targetAngle = useRef(0)
+  const currentAngle = useRef(0)
   useEffect(() => {
     if (!on) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const DEG = Math.PI / 180
     const onOrientation = (e: DeviceOrientationEvent) => {
-      if (e.gamma == null || !tiltRef.current) return
-      const gamma = Math.max(-28, Math.min(28, e.gamma))
-      tiltRef.current.style.transform = `rotate(${(-gamma).toFixed(1)}deg)`
+      if (e.beta == null || e.gamma == null) return
+      const beta = e.beta * DEG
+      const gamma = e.gamma * DEG
+      // In-plane gravity direction → rotation that aligns the field's downward
+      // fall with it. Fully continuous: no clamp, wraps through a whole turn.
+      targetAngle.current =
+        Math.atan2(-Math.sin(gamma) * Math.cos(beta), Math.sin(beta)) / DEG
+    }
+    let raf = 0
+    const tick = () => {
+      // Ease along the shortest arc so crossing ±180° never spins the long way.
+      const delta = ((targetAngle.current - currentAngle.current + 540) % 360) - 180
+      currentAngle.current += delta * 0.12
+      if (tiltRef.current) {
+        tiltRef.current.style.transform = `rotate(${currentAngle.current.toFixed(2)}deg)`
+      }
+      raf = requestAnimationFrame(tick)
     }
     window.addEventListener('deviceorientation', onOrientation)
-    return () => window.removeEventListener('deviceorientation', onOrientation)
+    raf = requestAnimationFrame(tick)
+    return () => {
+      window.removeEventListener('deviceorientation', onOrientation)
+      cancelAnimationFrame(raf)
+    }
   }, [on])
 
   // Tab chrome — 🍦 title prefix + cone favicon while the mode is on.
