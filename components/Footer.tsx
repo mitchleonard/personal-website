@@ -11,12 +11,13 @@ const HIGHLIGHT_COLORS = [
   { rgba: 'rgba(155,197,61,0.55)',  hex: '#9bc53d' },
 ]
 
-function pickRandom<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
+function pickForLabel(label: string) {
+  const hash = Array.from(label).reduce((total, character) => total + character.charCodeAt(0), 0)
+  return HIGHLIGHT_COLORS[hash % HIGHLIGHT_COLORS.length]
 }
 
 function FooterLink({ href, label, external }: { href: string; label: string; external?: boolean }) {
-  const colorRef = useRef(pickRandom(HIGHLIGHT_COLORS))
+  const colorRef = useRef(pickForLabel(label))
   const [hovered, setHovered] = useState(false)
 
   const style: React.CSSProperties = {

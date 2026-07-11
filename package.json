@@ -6,7 +6,9 @@
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ice-cream:check": "node scripts/import-ice-cream.mjs",
+    "ice-cream:import": "node scripts/import-ice-cream.mjs --write"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.0",

@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/cv`, priority: 0.8 },
     { url: `${BASE}/hire`, priority: 0.8 },
     { url: `${BASE}/projects`, priority: 0.7 },
+    { url: `${BASE}/ice-cream`, priority: 0.7 },
     { url: `${BASE}/contact`, priority: 0.7 },
   ].map(({ url, priority }) => ({
     url,

@@ -13,8 +13,9 @@ const HIGHLIGHT_COLORS = [
   { rgba: 'rgba(155,197,61,0.55)',  hex: '#9bc53d' },  // yellow-green
 ]
 
-function pickRandom<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
+function pickForLabel(label: string) {
+  const hash = Array.from(label).reduce((total, character) => total + character.charCodeAt(0), 0)
+  return HIGHLIGHT_COLORS[hash % HIGHLIGHT_COLORS.length]
 }
 
 function isActive(href: string, pathname: string): boolean {
@@ -26,7 +27,7 @@ function isActive(href: string, pathname: string): boolean {
 
 // Desktop: minimal underline that uses a random brand color when active or hovered
 function DesktopNavLink({ href, label, active }: { href: string; label: string; active: boolean }) {
-  const colorRef = useRef(pickRandom(HIGHLIGHT_COLORS))
+  const colorRef = useRef(pickForLabel(label))
   const [hovered, setHovered] = useState(false)
   const showColor = active || hovered
 
@@ -52,7 +53,7 @@ function MobileNavLink({ href, label, active, onClose }: {
   active: boolean
   onClose: () => void
 }) {
-  const colorRef = useRef(pickRandom(HIGHLIGHT_COLORS))
+  const colorRef = useRef(pickForLabel(label))
   const [pressed, setPressed] = useState(false)
 
   const highlightStyle: React.CSSProperties = pressed ? {
@@ -161,7 +162,7 @@ export default function Nav() {
         aria-hidden={!menuOpen}
       >
         <div className="h-[60px] shrink-0" />
-        <nav className="flex flex-col justify-center flex-1 px-6 gap-1 pb-16">
+          <nav className="flex flex-col justify-center flex-1 px-6 gap-1 pb-16">
           {links.map((link) => (
             <MobileNavLink
               key={link.href}
