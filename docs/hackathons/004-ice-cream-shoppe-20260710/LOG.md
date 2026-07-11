@@ -32,5 +32,10 @@
 
 [+34:20] Ratings archive extracted from Apple Notes PDF
   why: The source note arrived before the iPhone photo albums, so the migration needed to separate rating data from photo metadata.
-  did: Visually reviewed the 21-page export, confirmed 155 scored entries, and built a reusable extractor. It produced 153 clean review rows; two irregular price/score sequences are correctly left for manual review rather than guessed.
+  did: Visually reviewed the 21-page export, confirmed 155 scored entries, and built a reusable extractor. The initial PDF parse produced 153 clean review rows; two irregular price/score sequences are correctly left for manual review rather than guessed.
   next: Export the two iPhone albums as originals, then match dates, photos, and safe public locations to the review table.
+
+[+35:40] Plain-text note completed the ratings extraction
+  why: The text export retained one record per blank-separated block, avoiding page-break ambiguity from PDF extraction.
+  did: Updated the extractor to prefer text exports and generated all 155 review rows, including the two irregularly formatted entries. Dates, photos, and locations remain intentionally blank until their source metadata is available.
+  next: Use the 155-row review table as the matching target for the original iPhone album exports.
