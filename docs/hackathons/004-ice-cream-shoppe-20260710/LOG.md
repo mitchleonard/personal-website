@@ -29,3 +29,8 @@
   why: A linked historical commit revealed the expressive mode behavior that was absent from the current checkout.
   did: Adapted its continuous gyroscope gravity field, falling sprinkles, tap bursts, cone favicon and title treatment, and pre-paint theme restoration to the new persistent provider. Browser QA confirmed the overlay, burst, tab treatment, a non-identity gravity rotation, and zero console errors.
   next: Import the real Apple archive and use the animation as the playful doorway into a production-ready collection.
+
+[+34:20] Ratings archive extracted from Apple Notes PDF
+  why: The source note arrived before the iPhone photo albums, so the migration needed to separate rating data from photo metadata.
+  did: Visually reviewed the 21-page export, confirmed 155 scored entries, and built a reusable extractor. It produced 153 clean review rows; two irregular price/score sequences are correctly left for manual review rather than guessed.
+  next: Export the two iPhone albums as originals, then match dates, photos, and safe public locations to the review table.
