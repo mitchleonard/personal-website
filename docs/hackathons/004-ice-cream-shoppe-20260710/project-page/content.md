@@ -17,6 +17,7 @@ Turn a private, loosely structured archive into a public collection without maki
 ## Execution
 
 - Made Ice Cream Mode a persistent global preference instead of a one-page visual gag. Turning it on changes the site atmosphere and reveals an invitation into the Shoppe across navigation.
+- Reconnected the physical side of the original Ice Cream Mode: a full-screen sprinkle field responds continuously to phone orientation, tap bursts add a tactile little payoff, and the browser tab turns into a cone while the mode is on.
 - Built an editorial `/ice-cream` experience with a dramatic storefront entrance, sortable rating case, geographic preview, and a distinct Made by Mitch pint lab.
 - Kept the collection out of the Projects grid. The existing About and footer references become natural entrances, while the Shoppe remains directly shareable.
 - Designed a typed archive schema for public ratings and homemade pints, with representative records clearly labeled as preview data until the private archive is reviewed.

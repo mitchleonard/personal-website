@@ -24,3 +24,8 @@
   why: Separate a working prototype from a deployment-ready build and keep unproven requirements visible.
   did: Next.js compiled the new static route successfully; browser QA proved sorting, mode persistence, responsive rendering, and zero console errors. The audit identified real Apple data, real media metadata, and the production URL as the remaining external evidence.
   next: Receive the Apple Note and album exports, run the migration review, replace preview records, and deploy.
+
+[+16:49] Restored the original Ice Cream Mode animation system
+  why: A linked historical commit revealed the expressive mode behavior that was absent from the current checkout.
+  did: Adapted its continuous gyroscope gravity field, falling sprinkles, tap bursts, cone favicon and title treatment, and pre-paint theme restoration to the new persistent provider. Browser QA confirmed the overlay, burst, tab treatment, a non-identity gravity rotation, and zero console errors.
+  next: Import the real Apple archive and use the animation as the playful doorway into a production-ready collection.

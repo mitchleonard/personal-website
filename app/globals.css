@@ -59,6 +59,22 @@ html[data-ice-cream-mode='on'] body {
   background-size: 54px 54px, 72px 72px;
 }
 
+html[data-ice-cream-mode='on'] main:not(.shoppe-page) h1,
+html[data-ice-cream-mode='on'] main:not(.shoppe-page) h2 { color:#e6399b; }
+
+html[data-ice-cream-mode='on'] body::after { content:''; position:fixed; inset:0 0 auto; height:44px; pointer-events:none; z-index:102; background:radial-gradient(circle at 50% 0,#fff6e9 0 55%,transparent 57%) 0 -16px/64px 44px repeat-x; filter:drop-shadow(0 3px 2px rgb(74 35 23 / .12)); }
+html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inline-block; animation:ic-wiggle 1.2s ease-in-out infinite; }
+@keyframes ic-wiggle { 0%,100% { transform:rotate(-8deg) } 50% { transform:rotate(8deg) } }
+.sprinkle-overlay { position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:110; }
+.sprinkle-tilt { position:absolute; top:50%; left:50%; width:150vmax; height:150vmax; margin:-75vmax 0 0 -75vmax; will-change:transform; }
+.sprinkle { position:absolute; top:0; animation:sprinkle-fall linear infinite; }
+.sprinkle-piece { display:block; width:5px; height:15px; border-radius:9999px; animation:sprinkle-sway ease-in-out infinite; }
+.sprinkle-dot { width:7px; height:7px; }
+@keyframes sprinkle-fall { from { transform:translateY(-8vh) } to { transform:translateY(160vh) } }
+@keyframes sprinkle-sway { 0%,100% { transform:translateX(-7px) rotate(35deg) } 50% { transform:translateX(7px) rotate(215deg) } }
+.sprinkle-burst-piece { position:absolute; border-radius:9999px; animation:sprinkle-burst .7s ease-out forwards; }
+@keyframes sprinkle-burst { from { transform:translate(0,0) rotate(0); opacity:1 } to { transform:translate(var(--dx),var(--dy)) rotate(var(--rot)); opacity:0 } }
+
 .ice-mode-control { display:flex; align-items:center; gap:.65rem; flex-wrap:wrap; }
 .ice-mode-toggle { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(15,15,15,.16); border-radius:999px; background:rgba(255,255,255,.5); padding:.38rem .55rem; font:500 .76rem/1 var(--font-sans),sans-serif; color:#0f0f0f; cursor:pointer; transition:transform .15s ease, background .15s ease; }
 .ice-mode-toggle:hover { transform:translateY(-1px); background:#fff; }
