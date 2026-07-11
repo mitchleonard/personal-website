@@ -27,6 +27,8 @@ export const PROJECT_TAGS = {
   'Claude Skills':  'cornflower',
   'Documentation':  'neutral',
   'Hackathon':      'tangerine',
+  'Data Visualization': 'cornflower',
+  'Digital Archive':    'neutral',
   'MCP Servers':    'cornflower',
   'AI Chatbot':     'cornflower',
   'API':            'cornflower',

@@ -1,0 +1,7 @@
+# Tool and technology inventory
+
+- **Hackathon Skill** — kickoff structure, milestone rules, evidence capture, and case-study output — `public/hackathon-skill/hackathon-skill.md`
+- **Next.js App Router Skill** — persistent layout/provider and interactive component architecture — `vercel:nextjs`
+- **Codex filesystem and shell tools** — repository inspection, edits, validation, and Git evidence — Codex workspace tools
+- **GPT-5.6** — product strategy, architecture, visual design, implementation, and verification — model under evaluation
+
