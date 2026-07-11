@@ -19,3 +19,8 @@
   why: New ratings must be easy to publish after the one-time Apple archive migration.
   did: Added a spreadsheet-friendly inbox, validation and import commands, generated JSON source, privacy guidance, and a step-by-step update runbook. Empty-inbox check and import both passed.
   next: Run the production build, complete the real-data migration when exports are available, and prepare the live deployment milestone.
+
+[+10:46] Production build and completion audit passed for the application layer
+  why: Separate a working prototype from a deployment-ready build and keep unproven requirements visible.
+  did: Next.js compiled the new static route successfully; browser QA proved sorting, mode persistence, responsive rendering, and zero console errors. The audit identified real Apple data, real media metadata, and the production URL as the remaining external evidence.
+  next: Receive the Apple Note and album exports, run the migration review, replace preview records, and deploy.
