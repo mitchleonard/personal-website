@@ -46,8 +46,11 @@ The same experience condenses into a narrow, touch-friendly layout without turni
 
 ## Remaining ship gates
 
-- Import and manually review the real Apple Notes ratings.
-- Match and optimize real rating and homemade-pint photos.
-- Review GPS metadata and remove private coordinates.
-- Replace preview content and verify the full collection at roughly 150 records.
+- Add real Made by Mitch photos and flavors when that album is available.
 - Deploy and record the production URL and final milestone.
+
+## Real archive milestone
+
+The Apple Notes text export and original iPhone Photos album resolved into 155 published ratings. The photo sidecars supplied a capture date for every record and GPS coordinates for 153. Rather than commit raw HEIC originals or their metadata, the build pipeline creates 1200px JPEGs with metadata stripped; the raw import folder stays private and ignored by Git.
+
+The archive’s original-note order and chronological photo order aligned one-to-one. This gives the collection an honest recent-first sort and a geographically informed field without requiring hand-entry of 155 dates.

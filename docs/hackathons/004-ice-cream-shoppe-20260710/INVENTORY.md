@@ -6,3 +6,4 @@
 - **GPT-5.6** — product strategy, architecture, visual design, implementation, and verification — model under evaluation
 - **Playwright + local Chrome** — desktop/mobile rendering, interaction, persistence, hydration, and console verification — bundled Playwright runtime
 - **PDF extraction workflow** — rendered and extracted the Apple Notes PDF into a metadata-review staging table — `pdfplumber` + Poppler
+- **HEIF conversion runtime** — decoded iPhone HEIC originals into stripped, web-sized JPEGs after macOS conversion quality checks — `heif-convert` + `sips`

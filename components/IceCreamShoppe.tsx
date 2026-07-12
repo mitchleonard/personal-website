@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { HomemadePint, IceCreamRating } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
@@ -11,17 +12,22 @@ function formatDate(value: string) {
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
 }
 
+function formatLocation(rating: IceCreamRating) {
+  const place = [rating.location.city, rating.location.region].filter(Boolean).join(', ')
+  return place || (rating.location.latitude != null ? 'GPS-tagged tasting' : 'Location pending')
+}
+
 function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number }) {
   return (
     <article className="scoop-card">
       <div className="scoop-card__visual" aria-hidden="true">
-        <span>{rating.flavor.slice(0, 1)}</span>
+        {rating.image ? <Image src={rating.image.src} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 24vw" className="scoop-card__image" /> : <span>{rating.flavor.slice(0, 1)}</span>}
         {rank && <strong>#{rank}</strong>}
       </div>
       <div className="scoop-card__body">
         <div className="scoop-card__meta">
           <span>{formatDate(rating.triedAt)}</span>
-          <span>{rating.location.city}, {rating.location.region}</span>
+          <span>{formatLocation(rating)}</span>
         </div>
         <h3>{rating.flavor}</h3>
         <p className="scoop-card__shop">{rating.shop}</p>
@@ -33,14 +39,21 @@ function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number })
 }
 
 function LocationPlot({ ratings }: { ratings: IceCreamRating[] }) {
-  const places = Array.from(new Map(ratings.map((rating) => [`${rating.location.city}-${rating.location.region}`, rating.location])).values())
+  const points = ratings.filter((rating) => rating.location.latitude != null && rating.location.longitude != null)
+  const lats = points.map((rating) => rating.location.latitude as number)
+  const lons = points.map((rating) => rating.location.longitude as number)
+  const minLat = Math.min(...lats)
+  const maxLat = Math.max(...lats)
+  const minLon = Math.min(...lons)
+  const maxLon = Math.max(...lons)
+  const positionFor = (rating: IceCreamRating) => ({
+    left: `${12 + (((rating.location.longitude as number) - minLon) / (maxLon - minLon || 1)) * 76}%`,
+    top: `${12 + ((maxLat - (rating.location.latitude as number)) / (maxLat - minLat || 1)) * 76}%`,
+  })
   return (
-    <div className="shoppe-map" role="img" aria-label={`Map preview showing ${places.length} sample cities. A full accessible location list follows.`}>
+    <div className="shoppe-map" role="img" aria-label={`Map field showing ${points.length} GPS-tagged ice cream ratings.`}>
       <div className="shoppe-map__grid" />
-      {places.map((place, index) => {
-        const positions = [{ left: '25%', top: '38%' }, { left: '55%', top: '58%' }, { left: '79%', top: '40%' }]
-        return <span key={`${place.city}-${place.region}`} className="shoppe-map__pin" style={positions[index % positions.length]}><i>🍦</i><b>{place.city}</b></span>
-      })}
+      {points.map((rating) => <span key={rating.id} className="shoppe-map__pin" style={positionFor(rating)} title={rating.location.label}><i>•</i></span>)}
     </div>
   )
 }
@@ -53,6 +66,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
 }) {
   const [sort, setSort] = useState<SortMode>('recent')
   const [isIceCreamMode, toggleIceCreamMode] = useIceCreamMode()
+  const geotagged = ratings.filter((rating) => rating.location.latitude != null && rating.location.longitude != null)
   const sorted = useMemo(() => [...ratings].sort((a, b) => {
     if (sort === 'top') return b.score - a.score || b.triedAt.localeCompare(a.triedAt)
     if (sort === 'shop') return a.shop.localeCompare(b.shop) || b.score - a.score
@@ -105,11 +119,12 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
       <section className="shoppe-section shoppe-map-section">
         <div className="shoppe-section__heading">
           <div><p className="shoppe-kicker">The scoop map</p><h2>Worth the trip.</h2></div>
-          <p>Ratings become recommendations when you can find them. The archive is ready for the locations embedded in Mitch’s photos.</p>
+          <p>Every point comes from the original photo metadata. The field follows the collection from Minneapolis to the road-trip scoops in between.</p>
         </div>
         <LocationPlot ratings={ratings} />
-        <ul className="location-list" aria-label="Locations in the preview">
-          {Array.from(new Set(ratings.map((rating) => `${rating.location.city}, ${rating.location.region}`))).map((location) => <li key={location}>{location}</li>)}
+        <ul className="location-list" aria-label="GPS-tagged shops">
+          {Array.from(new Set(geotagged.map((rating) => rating.location.label))).slice(0, 12).map((location) => <li key={location}>{location}</li>)}
+          {geotagged.length > 12 && <li>+ {geotagged.length - 12} more</li>}
         </ul>
       </section>
 

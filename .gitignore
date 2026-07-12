@@ -41,3 +41,5 @@ next-env.d.ts
 # Videos live in Vercel Blob, not git
 public/**/*.mp4
 public/**/*.MP4
+# Private Apple Notes and Photos exports used to build the Ice Cream Shoppe.
+imports*/

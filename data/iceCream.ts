@@ -10,8 +10,8 @@ export type IceCreamRating = {
   image?: { src: string; alt: string }
   location: {
     label: string
-    city: string
-    region: string
+    city?: string
+    region?: string
     latitude?: number
     longitude?: number
   }

@@ -39,3 +39,8 @@
   why: The text export retained one record per blank-separated block, avoiding page-break ambiguity from PDF extraction.
   did: Updated the extractor to prefer text exports and generated all 155 review rows, including the two irregularly formatted entries. Dates, photos, and locations remain intentionally blank until their source metadata is available.
   next: Use the 155-row review table as the matching target for the original iPhone album exports.
+
+[+23:46] Real ratings and photo metadata migrated
+  why: The original iPhone album export arrived with one XMP sidecar per rating.
+  did: Matched the note’s chronological 155-entry order to 155 dated photo sidecars; generated 155 public rating records, 153 GPS-tagged locations, and 155 metadata-stripped web JPEGs. The first HEIC conversion path produced black images, so it was replaced with HEIF decoding plus resized JPEG output and visually rechecked. The archive now renders real photos, top-ranked sorting, recency sorting, and the GPS field; the production build passes.
+  next: Add real Made by Mitch photos and flavors when that album is available, then deploy the finished collection.

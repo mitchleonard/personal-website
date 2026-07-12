@@ -109,9 +109,15 @@ if (errors.length) {
   console.error(`Ice cream import found ${errors.length} issue${errors.length === 1 ? '' : 's'}:\n- ${errors.join('\n- ')}`)
   process.exitCode = 1
 } else if (shouldWrite) {
-  fs.writeFileSync(outputPath, `${JSON.stringify({ ratings, homemade }, null, 2)}\n`)
-  console.log(`Imported ${ratings.length} rating${ratings.length === 1 ? '' : 's'} and ${homemade.length} homemade pint${homemade.length === 1 ? '' : 's'}.`)
+  const existing = fs.existsSync(outputPath) ? JSON.parse(fs.readFileSync(outputPath, 'utf8')) : { ratings: [], homemade: [] }
+  const merge = (current, incoming) => {
+    const incomingIds = new Set(incoming.map((record) => record.id))
+    return [...current.filter((record) => !incomingIds.has(record.id)), ...incoming]
+  }
+  const mergedRatings = merge(existing.ratings ?? [], ratings)
+  const mergedHomemade = merge(existing.homemade ?? [], homemade)
+  fs.writeFileSync(outputPath, `${JSON.stringify({ ratings: mergedRatings, homemade: mergedHomemade }, null, 2)}\n`)
+  console.log(`Added ${ratings.length} rating${ratings.length === 1 ? '' : 's'} and ${homemade.length} homemade pint${homemade.length === 1 ? '' : 's'}; archive now contains ${mergedRatings.length} ratings and ${mergedHomemade.length} homemade pints.`)
 } else {
   console.log(`Valid inbox: ${ratings.length} rating${ratings.length === 1 ? '' : 's'}, ${homemade.length} homemade pint${homemade.length === 1 ? '' : 's'}. Run npm run ice-cream:import to publish.`)
 }
-
