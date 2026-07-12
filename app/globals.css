@@ -76,13 +76,18 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 @keyframes sprinkle-burst { from { transform:translate(0,0) rotate(0); opacity:1 } to { transform:translate(var(--dx),var(--dy)) rotate(var(--rot)); opacity:0 } }
 
 .ice-mode-control { display:flex; align-items:center; gap:.65rem; flex-wrap:wrap; }
-.ice-mode-toggle { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(15,15,15,.16); border-radius:999px; background:rgba(255,255,255,.5); padding:.38rem .55rem; font:500 .76rem/1 var(--font-sans),sans-serif; color:#0f0f0f; cursor:pointer; transition:transform .15s ease, background .15s ease; }
-.ice-mode-toggle:hover { transform:translateY(-1px); background:#fff; }
+/* Glossy on/off slider shown once Ice Cream Mode is running — the 🍦 rides
+   inside a white knob on a strawberry→cherry track (no words needed). The
+   track is only ever rendered in its "on" look; the knob does a one-time
+   springy slide-in so every reveal feels like flipping the switch. */
+.ice-mode-toggle { display:inline-flex; align-items:center; border:none; background:transparent; padding:0; cursor:pointer; transition:transform .18s cubic-bezier(.34,1.56,.64,1); }
+.ice-mode-toggle:hover { transform:translateY(-1px) scale(1.04); }
+.ice-mode-toggle:active { transform:scale(.96); }
 .ice-mode-toggle:disabled { opacity:.55; cursor:default; }
-.ice-mode-toggle__track { position:relative; display:inline-block; width:1.8rem; height:1rem; border-radius:999px; background:rgba(15,15,15,.2); transition:background .2s ease; }
-.ice-mode-toggle__thumb { position:absolute; width:.72rem; height:.72rem; left:.14rem; top:.14rem; border-radius:50%; background:white; box-shadow:0 1px 3px rgba(0,0,0,.25); transition:transform .2s ease; }
-[aria-checked='true'] .ice-mode-toggle__track { background:#d84e72; }
-[aria-checked='true'] .ice-mode-toggle__thumb { transform:translateX(.8rem); }
+.ice-mode-toggle__track { position:relative; display:inline-block; width:4rem; height:2.1rem; border-radius:999px; background:radial-gradient(120% 90% at 15% 12%, rgba(255,255,255,.45), transparent 45%), linear-gradient(150deg,#ff9ec7 0%,#f56a97 45%,#d84e72 100%); box-shadow:0 6px 16px rgba(216,78,114,.4), inset 0 2px 4px rgba(255,255,255,.35), inset 0 -3px 6px rgba(122,37,64,.3); overflow:hidden; }
+.ice-mode-toggle__track::after { content:''; position:absolute; left:-10%; right:-10%; bottom:-40%; height:120%; background:linear-gradient(180deg,rgba(255,255,255,.28),transparent 60%); border-radius:50%; transform:rotate(-8deg); }
+.ice-mode-toggle__thumb { position:absolute; z-index:1; width:1.68rem; height:1.68rem; left:.21rem; top:.21rem; border-radius:50%; background:radial-gradient(circle at 34% 28%,#ffffff,#ffeaf1 78%); box-shadow:0 3px 6px rgba(122,37,64,.45), inset 0 1px 2px rgba(255,255,255,.9); display:grid; place-items:center; font-size:1.02rem; line-height:1; transform:translateX(1.9rem); animation:ice-thumb-on .55s cubic-bezier(.34,1.56,.64,1); }
+@keyframes ice-thumb-on { 0% { transform:translateX(0) } 62% { transform:translateX(2.12rem) } 100% { transform:translateX(1.9rem) } }
 .ice-mode-control--compact .ice-shoppe-entry { position:absolute; top:4.3rem; right:1.5rem; }
 .ice-shoppe-entry { display:inline-flex; gap:.35rem; align-items:center; border-radius:999px; padding:.55rem .85rem; background:#d84e72; color:white; font:600 .75rem/1 var(--font-sans),sans-serif; box-shadow:0 8px 20px rgba(216,78,114,.25); }
 
