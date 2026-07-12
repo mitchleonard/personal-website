@@ -59,3 +59,8 @@
   why: The initial mobile cards obscured portrait ice cream photos and an historic Cereal Killerz image had been re-added to the iPhone album, breaking the chronological pairing after its intended 2021 position.
   did: Redesigned the rating case into a two-column mobile grid with portrait-forward image crops, three desktop columns, and four at wide desktop sizes. Replaced location-status labels and quoted notes with compact map/price icons and a plain Rating number. Moved the Cereal Killerz source image from the end of the album back to rating #42, set its verified September 21, 2021 date, and advanced the affected 113 associations.
   next: Deploy and verify the compact rating case in production.
+
+[+25:44] Editorial archive corrections applied
+  why: A follow-up review identified three local photo-pair swaps, one flavor-name correction, and several homemade-pint gallery order changes.
+  did: Applied the verified State Fair, Dat Malt Dough, and North Shore/Barney’s image swaps; corrected Cookies Are My Butter Half; removed homemade dates and duplicate ingredient copy; and reversed the specified pint photo sequences. The rating card now pairs date with a concise # rank, and presents the shop and price with icon-led detail rather than status labels.
+  next: Publish the editorial pass, then choose a longer-term card-art direction.

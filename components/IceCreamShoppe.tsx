@@ -30,6 +30,7 @@ function PriceIcon() {
 
 function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number }) {
   const { price, ranking } = ratingDetails(rating.notes)
+  const ratingNumber = ranking?.replace('Rating ', '')
   return (
     <article className="scoop-card">
       <div className="scoop-card__visual" aria-hidden="true">
@@ -39,13 +40,12 @@ function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number })
       <div className="scoop-card__body">
         <div className="scoop-card__meta">
           <span>{formatDate(rating.triedAt)}</span>
+          {ratingNumber && <span>{ratingNumber}</span>}
         </div>
         <h3>{rating.flavor}</h3>
-        <p className="scoop-card__shop">{rating.shop}</p>
         <div className="scoop-card__details" aria-label="Tasting details">
-          {rating.location.latitude != null && <span title="View on the scoop map"><LocationIcon />On the map</span>}
+          <span><LocationIcon />{rating.shop}</span>
           {price && <span><PriceIcon />{price}</span>}
-          {ranking && <span>{ranking}</span>}
         </div>
         <div className="scoop-card__score"><strong>{rating.score.toFixed(1)}</strong><span>/10</span></div>
       </div>
@@ -154,7 +154,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
               <div className={`pint-lid pint-lid--${index % 3}`}>
                 {pint.images?.[0] ? <Image src={pint.images[0].src} alt={pint.images[0].alt} fill unoptimized sizes="128px" className="pint-lid__image" /> : <span>Batch<br />{String(index + 1).padStart(2, '0')}</span>}
               </div>
-              <div><p>{formatDate(pint.madeAt)}</p><h3>{pint.name}</h3><span>{pint.base} · {pint.mixIns.join(' + ')}</span><p>{pint.description}</p>{pint.images && pint.images.length > 1 && <div className="pint-gallery" aria-label={`${pint.name} photo gallery`}>{pint.images.slice(1).map((image) => <Image key={image.src} src={image.src} alt={image.alt} width={52} height={52} unoptimized className="pint-gallery__image" />)}</div>}</div>
+              <div><h3>{pint.name}</h3><p>{pint.description}</p>{pint.images && pint.images.length > 1 && <div className="pint-gallery" aria-label={`${pint.name} photo gallery`}>{pint.images.slice(1).map((image) => <Image key={image.src} src={image.src} alt={image.alt} width={52} height={52} unoptimized className="pint-gallery__image" />)}</div>}</div>
             </article>
           ))}
         </div>

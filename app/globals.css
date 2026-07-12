@@ -122,9 +122,8 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .scoop-card:nth-child(2n) .scoop-card__visual { background:linear-gradient(155deg,var(--sky),var(--mint)); }
 .scoop-card__visual strong { position:absolute; top:1rem; left:1rem; background:var(--chocolate); color:white; font:700 .75rem/1 var(--font-sans),sans-serif; padding:.45rem; border-radius:999px; }
 .scoop-card__body { position:relative; padding:1.1rem 1.1rem 1rem; display:flex; flex:1; flex-direction:column; }
-.scoop-card__meta { display:flex; gap:1rem; font-size:.67rem; text-transform:uppercase; letter-spacing:.08em; opacity:.55; }
-.scoop-card h3 { font-family:var(--font-serif),serif; font-size:clamp(1.45rem,2vw,2rem); line-height:1.05; margin-top:.8rem; }
-.scoop-card__shop { color:var(--cherry); font-weight:700; margin-top:.35rem; }
+.scoop-card__meta { display:flex; justify-content:space-between; gap:1rem; font-size:.67rem; text-transform:uppercase; letter-spacing:.08em; opacity:.55; }
+.scoop-card h3 { font-family:var(--font-serif),serif; font-size:clamp(1.45rem,2vw,2rem); line-height:1.05; margin-top:.8rem; text-decoration:none; }
 .scoop-card__details { display:flex; align-items:center; gap:.65rem; flex-wrap:wrap; margin-top:1rem; color:rgba(56,39,33,.62); font-size:.72rem; font-weight:700; }
 .scoop-card__details span { display:inline-flex; align-items:center; gap:.28rem; }
 .scoop-card__details svg { width:.9rem; height:.9rem; flex:none; }
@@ -144,10 +143,8 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .pint-lid--1 { background:var(--mint); transform:rotate(6deg); }
 .pint-lid__image { object-fit:cover; }
 .pint-lid span { text-align:center; text-transform:uppercase; font-size:.65rem; font-weight:800; letter-spacing:.1em; }
-.pint-card > div:last-child > p:first-child { opacity:.5; font-size:.75rem; }
 .pint-card h3 { font-family:var(--font-serif),serif; font-size:1.8rem; margin:.25rem 0; }
-.pint-card h3 + span { color:var(--cherry); font-size:.78rem; font-weight:700; }
-.pint-card h3 + span + p { opacity:.7; margin-top:1rem; line-height:1.5; }
+.pint-card h3 + p { opacity:.7; margin-top:1rem; line-height:1.5; }
 .pint-gallery { display:flex; gap:.45rem; margin-top:1rem; }
 .pint-gallery__image { width:3.25rem; height:3.25rem; object-fit:cover; border-radius:.7rem; border:1px solid rgba(56,39,33,.15); }
 .shoppe-footer { background:var(--chocolate); color:white; padding:4rem max(1.5rem,calc((100vw - 72rem)/2)); display:flex; justify-content:space-between; gap:2rem; }
