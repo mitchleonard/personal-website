@@ -85,6 +85,7 @@ export default function Footer() {
           >
             Powered by <span className="ic-cone">🍦</span>
           </button>
+          {iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
         </div>
       </div>
     </footer>

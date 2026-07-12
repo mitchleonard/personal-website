@@ -44,3 +44,8 @@
   why: The original iPhone album export arrived with one XMP sidecar per rating.
   did: Matched the note’s chronological 155-entry order to 155 dated photo sidecars; generated 155 public rating records, 153 GPS-tagged locations, and 155 metadata-stripped web JPEGs. The first HEIC conversion path produced black images, so it was replaced with HEIF decoding plus resized JPEG output and visually rechecked. The archive now renders real photos, top-ranked sorting, recency sorting, and the GPS field; the production build passes.
   next: Add real Made by Mitch photos and flavors when that album is available, then deploy the finished collection.
+
+[+23:48] Ice Cream Mode became the Shoppe doorway
+  why: The mode needed a functional destination as well as a persistent visual identity.
+  did: Added a compact Enter the Shoppe link to the desktop navigation, mobile menu, and footer only when Ice Cream Mode is on. The rating archive remains directly linkable, so the playful entrance never becomes a gate.
+  next: Deployment verification and the optional Made by Mitch album.

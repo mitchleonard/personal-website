@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import IceCreamToggle from './IceCreamToggle'
+import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
 // Same brand colors as HighlightLink in BrandAccent.tsx
 const HIGHLIGHT_COLORS = [
@@ -86,6 +87,7 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const [iceCreamOn] = useIceCreamMode()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -137,6 +139,7 @@ export default function Nav() {
               />
             ))}
             <IceCreamToggle className="text-lg leading-none hover:scale-125 transition-transform" />
+            {iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
           </nav>
 
           {/* Mobile hamburger — morphs to ✕ */}
@@ -174,6 +177,7 @@ export default function Nav() {
           ))}
           {/* Stays open on toggle so the palette swap is visible live */}
           <IceCreamToggle className="py-4 px-4 text-3xl leading-none w-fit" />
+          {iceCreamOn && <MobileNavLink href="/ice-cream" label="Ice Cream Shoppe" active={pathname === '/ice-cream'} onClose={() => setMenuOpen(false)} />}
         </nav>
       </div>
     </>
