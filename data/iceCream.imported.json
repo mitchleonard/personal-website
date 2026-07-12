@@ -3411,5 +3411,371 @@
       "status": "published"
     }
   ],
-  "homemade": []
+  "homemade": [
+    {
+      "id": "pumpkin-pie",
+      "slug": "pumpkin-pie",
+      "name": "Pumpkin Pie",
+      "madeAt": "2024-10-21",
+      "base": "Pumpkin ice cream",
+      "mixIns": [
+        "Caramel swirl"
+      ],
+      "description": "Pumpkin ice cream with a caramel swirl",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/pumpkin-pie-1-img_0523.jpg",
+          "alt": "Pumpkin Pie homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "peanut-explosion",
+      "slug": "peanut-explosion",
+      "name": "Peanut Explosion",
+      "madeAt": "2024-11-05",
+      "base": "Peanut butter ice cream",
+      "mixIns": [
+        "Reese\u2019s Puffs",
+        "Chocolate swirl",
+        "Salted peanuts"
+      ],
+      "description": "Peanut butter ice cream, Reese\u2019s Puffs cereal with a chocolate swirl and salted peanuts",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/peanut-explosion-1-img_0605.jpg",
+          "alt": "Peanut Explosion homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/peanut-explosion-2-img_0632.jpg",
+          "alt": "Peanut Explosion homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "m-m-and-oreo",
+      "slug": "m-m-and-oreo",
+      "name": "M&M and Oreo",
+      "madeAt": "2025-05-29",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Crushed M&Ms",
+        "Oreos"
+      ],
+      "description": "Vanilla ice cream, crushed M&Ms and Oreos",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/m-m-and-oreo-1-img_2305.jpg",
+          "alt": "M&M and Oreo homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "reeses-peanut-butter-cup-and-butterfinger",
+      "slug": "reeses-peanut-butter-cup-and-butterfinger",
+      "name": "Reese\u2019s Peanut Butter Cup and Butterfinger",
+      "madeAt": "2025-05-30",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Butterfinger",
+        "Reese\u2019s Peanut Butter Cups",
+        "Chocolate swirl"
+      ],
+      "description": "Vanilla ice cream, crushed Butterfinger and Reese\u2019s Peanut Butter Cups with chocolate swirl",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/reeses-peanut-butter-cup-and-butterfinger-1-img_2309.jpg",
+          "alt": "Reese\u2019s Peanut Butter Cup and Butterfinger homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/reeses-peanut-butter-cup-and-butterfinger-2-img_2310.jpg",
+          "alt": "Reese\u2019s Peanut Butter Cup and Butterfinger homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "flossys-nutty-chocolate-swirl",
+      "slug": "flossys-nutty-chocolate-swirl",
+      "name": "Flossy\u2019s Nutty Chocolate Swirl",
+      "madeAt": "2025-07-12",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Grandma\u2019s chocolate sauce",
+        "Peanuts",
+        "Crunchy bits"
+      ],
+      "description": "Vanilla ice cream, Grandma\u2019s chocolate sauce swirl, chopped peanuts, crunchy bits",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/flossys-nutty-chocolate-swirl-1-img_2489.jpg",
+          "alt": "Flossy\u2019s Nutty Chocolate Swirl homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/flossys-nutty-chocolate-swirl-2-img_2491.jpg",
+          "alt": "Flossy\u2019s Nutty Chocolate Swirl homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "pbp-deconstruct-o",
+      "slug": "pbp-deconstruct-o",
+      "name": "PBP Deconstruct-O",
+      "madeAt": "2025-07-14",
+      "base": "Oreo ice cream",
+      "mixIns": [
+        "Grandma\u2019s chocolate sauce",
+        "Salted peanuts"
+      ],
+      "description": "Oreo ice cream, layers of Grandma\u2019s chocolate sauce and crushed salted peanuts",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/pbp-deconstruct-o-1-img_2494.jpg",
+          "alt": "PBP Deconstruct-O homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/pbp-deconstruct-o-2-img_2495.jpg",
+          "alt": "PBP Deconstruct-O homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "scotcheroo",
+      "slug": "scotcheroo",
+      "name": "Scotcheroo",
+      "madeAt": "2025-07-20",
+      "base": "Peanut butter ice cream",
+      "mixIns": [
+        "Grandma\u2019s chocolate sauce",
+        "Butterscotch",
+        "Rice Krispies"
+      ],
+      "description": "Peanut butter ice cream, Grandma\u2019s chocolate sauce, and clusters of butterscotch, peanut butter, and Rice Krispies",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/scotcheroo-1-img_2531.jpg",
+          "alt": "Scotcheroo homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "gooey-cookie-dough-balls",
+      "slug": "gooey-cookie-dough-balls",
+      "name": "Gooey (Cookie) Dough Balls",
+      "madeAt": "2025-08-20",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Chocolate shavings",
+        "Grandma\u2019s chocolate sauce",
+        "Marshmallow cream",
+        "Cookie dough balls"
+      ],
+      "description": "Vanilla ice cream with semi-sweet chocolate shavings, swirls of Grandma\u2019s chocolate sauce and marshmallow cream, and movie theater cookie dough balls",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/gooey-cookie-dough-balls-1-img_2692.jpg",
+          "alt": "Gooey (Cookie) Dough Balls homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/gooey-cookie-dough-balls-2-img_2693.jpg",
+          "alt": "Gooey (Cookie) Dough Balls homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "only-the-best-candy",
+      "slug": "only-the-best-candy",
+      "name": "Only the Best Candy",
+      "madeAt": "2025-08-31",
+      "base": "Oreo ice cream",
+      "mixIns": [
+        "Grandma\u2019s chocolate sauce",
+        "M&Ms",
+        "Reese\u2019s Peanut Butter Cups"
+      ],
+      "description": "Oreo ice cream, swirls of Grandma\u2019s chocolate sauce, crushed M&Ms, and Reese\u2019s Peanut Butter Cups",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/only-the-best-candy-1-img_2761.jpg",
+          "alt": "Only the Best Candy homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/only-the-best-candy-2-img_2764.jpg",
+          "alt": "Only the Best Candy homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "strawberry-shortbread-cookie",
+      "slug": "strawberry-shortbread-cookie",
+      "name": "Strawberry Shortbread Cookie",
+      "madeAt": "2025-09-13",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Shortbread cookie",
+        "Strawberry topping",
+        "Marshmallow topping"
+      ],
+      "description": "Vanilla ice cream, shortbread cookie chunks, and swirls of Smucker\u2019s strawberry and marshmallow topping",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/strawberry-shortbread-cookie-1-img_2805.jpg",
+          "alt": "Strawberry Shortbread Cookie homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/strawberry-shortbread-cookie-2-img_2806.jpg",
+          "alt": "Strawberry Shortbread Cookie homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "banana-pudding",
+      "slug": "banana-pudding",
+      "name": "Banana Pudding",
+      "madeAt": "2025-09-24",
+      "base": "Banana pudding ice cream",
+      "mixIns": [
+        "Butterscotch swirl",
+        "Nilla wafers"
+      ],
+      "description": "Banana pudding ice cream, butterscotch swirl, and smashed Nila wafers",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/banana-pudding-1-img_2913.jpg",
+          "alt": "Banana Pudding homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/banana-pudding-2-img_2916.jpg",
+          "alt": "Banana Pudding homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/banana-pudding-3-img_2917.jpg",
+          "alt": "Banana Pudding homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "halloween-peanut-m-m-and-oreo",
+      "slug": "halloween-peanut-m-m-and-oreo",
+      "name": "Halloween Peanut M&M and Oreo",
+      "madeAt": "2025-10-25",
+      "base": "Orange vanilla ice cream",
+      "mixIns": [
+        "Oreos",
+        "Peanut M&Ms"
+      ],
+      "description": "Orange-colored Vanilla ice cream, crushed Oreos and peanut M&Ms",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/halloween-peanut-m-m-and-oreo-1-img_3342.jpg",
+          "alt": "Halloween Peanut M&M and Oreo homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "spooky-c-c",
+      "slug": "spooky-c-c",
+      "name": "Spooky C&C",
+      "madeAt": "2025-10-29",
+      "base": "Green cookies & cream ice cream",
+      "mixIns": [
+        "Crushed Oreos"
+      ],
+      "description": "Green cookies & cream ice cream with crushed Oreos",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/spooky-c-c-1-img_3361.jpg",
+          "alt": "Spooky C&C homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "qs-sprinkles",
+      "slug": "qs-sprinkles",
+      "name": "Q\u2019s Sprinkles",
+      "madeAt": "2026-02-28",
+      "base": "Cookies & cream ice cream",
+      "mixIns": [
+        "Colorful sprinkles"
+      ],
+      "description": "Cookies & cream ice cream with colorful sprinkles",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/qs-sprinkles-1-img_4529.jpg",
+          "alt": "Q\u2019s Sprinkles homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "minty-c-c",
+      "slug": "minty-c-c",
+      "name": "Minty C&C",
+      "madeAt": "2026-02-28",
+      "base": "Green cookies & cream ice cream",
+      "mixIns": [
+        "Andes chocolate mints"
+      ],
+      "description": "Green cookies & cream ice cream with chopped Andes chocolate mints",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/minty-c-c-1-img_4530.jpg",
+          "alt": "Minty C&C homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "luck-of-the-charm",
+      "slug": "luck-of-the-charm",
+      "name": "Luck of the Charm",
+      "madeAt": "2026-03-29",
+      "base": "Lucky Charm steeped ice cream",
+      "mixIns": [
+        "Marshmallow layers"
+      ],
+      "description": "Lucky Charm steeped ice cream with marshmallow layers",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/luck-of-the-charm-1-img_4711.jpg",
+          "alt": "Luck of the Charm homemade ice cream"
+        },
+        {
+          "src": "/ice-cream/made-by-mitch/luck-of-the-charm-2-img_4712.jpg",
+          "alt": "Luck of the Charm homemade ice cream"
+        }
+      ]
+    },
+    {
+      "id": "cadury-good-time",
+      "slug": "cadury-good-time",
+      "name": "Cadury Good Time",
+      "madeAt": "2026-04-03",
+      "base": "Vanilla ice cream",
+      "mixIns": [
+        "Crushed mini eggs"
+      ],
+      "description": "Vanilla ice cream, crushed mini eggs",
+      "wouldMakeAgain": true,
+      "images": [
+        {
+          "src": "/ice-cream/made-by-mitch/cadury-good-time-1-img_4716.jpg",
+          "alt": "Cadury Good Time homemade ice cream"
+        }
+      ]
+    }
+  ]
 }

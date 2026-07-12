@@ -4,7 +4,7 @@ My ratings, recommendations, and homemade pints—all served from one digital sh
 
 ## Quick read
 
-In the first ten minutes, GPT‑5.6 turned a private six-year ice cream archive into a responsive, deployment-ready collection experience—with persistent Ice Cream Mode, sortable ratings, a map-ready location view, a homemade-pint lab, and a validated update workflow. The final data migration and live results will be added after the Apple exports arrive.
+GPT‑5.6 turned a private six-year ice cream archive into a responsive, live collection experience—with persistent Ice Cream Mode, sortable ratings, a map-ready location view, 17 photographed homemade pints, and a validated update workflow.
 
 ## Context
 
@@ -20,7 +20,7 @@ Turn a private, loosely structured archive into a public collection without maki
 - Reconnected the physical side of the original Ice Cream Mode: a full-screen sprinkle field responds continuously to phone orientation, tap bursts add a tactile little payoff, and the browser tab turns into a cone while the mode is on.
 - Built an editorial `/ice-cream` experience with a dramatic storefront entrance, sortable rating case, geographic preview, and a distinct Made by Mitch pint lab.
 - Kept the collection out of the Projects grid. The existing About and footer references become natural entrances, while the Shoppe remains directly shareable.
-- Designed a typed archive schema for public ratings and homemade pints, with representative records clearly labeled as preview data until the private archive is reviewed.
+- Designed a typed archive schema for public ratings and homemade pints, then populated it from the reviewed private exports.
 - Added a spreadsheet-friendly CSV inbox plus validation and import commands, so a new rating can be published without editing application code.
 - Browser-tested desktop and mobile behavior, including sorting and cross-route persistence. The test surfaced and fixed an unrelated hydration mismatch caused by random navigation colors.
 - Produced a clean Next.js production build with `/ice-cream` statically generated.
@@ -42,15 +42,21 @@ The same experience condenses into a narrow, touch-friendly layout without turni
 - **Design judgment:** preserved the portfolio’s focus by treating Ice Cream Mode as the entrance rather than adding another main-navigation project item.
 - **Implementation quality:** type-check, production build, desktop/mobile browser rendering, sorting, persistence, and console checks passed.
 - **Correction required:** the first milestone screenshot appeared before styles had settled and was replaced after inspecting computed CSS. Browser QA also exposed an existing hydration warning, which GPT‑5.6 traced to nondeterministic nav colors and corrected.
-- **Still unproven:** real-world data matching quality, EXIF extraction, and handling of ambiguous Apple Note/photo pairs cannot be evaluated until the source exports are available.
+- **Real-data migration:** the 155-rating note and its image album aligned chronologically one-to-one; the homemade PDF supplied the exact association between 17 flavors and 27 photos.
+- **Privacy correction:** a final JPEG inspection found retained iPhone EXIF/GPS after conversion. GPT‑5.6 adjusted the ingestion script to strip all public image metadata, then regenerated and rechecked the assets.
 
-## Remaining ship gates
+## Shipped
 
-- Add real Made by Mitch photos and flavors when that album is available.
-- Deploy and record the production URL and final milestone.
+- The live Shoppe is available at [mitchleonard.com/ice-cream](https://www.mitchleonard.com/ice-cream).
+- It contains 155 ratings and 17 Made by Mitch flavors with 27 real photos.
+- Future ratings use the CSV inbox and validated importer; the public image pipeline strips metadata before publishing.
 
 ## Real archive milestone
 
 The Apple Notes text export and original iPhone Photos album resolved into 155 published ratings. The photo sidecars supplied a capture date for every record and GPS coordinates for 153. Rather than commit raw HEIC originals or their metadata, the build pipeline creates 1200px JPEGs with metadata stripped; the raw import folder stays private and ignored by Git.
 
 The archive’s original-note order and chronological photo order aligned one-to-one. This gives the collection an honest recent-first sort and a geographically informed field without requiring hand-entry of 155 dates.
+
+## Made by Mitch milestone
+
+The homemade album adds 17 pints, from Pumpkin Pie to Cadury Good Time, with 27 images matched to the exact flavor list. The images are intentionally date-only in the collection: capture locations from the personal album are never exposed. The ingestion script now makes that privacy promise enforceable by removing EXIF and GPS from every generated public JPEG.

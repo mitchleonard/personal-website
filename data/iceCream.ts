@@ -27,7 +27,7 @@ export type HomemadePint = {
   mixIns: string[]
   description: string
   wouldMakeAgain: boolean
-  image?: { src: string; alt: string }
+  images?: Array<{ src: string; alt: string }>
 }
 
 import importedData from './iceCream.imported.json'
@@ -72,12 +72,14 @@ export const demoHomemadePints: HomemadePint[] = [
     madeAt: '2026-05-18', base: 'Malted vanilla', mixIns: ['Chocolate-covered waffle cone'],
     description: 'A sample batch entry showing how experiments, mix-ins, and verdicts will live together.',
     wouldMakeAgain: true,
+    images: [],
   },
   {
     id: 'pint-demo-002', slug: 'roasted-strawberry', name: 'Roasted Strawberry',
     madeAt: '2026-04-06', base: 'Buttermilk', mixIns: ['Roasted strawberries', 'Strawberry ripple'],
     description: 'The homemade shelf is intentionally separate from the public-shop leaderboard.',
     wouldMakeAgain: true,
+    images: [],
   },
 ]
 

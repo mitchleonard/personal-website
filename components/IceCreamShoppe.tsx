@@ -136,8 +136,10 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
         <div className="pint-grid">
           {homemade.map((pint, index) => (
             <article className="pint-card" key={pint.id}>
-              <div className={`pint-lid pint-lid--${index % 3}`}><span>Batch<br />{String(index + 1).padStart(2, '0')}</span></div>
-              <div><p>{formatDate(pint.madeAt)}</p><h3>{pint.name}</h3><span>{pint.base} · {pint.mixIns.join(' + ')}</span><p>{pint.description}</p></div>
+              <div className={`pint-lid pint-lid--${index % 3}`}>
+                {pint.images?.[0] ? <Image src={pint.images[0].src} alt={pint.images[0].alt} fill unoptimized sizes="128px" className="pint-lid__image" /> : <span>Batch<br />{String(index + 1).padStart(2, '0')}</span>}
+              </div>
+              <div><p>{formatDate(pint.madeAt)}</p><h3>{pint.name}</h3><span>{pint.base} · {pint.mixIns.join(' + ')}</span><p>{pint.description}</p>{pint.images && pint.images.length > 1 && <div className="pint-gallery" aria-label={`${pint.name} photo gallery`}>{pint.images.slice(1).map((image) => <Image key={image.src} src={image.src} alt={image.alt} width={52} height={52} unoptimized className="pint-gallery__image" />)}</div>}</div>
             </article>
           ))}
         </div>

@@ -49,3 +49,8 @@
   why: The mode needed a functional destination as well as a persistent visual identity.
   did: Added a compact Enter the Shoppe link to the desktop navigation, mobile menu, and footer only when Ice Cream Mode is on. The rating archive remains directly linkable, so the playful entrance never becomes a gate.
   next: Deployment verification and the optional Made by Mitch album.
+
+[+24:34] Made by Mitch catalog migrated with privacy review
+  why: The Shoppe’s homemade pint lab needed to become a real collection rather than a placeholder after the second iPhone album arrived.
+  did: Reviewed the source PDF, paired its 17 named flavors to all 27 user-specified photos, and published responsive web JPEGs. A verification pass caught retained iPhone EXIF/GPS after the first conversion; the final pipeline explicitly strips all metadata before the images enter the public directory. Type check, production build, and direct asset delivery all pass.
+  next: Deploy the completed collection and verify the live route.
