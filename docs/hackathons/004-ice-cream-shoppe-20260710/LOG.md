@@ -64,3 +64,8 @@
   why: A follow-up review identified three local photo-pair swaps, one flavor-name correction, and several homemade-pint gallery order changes.
   did: Applied the verified State Fair, Dat Malt Dough, and North Shore/Barney’s image swaps; corrected Cookies Are My Butter Half; removed homemade dates and duplicate ingredient copy; and reversed the specified pint photo sequences. The rating card now pairs date with a concise # rank, and presents the shop and price with icon-led detail rather than status labels.
   next: Publish the editorial pass, then choose a longer-term card-art direction.
+
+[+25:58] Cherry Ledge score treatment selected
+  why: The score needed more visual emphasis while retaining the calm, serif-forward hierarchy of the gallery-label card.
+  did: Anchored the score at the lower-right of each card body and added a short cherry ledge above it. The result keeps the rating in the Shoppe’s existing cream, chocolate, and cherry visual language rather than turning it into a separate badge.
+  next: Deploy and verify the selected score treatment.

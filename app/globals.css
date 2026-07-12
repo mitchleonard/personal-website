@@ -127,7 +127,8 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .scoop-card__details { display:flex; align-items:center; gap:.65rem; flex-wrap:wrap; margin-top:1rem; color:rgba(56,39,33,.62); font-size:.72rem; font-weight:700; }
 .scoop-card__details span { display:inline-flex; align-items:center; gap:.28rem; }
 .scoop-card__details svg { width:.9rem; height:.9rem; flex:none; }
-.scoop-card__score { margin-top:1rem; align-self:flex-end; display:flex; align-items:baseline; }
+.scoop-card__score { position:relative; margin-top:auto; padding-top:1.1rem; align-self:flex-end; display:flex; align-items:baseline; }
+.scoop-card__score::before { content:''; position:absolute; top:.35rem; right:0; width:2.1rem; height:.23rem; background:var(--cherry); }
 .scoop-card__score strong { font-family:var(--font-serif),serif; font-size:2.5rem; }
 .scoop-card__score span { opacity:.5; }
 .shoppe-map-section { max-width:none; background:#c8e4ef; padding-left:max(1.5rem,calc((100vw - 72rem)/2)); padding-right:max(1.5rem,calc((100vw - 72rem)/2)); }
