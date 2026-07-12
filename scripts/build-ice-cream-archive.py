@@ -23,6 +23,12 @@ LON_RE = re.compile(r"<exif:GPSLongitude>([^<]+)")
 LAT_REF_RE = re.compile(r"<exif:GPSLatitudeRef>([^<]+)")
 LON_REF_RE = re.compile(r"<exif:GPSLongitudeRef>([^<]+)")
 
+# This original Cereal Killerz photo was re-added to the iPhone album in 2026,
+# so its sidecar capture date no longer reflects its place in the 2021 archive.
+PHOTO_SEQUENCE_INSERTIONS = {
+    "IMG_5464": {"position": 42, "created": "2021-09-21T12:00:00-05:00"},
+}
+
 
 def slugify(value: str) -> str:
     value = value.lower().replace("’", "").replace("'", "")
@@ -81,13 +87,27 @@ def convert(source: Path, destination: Path) -> None:
         subprocess.run(["/Users/mitchellleonard/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/heif-convert", str(source), str(intermediate)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         source = intermediate
     subprocess.run(["sips", "-Z", "1200", "-s", "format", "jpeg", "-s", "formatOptions", "68", str(source), "--out", str(destination)], check=True, stdout=subprocess.DEVNULL)
+    stripped = destination.with_suffix(".stripped.jpg")
+    subprocess.run(["ffmpeg", "-y", "-i", str(destination), "-map_metadata", "-1", "-q:v", "5", str(stripped)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    stripped.replace(destination)
     intermediate.unlink(missing_ok=True)
+
+
+def corrected_photo_order(photos: list[dict]) -> list[dict]:
+    for stem, correction in PHOTO_SEQUENCE_INSERTIONS.items():
+        photo = next((item for item in photos if item["stem"] == stem), None)
+        if photo is None:
+            raise ValueError(f"Missing corrected photo sidecar: {stem}")
+        photos.remove(photo)
+        photo["created"] = correction["created"]
+        photos.insert(correction["position"] - 1, photo)
+    return photos
 
 
 def main(note_path: Path, photo_dir: Path) -> None:
     root = Path.cwd()
     notes = parse_note(note_path)
-    photos = sorted((parse_xmp(path) for path in photo_dir.glob("*.xmp")), key=lambda photo: photo["created"] or "")
+    photos = corrected_photo_order(sorted((parse_xmp(path) for path in photo_dir.glob("*.xmp")), key=lambda photo: photo["created"] or ""))
     if len(notes) != len(photos):
         raise SystemExit(f"Cannot safely pair entries: {len(notes)} ratings versus {len(photos)} photo sidecars.")
 

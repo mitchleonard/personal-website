@@ -54,3 +54,8 @@
   why: The Shoppe’s homemade pint lab needed to become a real collection rather than a placeholder after the second iPhone album arrived.
   did: Reviewed the source PDF, paired its 17 named flavors to all 27 user-specified photos, and published responsive web JPEGs. A verification pass caught retained iPhone EXIF/GPS after the first conversion; the final pipeline explicitly strips all metadata before the images enter the public directory. Type check, production build, and direct asset delivery all pass.
   next: Deploy the completed collection and verify the live route.
+
+[+25:12] Archive card density and photo-order correction completed
+  why: The initial mobile cards obscured portrait ice cream photos and an historic Cereal Killerz image had been re-added to the iPhone album, breaking the chronological pairing after its intended 2021 position.
+  did: Redesigned the rating case into a two-column mobile grid with portrait-forward image crops, three desktop columns, and four at wide desktop sizes. Replaced location-status labels and quoted notes with compact map/price icons and a plain Rating number. Moved the Cereal Killerz source image from the end of the album back to rating #42, set its verified September 21, 2021 date, and advanced the affected 113 associations.
+  next: Deploy and verify the compact rating case in production.

@@ -12,12 +12,24 @@ function formatDate(value: string) {
   return new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`))
 }
 
-function formatLocation(rating: IceCreamRating) {
-  const place = [rating.location.city, rating.location.region].filter(Boolean).join(', ')
-  return place || (rating.location.latitude != null ? 'GPS-tagged tasting' : 'Location pending')
+function ratingDetails(notes?: string) {
+  const parts = notes?.split(' · ') ?? []
+  return {
+    price: parts.find((part) => part.startsWith('$')),
+    ranking: parts.find((part) => part.startsWith('Rating #')),
+  }
+}
+
+function LocationIcon() {
+  return <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 14s4-3.6 4-7A4 4 0 1 0 4 7c0 3.4 4 7 4 7Z" fill="none" stroke="currentColor" strokeWidth="1.6" /><circle cx="8" cy="7" r="1.35" fill="currentColor" /></svg>
+}
+
+function PriceIcon() {
+  return <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h7.1l3.9 3.9-6.1 6.1-4.9-4.9V3.5Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="5.8" cy="6.5" r=".9" fill="currentColor" /></svg>
 }
 
 function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number }) {
+  const { price, ranking } = ratingDetails(rating.notes)
   return (
     <article className="scoop-card">
       <div className="scoop-card__visual" aria-hidden="true">
@@ -27,11 +39,14 @@ function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number })
       <div className="scoop-card__body">
         <div className="scoop-card__meta">
           <span>{formatDate(rating.triedAt)}</span>
-          <span>{formatLocation(rating)}</span>
         </div>
         <h3>{rating.flavor}</h3>
         <p className="scoop-card__shop">{rating.shop}</p>
-        {rating.notes && <p className="scoop-card__notes">“{rating.notes}”</p>}
+        <div className="scoop-card__details" aria-label="Tasting details">
+          {rating.location.latitude != null && <span title="View on the scoop map"><LocationIcon />On the map</span>}
+          {price && <span><PriceIcon />{price}</span>}
+          {ranking && <span>{ranking}</span>}
+        </div>
         <div className="scoop-card__score"><strong>{rating.score.toFixed(1)}</strong><span>/10</span></div>
       </div>
     </article>
@@ -85,7 +100,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           <div className="shoppe-hero__actions">
             <a href="#the-case" className="shoppe-button">Browse the case</a>
             {!isIceCreamMode && <button type="button" className="shoppe-text-button" onClick={toggleIceCreamMode}>Keep Ice Cream Mode on everywhere</button>}
-            {isIceCreamMode && <span className="shoppe-mode-confirmation">🍦 Ice Cream Mode travels with you</span>}
+            {isIceCreamMode && <span className="shoppe-mode-confirmation">Ice Cream Mode travels with you</span>}
           </div>
           <div className="shoppe-stats" aria-label="Collection statistics">
             <div><strong>{isDemo ? `${expectedRatings}+` : ratings.length}</strong><span>scoops tracked</span></div>
