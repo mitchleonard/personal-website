@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import type { HomemadePint, IceCreamRating } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
+import IceCreamToggle from './IceCreamToggle'
 
 type SortMode = 'recent' | 'top' | 'shop'
 
@@ -80,7 +81,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
   isDemo: boolean
 }) {
   const [sort, setSort] = useState<SortMode>('recent')
-  const [isIceCreamMode, toggleIceCreamMode] = useIceCreamMode()
+  const [isIceCreamMode] = useIceCreamMode()
   const geotagged = ratings.filter((rating) => rating.location.latitude != null && rating.location.longitude != null)
   const sorted = useMemo(() => [...ratings].sort((a, b) => {
     if (sort === 'top') return b.score - a.score || b.triedAt.localeCompare(a.triedAt)
@@ -99,8 +100,10 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           <p className="shoppe-lede">A very serious archive about a very joyful subject: every scoop I’ve rated around the country, plus the pints coming out of my own kitchen.</p>
           <div className="shoppe-hero__actions">
             <a href="#the-case" className="shoppe-button">Browse the case</a>
-            {!isIceCreamMode && <button type="button" className="shoppe-text-button" onClick={toggleIceCreamMode}>Keep Ice Cream Mode on everywhere</button>}
-            {isIceCreamMode && <span className="shoppe-mode-confirmation">Ice Cream Mode travels with you</span>}
+            <span className="ice-mode-control">
+              <IceCreamToggle />
+              <span className="shoppe-mode-confirmation">{isIceCreamMode ? 'Ice Cream Mode travels with you' : 'Flip on Ice Cream Mode'}</span>
+            </span>
           </div>
           <div className="shoppe-stats" aria-label="Collection statistics">
             <div><strong>{isDemo ? `${expectedRatings}+` : ratings.length}</strong><span>scoops tracked</span></div>

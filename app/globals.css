@@ -76,18 +76,25 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 @keyframes sprinkle-burst { from { transform:translate(0,0) rotate(0); opacity:1 } to { transform:translate(var(--dx),var(--dy)) rotate(var(--rot)); opacity:0 } }
 
 .ice-mode-control { display:flex; align-items:center; gap:.65rem; flex-wrap:wrap; }
-/* Glossy on/off slider shown once Ice Cream Mode is running — the 🍦 rides
-   inside a white knob on a strawberry→cherry track (no words needed). The
-   track is only ever rendered in its "on" look; the knob does a one-time
-   springy slide-in so every reveal feels like flipping the switch. */
-.ice-mode-toggle { display:inline-flex; align-items:center; border:none; background:transparent; padding:0; cursor:pointer; transition:transform .18s cubic-bezier(.34,1.56,.64,1); }
-.ice-mode-toggle:hover { transform:translateY(-1px) scale(1.04); }
-.ice-mode-toggle:active { transform:scale(.96); }
+/* Persistent glossy on/off slider (see IceCreamToggle.tsx). It lives in both
+   states so the mode can be flipped from anywhere: OFF = muted cream track,
+   knob left; ON = strawberry→cherry track dusted with sprinkles, knob right,
+   cone gently wiggling. No padding here — the caller's className controls
+   placement/alignment (the reset already zeroes button padding). */
+.ice-mode-toggle { display:inline-flex; align-items:center; gap:.55rem; border:none; background:transparent; cursor:pointer; }
+.ice-mode-toggle:active { transform:scale(.97); }
 .ice-mode-toggle:disabled { opacity:.55; cursor:default; }
-.ice-mode-toggle__track { position:relative; display:inline-block; width:4rem; height:2.1rem; border-radius:999px; background:radial-gradient(120% 90% at 15% 12%, rgba(255,255,255,.45), transparent 45%), linear-gradient(150deg,#ff9ec7 0%,#f56a97 45%,#d84e72 100%); box-shadow:0 6px 16px rgba(216,78,114,.4), inset 0 2px 4px rgba(255,255,255,.35), inset 0 -3px 6px rgba(122,37,64,.3); overflow:hidden; }
-.ice-mode-toggle__track::after { content:''; position:absolute; left:-10%; right:-10%; bottom:-40%; height:120%; background:linear-gradient(180deg,rgba(255,255,255,.28),transparent 60%); border-radius:50%; transform:rotate(-8deg); }
-.ice-mode-toggle__thumb { position:absolute; z-index:1; width:1.68rem; height:1.68rem; left:.21rem; top:.21rem; border-radius:50%; background:radial-gradient(circle at 34% 28%,#ffffff,#ffeaf1 78%); box-shadow:0 3px 6px rgba(122,37,64,.45), inset 0 1px 2px rgba(255,255,255,.9); display:grid; place-items:center; font-size:1.02rem; line-height:1; transform:translateX(1.9rem); animation:ice-thumb-on .55s cubic-bezier(.34,1.56,.64,1); }
-@keyframes ice-thumb-on { 0% { transform:translateX(0) } 62% { transform:translateX(2.12rem) } 100% { transform:translateX(1.9rem) } }
+.ice-mode-toggle__track { position:relative; display:inline-block; width:4.25rem; height:2.25rem; border-radius:999px; background:linear-gradient(180deg,#f4ece7,#e7dcd4); box-shadow:inset 0 2px 4px rgba(74,35,23,.16), inset 0 -1px 2px rgba(255,255,255,.55), 0 1px 2px rgba(74,35,23,.12); overflow:hidden; transition:background .35s ease, box-shadow .35s ease; }
+.ice-mode-toggle__track::after { content:''; position:absolute; left:-10%; right:-10%; bottom:-40%; height:120%; background:linear-gradient(180deg,rgba(255,255,255,.32),transparent 60%); border-radius:50%; transform:rotate(-8deg); }
+.ice-mode-toggle__track::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,.9) 0 1.2px,transparent 1.6px); background-size:9px 9px; background-position:4px 3px; opacity:0; transition:opacity .35s ease; }
+.ice-mode-toggle__thumb { position:absolute; z-index:1; width:1.8rem; height:1.8rem; left:.225rem; top:.225rem; border-radius:50%; background:radial-gradient(circle at 34% 28%,#ffffff,#f4e9e2 78%); box-shadow:0 3px 6px rgba(74,35,23,.32), inset 0 1px 2px rgba(255,255,255,.9); display:grid; place-items:center; font-size:1.05rem; line-height:1; transform:translateX(0); transition:transform .38s cubic-bezier(.34,1.56,.64,1), background .35s ease; }
+.ice-mode-toggle__cone { display:block; }
+.ice-mode-toggle:hover .ice-mode-toggle__thumb { box-shadow:0 4px 9px rgba(74,35,23,.4), inset 0 1px 2px rgba(255,255,255,.9); }
+/* ON state */
+.ice-mode-toggle[aria-checked='true'] .ice-mode-toggle__track { background:radial-gradient(120% 90% at 15% 12%, rgba(255,255,255,.45), transparent 45%), linear-gradient(150deg,#ff9ec7 0%,#f56a97 45%,#d84e72 100%); box-shadow:0 6px 16px rgba(216,78,114,.4), inset 0 2px 4px rgba(255,255,255,.35), inset 0 -3px 6px rgba(122,37,64,.3); }
+.ice-mode-toggle[aria-checked='true'] .ice-mode-toggle__track::before { opacity:.55; }
+.ice-mode-toggle[aria-checked='true'] .ice-mode-toggle__thumb { transform:translateX(2rem); background:radial-gradient(circle at 34% 28%,#ffffff,#ffeaf1 78%); box-shadow:0 3px 6px rgba(122,37,64,.45), inset 0 1px 2px rgba(255,255,255,.9); }
+.ice-mode-toggle[aria-checked='true'] .ice-mode-toggle__cone { animation:ic-wiggle 1.2s ease-in-out infinite; }
 .ice-mode-control--compact .ice-shoppe-entry { position:absolute; top:4.3rem; right:1.5rem; }
 .ice-shoppe-entry { display:inline-flex; gap:.35rem; align-items:center; border-radius:999px; padding:.55rem .85rem; background:#d84e72; color:white; font:600 .75rem/1 var(--font-sans),sans-serif; box-shadow:0 8px 20px rgba(216,78,114,.25); }
 

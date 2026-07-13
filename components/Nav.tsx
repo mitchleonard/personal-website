@@ -138,7 +138,7 @@ export default function Nav() {
                 active={isActive(link.href, pathname)}
               />
             ))}
-            <IceCreamToggle className="text-lg leading-none hover:scale-125 transition-transform" />
+            <IceCreamToggle />
             {iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
           </nav>
 
@@ -175,8 +175,10 @@ export default function Nav() {
               onClose={() => setMenuOpen(false)}
             />
           ))}
-          {/* Stays open on toggle so the palette swap is visible live */}
-          <IceCreamToggle className="py-4 px-4 text-3xl leading-none w-fit" />
+          {/* Stays open on toggle so the palette swap is visible live.
+              px-4 matches the nav links' text inset so the slider's left edge
+              lines up with the first letter of each word. */}
+          <IceCreamToggle className="px-4 py-4 w-fit" />
           {iceCreamOn && <MobileNavLink href="/ice-cream" label="Ice Cream Shoppe" active={pathname === '/ice-cream'} onClose={() => setMenuOpen(false)} />}
         </nav>
       </div>
