@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import IceCreamToggle from './IceCreamToggle'
+import { ICE_CREAM_SHOPPE_PUBLIC } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
 // Same brand colors as HighlightLink in BrandAccent.tsx
@@ -139,7 +140,7 @@ export default function Nav() {
               />
             ))}
             <IceCreamToggle />
-            {iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
+            {ICE_CREAM_SHOPPE_PUBLIC && iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
           </nav>
 
           {/* Mobile hamburger — morphs to ✕ */}
@@ -179,7 +180,7 @@ export default function Nav() {
               px-4 matches the nav links' text inset so the slider's left edge
               lines up with the first letter of each word. */}
           <IceCreamToggle className="px-4 py-4 w-fit" />
-          {iceCreamOn && <MobileNavLink href="/ice-cream" label="Ice Cream Shoppe" active={pathname === '/ice-cream'} onClose={() => setMenuOpen(false)} />}
+          {ICE_CREAM_SHOPPE_PUBLIC && iceCreamOn && <MobileNavLink href="/ice-cream" label="Ice Cream Shoppe" active={pathname === '/ice-cream'} onClose={() => setMenuOpen(false)} />}
         </nav>
       </div>
     </>

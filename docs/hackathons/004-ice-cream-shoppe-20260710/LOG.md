@@ -69,3 +69,8 @@
   why: The score needed more visual emphasis while retaining the calm, serif-forward hierarchy of the gallery-label card.
   did: Anchored the score at the lower-right of each card body and added a short cherry ledge above it. The result keeps the rating in the Shoppe’s existing cream, chocolate, and cherry visual language rather than turning it into a separate badge.
   next: Deploy and verify the selected score treatment.
+
+[+26:12] Shoppe held private for map validation
+  why: The location experience needs a verified shop-level data pass before the collection is ready for public recommendations.
+  did: Updated the storefront copy, normalized Mexican peso prices to MXN, and introduced a single Shoppe visibility flag. While off, the route resolves to not found and is removed from the navigation and sitemap, while the rest of Ice Cream Mode remains available across the site.
+  next: Complete the separate shop-location research pass, validate the map, then re-enable the public route.

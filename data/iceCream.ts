@@ -89,5 +89,9 @@ export const ICE_CREAM_DATA_STATUS = {
   expectedRatings: 150,
 } as const
 
+// Keep the collection local-only while its map data is being verified. Flip to
+// true when the route, navigation entries, and sitemap listing are ready again.
+export const ICE_CREAM_SHOPPE_PUBLIC = false
+
 export const importedRatings = importedData.ratings as IceCreamRating[]
 export const importedHomemadePints = importedData.homemade as HomemadePint[]

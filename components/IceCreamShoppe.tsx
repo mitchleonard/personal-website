@@ -97,7 +97,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           <Link href="/" className="shoppe-back">← Mitch Leonard</Link>
           <p className="shoppe-kicker">Est. 2020 · Minneapolis, Minnesota</p>
           <h1>Ice Cream<br /><em>Shoppe</em></h1>
-          <p className="shoppe-lede">A very serious archive about a very joyful subject: every scoop I’ve rated around the country, plus the pints coming out of my own kitchen.</p>
+          <p className="shoppe-lede">A very serious archive of every scoop I’ve rated around the country, plus the pints coming out of my own kitchen.</p>
           <div className="shoppe-hero__actions">
             <a href="#the-case" className="shoppe-button">Browse the case</a>
             <span className="ice-mode-control">

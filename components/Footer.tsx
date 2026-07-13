@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 import Link from 'next/link'
+import { ICE_CREAM_SHOPPE_PUBLIC } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
 const HIGHLIGHT_COLORS = [
@@ -85,7 +86,7 @@ export default function Footer() {
           >
             Powered by <span className="ic-cone">🍦</span>
           </button>
-          {iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
+          {ICE_CREAM_SHOPPE_PUBLIC && iceCreamOn && <Link href="/ice-cream" className="ice-shoppe-entry">Enter the Shoppe <span aria-hidden="true">→</span></Link>}
         </div>
       </div>
     </footer>
