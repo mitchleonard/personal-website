@@ -2,13 +2,12 @@
 
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 
-// Progressive disclosure, on purpose:
-//   OFF — a bare 🍦 cone. Quiet enough to stay an easter egg a curious
-//         visitor discovers and taps.
-//   ON  — the cone expands into a clearly-labeled switch (reusing the
-//         .ice-mode-toggle styles in globals.css) so, once the whimsy is
-//         running, turning it back off is obvious and stays one tap away on
-//         every page the visitor navigates to.
+// A persistent on/off slider. The 🍦 rides inside a glossy knob that slides
+// between OFF (left, muted cream track) and ON (right, strawberry→cherry
+// track with a sprinkle dusting + a wiggling cone). It stays visible in both
+// states so the mode can be flipped from anywhere — the nav on every page and
+// the Ice Cream Shoppe. The outer button carries the caller's className so it
+// can line up with surrounding items (e.g. the mobile nav links).
 export default function IceCreamToggle({
   className = '',
   label,
@@ -18,36 +17,22 @@ export default function IceCreamToggle({
 }) {
   const [on, toggle] = useIceCreamMode()
 
-  if (!on) {
-    return (
-      <button
-        type="button"
-        onClick={toggle}
-        role="switch"
-        aria-checked={false}
-        aria-label="Turn on ice cream mode"
-        title="Ice cream mode"
-        className={className}
-      >
-        <span className="ic-cone">🍦</span>
-        {label && <span>{label}</span>}
-      </button>
-    )
-  }
-
   return (
     <button
       type="button"
       onClick={toggle}
       role="switch"
-      aria-checked={true}
-      aria-label="Turn off ice cream mode"
+      aria-checked={on}
+      aria-label={on ? 'Turn off ice cream mode' : 'Turn on ice cream mode'}
       title="Ice cream mode"
-      className="ice-mode-toggle"
+      className={`ice-mode-toggle ${className}`.trim()}
     >
       <span className="ice-mode-toggle__track" aria-hidden="true">
-        <span className="ice-mode-toggle__thumb">🍦</span>
+        <span className="ice-mode-toggle__thumb">
+          <span className="ice-mode-toggle__cone">🍦</span>
+        </span>
       </span>
+      {label && <span className="ice-mode-toggle__label">{label}</span>}
     </button>
   )
 }
