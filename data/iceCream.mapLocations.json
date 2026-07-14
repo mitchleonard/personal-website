@@ -1,0 +1,1242 @@
+{
+  "001-nelsons-ice-cream-child-size-pirates-booty-brownie-smores": {
+    "id": "Nelson’s Ice Cream — St. Paul|454 Snelling Ave S, St. Paul, MN 55105",
+    "label": "Nelson’s Ice Cream — St. Paul",
+    "address": "454 Snelling Ave S, St. Paul, MN 55105",
+    "latitude": 44.927826711413,
+    "longitude": -93.166943857265,
+    "source": "location-research"
+  },
+  "002-schoonys-malt-shop-chocolate-peanut-butter-shake": {
+    "id": "Schoony’s Malt Shop & Pizzeria|384 Bench St, Taylors Falls, MN 55084",
+    "label": "Schoony’s Malt Shop & Pizzeria",
+    "address": "384 Bench St, Taylors Falls, MN 55084",
+    "latitude": 45.402494864133,
+    "longitude": -92.652537206316,
+    "source": "location-research"
+  },
+  "003-mn-ice-cream-monster-cookie-with-twist-ice-cream": {
+    "id": "MN Nice Cream — Northeast|807 Broadway St NE, Minneapolis, MN 55413",
+    "label": "MN Nice Cream — Northeast",
+    "address": "807 Broadway St NE, Minneapolis, MN 55413",
+    "latitude": 44.998771298301,
+    "longitude": -93.251025951228,
+    "source": "location-research"
+  },
+  "004-itasca-state-park-waffle-cone-with-french-silk-pie": {
+    "id": "Mary Gibbs Cafe — Itasca State Park|36750 Main Park Dr, Park Rapids, MN 56470",
+    "label": "Mary Gibbs Cafe — Itasca State Park",
+    "address": "36750 Main Park Dr, Park Rapids, MN 56470",
+    "latitude": 47.1881825,
+    "longitude": -95.2196055,
+    "source": "location-research"
+  },
+  "005-leos-grill-malt-shop-chocolate-chip-deluxe-malt": {
+    "id": "Leo’s Grill & Malt Shop|131 S Main St, Stillwater, MN 55082",
+    "label": "Leo’s Grill & Malt Shop",
+    "address": "131 S Main St, Stillwater, MN 55082",
+    "latitude": 45.056355320411,
+    "longitude": -92.805965627637,
+    "source": "location-research"
+  },
+  "006-barneys-drive-in-cookie-monster-flurry": {
+    "id": "Barney’s Drive-In|1300 E Elm Ave, Waseca, MN 56093",
+    "label": "Barney’s Drive-In",
+    "address": "1300 E Elm Ave, Waseca, MN 56093",
+    "latitude": 44.07865956822,
+    "longitude": -93.523212990394,
+    "source": "location-research"
+  },
+  "007-nita-maes-scoop-north-shore": {
+    "id": "‘Nita Mae’s Scoop|101 Judd St, Marine on St. Croix, MN 55047",
+    "label": "‘Nita Mae’s Scoop",
+    "address": "101 Judd St, Marine on St. Croix, MN 55047",
+    "latitude": 45.19860013368,
+    "longitude": -92.769613505608,
+    "source": "location-research"
+  },
+  "008-sebastian-joes-nicollet-ave-pothole-salted-carmel-in-a-waffle-cone": {
+    "id": "Sebastian Joe’s — Linden Hills|4321 Upton Ave S, Minneapolis, MN 55410",
+    "label": "Sebastian Joe’s — Linden Hills",
+    "address": "4321 Upton Ave S, Minneapolis, MN 55410",
+    "latitude": 44.924310928673,
+    "longitude": -93.314660747978,
+    "source": "location-research"
+  },
+  "009-fitzs-cookie-monster-float": {
+    "id": "Fitz’s Delmar|6605 Delmar Blvd, St. Louis, MO 63130",
+    "label": "Fitz’s Delmar",
+    "address": "6605 Delmar Blvd, St. Louis, MO 63130",
+    "latitude": 38.656116400974,
+    "longitude": -90.305910288416,
+    "source": "location-research"
+  },
+  "010-fitzs-trouble-float": {
+    "id": "Fitz’s Delmar|6605 Delmar Blvd, St. Louis, MO 63130",
+    "label": "Fitz’s Delmar",
+    "address": "6605 Delmar Blvd, St. Louis, MO 63130",
+    "latitude": 38.656116400974,
+    "longitude": -90.305910288416,
+    "source": "location-research"
+  },
+  "011-gelato-di-rosa-caramel-salato-biscotti-nut-crunch-gelato": {
+    "id": "Gelato Di Riso|5204 Wilson Ave, St. Louis, MO 63110",
+    "label": "Gelato Di Riso",
+    "address": "5204 Wilson Ave, St. Louis, MO 63110",
+    "latitude": 38.615666941318,
+    "longitude": -90.273004599134,
+    "source": "location-research"
+  },
+  "012-baskin-robbins-moms-makin-cookies-gold-medal-ribbon-sundae": {
+    "id": "Baskin-Robbins|3944 S Garnett Rd, Tulsa, OK 74146",
+    "label": "Baskin-Robbins",
+    "address": "3944 S Garnett Rd, Tulsa, OK 74146",
+    "latitude": 36.106245988414,
+    "longitude": -95.851141651058,
+    "source": "location-research"
+  },
+  "013-andys-frozen-custard-james-brownie-funky-jackhammer": {
+    "id": "Andy’s Frozen Custard|4844 S Yale Ave, Tulsa, OK 74135",
+    "label": "Andy’s Frozen Custard",
+    "address": "4844 S Yale Ave, Tulsa, OK 74135",
+    "latitude": 36.093751226219,
+    "longitude": -95.922328813635,
+    "source": "location-research"
+  },
+  "014-sheridans-frozen-custard-courtneys-dirt-worms": {
+    "id": "Sheridan’s Frozen Custard|2450 Grand Blvd, Unit 119, Kansas City, MO 64108",
+    "label": "Sheridan’s Frozen Custard",
+    "address": "2450 Grand Blvd, Unit 119, Kansas City, MO 64108",
+    "latitude": 39.083289683825,
+    "longitude": -94.581854594192,
+    "source": "location-research"
+  },
+  "015-a-to-z-creamery-nuts-about-dough": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "016-a-to-z-creamery-cookies-are-my-better-half": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "017-a-to-z-creamery-my-bloody-valentine": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "018-bebe-zito-peanut-butter-puppy-chow-the-crowening": {
+    "id": "Bebe Zito — Uptown|704 W 22nd St, Minneapolis, MN 55405",
+    "label": "Bebe Zito — Uptown",
+    "address": "704 W 22nd St, Minneapolis, MN 55405",
+    "latitude": 44.96097130639,
+    "longitude": -93.288137719997,
+    "source": "location-research"
+  },
+  "019-bebe-zito-dat-malt-dough": {
+    "id": "Bebe Zito — A to Z collaboration pickup|703 Mainstreet, Hopkins, MN 55343",
+    "label": "Bebe Zito — A to Z collaboration pickup",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "020-a-to-z-creamery-its-gettin-hot-in-here": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "021-mn-nice-cream-peanut-butter-cups-peanut-butter-monster-cookie-doug": {
+    "id": "MN Nice Cream — Northeast|807 Broadway St NE, Minneapolis, MN 55413",
+    "label": "MN Nice Cream — Northeast",
+    "address": "807 Broadway St NE, Minneapolis, MN 55413",
+    "latitude": 44.998771298301,
+    "longitude": -93.251025951228,
+    "source": "location-research"
+  },
+  "022-treats-crisp-n-cream": {
+    "id": "Treats Cereal Bar & Boba — St. Paul|770 Grand Ave, St. Paul, MN 55105",
+    "label": "Treats Cereal Bar & Boba — St. Paul",
+    "address": "770 Grand Ave, St. Paul, MN 55105",
+    "latitude": 44.939864207988,
+    "longitude": -93.132579948221,
+    "source": "location-research"
+  },
+  "023-connys-creamy-cone-french-silk-pie-flurry": {
+    "id": "Conny’s Creamy Cone|1197 Dale St N, St. Paul, MN 55117",
+    "label": "Conny’s Creamy Cone",
+    "address": "1197 Dale St N, St. Paul, MN 55117",
+    "latitude": 44.977248977645,
+    "longitude": -93.126434783734,
+    "source": "location-research"
+  },
+  "024-nelsons-ice-cream-lake-effect-and-rich-and-famous": {
+    "id": "Nelson’s Ice Cream — St. Paul|454 Snelling Ave S, St. Paul, MN 55105",
+    "label": "Nelson’s Ice Cream — St. Paul",
+    "address": "454 Snelling Ave S, St. Paul, MN 55105",
+    "latitude": 44.927826711413,
+    "longitude": -93.166943857265,
+    "source": "location-research"
+  },
+  "025-a-to-z-creamery-this-baby-takes-the-cake": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "026-mn-nice-cream-camper-with-sprinkle-cone": {
+    "id": "MN Nice Cream — Northeast|807 Broadway St NE, Minneapolis, MN 55413",
+    "label": "MN Nice Cream — Northeast",
+    "address": "807 Broadway St NE, Minneapolis, MN 55413",
+    "latitude": 44.998771298301,
+    "longitude": -93.251025951228,
+    "source": "location-research"
+  },
+  "027-the-blast-cookie-jar-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "028-a-to-z-creamery-stan-the-man": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "029-the-blast-minnesota-maple-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "030-nellies-ice-cream-hot-pressed-c-is-for-cookie-ice-cream-sandwich-rolle": {
+    "id": "Nellie’s Ice Cream|2034 Marshall Ave, St. Paul, MN 55104",
+    "label": "Nellie’s Ice Cream",
+    "address": "2034 Marshall Ave, St. Paul, MN 55104",
+    "latitude": 44.948330845439,
+    "longitude": -93.186357840786,
+    "source": "location-research"
+  },
+  "031-american-old-fashioned-ice-cream-parlor-elephant-tracks-scotcheroo-in-homemade-oreo-waffle-c": {
+    "id": "American Old-Fashioned Ice Cream Parlor|102 N Main St, Galena, IL 61036",
+    "label": "American Old-Fashioned Ice Cream Parlor",
+    "address": "102 N Main St, Galena, IL 61036",
+    "latitude": 42.416312057576,
+    "longitude": -90.428382159715,
+    "source": "location-research"
+  },
+  "032-4-queens-dairy-cream-surprise-snowstorm": {
+    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Treat",
+    "address": "1310 W 1st St, Cedar Falls, IA 50613",
+    "latitude": 42.537788405112,
+    "longitude": -92.460892846993,
+    "source": "location-research"
+  },
+  "033-grandpas-ice-cream-smores-and-more-crazy-shake": {
+    "id": "Grandpa’s Ice Cream|1258 E Moore Lake Dr, Fridley, MN 55432",
+    "label": "Grandpa’s Ice Cream",
+    "address": "1258 E Moore Lake Dr, Fridley, MN 55432",
+    "latitude": 45.0809618,
+    "longitude": -93.2432205,
+    "source": "location-research"
+  },
+  "034-dux-ice-cream-this-just-got-serious-pb-hearts-chocolate": {
+    "id": "Dux|216 S Washington St, Lake City, MN 55041",
+    "label": "Dux",
+    "address": "216 S Washington St, Lake City, MN 55041",
+    "latitude": 44.449043273831,
+    "longitude": -92.264883624756,
+    "source": "location-research"
+  },
+  "035-licks-unlimited-heaps-of-love-and-halleys-comet-in-a-chocolate-dippe": {
+    "id": "Licks Unlimited|31 Water St, Excelsior, MN 55331",
+    "label": "Licks Unlimited",
+    "address": "31 Water St, Excelsior, MN 55331",
+    "latitude": 44.904081288974,
+    "longitude": -93.565284114295,
+    "source": "location-research"
+  },
+  "036-cold-front-ice-cream-slider-with-sticks-and-stones-ice-cream": {
+    "id": "Cold Front|490 Hamline Ave S, St. Paul, MN 55116",
+    "label": "Cold Front",
+    "address": "490 Hamline Ave S, St. Paul, MN 55116",
+    "latitude": 44.926507006598,
+    "longitude": -93.156755861664,
+    "source": "location-research"
+  },
+  "037-love-creamery-salted-chocolate-brownie-and-popcorn-carmel-fudge": {
+    "id": "Love Creamery — Lincoln Park|1908 W Superior St, Duluth, MN 55806",
+    "label": "Love Creamery — Lincoln Park",
+    "address": "1908 W Superior St, Duluth, MN 55806",
+    "latitude": 46.768682923333,
+    "longitude": -92.121846197448,
+    "source": "location-research"
+  },
+  "038-sebastian-joes-peaces-of-the-world": {
+    "id": "Sebastian Joe’s — Linden Hills|4321 Upton Ave S, Minneapolis, MN 55410",
+    "label": "Sebastian Joe’s — Linden Hills",
+    "address": "4321 Upton Ave S, Minneapolis, MN 55410",
+    "latitude": 44.924310928673,
+    "longitude": -93.314660747978,
+    "source": "location-research"
+  },
+  "039-red-cabin-custard-pumpkin-pie-frozen-custard-in-a-waffle-cone": {
+    "id": "Red Cabin Custard|1114 E Sheridan St, Ely, MN 55731",
+    "label": "Red Cabin Custard",
+    "address": "1114 E Sheridan St, Ely, MN 55731",
+    "latitude": 47.90310919927,
+    "longitude": -91.849910747949,
+    "source": "location-research"
+  },
+  "040-a-to-z-creamery-do-you-know-the-muffin-man": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "041-the-blast-kitchen-sink-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "042-cereal-killerz-peanut-butter-lover-milkshake": {
+    "id": "The Cereal Killerz Kitchen — Miracle Mile Shops|3663 S Las Vegas Blvd, Suite 810, Las Vegas, NV 89109",
+    "label": "The Cereal Killerz Kitchen — Miracle Mile Shops",
+    "address": "3663 S Las Vegas Blvd, Suite 810, Las Vegas, NV 89109",
+    "latitude": 36.110960389144,
+    "longitude": -115.172914345721,
+    "source": "location-research"
+  },
+  "043-honey-mackies-kit-kat-and-salted-caramel-with-peanuts-in-a-homemad": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "044-a-to-z-creamery-donut-share-me": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "045-bebe-zito-peanut-butter-puppy-chow": {
+    "id": "Bebe Zito — Malcolm Yards|501 30th Ave SE, Minneapolis, MN 55414",
+    "label": "Bebe Zito — Malcolm Yards",
+    "address": "501 30th Ave SE, Minneapolis, MN 55414",
+    "latitude": 44.9728625,
+    "longitude": -93.2136058,
+    "source": "location-research"
+  },
+  "046-a-to-z-creamery-mystery-ice-cream": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "047-a-to-z-creamery-chandlers-pint": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "048-a-to-z-creamery-im-so-krispy": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "049-grand-ole-creamery-mac-daddy-black-hills-gold-in-a-homemade-waffle-cone": {
+    "id": "Grand Ole Creamery|750 Grand Ave, St. Paul, MN 55105",
+    "label": "Grand Ole Creamery",
+    "address": "750 Grand Ave, St. Paul, MN 55105",
+    "latitude": 44.939861399627,
+    "longitude": -93.131789410124,
+    "source": "location-research"
+  },
+  "050-a-to-z-creamery-ice-cream-for-suppah": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "051-the-blast-kitchen-sink-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "052-lick-honest-ice-creams-texas-sheet-cake-sweet-cream-and-strawberry": {
+    "id": "Lick Honest Ice Creams — Burnet Road|6555 Burnet Rd, Suite 200, Austin, TX 78757",
+    "label": "Lick Honest Ice Creams — Burnet Road",
+    "address": "6555 Burnet Rd, Suite 200, Austin, TX 78757",
+    "latitude": 30.34041251431,
+    "longitude": -97.738847492201,
+    "source": "location-research"
+  },
+  "053-museum-of-ice-cream-animal-cookie-milk-shake": {
+    "id": "Museum of Ice Cream — The Domain|11506 Century Oaks Terrace, Suite 128, Austin, TX 78758",
+    "label": "Museum of Ice Cream — The Domain",
+    "address": "11506 Century Oaks Terrace, Suite 128, Austin, TX 78758",
+    "latitude": 30.401874152299,
+    "longitude": -97.726212983687,
+    "source": "location-research"
+  },
+  "054-heritage-creamery-brown-butter-texas-pecan": {
+    "id": "Heritage Creamery — 8th Street|1125 S 8th St, Waco, TX 76706",
+    "label": "Heritage Creamery — 8th Street",
+    "address": "1125 S 8th St, Waco, TX 76706",
+    "latitude": 31.546405778874,
+    "longitude": -97.124858854921,
+    "source": "location-research"
+  },
+  "055-the-baked-bear-funfetti-cookie-sandwich-with-bear-batter-ice-cream-": {
+    "id": "The Baked Bear — Seaholm|211 Walter Seaholm Dr, Suite LR150, Austin, TX 78701",
+    "label": "The Baked Bear — Seaholm",
+    "address": "211 Walter Seaholm Dr, Suite LR150, Austin, TX 78701",
+    "latitude": 30.2679551,
+    "longitude": -97.7530453,
+    "source": "location-research"
+  },
+  "056-the-yard-milkshake-bar-cookie-monster-shake": {
+    "id": "The Yard Milkshake Bar — Austin|3400 Esperanza Crossing, Austin, TX 78758",
+    "label": "The Yard Milkshake Bar — Austin",
+    "address": "3400 Esperanza Crossing, Austin, TX 78758",
+    "latitude": 30.400613232304,
+    "longitude": -97.726752921978,
+    "source": "location-research"
+  },
+  "057-fletchers-ice-cream-1800-in-a-waffle-cone": {
+    "id": "Fletcher’s Ice Cream & Cafe|306 E Hennepin Ave, Minneapolis, MN 55414",
+    "label": "Fletcher’s Ice Cream & Cafe",
+    "address": "306 E Hennepin Ave, Minneapolis, MN 55414",
+    "latitude": 44.988003961415,
+    "longitude": -93.256154207351,
+    "source": "location-research"
+  },
+  "058-dream-creamery-cookie-dough-and-fudge-and-101-grand-in-a-blue-lagoo": {
+    "id": "Dream Creamery NE|816 NE Lowry Ave, Minneapolis, MN 55418",
+    "label": "Dream Creamery NE",
+    "address": "816 NE Lowry Ave, Minneapolis, MN 55418",
+    "latitude": 45.013101704786,
+    "longitude": -93.250569053277,
+    "source": "location-research"
+  },
+  "059-nelsons-ice-cream-monster-cookie-and-bear-creek-caramel": {
+    "id": "Nelson’s Ice Cream — St. Paul|454 Snelling Ave S, St. Paul, MN 55105",
+    "label": "Nelson’s Ice Cream — St. Paul",
+    "address": "454 Snelling Ave S, St. Paul, MN 55105",
+    "latitude": 44.927826711413,
+    "longitude": -93.166943857265,
+    "source": "location-research"
+  },
+  "060-tommys-tonka-trolley-sebastian-joes-pavarotti": {
+    "id": "Tommy’s Tonka Trolley|Excelsior, Minnesota",
+    "label": "Tommy’s Tonka Trolley",
+    "address": "Excelsior, Minnesota",
+    "latitude": 44.9047737,
+    "longitude": -93.5654459,
+    "source": "location-research"
+  },
+  "061-4-queens-dairy-treat-monster-cookie-snowstorm": {
+    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Treat",
+    "address": "1310 W 1st St, Cedar Falls, IA 50613",
+    "latitude": 42.537788405112,
+    "longitude": -92.460892846993,
+    "source": "location-research"
+  },
+  "062-jenis-splendid-ice-creams-bombastix-sundae-cone-and-brown-butter-almond-brittl": {
+    "id": "Jeni’s Splendid Ice Creams — Brentwood|211 Franklin Rd, Suite 100, Brentwood, TN 37027",
+    "label": "Jeni’s Splendid Ice Creams — Brentwood",
+    "address": "211 Franklin Rd, Suite 100, Brentwood, TN 37027",
+    "latitude": 36.032651997509,
+    "longitude": -86.789193805875,
+    "source": "location-research"
+  },
+  "063-dream-creamery-oh-my-gourd-and-monkey-bread-praline-in-a-waffle-con": {
+    "id": "Dream Creamery NE|816 NE Lowry Ave, Minneapolis, MN 55418",
+    "label": "Dream Creamery NE",
+    "address": "816 NE Lowry Ave, Minneapolis, MN 55418",
+    "latitude": 45.013101704786,
+    "longitude": -93.250569053277,
+    "source": "location-research"
+  },
+  "064-graeters-black-raspberry-chip": {
+    "id": "Graeter’s — Mason|5076 Natorp Blvd, Mason, OH 45040",
+    "label": "Graeter’s — Mason",
+    "address": "5076 Natorp Blvd, Mason, OH 45040",
+    "latitude": 39.300556295282,
+    "longitude": -84.316040558196,
+    "source": "location-research"
+  },
+  "065-graeters-cookie-dough-chocolate-chip": {
+    "id": "Graeter’s — CVG Airport|2939 Terminal Dr, Hebron, KY 41048",
+    "label": "Graeter’s — CVG Airport",
+    "address": "2939 Terminal Dr, Hebron, KY 41048",
+    "latitude": 39.055343247434,
+    "longitude": -84.662068029947,
+    "source": "location-research"
+  },
+  "066-4-queens-dairy-treat-scotcheroo-snowstorm": {
+    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Treat",
+    "address": "1310 W 1st St, Cedar Falls, IA 50613",
+    "latitude": 42.537788405112,
+    "longitude": -92.460892846993,
+    "source": "location-research"
+  },
+  "067-a-to-z-creamery-pumkn-szn": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "068-a-to-z-creamery-lets-get-knotty": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "069-a-to-z-creamery-reindeer-chow": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "070-a-to-z-creamery-swirly-mammoth": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "071-reginas-ice-cream-butterscotch-bomb": {
+    "id": "Regina’s Ice Cream|8990 Fontana Del Sol Way, Suite 100, Naples, FL 34109",
+    "label": "Regina’s Ice Cream",
+    "address": "8990 Fontana Del Sol Way, Suite 100, Naples, FL 34109",
+    "latitude": 26.244845490711,
+    "longitude": -81.77311857762,
+    "source": "location-research"
+  },
+  "072-m-ms-cafe-sticky-fingers": {
+    "id": "M&M’s Cafe at Tin City|1200 5th Ave S, Naples, FL 34102",
+    "label": "M&M’s Cafe at Tin City",
+    "address": "1200 5th Ave S, Naples, FL 34102",
+    "latitude": 26.142030463865,
+    "longitude": -81.790730743074,
+    "source": "location-research"
+  },
+  "073-a-to-z-creamery-dat-new-new": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "074-sebastian-joes-raspberry-chocolate-chip": {
+    "id": "Sebastian Joe’s — Linden Hills|4321 Upton Ave S, Minneapolis, MN 55410",
+    "label": "Sebastian Joe’s — Linden Hills",
+    "address": "4321 Upton Ave S, Minneapolis, MN 55410",
+    "latitude": 44.924310928673,
+    "longitude": -93.314660747978,
+    "source": "location-research"
+  },
+  "075-mn-nice-cream-fun-cone": {
+    "id": "MN Nice Cream — Northeast|807 Broadway St NE, Minneapolis, MN 55413",
+    "label": "MN Nice Cream — Northeast",
+    "address": "807 Broadway St NE, Minneapolis, MN 55413",
+    "latitude": 44.998771298301,
+    "longitude": -93.251025951228,
+    "source": "location-research"
+  },
+  "076-a-to-z-creamery-the-american-cream": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "077-a-to-z-creamery-puddle-of-mud": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "078-edina-creamery-sweet-salty-sundae": {
+    "id": "Edina Creamery|4940 France Ave S, Edina, MN 55410",
+    "label": "Edina Creamery",
+    "address": "4940 France Ave S, Edina, MN 55410",
+    "latitude": 44.913216419938,
+    "longitude": -93.329124744286,
+    "source": "location-research"
+  },
+  "079-portland-malt-shoppe-marshmallow-brownie-nut-fudge": {
+    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "The PortLand Malt Shoppe",
+    "address": "706 E Superior St, Duluth, MN 55802",
+    "latitude": 46.793831933097,
+    "longitude": -92.089171460695,
+    "source": "location-research"
+  },
+  "080-a-to-z-creamery-great-scoff": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "081-sebastian-joes-pridefetti": {
+    "id": "Sebastian Joe’s — Linden Hills|4321 Upton Ave S, Minneapolis, MN 55410",
+    "label": "Sebastian Joe’s — Linden Hills",
+    "address": "4321 Upton Ave S, Minneapolis, MN 55410",
+    "latitude": 44.924310928673,
+    "longitude": -93.314660747978,
+    "source": "location-research"
+  },
+  "082-dream-creamery-chocolate-hazelnut-wafer-crunch": {
+    "id": "Dream Creamery NE|816 NE Lowry Ave, Minneapolis, MN 55418",
+    "label": "Dream Creamery NE",
+    "address": "816 NE Lowry Ave, Minneapolis, MN 55418",
+    "latitude": 45.013101704786,
+    "longitude": -93.250569053277,
+    "source": "location-research"
+  },
+  "083-blue-moon-dine-in-theater-mn-state-fair-irish-butter-ice-cream-over-brown-sugar-cinnamon-toa": {
+    "id": "Blue Moon Dine-In Theater|1777 Carnes Ave, Falcon Heights, MN 55108",
+    "label": "Blue Moon Dine-In Theater",
+    "address": "1777 Carnes Ave, Falcon Heights, MN 55108",
+    "latitude": 44.9798822,
+    "longitude": -93.1729608,
+    "source": "location-research"
+  },
+  "084-a-to-z-creamery-mn-state-fair-apple-of-grannys-eye": {
+    "id": "A to Z Creamery — Minnesota State Fair|1297 Underwood St, Falcon Heights, MN 55108",
+    "label": "A to Z Creamery — Minnesota State Fair",
+    "address": "1297 Underwood St, Falcon Heights, MN 55108",
+    "latitude": 44.9828877,
+    "longitude": -93.1704962,
+    "source": "location-research"
+  },
+  "085-a-to-z-creamery-aye-aye-capn": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "086-handels-ice-cream-graham-central-station-and-salty-caramel-truffle": {
+    "id": "Handel’s Homemade Ice Cream|13539 NW Cornell Rd, Portland, OR 97229",
+    "label": "Handel’s Homemade Ice Cream",
+    "address": "13539 NW Cornell Rd, Portland, OR 97229",
+    "latitude": 45.528328970836,
+    "longitude": -122.817768093737,
+    "source": "location-research"
+  },
+  "087-salt-straw-the-great-candycopia-and-salted-malted-chocolate-chi": {
+    "id": "Salt & Straw — Beaverton|2735 SW Cedar Hills Blvd, Unit 100, Beaverton, OR 97005",
+    "label": "Salt & Straw — Beaverton",
+    "address": "2735 SW Cedar Hills Blvd, Unit 100, Beaverton, OR 97005",
+    "latitude": 45.49928105024,
+    "longitude": -122.807219248267,
+    "source": "location-research"
+  },
+  "088-tin-roof-dairy-black-cherry-vanilla-soda": {
+    "id": "Sweets on Third|119 3rd Ave, Baraboo, WI 53913",
+    "label": "Sweets on Third",
+    "address": "119 3rd Ave, Baraboo, WI 53913",
+    "latitude": 43.469877140803,
+    "longitude": -89.742865864627,
+    "source": "location-research"
+  },
+  "089-a-to-z-creamery-schweddy-ballz": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "090-amys-ice-cream-potatoes-and-molasses": {
+    "id": "Amy’s Ice Creams — South Congress|1301 S Congress Ave, Austin, TX 78704",
+    "label": "Amy’s Ice Creams — South Congress",
+    "address": "1301 S Congress Ave, Austin, TX 78704",
+    "latitude": 30.251046944395,
+    "longitude": -97.749061494884,
+    "source": "location-research"
+  },
+  "091-frozen-flamingo-christmas-cookie-concrete": {
+    "id": "Frozen Flamingo|1208 Williams Dr, Georgetown, TX 78628",
+    "label": "Frozen Flamingo",
+    "address": "1208 Williams Dr, Georgetown, TX 78628",
+    "latitude": 30.651247308474,
+    "longitude": -97.681463812494,
+    "source": "location-research"
+  },
+  "092-jenis-spendid-ice-creams-buckeye-frenzy-and-gooey-butter-cake": {
+    "id": "Jeni’s Splendid Ice Creams — The Triangle|4616 Triangle Ave, Suite 200, Austin, TX 78751",
+    "label": "Jeni’s Splendid Ice Creams — The Triangle",
+    "address": "4616 Triangle Ave, Suite 200, Austin, TX 78751",
+    "latitude": 30.314302715623,
+    "longitude": -97.734081112101,
+    "source": "location-research"
+  },
+  "093-cossettas-cannoli-gelato": {
+    "id": "Cossetta Alimentari|211 7th St W, St. Paul, MN 55102",
+    "label": "Cossetta Alimentari",
+    "address": "211 7th St W, St. Paul, MN 55102",
+    "latitude": 44.943490003244,
+    "longitude": -93.104090667586,
+    "source": "location-research"
+  },
+  "094-a-to-z-creamery-dough-boi": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "095-a-to-z-creamery-everything-and-the": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "096-dream-creamery-salty-dulce-de-leche-and-brown-sugar-cookie-dough": {
+    "id": "Dream Creamery NE|816 NE Lowry Ave, Minneapolis, MN 55418",
+    "label": "Dream Creamery NE",
+    "address": "816 NE Lowry Ave, Minneapolis, MN 55418",
+    "latitude": 45.013101704786,
+    "longitude": -93.250569053277,
+    "source": "location-research"
+  },
+  "097-the-blast-cookie-monster-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "098-a-to-z-creamery-oreo-madness": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "099-pops-old-fashioned-ice-cream-company-peanut-butter-chocolate-pretzel-rubys-world-famous-c": {
+    "id": "Pop’s Old Fashioned Ice Cream Co.|109 King St, Alexandria, VA 22314",
+    "label": "Pop’s Old Fashioned Ice Cream Co.",
+    "address": "109 King St, Alexandria, VA 22314",
+    "latitude": 38.804305841336,
+    "longitude": -77.040416658556,
+    "source": "location-research"
+  },
+  "100-pitango-hibiscus-blossom-and-crema": {
+    "id": "Pitango Gelato & Coffee — Penn Quarter|413 7th St NW, Washington, DC 20004",
+    "label": "Pitango Gelato & Coffee — Penn Quarter",
+    "address": "413 7th St NW, Washington, DC 20004",
+    "latitude": 38.895005343234,
+    "longitude": -77.021842726833,
+    "source": "location-research"
+  },
+  "101-thomas-sweets-cookie-monster-blend-in-with-fudge-striped-cookie": {
+    "id": "Thomas Sweet — Washington, D.C.|3214 P St NW, Washington, DC 20007",
+    "label": "Thomas Sweet — Washington, D.C.",
+    "address": "3214 P St NW, Washington, DC 20007",
+    "latitude": 38.909190249588,
+    "longitude": -77.063860883675,
+    "source": "location-research"
+  },
+  "102-the-creamery-cookie-dough-and-banana-pudding": {
+    "id": "The Creamery|110 King St, Alexandria, VA 22314",
+    "label": "The Creamery",
+    "address": "110 King St, Alexandria, VA 22314",
+    "latitude": 38.804195139688,
+    "longitude": -77.040460596862,
+    "source": "location-research"
+  },
+  "103-jackies-ice-cream-candy-bar-sundae": {
+    "id": "Jackie’s Ice Cream|202 Main St, Preston, IA 52069",
+    "label": "Jackie’s Ice Cream",
+    "address": "202 Main St, Preston, IA 52069",
+    "latitude": 42.052640319977,
+    "longitude": -90.39387683819,
+    "source": "location-research"
+  },
+  "104-the-scream-monster-cookie-dough-flurry": {
+    "id": "The S'Cream|Owatonna, Minnesota",
+    "label": "The S'Cream",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.082517,
+    "longitude": -93.2282716,
+    "source": "location-research"
+  },
+  "105-treats-butter-puff": {
+    "id": "Treats Cereal Bar & Boba — Minneapolis|314 N 2nd St, Minneapolis, MN 55401",
+    "label": "Treats Cereal Bar & Boba — Minneapolis",
+    "address": "314 N 2nd St, Minneapolis, MN 55401",
+    "latitude": 44.985521304277,
+    "longitude": -93.271459707956,
+    "source": "location-research"
+  },
+  "106-picol-ferrero-rocher-popsicle": {
+    "id": "Picolé|2656 Main St, Suite 110, Dallas, TX 75226",
+    "label": "Picolé",
+    "address": "2656 Main St, Suite 110, Dallas, TX 75226",
+    "latitude": 32.783575926956,
+    "longitude": -96.785098715262,
+    "source": "location-research"
+  },
+  "107-adeles-frozen-custard-cookie-dough-concrete": {
+    "id": "Adele’s Frozen Custard|800 Excelsior Blvd, Excelsior, MN 55331",
+    "label": "Adele’s Frozen Custard",
+    "address": "800 Excelsior Blvd, Excelsior, MN 55331",
+    "latitude": 44.9027302,
+    "longitude": -93.5535009,
+    "source": "location-research"
+  },
+  "108-nelsons-ice-cream-monkey-business-and-elephant-tracks": {
+    "id": "Nelson’s Ice Cream — St. Paul|454 Snelling Ave S, St. Paul, MN 55105",
+    "label": "Nelson’s Ice Cream — St. Paul",
+    "address": "454 Snelling Ave S, St. Paul, MN 55105",
+    "latitude": 44.927826711413,
+    "longitude": -93.166943857265,
+    "source": "location-research"
+  },
+  "109-a-to-z-creamery-friez-b4-guyz": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "110-portland-malt-shoppe-peanut-butter-moose-tracks": {
+    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "The PortLand Malt Shoppe",
+    "address": "706 E Superior St, Duluth, MN 55802",
+    "latitude": 46.793831933097,
+    "longitude": -92.089171460695,
+    "source": "location-research"
+  },
+  "111-a-to-z-creamery-whats-poppin": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "112-bavettes-bar-and-boeuf-ice-cream-sundae-royal": {
+    "id": "Bavette’s Bar & Boeuf|218 W Kinzie St, Chicago, IL 60654",
+    "label": "Bavette’s Bar & Boeuf",
+    "address": "218 W Kinzie St, Chicago, IL 60654",
+    "latitude": 41.889216408748,
+    "longitude": -87.634411932852,
+    "source": "location-research"
+  },
+  "113-margies-candies-jumbo-hot-fudge-sundae": {
+    "id": "Margie’s Candies|1960 N Western Ave, Chicago, IL 60647",
+    "label": "Margie’s Candies",
+    "address": "1960 N Western Ave, Chicago, IL 60647",
+    "latitude": 41.916864171279,
+    "longitude": -87.687468894059,
+    "source": "location-research"
+  },
+  "114-north-end-dairy-treat-chocolate-chip-cookie-frost-bite": {
+    "id": "North End Dairy Treat|1108 N 2nd St, Clinton, IA 52732",
+    "label": "North End Dairy Treat",
+    "address": "1108 N 2nd St, Clinton, IA 52732",
+    "latitude": 41.856219093905,
+    "longitude": -90.185745305486,
+    "source": "location-research"
+  },
+  "115-schoolhouse-scoop-jumping-jersey-cow-and-muddy-boots-extra-credit": {
+    "id": "Schoolhouse Scoop|919 Vermillion St, Suite 120, Hastings, MN 55033",
+    "label": "Schoolhouse Scoop",
+    "address": "919 Vermillion St, Suite 120, Hastings, MN 55033",
+    "latitude": 44.737098505226,
+    "longitude": -92.852385433178,
+    "source": "location-research"
+  },
+  "116-honey-mackeys-velvet-oreo-and-candy-bar-mix-up": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "117-two-scoops-fluffer-nutter-split": {
+    "id": "Two Scoops — Osseo|215 Central Ave, Osseo, MN 55369",
+    "label": "Two Scoops — Osseo",
+    "address": "215 Central Ave, Osseo, MN 55369",
+    "latitude": 45.118368323631,
+    "longitude": -93.402253817829,
+    "source": "location-research"
+  },
+  "118-honey-and-mackies-waffle-cone-crunch-and-rice-krispies": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "119-honey-and-mackies-sweet-elvis-and-chocolate-gold": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "120-red-barn-farm-maple-nut-sundae": {
+    "id": "Red Barn Farm|10063 110th St E, Northfield, MN 55057",
+    "label": "Red Barn Farm",
+    "address": "10063 110th St E, Northfield, MN 55057",
+    "latitude": 44.428223490336,
+    "longitude": -93.097336403172,
+    "source": "location-research"
+  },
+  "121-a-to-z-creamery-baked-banana": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "122-honey-mackies-nutella-graham-and-hot-chocolate": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "123-ululanis-hawaiian-shave-ice-sunset-beach-with-macadamia-nut-ice-cream-and-snow-c": {
+    "id": "Ululani’s Hawaiian Shave Ice|61 S Kihei Rd, Kihei, HI 96753",
+    "label": "Ululani’s Hawaiian Shave Ice",
+    "address": "61 S Kihei Rd, Kihei, HI 96753",
+    "latitude": 20.780512845539,
+    "longitude": -156.462001241164,
+    "source": "location-research"
+  },
+  "124-lapperts-ube-haupia": {
+    "id": "Lappert’s Hawaii — Wailea|3750 Wailea Alanui Dr, Kihei, HI 96753",
+    "label": "Lappert’s Hawaii — Wailea",
+    "address": "3750 Wailea Alanui Dr, Kihei, HI 96753",
+    "latitude": 20.688114024077,
+    "longitude": -156.439642990808,
+    "source": "location-research"
+  },
+  "125-roselani-banana-mac-crunch": {
+    "id": "Roselani Scoop Shop|115D Hana Hwy, Paia, HI 96779",
+    "label": "Roselani Scoop Shop",
+    "address": "115D Hana Hwy, Paia, HI 96779",
+    "latitude": 20.91600892112,
+    "longitude": -156.381531223624,
+    "source": "location-research"
+  },
+  "126-lapperts-caramel-coconut-macadamia-nut": {
+    "id": "Lappert’s Hawaii — Koloa|2829 Ala Kalanikaumaka, Unit K-160, Koloa, HI 96756",
+    "label": "Lappert’s Hawaii — Koloa",
+    "address": "2829 Ala Kalanikaumaka, Unit K-160, Koloa, HI 96756",
+    "latitude": 21.888076388855,
+    "longitude": -159.469679206479,
+    "source": "location-research"
+  },
+  "127-uncles-shaved-ice-island-nectar": {
+    "id": "Uncle’s Shave Ice|4454 Nuhou St, Unit 419, Lihue, HI 96766",
+    "label": "Uncle’s Shave Ice",
+    "address": "4454 Nuhou St, Unit 419, Lihue, HI 96766",
+    "latitude": 21.966801536517,
+    "longitude": -159.385609486547,
+    "source": "location-research"
+  },
+  "128-papalani-gelato-kauai-crunch-and-haupia": {
+    "id": "Papalani Gelato|2360 Kiahuna Plantation Dr, Koloa, HI 96756",
+    "label": "Papalani Gelato",
+    "address": "2360 Kiahuna Plantation Dr, Koloa, HI 96756",
+    "latitude": 21.881002766882,
+    "longitude": -159.457726341723,
+    "source": "location-research"
+  },
+  "129-lapperts-heavenly-hana-and-mauna-keas-secret": {
+    "id": "Lappert’s Hawaii — Koloa|2829 Ala Kalanikaumaka, Unit K-160, Koloa, HI 96756",
+    "label": "Lappert’s Hawaii — Koloa",
+    "address": "2829 Ala Kalanikaumaka, Unit K-160, Koloa, HI 96756",
+    "latitude": 21.888076388855,
+    "longitude": -159.469679206479,
+    "source": "location-research"
+  },
+  "130-skinny-mikes-ice-cream-and-shave-ice-kauai-sunset": {
+    "id": "Skinny Mike’s Ice Cream & Shave Ice|3501 Rice St, Unit 1006, Lihue, HI 96766",
+    "label": "Skinny Mike’s Ice Cream & Shave Ice",
+    "address": "3501 Rice St, Unit 1006, Lihue, HI 96766",
+    "latitude": 21.9722488,
+    "longitude": -159.3500201,
+    "source": "location-research"
+  },
+  "131-salt-straw-pots-of-gold-rainbows-and-milk-chocolate-fudge-with-": {
+    "id": "Salt & Straw — NW 23rd|838 NW 23rd Ave, Portland, OR 97210",
+    "label": "Salt & Straw — NW 23rd",
+    "address": "838 NW 23rd Ave, Portland, OR 97210",
+    "latitude": 45.528656612203,
+    "longitude": -122.698485213398,
+    "source": "location-research"
+  },
+  "132-the-blast-cadburry-egg-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "133-honey-mackies-banana-oreo-and-kit-kat": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "134-a-to-z-creamery-udderly-soaked": {
+    "id": "A to Z Creamery — Hopkins|703 Mainstreet, Hopkins, MN 55343",
+    "label": "A to Z Creamery — Hopkins",
+    "address": "703 Mainstreet, Hopkins, MN 55343",
+    "latitude": 44.924466602149,
+    "longitude": -93.408919429464,
+    "source": "location-research"
+  },
+  "135-honey-mackies-smores-and-timberwolves": {
+    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie’s",
+    "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "latitude": 45.021148307682,
+    "longitude": -93.493972613457,
+    "source": "location-research"
+  },
+  "136-wells-roadside-hot-fudge-shake": {
+    "id": "Wells Roadside|3712 Quebec Ave S, St. Louis Park, MN 55426",
+    "label": "Wells Roadside",
+    "address": "3712 Quebec Ave S, St. Louis Park, MN 55426",
+    "latitude": 44.936359777906,
+    "longitude": -93.37701645442,
+    "source": "location-research"
+  },
+  "137-bridgemans-peanut-butter-banana-marshmallow": {
+    "id": "Bridgeman’s|2202 Mountain Shadow Dr, Duluth, MN 55811",
+    "label": "Bridgeman’s",
+    "address": "2202 Mountain Shadow Dr, Duluth, MN 55811",
+    "latitude": 46.805814879365,
+    "longitude": -92.1651755824,
+    "source": "location-research"
+  },
+  "138-portland-malt-shoppe-caramel-cookies-and-cream-malt": {
+    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "The PortLand Malt Shoppe",
+    "address": "706 E Superior St, Duluth, MN 55802",
+    "latitude": 46.793831933097,
+    "longitude": -92.089171460695,
+    "source": "location-research"
+  },
+  "139-wilky-wilty-reeses-pieces-of-heaven": {
+    "id": "Wilky Wilty|712 1st Center Ave, Brodhead, WI 53520",
+    "label": "Wilky Wilty",
+    "address": "712 1st Center Ave, Brodhead, WI 53520",
+    "latitude": 42.623406627564,
+    "longitude": -89.376742943698,
+    "source": "location-research"
+  },
+  "140-the-blast-cookie-dough": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "141-la-michoacana-owatonna-three-milk-cake": {
+    "id": "La Michoacana Minnesota|1830 S Cedar Ave, Owatonna, MN 55060",
+    "label": "La Michoacana Minnesota",
+    "address": "1830 S Cedar Ave, Owatonna, MN 55060",
+    "latitude": 44.065799230688,
+    "longitude": -93.22616102937,
+    "source": "location-research"
+  },
+  "142-the-blast-cookies-and-cream-pie-with-cookie-dough-on-top": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  },
+  "143-historic-moorhead-dairy-queen-nutty-banana-bash": {
+    "id": "Historic Moorhead Dairy Queen|24 8th St S, Moorhead, MN 56560",
+    "label": "Historic Moorhead Dairy Queen",
+    "address": "24 8th St S, Moorhead, MN 56560",
+    "latitude": 46.874885450215,
+    "longitude": -96.76777327172,
+    "source": "location-research"
+  },
+  "144-daytripper-sips-scoops-marionberry-pie": {
+    "id": "Detroit Mountain Daytripper Sips & Scoops|29409 170th St, Detroit Lakes, MN 56501",
+    "label": "Detroit Mountain Daytripper Sips & Scoops",
+    "address": "29409 170th St, Detroit Lakes, MN 56501",
+    "latitude": 46.818041410736,
+    "longitude": -95.784983087151,
+    "source": "location-research"
+  },
+  "145-fletchers-ice-cream-cafe-baja-blast-and-blood-orange-sorbet": {
+    "id": "Fletcher’s Ice Cream & Cafe|306 E Hennepin Ave, Minneapolis, MN 55414",
+    "label": "Fletcher’s Ice Cream & Cafe",
+    "address": "306 E Hennepin Ave, Minneapolis, MN 55414",
+    "latitude": 44.988003961415,
+    "longitude": -93.256154207351,
+    "source": "location-research"
+  },
+  "146-sweets-on-third-party-animal-and-halleys-comet": {
+    "id": "Sweets on Third|119 3rd Ave, Baraboo, WI 53913",
+    "label": "Sweets on Third",
+    "address": "119 3rd Ave, Baraboo, WI 53913",
+    "latitude": 43.469877140803,
+    "longitude": -89.742865864627,
+    "source": "location-research"
+  },
+  "147-gelato-isla-mujeres-kinder-and-dulce-de-leche-y-chocolate": {
+    "id": "Gelato Isla Mujeres|Av. Rueda Medina 1255, Bahía, Isla Mujeres, Quintana Roo, Mexico",
+    "label": "Gelato Isla Mujeres",
+    "address": "Av. Rueda Medina 1255, Bahía, Isla Mujeres, Quintana Roo, Mexico",
+    "latitude": 21.24158,
+    "longitude": -86.73881,
+    "source": "location-research"
+  },
+  "148-aldos-gelato-cancun-dubai-chocolate": {
+    "id": "Aldo’s Gelato — La Isla I|Blvd. Kukulcan km 12.5, Zona Hotelera, Cancún, Quintana Roo, Mexico",
+    "label": "Aldo’s Gelato — La Isla I",
+    "address": "Blvd. Kukulcan km 12.5, Zona Hotelera, Cancún, Quintana Roo, Mexico",
+    "latitude": 21.1134,
+    "longitude": -86.764,
+    "source": "location-research"
+  },
+  "149-sweet-saint-gallete-des-rois": {
+    "id": "Sweet Saint|710 Saint Louis St, New Orleans, LA 70130",
+    "label": "Sweet Saint",
+    "address": "710 Saint Louis St, New Orleans, LA 70130",
+    "latitude": 29.956449267219,
+    "longitude": -90.066302516005,
+    "source": "location-research"
+  },
+  "150-north-end-dairy-treat-chips-ahoy-frost-bite": {
+    "id": "North End Dairy Treat|1108 N 2nd St, Clinton, IA 52732",
+    "label": "North End Dairy Treat",
+    "address": "1108 N 2nd St, Clinton, IA 52732",
+    "latitude": 41.856219093905,
+    "longitude": -90.185745305486,
+    "source": "location-research"
+  },
+  "151-armadillos-ice-cream-shoppe-bananarama-shake": {
+    "id": "Armadillo’s Ice Cream Shoppe|130 Main St, Rapid City, SD 57701",
+    "label": "Armadillo’s Ice Cream Shoppe",
+    "address": "130 Main St, Rapid City, SD 57701",
+    "latitude": 44.079718652316,
+    "longitude": -103.218260399805,
+    "source": "location-research"
+  },
+  "152-deadwood-hook-line-sinker-and-tipsy-banana": {
+    "id": "Deadwood Ice Cream Company|673 Main St, Deadwood, SD 57732",
+    "label": "Deadwood Ice Cream Company",
+    "address": "673 Main St, Deadwood, SD 57732",
+    "latitude": 44.376741965391,
+    "longitude": -103.73032983397,
+    "source": "location-research"
+  },
+  "153-nelsons-ice-cream-rich-and-famous-and-elephant-tracks": {
+    "id": "Nelson’s Ice Cream — St. Paul|454 Snelling Ave S, St. Paul, MN 55105",
+    "label": "Nelson’s Ice Cream — St. Paul",
+    "address": "454 Snelling Ave S, St. Paul, MN 55105",
+    "latitude": 44.927826711413,
+    "longitude": -93.166943857265,
+    "source": "location-research"
+  },
+  "154-portland-malt-shoppe-butterscotch-moose-tracks": {
+    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "The PortLand Malt Shoppe",
+    "address": "706 E Superior St, Duluth, MN 55802",
+    "latitude": 46.793831933097,
+    "longitude": -92.089171460695,
+    "source": "location-research"
+  },
+  "155-the-blast-puppy-chow-flurry": {
+    "id": "Blast Soft Serve|Owatonna, Minnesota",
+    "label": "Blast Soft Serve",
+    "address": "Owatonna, Minnesota",
+    "latitude": 44.088083,
+    "longitude": -93.2282628,
+    "source": "location-research"
+  }
+}

@@ -163,6 +163,7 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .shoppe-map-popup__eyebrow { color:var(--cherry); font-size:.67rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; }
 .shoppe-map-popup h3 { margin:.35rem 0; font-family:var(--font-serif),serif; font-size:1.45rem; line-height:1; }
 .shoppe-map-popup > p:not(.shoppe-map-popup__eyebrow) { font-size:.78rem; line-height:1.4; }
+.shoppe-map-popup__address { color:rgba(56,39,33,.62); margin-top:.45rem; }
 .shoppe-map-popup__footer { display:flex; justify-content:space-between; align-items:center; gap:.8rem; border-top:1px solid rgba(56,39,33,.12); margin-top:.8rem; padding-top:.7rem; color:rgba(56,39,33,.65); font-size:.68rem; }
 .shoppe-map-popup__footer a { color:var(--cherry); font-weight:700; text-decoration:underline; text-underline-offset:3px; }
 .shoppe-map__selection { margin:0; padding:.85rem 1.1rem 1rem; border-top:1px solid rgba(56,39,33,.12); font-size:.83rem; }
