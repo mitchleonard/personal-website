@@ -131,8 +131,11 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .scoop-card { background:white; border:1px solid rgba(56,39,33,.12); display:flex; flex-direction:column; min-width:0; border-radius:1.25rem; overflow:hidden; box-shadow:0 12px 40px rgba(56,39,33,.06); }
 .scoop-card__visual { position:relative; display:grid; place-items:center; overflow:hidden; background:linear-gradient(155deg,#f4b8ca,#fbe7b5); font-family:var(--font-serif),serif; font-size:6rem; color:rgba(255,255,255,.7); }
 .scoop-card__visual { aspect-ratio:4 / 3; }
+.scoop-card__image-button,.pint-image-button { appearance:none; border:0; cursor:zoom-in; display:block; padding:0; position:absolute; inset:0; width:100%; background:transparent; }
+.scoop-card__image-button { z-index:1; }
 .scoop-card__image { object-fit:cover; object-position:center; }
-.scoop-card__visual::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(56,39,33,.12)); }
+.scoop-card__image-button:focus-visible,.pint-image-button:focus-visible,.pint-gallery__button:focus-visible { outline:3px solid var(--cherry); outline-offset:-3px; }
+.scoop-card__visual::after { content:''; position:absolute; inset:0; pointer-events:none; background:linear-gradient(180deg,transparent 55%,rgba(56,39,33,.12)); }
 .scoop-card:nth-child(2n) .scoop-card__visual { background:linear-gradient(155deg,var(--sky),var(--mint)); }
 .scoop-card__visual strong { position:absolute; top:1rem; left:1rem; background:var(--chocolate); color:white; font:700 .75rem/1 var(--font-sans),sans-serif; padding:.45rem; border-radius:999px; }
 .scoop-card__body { position:relative; padding:1.1rem 1.1rem 1rem; display:flex; flex:1; flex-direction:column; }
@@ -152,6 +155,7 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .shoppe-map { height:28rem; position:relative; background:#d7e8ed; }
 .shoppe-map--loading { background:repeating-linear-gradient(-45deg,#d7e8ed 0 16px,#e5f0eb 16px 32px); }
 .shoppe-leaflet-map { width:100%; height:100%; font-family:var(--font-sans),sans-serif; }
+.shoppe-leaflet-map.leaflet-container { touch-action:none; }
 .shoppe-map .leaflet-control-zoom a { color:var(--chocolate); }
 .shoppe-map .leaflet-popup-content-wrapper { border-radius:1rem; color:var(--chocolate); box-shadow:0 8px 24px rgba(56,39,33,.2); }
 .shoppe-map .leaflet-popup-content { margin:1rem 1.1rem; min-width:12rem; }
@@ -173,7 +177,18 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .pint-card h3 { font-family:var(--font-serif),serif; font-size:1.8rem; margin:.25rem 0; }
 .pint-card h3 + p { opacity:.7; margin-top:1rem; line-height:1.5; }
 .pint-gallery { display:flex; gap:.45rem; margin-top:1rem; }
+.pint-gallery__button { padding:0; border:0; background:transparent; cursor:zoom-in; border-radius:.7rem; }
 .pint-gallery__image { width:3.25rem; height:3.25rem; object-fit:cover; border-radius:.7rem; border:1px solid rgba(56,39,33,.15); }
+.ice-lightbox { position:fixed; z-index:100; inset:0; display:grid; place-items:center; padding:1rem; background:rgba(38,24,20,.86); }
+.ice-lightbox__dialog { width:min(72rem,100%); max-height:calc(100vh - 2rem); overflow:hidden; position:relative; border-radius:1.25rem; background:#fff8ef; box-shadow:0 24px 80px rgba(0,0,0,.35); }
+.ice-lightbox__close { position:absolute; z-index:1; top:.8rem; right:.8rem; width:2.5rem; height:2.5rem; border:0; border-radius:50%; background:rgba(255,248,239,.9); color:var(--chocolate); cursor:pointer; font-size:2rem; line-height:1; }
+.ice-lightbox__image-wrap { height:min(74vh,52rem); display:grid; place-items:center; background:#2e201b; }
+.ice-lightbox__image { width:100%; height:100%; object-fit:contain; }
+.ice-lightbox__footer { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 1.2rem; color:var(--chocolate); }
+.ice-lightbox__footer p { font-family:var(--font-serif),serif; font-size:1.2rem; }
+.ice-lightbox__footer span { color:rgba(56,39,33,.62); font-size:.78rem; }
+.ice-lightbox__controls { display:flex; gap:.5rem; }
+.ice-lightbox__controls button { width:2.4rem; height:2.4rem; border:1px solid rgba(56,39,33,.22); border-radius:50%; background:white; color:var(--chocolate); cursor:pointer; font-size:1.1rem; }
 .shoppe-footer { background:var(--chocolate); color:white; padding:4rem max(1.5rem,calc((100vw - 72rem)/2)); display:flex; justify-content:space-between; gap:2rem; }
 .shoppe-footer p { font-family:var(--font-serif),serif; font-size:1.6rem; }
 .shoppe-footer a { text-decoration:underline; text-underline-offset:4px; }
@@ -201,6 +216,7 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
   .shoppe-map { height:22rem; }
   .shoppe-map__toolbar { align-items:flex-start; flex-direction:column; gap:.25rem; }
   .pint-card { grid-template-columns:6.5rem 1fr; }
+  .ice-lightbox__image-wrap { height:min(70vh,38rem); }
   .shoppe-footer { flex-direction:column; }
 }
 

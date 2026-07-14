@@ -7,6 +7,7 @@ import Image from 'next/image'
 import type { HomemadePint, IceCreamRating } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 import IceCreamToggle from './IceCreamToggle'
+import IceCreamImageLightbox, { type LightboxImage } from './IceCreamImageLightbox'
 
 type SortMode = 'recent' | 'top' | 'shop'
 
@@ -35,13 +36,13 @@ function PriceIcon() {
   return <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h7.1l3.9 3.9-6.1 6.1-4.9-4.9V3.5Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /><circle cx="5.8" cy="6.5" r=".9" fill="currentColor" /></svg>
 }
 
-function RatingCard({ rating, rank }: { rating: IceCreamRating; rank?: number }) {
+function RatingCard({ rating, rank, onOpenImage }: { rating: IceCreamRating; rank?: number; onOpenImage: (images: LightboxImage[], title: string) => void }) {
   const { price, ranking } = ratingDetails(rating.notes)
   const ratingNumber = ranking?.replace('Rating ', '')
   return (
     <article className="scoop-card">
-      <div className="scoop-card__visual" aria-hidden="true">
-        {rating.image ? <Image src={rating.image.src} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, 24vw" className="scoop-card__image" /> : <span>{rating.flavor.slice(0, 1)}</span>}
+      <div className="scoop-card__visual">
+        {rating.image ? <button type="button" className="scoop-card__image-button" onClick={() => onOpenImage([rating.image!], `${rating.flavor} at ${rating.shop}`)} aria-label={`View full photo of ${rating.flavor} at ${rating.shop}`}><Image src={rating.image.src} alt="" fill unoptimized sizes="(max-width: 700px) 50vw, 24vw" className="scoop-card__image" /></button> : <span aria-hidden="true">{rating.flavor.slice(0, 1)}</span>}
         {rank && <strong>#{rank}</strong>}
       </div>
       <div className="scoop-card__body">
@@ -68,7 +69,8 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
 }) {
   const [sort, setSort] = useState<SortMode>('recent')
   const [isIceCreamMode] = useIceCreamMode()
-  const geotagged = ratings.filter((rating) => rating.location.latitude != null && rating.location.longitude != null)
+  const [lightbox, setLightbox] = useState<{ images: LightboxImage[]; title: string; initialIndex: number } | null>(null)
+  const openLightbox = (images: LightboxImage[], title: string, initialIndex = 0) => setLightbox({ images, title, initialIndex })
   const sorted = useMemo(() => [...ratings].sort((a, b) => {
     if (sort === 'top') return b.score - a.score || b.triedAt.localeCompare(a.triedAt)
     if (sort === 'shop') return a.shop.localeCompare(b.shop) || b.score - a.score
@@ -116,7 +118,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           </div>
         </div>
         <div className="scoop-grid">
-          {sorted.map((rating, index) => <RatingCard key={rating.id} rating={rating} rank={sort === 'top' ? index + 1 : undefined} />)}
+          {sorted.map((rating, index) => <RatingCard key={rating.id} rating={rating} rank={sort === 'top' ? index + 1 : undefined} onOpenImage={openLightbox} />)}
         </div>
       </section>
 
@@ -126,10 +128,6 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           <p>Pan and zoom through every stop from the collection. Click a cherry for the shop, its score, and a direct route.</p>
         </div>
         <ShoppeMap ratings={ratings} />
-        <ul className="location-list" aria-label="GPS-tagged shops">
-          {Array.from(new Set(geotagged.map((rating) => rating.location.label))).slice(0, 12).map((location) => <li key={location}>{location}</li>)}
-          {geotagged.length > 12 && <li>+ {geotagged.length - 12} more</li>}
-        </ul>
       </section>
 
       <section className="shoppe-section homemade-section">
@@ -141,9 +139,9 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
           {homemade.map((pint, index) => (
             <article className="pint-card" key={pint.id}>
               <div className={`pint-lid pint-lid--${index % 3}`}>
-                {pint.images?.[0] ? <Image src={pint.images[0].src} alt={pint.images[0].alt} fill unoptimized sizes="128px" className="pint-lid__image" /> : <span>Batch<br />{String(index + 1).padStart(2, '0')}</span>}
+                {pint.images?.[0] ? <button type="button" className="pint-image-button" onClick={() => openLightbox(pint.images!, pint.name)} aria-label={`View photos of ${pint.name}`}><Image src={pint.images[0].src} alt="" fill unoptimized sizes="128px" className="pint-lid__image" /></button> : <span>Batch<br />{String(index + 1).padStart(2, '0')}</span>}
               </div>
-              <div><h3>{pint.name}</h3><p>{pint.description}</p>{pint.images && pint.images.length > 1 && <div className="pint-gallery" aria-label={`${pint.name} photo gallery`}>{pint.images.slice(1).map((image) => <Image key={image.src} src={image.src} alt={image.alt} width={52} height={52} unoptimized className="pint-gallery__image" />)}</div>}</div>
+              <div><h3>{pint.name}</h3><p>{pint.description}</p>{pint.images && pint.images.length > 1 && <div className="pint-gallery" aria-label={`${pint.name} photo gallery`}>{pint.images.slice(1).map((image, imageIndex) => <button type="button" key={image.src} className="pint-gallery__button" onClick={() => openLightbox(pint.images!, pint.name, imageIndex + 1)} aria-label={`View photo ${imageIndex + 2} of ${pint.name}`}><Image src={image.src} alt="" width={52} height={52} unoptimized className="pint-gallery__image" /></button>)}</div>}</div>
             </article>
           ))}
         </div>
@@ -153,6 +151,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
         <p>One scoop at a time since 2020.</p>
         <Link href="/">Return to the portfolio →</Link>
       </footer>
+      {lightbox && <IceCreamImageLightbox images={lightbox.images} initialIndex={lightbox.initialIndex} title={lightbox.title} onClose={() => setLightbox(null)} />}
     </main>
   )
 }

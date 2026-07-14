@@ -63,7 +63,7 @@ export default function ShoppeMap({ ratings }: { ratings: IceCreamRating[] }) {
         <p>Every rating is included. Tap a cherry to see what I ordered.</p>
       </div>
       <div className="shoppe-map" aria-label={`Interactive map with ${ratings.length} ice cream ratings across ${points.length} destinations.`}>
-        <MapContainer center={[39.4, -96.2]} zoom={4} minZoom={3} maxZoom={18} scrollWheelZoom={false} className="shoppe-leaflet-map">
+        <MapContainer center={[39.4, -96.2]} zoom={4} minZoom={3} maxZoom={18} zoomSnap={0.25} zoomDelta={0.5} scrollWheelZoom touchZoom="center" doubleClickZoom className="shoppe-leaflet-map">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

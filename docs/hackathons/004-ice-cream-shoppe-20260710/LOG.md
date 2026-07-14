@@ -89,3 +89,8 @@
   why: Similar shop names and two missing photo geotags caused the interactive map to split repeat visits and silently omit ratings.
   did: Added a reusable map audit that requires all 155 ratings to resolve to valid coordinates and verifies the multi-visit 4 Queens and Honey & Mackie’s destinations. Resolved the two missing coordinates from the completed location research and applied the Deadwood correction to The Depot.
   next: Rebuild the preview and verify every destination marker against the shop-location research before launch.
+
+[+27:13] Map controls and full-photo viewing refined
+  why: Map review found an inaccessible zoom experience and image crops that made it difficult to inspect individual scoops and pint details.
+  did: Enabled touch pinch, trackpad/wheel, double-click, and smooth fractional zoom on the map; removed nonfunctional location chips; and added a keyboard-accessible full-image viewer for rating cards and Pint Lab images.
+  next: Review the interaction pass in the private preview on touch and desktop devices.
