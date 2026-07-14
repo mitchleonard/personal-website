@@ -180,10 +180,10 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .pint-gallery__button { padding:0; border:0; background:transparent; cursor:zoom-in; border-radius:.7rem; }
 .pint-gallery__image { width:3.25rem; height:3.25rem; object-fit:cover; border-radius:.7rem; border:1px solid rgba(56,39,33,.15); }
 .ice-lightbox { position:fixed; z-index:100; inset:0; display:grid; place-items:center; padding:1rem; background:rgba(38,24,20,.86); }
-.ice-lightbox__dialog { width:min(72rem,100%); max-height:calc(100vh - 2rem); overflow:hidden; position:relative; border-radius:1.25rem; background:#2e201b; box-shadow:0 24px 80px rgba(0,0,0,.35); }
+.ice-lightbox__dialog { max-width:calc(100vw - 2rem); max-height:calc(100vh - 2rem); overflow:hidden; position:relative; border-radius:1.25rem; background:#2e201b; box-shadow:0 24px 80px rgba(0,0,0,.35); }
 .ice-lightbox__close { position:absolute; z-index:1; top:.8rem; right:.8rem; width:2.5rem; height:2.5rem; border:0; border-radius:50%; background:rgba(255,248,239,.9); color:var(--chocolate); cursor:pointer; font-size:2rem; line-height:1; }
-.ice-lightbox__image-wrap { position:relative; height:min(88vh,52rem); display:grid; place-items:center; background:#2e201b; }
-.ice-lightbox__image { display:block; width:100%; height:100%; object-fit:contain; }
+.ice-lightbox__image-wrap { position:relative; line-height:0; background:#2e201b; }
+.ice-lightbox__image { display:block; width:auto; height:auto; max-width:min(90vw,72rem); max-height:calc(100vh - 2rem); }
 .ice-lightbox__controls { position:absolute; right:1rem; bottom:1rem; display:flex; gap:.5rem; }
 .ice-lightbox__controls button { width:2.75rem; height:2.75rem; border:1px solid rgba(56,39,33,.22); border-radius:50%; background:rgba(255,255,255,.94); color:var(--chocolate); cursor:pointer; font-size:1.25rem; }
 .shoppe-footer { background:var(--chocolate); color:white; padding:4rem max(1.5rem,calc((100vw - 72rem)/2)); display:flex; justify-content:space-between; gap:2rem; }
@@ -213,7 +213,7 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
   .shoppe-map { height:22rem; }
   .shoppe-map__toolbar { align-items:flex-start; flex-direction:column; gap:.25rem; }
   .pint-card { grid-template-columns:6.5rem 1fr; }
-  .ice-lightbox__image-wrap { height:min(88vh,38rem); }
+  .ice-lightbox__image { max-width:calc(100vw - 2rem); max-height:calc(100vh - 2rem); }
   .shoppe-footer { flex-direction:column; }
 }
 

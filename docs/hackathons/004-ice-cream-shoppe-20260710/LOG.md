@@ -94,3 +94,8 @@
   why: Map review found an inaccessible zoom experience and image crops that made it difficult to inspect individual scoops and pint details.
   did: Enabled touch pinch, trackpad/wheel, double-click, and smooth fractional zoom on the map; removed nonfunctional location chips; and added a keyboard-accessible full-image viewer for rating cards and Pint Lab images.
   next: Review the interaction pass in the private preview on touch and desktop devices.
+
+[+27:24] Desktop full-photo viewer corrected
+  why: Desktop review showed portrait photos being forced into a landscape frame, which cropped the full scoop or pint composition.
+  did: Replaced the fixed-ratio image rendering with a native-dimension viewer that constrains each photo only to the available viewport, keeping the viewer image-only while retaining overlay controls for multi-photo pints.
+  next: Recheck both portrait and landscape photos in the private preview before publishing the Shoppe.

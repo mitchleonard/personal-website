@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 
 export type LightboxImage = {
   src: string
@@ -38,7 +37,7 @@ export default function IceCreamImageLightbox({ images, initialIndex, title, onC
       <section className="ice-lightbox__dialog" role="dialog" aria-modal="true" aria-label={`${title} image viewer`}>
         <button type="button" className="ice-lightbox__close" onClick={onClose} aria-label="Close image viewer">×</button>
         <div className="ice-lightbox__image-wrap">
-          <Image src={image.src} alt={image.alt} width={1600} height={1600} unoptimized className="ice-lightbox__image" sizes="(max-width: 900px) 94vw, 78vw" />
+          <img src={image.src} alt={image.alt} className="ice-lightbox__image" />
           {hasGallery && <div className="ice-lightbox__controls" aria-label={`${title} photo navigation`}>
             <button type="button" onClick={() => setIndex((current) => (current - 1 + images.length) % images.length)} aria-label="Previous photo">←</button>
             <button type="button" onClick={() => setIndex((current) => (current + 1) % images.length)} aria-label="Next photo">→</button>
