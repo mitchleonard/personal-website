@@ -9,6 +9,7 @@
     "lint": "next lint",
     "ice-cream:check": "node scripts/import-ice-cream.mjs",
     "ice-cream:import": "node scripts/import-ice-cream.mjs --write",
+    "ice-cream:normalize-shops": "node scripts/normalize-ice-cream-shop-names.mjs",
     "ice-cream:map-locations": "node scripts/build-ice-cream-map-locations.mjs",
     "ice-cream:map-check": "node scripts/check-ice-cream-map.mjs"
   },

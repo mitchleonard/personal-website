@@ -6,6 +6,18 @@ const inputPath = path.join(root, 'data', 'ice-cream-inbox.csv')
 const outputPath = path.join(root, 'data', 'iceCream.imported.json')
 const shouldWrite = process.argv.includes('--write')
 
+const shopNameAliases = {
+  'Honey & Mackies': "Honey & Mackie's",
+  'Honey & Mackey’s': "Honey & Mackie's",
+  'Honey & Mackie’s': "Honey & Mackie's",
+  'Honey and Mackie’s': "Honey & Mackie's",
+  '4 Queens Dairy Treat': '4 Queens Dairy Cream',
+  'Jeni’s Spendid Ice Creams': "Jeni's Splendid Ice Creams",
+  'Jeni’s Splendid Ice Creams': "Jeni's Splendid Ice Creams",
+}
+
+const canonicalShopName = (value) => shopNameAliases[value] ?? value
+
 function parseCsv(text) {
   const rows = []
   let row = []
@@ -76,7 +88,8 @@ for (const [index, record] of records.entries()) {
     continue
   }
   validateDate(record.date, rowNumber, errors)
-  const slug = slugify(`${record.shop_or_name}-${record.flavor_or_base}-${record.date}`)
+  const shopOrName = record.type === 'rating' ? canonicalShopName(record.shop_or_name) : record.shop_or_name
+  const slug = slugify(`${shopOrName}-${record.flavor_or_base}-${record.date}`)
   if (ids.has(slug)) errors.push(`Row ${rowNumber}: duplicate record ${slug}.`)
   ids.add(slug)
 
@@ -85,11 +98,11 @@ for (const [index, record] of records.entries()) {
     if (!Number.isFinite(score) || score < 0 || score > 10) errors.push(`Row ${rowNumber}: score must be between 0 and 10.`)
     if (!record.city || !record.region) errors.push(`Row ${rowNumber}: ratings require city and region.`)
     ratings.push({
-      id: slug, slug, shop: record.shop_or_name, flavor: record.flavor_or_base,
+      id: slug, slug, shop: shopOrName, flavor: record.flavor_or_base,
       score, scoreScale: 10, triedAt: record.date, notes: record.notes || undefined,
-      image: record.image_src ? { src: record.image_src, alt: `${record.flavor_or_base} ice cream from ${record.shop_or_name}` } : undefined,
+      image: record.image_src ? { src: record.image_src, alt: `${record.flavor_or_base} ice cream from ${shopOrName}` } : undefined,
       location: {
-        label: `${record.shop_or_name}, ${record.city}`, city: record.city, region: record.region,
+        label: `${shopOrName}, ${record.city}`, city: record.city, region: record.region,
         latitude: record.latitude ? Number(record.latitude) : undefined,
         longitude: record.longitude ? Number(record.longitude) : undefined,
       },

@@ -31,11 +31,13 @@ const destinationCount = (label) => [...points.entries()]
   .filter(([id]) => id.startsWith(`${label}|`))
   .reduce((sum, [, entries]) => sum + entries.length, 0)
 
-if (destinationCount('4 Queens Dairy Treat') !== 3) fail('4 Queens Dairy Treat should contain 3 ratings')
-if (destinationCount('Honey & Mackie’s') !== 7) fail('Honey & Mackie’s should contain 7 ratings')
+if (destinationCount('4 Queens Dairy Cream') !== 3) fail('4 Queens Dairy Cream should contain 3 ratings')
+if (destinationCount("Honey & Mackie's") !== 7) fail("Honey & Mackie's should contain 7 ratings")
 if (destinationCount('Deadwood Ice Cream Company') !== 1) fail('Deadwood Ice Cream Company should contain 1 rating')
 if (destinationCount('A to Z Creamery — Hopkins') !== 29) fail('A to Z Creamery — Hopkins should contain 29 ratings')
 if (destinationCount('A to Z Creamery — Minnesota State Fair') !== 1) fail('A to Z Creamery — Minnesota State Fair should contain 1 rating')
 if (destinationCount('MN Nice Cream — Northeast') !== 4) fail('MN Nice Cream — Northeast should contain 4 ratings')
+if (destinationCount('Bebe Zito — Uptown') !== 2) fail('Bebe Zito — Uptown should contain 2 ratings')
+if (destinationCount('Bebe Zito — Malcolm Yards') !== 1) fail('Bebe Zito — Malcolm Yards should contain 1 rating')
 
 console.log(`Map QA passed: ${ratings.length} ratings across ${points.size} researched storefront destinations.`)

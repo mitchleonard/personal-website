@@ -3,18 +3,18 @@
     {
       "id": "001-nelsons-ice-cream-child-size-pirates-booty-brownie-smores",
       "slug": "001-nelsons-ice-cream-child-size-pirates-booty-brownie-smores",
-      "shop": "Nelson\u2019s Ice Cream",
-      "flavor": "Child size, pirate\u2019s booty + brownie s\u2019mores",
-      "score": 10.0,
+      "shop": "Nelson’s Ice Cream",
+      "flavor": "Child size, pirate’s booty + brownie s’mores",
+      "score": 10,
       "scoreScale": 10,
       "triedAt": "2020-07-19",
-      "notes": "$4.25 \u00b7 Rating #1",
+      "notes": "$4.25 · Rating #1",
       "image": {
         "src": "/ice-cream/ratings/001-img_1120.jpg",
-        "alt": "Child size, pirate\u2019s booty + brownie s\u2019mores from Nelson\u2019s Ice Cream"
+        "alt": "Child size, pirate’s booty + brownie s’mores from Nelson’s Ice Cream"
       },
       "location": {
-        "label": "Nelson\u2019s Ice Cream",
+        "label": "Nelson’s Ice Cream",
         "latitude": 44.927879999999995,
         "longitude": -93.16683833,
         "precision": "photo-metadata",
@@ -25,18 +25,18 @@
     {
       "id": "002-schoonys-malt-shop-chocolate-peanut-butter-shake",
       "slug": "002-schoonys-malt-shop-chocolate-peanut-butter-shake",
-      "shop": "Schoony\u2019s Malt Shop",
+      "shop": "Schoony’s Malt Shop",
       "flavor": "Chocolate peanut butter shake",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2020-07-24",
-      "notes": "$6.99 \u00b7 Rating #2",
+      "notes": "$6.99 · Rating #2",
       "image": {
         "src": "/ice-cream/ratings/002-img_1154.jpg",
-        "alt": "Chocolate peanut butter shake from Schoony\u2019s Malt Shop"
+        "alt": "Chocolate peanut butter shake from Schoony’s Malt Shop"
       },
       "location": {
-        "label": "Schoony\u2019s Malt Shop",
+        "label": "Schoony’s Malt Shop",
         "latitude": 45.40250332999999,
         "longitude": -92.65256333,
         "precision": "photo-metadata",
@@ -49,10 +49,10 @@
       "slug": "003-mn-ice-cream-monster-cookie-with-twist-ice-cream",
       "shop": "MN Ice Cream",
       "flavor": "Monster Cookie with twist ice cream",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2020-08-13",
-      "notes": "$6 \u00b7 Rating #3",
+      "notes": "$6 · Rating #3",
       "image": {
         "src": "/ice-cream/ratings/003-img_1237.jpg",
         "alt": "Monster Cookie with twist ice cream from MN Ice Cream"
@@ -71,10 +71,10 @@
       "slug": "004-itasca-state-park-waffle-cone-with-french-silk-pie",
       "shop": "Itasca State Park",
       "flavor": "Waffle cone with French silk pie",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2020-08-16",
-      "notes": "$4.50 \u00b7 Rating #4",
+      "notes": "$4.50 · Rating #4",
       "image": {
         "src": "/ice-cream/ratings/004-img_1295.jpg",
         "alt": "Waffle cone with French silk pie from Itasca State Park"
@@ -91,18 +91,18 @@
     {
       "id": "005-leos-grill-malt-shop-chocolate-chip-deluxe-malt",
       "slug": "005-leos-grill-malt-shop-chocolate-chip-deluxe-malt",
-      "shop": "Leo\u2019s Grill & Malt Shop",
+      "shop": "Leo’s Grill & Malt Shop",
       "flavor": "Chocolate chip deluxe malt",
       "score": 6.7,
       "scoreScale": 10,
       "triedAt": "2020-08-29",
-      "notes": "$5.99 \u00b7 Rating #5",
+      "notes": "$5.99 · Rating #5",
       "image": {
         "src": "/ice-cream/ratings/005-img_1352.jpg",
-        "alt": "Chocolate chip deluxe malt from Leo\u2019s Grill & Malt Shop"
+        "alt": "Chocolate chip deluxe malt from Leo’s Grill & Malt Shop"
       },
       "location": {
-        "label": "Leo\u2019s Grill & Malt Shop",
+        "label": "Leo’s Grill & Malt Shop",
         "latitude": 45.198411670000006,
         "longitude": -92.76926333000002,
         "precision": "photo-metadata",
@@ -113,18 +113,18 @@
     {
       "id": "006-barneys-drive-in-cookie-monster-flurry",
       "slug": "006-barneys-drive-in-cookie-monster-flurry",
-      "shop": "Barney\u2019s Drive In",
+      "shop": "Barney’s Drive In",
       "flavor": "Cookie Monster flurry",
       "score": 5.6,
       "scoreScale": 10,
       "triedAt": "2020-09-05",
-      "notes": "$4.49 \u00b7 Rating #6",
+      "notes": "$4.49 · Rating #6",
       "image": {
         "src": "/ice-cream/ratings/007-img_1378.jpg",
-        "alt": "Cookie Monster flurry from Barney\u2019s Drive In"
+        "alt": "Cookie Monster flurry from Barney’s Drive In"
       },
       "location": {
-        "label": "Barney\u2019s Drive In",
+        "label": "Barney’s Drive In",
         "latitude": 45.055875,
         "longitude": -92.80552832999999,
         "precision": "photo-metadata",
@@ -135,18 +135,18 @@
     {
       "id": "007-nita-maes-scoop-north-shore",
       "slug": "007-nita-maes-scoop-north-shore",
-      "shop": "\u2018Nita Mae\u2019s Scoop",
+      "shop": "‘Nita Mae’s Scoop",
       "flavor": "North Shore",
       "score": 7.3,
       "scoreScale": 10,
       "triedAt": "2020-09-06",
-      "notes": "$5.60 \u00b7 Rating #7",
+      "notes": "$5.60 · Rating #7",
       "image": {
         "src": "/ice-cream/ratings/006-img_1376.jpg",
-        "alt": "North Shore from \u2018Nita Mae\u2019s Scoop"
+        "alt": "North Shore from ‘Nita Mae’s Scoop"
       },
       "location": {
-        "label": "\u2018Nita Mae\u2019s Scoop",
+        "label": "‘Nita Mae’s Scoop",
         "latitude": 44.076163829999985,
         "longitude": -93.48751166999998,
         "precision": "photo-metadata",
@@ -157,18 +157,18 @@
     {
       "id": "008-sebastian-joes-nicollet-ave-pothole-salted-carmel-in-a-waffle-cone",
       "slug": "008-sebastian-joes-nicollet-ave-pothole-salted-carmel-in-a-waffle-cone",
-      "shop": "Sebastian Joe\u2019s",
+      "shop": "Sebastian Joe’s",
       "flavor": "Nicollet Ave. Pothole & Salted Carmel in a waffle cone",
       "score": 7.8,
       "scoreScale": 10,
       "triedAt": "2020-10-03",
-      "notes": "$6.95 \u00b7 Rating #8",
+      "notes": "$6.95 · Rating #8",
       "image": {
         "src": "/ice-cream/ratings/008-img_1591.jpg",
-        "alt": "Nicollet Ave. Pothole & Salted Carmel in a waffle cone from Sebastian Joe\u2019s"
+        "alt": "Nicollet Ave. Pothole & Salted Carmel in a waffle cone from Sebastian Joe’s"
       },
       "location": {
-        "label": "Sebastian Joe\u2019s",
+        "label": "Sebastian Joe’s",
         "latitude": 44.923813329999994,
         "longitude": -93.31486333000001,
         "precision": "photo-metadata",
@@ -179,18 +179,18 @@
     {
       "id": "009-fitzs-cookie-monster-float",
       "slug": "009-fitzs-cookie-monster-float",
-      "shop": "Fitz\u2019s",
+      "shop": "Fitz’s",
       "flavor": "Cookie Monster Float",
       "score": 6.9,
       "scoreScale": 10,
       "triedAt": "2020-10-24",
-      "notes": "$6.99 \u00b7 Rating #9",
+      "notes": "$6.99 · Rating #9",
       "image": {
         "src": "/ice-cream/ratings/009-img_1751.jpg",
-        "alt": "Cookie Monster Float from Fitz\u2019s"
+        "alt": "Cookie Monster Float from Fitz’s"
       },
       "location": {
-        "label": "Fitz\u2019s",
+        "label": "Fitz’s",
         "latitude": 38.656229999999994,
         "longitude": -90.30555833000001,
         "precision": "photo-metadata",
@@ -201,18 +201,18 @@
     {
       "id": "010-fitzs-trouble-float",
       "slug": "010-fitzs-trouble-float",
-      "shop": "Fitz\u2019s",
+      "shop": "Fitz’s",
       "flavor": "Trouble Float",
       "score": 8.4,
       "scoreScale": 10,
       "triedAt": "2020-10-24",
-      "notes": "$6.99 \u00b7 Rating #10",
+      "notes": "$6.99 · Rating #10",
       "image": {
         "src": "/ice-cream/ratings/010-img_1752.jpg",
-        "alt": "Trouble Float from Fitz\u2019s"
+        "alt": "Trouble Float from Fitz’s"
       },
       "location": {
-        "label": "Fitz\u2019s",
+        "label": "Fitz’s",
         "latitude": 38.65622167,
         "longitude": -90.30557167,
         "precision": "photo-metadata",
@@ -228,7 +228,7 @@
       "score": 9.3,
       "scoreScale": 10,
       "triedAt": "2020-10-25",
-      "notes": "$4.50 \u00b7 Rating #11",
+      "notes": "$4.50 · Rating #11",
       "image": {
         "src": "/ice-cream/ratings/011-img_1766.jpg",
         "alt": "Caramel Salato & Biscotti Nut Crunch gelato from Gelato Di Rosa"
@@ -246,14 +246,14 @@
       "id": "012-baskin-robbins-moms-makin-cookies-gold-medal-ribbon-sundae",
       "slug": "012-baskin-robbins-moms-makin-cookies-gold-medal-ribbon-sundae",
       "shop": "Baskin Robbins",
-      "flavor": "Mom\u2019s Makin\u2019 Cookies & Gold Medal Ribbon sundae",
+      "flavor": "Mom’s Makin’ Cookies & Gold Medal Ribbon sundae",
       "score": 6.4,
       "scoreScale": 10,
       "triedAt": "2020-10-28",
-      "notes": "$4.49 \u00b7 Rating #12",
+      "notes": "$4.49 · Rating #12",
       "image": {
         "src": "/ice-cream/ratings/012-img_1811.jpg",
-        "alt": "Mom\u2019s Makin\u2019 Cookies & Gold Medal Ribbon sundae from Baskin Robbins"
+        "alt": "Mom’s Makin’ Cookies & Gold Medal Ribbon sundae from Baskin Robbins"
       },
       "location": {
         "label": "Baskin Robbins",
@@ -267,18 +267,18 @@
     {
       "id": "013-andys-frozen-custard-james-brownie-funky-jackhammer",
       "slug": "013-andys-frozen-custard-james-brownie-funky-jackhammer",
-      "shop": "Andy\u2019s Frozen Custard",
+      "shop": "Andy’s Frozen Custard",
       "flavor": "James Brownie Funky Jackhammer",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2020-10-29",
-      "notes": "$6.79 \u00b7 Rating #13",
+      "notes": "$6.79 · Rating #13",
       "image": {
         "src": "/ice-cream/ratings/013-img_1856.jpg",
-        "alt": "James Brownie Funky Jackhammer from Andy\u2019s Frozen Custard"
+        "alt": "James Brownie Funky Jackhammer from Andy’s Frozen Custard"
       },
       "location": {
-        "label": "Andy\u2019s Frozen Custard",
+        "label": "Andy’s Frozen Custard",
         "latitude": 36.09187217,
         "longitude": -95.9225,
         "precision": "photo-metadata",
@@ -289,18 +289,18 @@
     {
       "id": "014-sheridans-frozen-custard-courtneys-dirt-worms",
       "slug": "014-sheridans-frozen-custard-courtneys-dirt-worms",
-      "shop": "Sheridan\u2019s Frozen Custard",
-      "flavor": "Courtney\u2019s Dirt & Worms",
-      "score": 7.0,
+      "shop": "Sheridan’s Frozen Custard",
+      "flavor": "Courtney’s Dirt & Worms",
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2020-10-31",
-      "notes": "$4.70 \u00b7 Rating #14",
+      "notes": "$4.70 · Rating #14",
       "image": {
         "src": "/ice-cream/ratings/014-img_1869.jpg",
-        "alt": "Courtney\u2019s Dirt & Worms from Sheridan\u2019s Frozen Custard"
+        "alt": "Courtney’s Dirt & Worms from Sheridan’s Frozen Custard"
       },
       "location": {
-        "label": "Sheridan\u2019s Frozen Custard",
+        "label": "Sheridan’s Frozen Custard",
         "latitude": 39.08272217,
         "longitude": -94.58170333000001,
         "precision": "photo-metadata",
@@ -316,7 +316,7 @@
       "score": 9.8,
       "scoreScale": 10,
       "triedAt": "2021-01-19",
-      "notes": "$12 \u00b7 Rating #15",
+      "notes": "$12 · Rating #15",
       "image": {
         "src": "/ice-cream/ratings/015-img_2152.jpg",
         "alt": "Nuts About Dough from A to Z Creamery"
@@ -338,7 +338,7 @@
       "score": 9.4,
       "scoreScale": 10,
       "triedAt": "2021-02-06",
-      "notes": "$12 \u00b7 Rating #16",
+      "notes": "$12 · Rating #16",
       "image": {
         "src": "/ice-cream/ratings/016-img_2229.jpg",
         "alt": "Cookies Are My Butter Half from A to Z Creamery"
@@ -360,7 +360,7 @@
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2021-02-11",
-      "notes": "$12.90 \u00b7 Rating #17",
+      "notes": "$12.90 · Rating #17",
       "image": {
         "src": "/ice-cream/ratings/017-img_2259.jpg",
         "alt": "My Bloody Valentine from A to Z Creamery"
@@ -379,10 +379,10 @@
       "slug": "018-bebe-zito-peanut-butter-puppy-chow-the-crowening",
       "shop": "Bebe Zito",
       "flavor": "Peanut Butter Puppy Chow & The Crowening",
-      "score": 10.0,
+      "score": 10,
       "scoreScale": 10,
       "triedAt": "2021-02-14",
-      "notes": "$5.75 \u00b7 Rating #18",
+      "notes": "$5.75 · Rating #18",
       "image": {
         "src": "/ice-cream/ratings/018-img_2269.jpg",
         "alt": "Peanut Butter Puppy Chow & The Crowening from Bebe Zito"
@@ -404,7 +404,7 @@
       "score": 7.6,
       "scoreScale": 10,
       "triedAt": "2021-02-24",
-      "notes": "$10 \u00b7 Rating #19",
+      "notes": "$10 · Rating #19",
       "image": {
         "src": "/ice-cream/ratings/020-img_2302.jpg",
         "alt": "Dat Malt Dough from Bebe Zito"
@@ -422,14 +422,14 @@
       "id": "020-a-to-z-creamery-its-gettin-hot-in-here",
       "slug": "020-a-to-z-creamery-its-gettin-hot-in-here",
       "shop": "A to Z Creamery",
-      "flavor": "It\u2019s Gettin Hot in Here",
-      "score": 5.0,
+      "flavor": "It’s Gettin Hot in Here",
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2021-02-27",
-      "notes": "$12.90 \u00b7 Rating #20",
+      "notes": "$12.90 · Rating #20",
       "image": {
         "src": "/ice-cream/ratings/019-img_2293.jpg",
-        "alt": "It\u2019s Gettin Hot in Here from A to Z Creamery"
+        "alt": "It’s Gettin Hot in Here from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -445,10 +445,10 @@
       "slug": "021-mn-nice-cream-peanut-butter-cups-peanut-butter-monster-cookie-doug",
       "shop": "MN Nice Cream",
       "flavor": "Peanut butter cups, peanut butter monster cookie dough, caramel, edible glitter with cake batter ice cream",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2021-03-13",
-      "notes": "$6.00 \u00b7 Rating #21",
+      "notes": "$6.00 · Rating #21",
       "image": {
         "src": "/ice-cream/ratings/021-img_2367.jpg",
         "alt": "Peanut butter cups, peanut butter monster cookie dough, caramel, edible glitter with cake batter ice cream from MN Nice Cream"
@@ -466,14 +466,14 @@
       "id": "022-treats-crisp-n-cream",
       "slug": "022-treats-crisp-n-cream",
       "shop": "Treats",
-      "flavor": "Crisp N\u2019 Cream",
+      "flavor": "Crisp N’ Cream",
       "score": 8.9,
       "scoreScale": 10,
       "triedAt": "2021-03-27",
-      "notes": "$8.00 \u00b7 Rating #22",
+      "notes": "$8.00 · Rating #22",
       "image": {
         "src": "/ice-cream/ratings/022-img_2420.jpg",
-        "alt": "Crisp N\u2019 Cream from Treats"
+        "alt": "Crisp N’ Cream from Treats"
       },
       "location": {
         "label": "Treats",
@@ -487,18 +487,18 @@
     {
       "id": "023-connys-creamy-cone-french-silk-pie-flurry",
       "slug": "023-connys-creamy-cone-french-silk-pie-flurry",
-      "shop": "Conny\u2019s Creamy Cone",
+      "shop": "Conny’s Creamy Cone",
       "flavor": "French Silk Pie Flurry",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2021-04-10",
-      "notes": "$4.39 \u00b7 Rating #23",
+      "notes": "$4.39 · Rating #23",
       "image": {
         "src": "/ice-cream/ratings/023-img_2472.jpg",
-        "alt": "French Silk Pie Flurry from Conny\u2019s Creamy Cone"
+        "alt": "French Silk Pie Flurry from Conny’s Creamy Cone"
       },
       "location": {
-        "label": "Conny\u2019s Creamy Cone",
+        "label": "Conny’s Creamy Cone",
         "latitude": 44.977225,
         "longitude": -93.12647217,
         "precision": "photo-metadata",
@@ -509,18 +509,18 @@
     {
       "id": "024-nelsons-ice-cream-lake-effect-and-rich-and-famous",
       "slug": "024-nelsons-ice-cream-lake-effect-and-rich-and-famous",
-      "shop": "Nelson\u2019s Ice Cream",
+      "shop": "Nelson’s Ice Cream",
       "flavor": "Lake Effect and Rich and Famous",
       "score": 9.5,
       "scoreScale": 10,
       "triedAt": "2021-05-09",
-      "notes": "$4.75 \u00b7 Rating #24",
+      "notes": "$4.75 · Rating #24",
       "image": {
         "src": "/ice-cream/ratings/024-img_2606.jpg",
-        "alt": "Lake Effect and Rich and Famous from Nelson\u2019s Ice Cream"
+        "alt": "Lake Effect and Rich and Famous from Nelson’s Ice Cream"
       },
       "location": {
-        "label": "Nelson\u2019s Ice Cream",
+        "label": "Nelson’s Ice Cream",
         "latitude": 44.92778,
         "longitude": -93.16694666999999,
         "precision": "photo-metadata",
@@ -533,10 +533,10 @@
       "slug": "025-a-to-z-creamery-this-baby-takes-the-cake",
       "shop": "A to Z Creamery",
       "flavor": "This Baby Takes the Cake",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2021-05-12",
-      "notes": "$12.90 \u00b7 Rating #25",
+      "notes": "$12.90 · Rating #25",
       "image": {
         "src": "/ice-cream/ratings/025-img_2617.jpg",
         "alt": "This Baby Takes the Cake from A to Z Creamery"
@@ -558,7 +558,7 @@
       "score": 7.8,
       "scoreScale": 10,
       "triedAt": "2021-05-16",
-      "notes": "$6.75 \u00b7 Rating #26",
+      "notes": "$6.75 · Rating #26",
       "image": {
         "src": "/ice-cream/ratings/026-img_2638.jpg",
         "alt": "Camper with Sprinkle Cone from MN Nice Cream"
@@ -580,7 +580,7 @@
       "score": 9.7,
       "scoreScale": 10,
       "triedAt": "2021-05-29",
-      "notes": "$4.25 \u00b7 Rating #27",
+      "notes": "$4.25 · Rating #27",
       "image": {
         "src": "/ice-cream/ratings/027-img_2717.jpg",
         "alt": "Cookie Jar Flurry from The Blast"
@@ -602,7 +602,7 @@
       "score": 9.9,
       "scoreScale": 10,
       "triedAt": "2021-06-03",
-      "notes": "$12.90 \u00b7 Rating #28",
+      "notes": "$12.90 · Rating #28",
       "image": {
         "src": "/ice-cream/ratings/028-img_2727.jpg",
         "alt": "Stan the Man from A to Z Creamery"
@@ -621,10 +621,10 @@
       "slug": "029-the-blast-minnesota-maple-flurry",
       "shop": "The Blast",
       "flavor": "Minnesota Maple Flurry",
-      "score": 3.0,
+      "score": 3,
       "scoreScale": 10,
       "triedAt": "2021-06-04",
-      "notes": "$4 \u00b7 Rating #29",
+      "notes": "$4 · Rating #29",
       "image": {
         "src": "/ice-cream/ratings/029-img_2731.jpg",
         "alt": "Minnesota Maple Flurry from The Blast"
@@ -641,18 +641,18 @@
     {
       "id": "030-nellies-ice-cream-hot-pressed-c-is-for-cookie-ice-cream-sandwich-rolle",
       "slug": "030-nellies-ice-cream-hot-pressed-c-is-for-cookie-ice-cream-sandwich-rolle",
-      "shop": "Nellie\u2019s Ice Cream",
-      "flavor": "Hot pressed \u201cC\u201d is for Cookie Ice Cream Sandwich rolled in Mini Chocolate Chips with Chocolate Chocolate Chip cookies",
+      "shop": "Nellie’s Ice Cream",
+      "flavor": "Hot pressed “C” is for Cookie Ice Cream Sandwich rolled in Mini Chocolate Chips with Chocolate Chocolate Chip cookies",
       "score": 9.5,
       "scoreScale": 10,
       "triedAt": "2021-06-09",
-      "notes": "$4.75 \u00b7 Rating #30",
+      "notes": "$4.75 · Rating #30",
       "image": {
         "src": "/ice-cream/ratings/030-img_2748.jpg",
-        "alt": "Hot pressed \u201cC\u201d is for Cookie Ice Cream Sandwich rolled in Mini Chocolate Chips with Chocolate Chocolate Chip cookies from Nellie\u2019s Ice Cream"
+        "alt": "Hot pressed “C” is for Cookie Ice Cream Sandwich rolled in Mini Chocolate Chips with Chocolate Chocolate Chip cookies from Nellie’s Ice Cream"
       },
       "location": {
-        "label": "Nellie\u2019s Ice Cream",
+        "label": "Nellie’s Ice Cream",
         "latitude": 44.94835,
         "longitude": -93.18633333000001,
         "precision": "photo-metadata",
@@ -665,10 +665,10 @@
       "slug": "031-american-old-fashioned-ice-cream-parlor-elephant-tracks-scotcheroo-in-homemade-oreo-waffle-c",
       "shop": "American Old-Fashioned Ice Cream Parlor",
       "flavor": "Elephant Tracks & Scotcheroo in homemade Oreo waffle cone",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2021-06-12",
-      "notes": "$6.25 \u00b7 Rating #31",
+      "notes": "$6.25 · Rating #31",
       "image": {
         "src": "/ice-cream/ratings/031-img_2787.jpg",
         "alt": "Elephant Tracks & Scotcheroo in homemade Oreo waffle cone from American Old-Fashioned Ice Cream Parlor"
@@ -687,10 +687,10 @@
       "slug": "032-4-queens-dairy-cream-surprise-snowstorm",
       "shop": "4 Queens Dairy Cream",
       "flavor": "Surprise Snowstorm",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2021-06-13",
-      "notes": "$4.10 \u00b7 Rating #32",
+      "notes": "$4.10 · Rating #32",
       "image": {
         "src": "/ice-cream/ratings/032-img_2812.jpg",
         "alt": "Surprise Snowstorm from 4 Queens Dairy Cream"
@@ -707,18 +707,18 @@
     {
       "id": "033-grandpas-ice-cream-smores-and-more-crazy-shake",
       "slug": "033-grandpas-ice-cream-smores-and-more-crazy-shake",
-      "shop": "Grandpa\u2019s Ice Cream",
-      "flavor": "S\u2019mores and More Crazy Shake",
-      "score": 7.0,
+      "shop": "Grandpa’s Ice Cream",
+      "flavor": "S’mores and More Crazy Shake",
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2021-06-20",
-      "notes": "$15 \u00b7 Rating #33",
+      "notes": "$15 · Rating #33",
       "image": {
         "src": "/ice-cream/ratings/033-img_2851.jpg",
-        "alt": "S\u2019mores and More Crazy Shake from Grandpa\u2019s Ice Cream"
+        "alt": "S’mores and More Crazy Shake from Grandpa’s Ice Cream"
       },
       "location": {
-        "label": "Grandpa\u2019s Ice Cream",
+        "label": "Grandpa’s Ice Cream",
         "latitude": 45.0815195,
         "longitude": -93.23902167,
         "precision": "photo-metadata",
@@ -731,10 +731,10 @@
       "slug": "034-dux-ice-cream-this-just-got-serious-pb-hearts-chocolate",
       "shop": "Dux Ice Cream",
       "flavor": "This $&@! Just Got Serious & PB Hearts Chocolate",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2021-07-17",
-      "notes": "$6 \u00b7 Rating #34",
+      "notes": "$6 · Rating #34",
       "image": {
         "src": "/ice-cream/ratings/034-img_2966.jpg",
         "alt": "This $&@! Just Got Serious & PB Hearts Chocolate from Dux Ice Cream"
@@ -752,14 +752,14 @@
       "id": "035-licks-unlimited-heaps-of-love-and-halleys-comet-in-a-chocolate-dippe",
       "slug": "035-licks-unlimited-heaps-of-love-and-halleys-comet-in-a-chocolate-dippe",
       "shop": "Licks Unlimited",
-      "flavor": "Heaps of Love and Halley\u2019s Comet in a Chocolate Dipped Krunch Waffle Cone",
+      "flavor": "Heaps of Love and Halley’s Comet in a Chocolate Dipped Krunch Waffle Cone",
       "score": 7.5,
       "scoreScale": 10,
       "triedAt": "2021-07-24",
-      "notes": "$7 \u00b7 Rating #35",
+      "notes": "$7 · Rating #35",
       "image": {
         "src": "/ice-cream/ratings/035-img_3028.jpg",
-        "alt": "Heaps of Love and Halley\u2019s Comet in a Chocolate Dipped Krunch Waffle Cone from Licks Unlimited"
+        "alt": "Heaps of Love and Halley’s Comet in a Chocolate Dipped Krunch Waffle Cone from Licks Unlimited"
       },
       "location": {
         "label": "Licks Unlimited",
@@ -775,10 +775,10 @@
       "slug": "036-cold-front-ice-cream-slider-with-sticks-and-stones-ice-cream",
       "shop": "Cold Front",
       "flavor": "Ice Cream Slider with Sticks and Stones Ice Cream",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2021-07-25",
-      "notes": "$6 \u00b7 Rating #36",
+      "notes": "$6 · Rating #36",
       "image": {
         "src": "/ice-cream/ratings/036-img_3031.jpg",
         "alt": "Ice Cream Slider with Sticks and Stones Ice Cream from Cold Front"
@@ -800,7 +800,7 @@
       "score": 6.3,
       "scoreScale": 10,
       "triedAt": "2021-07-30",
-      "notes": "$6.25 \u00b7 Rating #37",
+      "notes": "$6.25 · Rating #37",
       "image": {
         "src": "/ice-cream/ratings/037-img_3043.jpg",
         "alt": "Salted Chocolate Brownie and Popcorn Carmel Fudge from Love Creamery"
@@ -817,18 +817,18 @@
     {
       "id": "038-sebastian-joes-peaces-of-the-world",
       "slug": "038-sebastian-joes-peaces-of-the-world",
-      "shop": "Sebastian Joe\u2019s",
+      "shop": "Sebastian Joe’s",
       "flavor": "Peaces of the World",
       "score": 7.1,
       "scoreScale": 10,
       "triedAt": "2021-08-07",
-      "notes": "$4.45 \u00b7 Rating #38",
+      "notes": "$4.45 · Rating #38",
       "image": {
         "src": "/ice-cream/ratings/038-img_3091.jpg",
-        "alt": "Peaces of the World from Sebastian Joe\u2019s"
+        "alt": "Peaces of the World from Sebastian Joe’s"
       },
       "location": {
-        "label": "Sebastian Joe\u2019s",
+        "label": "Sebastian Joe’s",
         "latitude": 44.923858329999995,
         "longitude": -93.31479666999999,
         "precision": "photo-metadata",
@@ -844,7 +844,7 @@
       "score": 6.8,
       "scoreScale": 10,
       "triedAt": "2021-08-21",
-      "notes": "$5 \u00b7 Rating #39",
+      "notes": "$5 · Rating #39",
       "image": {
         "src": "/ice-cream/ratings/039-img_3142.jpg",
         "alt": "Pumpkin Pie Frozen Custard in a Waffle Cone from Red Cabin Custard"
@@ -866,7 +866,7 @@
       "score": 5.7,
       "scoreScale": 10,
       "triedAt": "2021-09-07",
-      "notes": "$12.90 \u00b7 Rating #40",
+      "notes": "$12.90 · Rating #40",
       "image": {
         "src": "/ice-cream/ratings/040-img_3302.jpg",
         "alt": "Do You Know The Muffin Man from A to Z Creamery"
@@ -885,10 +885,10 @@
       "slug": "041-the-blast-kitchen-sink-flurry",
       "shop": "The Blast",
       "flavor": "Kitchen Sink Flurry",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2021-09-22",
-      "notes": "$3.50 \u00b7 Rating #41",
+      "notes": "$3.50 · Rating #41",
       "image": {
         "src": "/ice-cream/ratings/041-img_3348.jpg",
         "alt": "Kitchen Sink Flurry from The Blast"
@@ -910,7 +910,7 @@
       "score": 9.4,
       "scoreScale": 10,
       "triedAt": "2021-09-21",
-      "notes": "$12 \u00b7 Rating #42",
+      "notes": "$12 · Rating #42",
       "image": {
         "src": "/ice-cream/ratings/155-img_5464.jpg",
         "alt": "Peanut Butter Lover Milkshake from Cereal Killerz"
@@ -927,18 +927,18 @@
     {
       "id": "043-honey-mackies-kit-kat-and-salted-caramel-with-peanuts-in-a-homemad",
       "slug": "043-honey-mackies-kit-kat-and-salted-caramel-with-peanuts-in-a-homemad",
-      "shop": "Honey & Mackies",
+      "shop": "Honey & Mackie's",
       "flavor": "Kit-Kat and Salted Caramel with Peanuts in a Homemade Waffle Cone",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2021-10-09",
-      "notes": "$5.75 \u00b7 Rating #43",
+      "notes": "$5.75 · Rating #43",
       "image": {
         "src": "/ice-cream/ratings/042-img_3736.jpg",
-        "alt": "Kit-Kat and Salted Caramel with Peanuts in a Homemade Waffle Cone from Honey & Mackies"
+        "alt": "Kit-Kat and Salted Caramel with Peanuts in a Homemade Waffle Cone from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey & Mackies",
+        "label": "Honey & Mackie's",
         "latitude": 45.01987783333333,
         "longitude": -93.49359166666666,
         "precision": "photo-metadata",
@@ -954,7 +954,7 @@
       "score": 6.2,
       "scoreScale": 10,
       "triedAt": "2021-10-17",
-      "notes": "$12.90 \u00b7 Rating #44",
+      "notes": "$12.90 · Rating #44",
       "image": {
         "src": "/ice-cream/ratings/043-img_3831.jpg",
         "alt": "Donut Share Me from A to Z Creamery"
@@ -976,7 +976,7 @@
       "score": 8.6,
       "scoreScale": 10,
       "triedAt": "2021-10-21",
-      "notes": "$5.50 \u00b7 Rating #45",
+      "notes": "$5.50 · Rating #45",
       "image": {
         "src": "/ice-cream/ratings/044-img_3852.jpg",
         "alt": "Peanut Butter Puppy Chow from Bebe Zito"
@@ -995,10 +995,10 @@
       "slug": "046-a-to-z-creamery-mystery-ice-cream",
       "shop": "A to Z Creamery",
       "flavor": "Mystery Ice Cream",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2021-10-29",
-      "notes": "$13.50 \u00b7 Rating #46",
+      "notes": "$13.50 · Rating #46",
       "image": {
         "src": "/ice-cream/ratings/045-img_3903.jpg",
         "alt": "Mystery Ice Cream from A to Z Creamery"
@@ -1016,14 +1016,14 @@
       "id": "047-a-to-z-creamery-chandlers-pint",
       "slug": "047-a-to-z-creamery-chandlers-pint",
       "shop": "A to Z Creamery",
-      "flavor": "Chandler\u2019s Pint",
+      "flavor": "Chandler’s Pint",
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2021-11-20",
-      "notes": "$13.50 \u00b7 Rating #47",
+      "notes": "$13.50 · Rating #47",
       "image": {
         "src": "/ice-cream/ratings/046-img_3991.jpg",
-        "alt": "Chandler\u2019s Pint from A to Z Creamery"
+        "alt": "Chandler’s Pint from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -1038,14 +1038,14 @@
       "id": "048-a-to-z-creamery-im-so-krispy",
       "slug": "048-a-to-z-creamery-im-so-krispy",
       "shop": "A to Z Creamery",
-      "flavor": "I\u2019m So Krispy",
+      "flavor": "I’m So Krispy",
       "score": 6.1,
       "scoreScale": 10,
       "triedAt": "2022-01-10",
-      "notes": "$13.50 \u00b7 Rating #48",
+      "notes": "$13.50 · Rating #48",
       "image": {
         "src": "/ice-cream/ratings/047-img_4175.jpg",
-        "alt": "I\u2019m So Krispy from A to Z Creamery"
+        "alt": "I’m So Krispy from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -1064,7 +1064,7 @@
       "score": 8.6,
       "scoreScale": 10,
       "triedAt": "2022-03-12",
-      "notes": "$8.00 \u00b7 Rating #49",
+      "notes": "$8.00 · Rating #49",
       "image": {
         "src": "/ice-cream/ratings/048-img_4271.jpg",
         "alt": "Mac Daddy & Black Hills Gold in a homemade waffle cone from Grand Ole Creamery"
@@ -1086,7 +1086,7 @@
       "score": 4.5,
       "scoreScale": 10,
       "triedAt": "2022-04-02",
-      "notes": "$14.63 \u00b7 Rating #50",
+      "notes": "$14.63 · Rating #50",
       "image": {
         "src": "/ice-cream/ratings/049-img_4336.jpg",
         "alt": "Ice Cream For Suppah from A to Z Creamery"
@@ -1105,10 +1105,10 @@
       "slug": "051-the-blast-kitchen-sink-flurry",
       "shop": "The Blast",
       "flavor": "Kitchen Sink Flurry",
-      "score": 4.0,
+      "score": 4,
       "scoreScale": 10,
       "triedAt": "2022-04-19",
-      "notes": "$3.50 \u00b7 Rating #51",
+      "notes": "$3.50 · Rating #51",
       "image": {
         "src": "/ice-cream/ratings/050-img_4414.jpg",
         "alt": "Kitchen Sink Flurry from The Blast"
@@ -1130,7 +1130,7 @@
       "score": 6.5,
       "scoreScale": 10,
       "triedAt": "2022-04-24",
-      "notes": "$5.29 \u00b7 Rating #52",
+      "notes": "$5.29 · Rating #52",
       "image": {
         "src": "/ice-cream/ratings/051-img_4550.jpg",
         "alt": "Texas Sheet Cake & Sweet Cream and Strawberry from Lick Honest Ice Creams"
@@ -1152,7 +1152,7 @@
       "score": 9.1,
       "scoreScale": 10,
       "triedAt": "2022-04-25",
-      "notes": "$16 \u00b7 Rating #53",
+      "notes": "$16 · Rating #53",
       "image": {
         "src": "/ice-cream/ratings/052-img_0080.jpg",
         "alt": "Animal Cookie Milk Shake from Museum of Ice Cream"
@@ -1171,10 +1171,10 @@
       "slug": "054-heritage-creamery-brown-butter-texas-pecan",
       "shop": "Heritage Creamery",
       "flavor": "Brown Butter & Texas Pecan",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2022-04-26",
-      "notes": "$3.50 \u00b7 Rating #54",
+      "notes": "$3.50 · Rating #54",
       "image": {
         "src": "/ice-cream/ratings/053-img_4989.jpg",
         "alt": "Brown Butter & Texas Pecan from Heritage Creamery"
@@ -1193,10 +1193,10 @@
       "slug": "055-the-baked-bear-funfetti-cookie-sandwich-with-bear-batter-ice-cream-",
       "shop": "The Baked Bear",
       "flavor": "Funfetti Cookie Sandwich with Bear Batter Ice Cream and Mini M&Ms",
-      "score": 10.0,
+      "score": 10,
       "scoreScale": 10,
       "triedAt": "2022-04-27",
-      "notes": "$7.45 \u00b7 Rating #55",
+      "notes": "$7.45 · Rating #55",
       "image": {
         "src": "/ice-cream/ratings/054-img_5061.jpg",
         "alt": "Funfetti Cookie Sandwich with Bear Batter Ice Cream and Mini M&Ms from The Baked Bear"
@@ -1215,10 +1215,10 @@
       "slug": "056-the-yard-milkshake-bar-cookie-monster-shake",
       "shop": "The Yard Milkshake Bar",
       "flavor": "Cookie Monster Shake",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2022-04-29",
-      "notes": "$22.81 \u00b7 Rating #56",
+      "notes": "$22.81 · Rating #56",
       "image": {
         "src": "/ice-cream/ratings/055-img_5190.jpg",
         "alt": "Cookie Monster Shake from The Yard Milkshake Bar"
@@ -1235,18 +1235,18 @@
     {
       "id": "057-fletchers-ice-cream-1800-in-a-waffle-cone",
       "slug": "057-fletchers-ice-cream-1800-in-a-waffle-cone",
-      "shop": "Fletcher\u2019s Ice Cream",
+      "shop": "Fletcher’s Ice Cream",
       "flavor": "1800 in a waffle cone",
       "score": 7.5,
       "scoreScale": 10,
       "triedAt": "2022-05-06",
-      "notes": "$6.50 \u00b7 Rating #57",
+      "notes": "$6.50 · Rating #57",
       "image": {
         "src": "/ice-cream/ratings/056-img_5247.jpg",
-        "alt": "1800 in a waffle cone from Fletcher\u2019s Ice Cream"
+        "alt": "1800 in a waffle cone from Fletcher’s Ice Cream"
       },
       "location": {
-        "label": "Fletcher\u2019s Ice Cream",
+        "label": "Fletcher’s Ice Cream",
         "latitude": 45.00313611666667,
         "longitude": -93.27095833333334,
         "precision": "photo-metadata",
@@ -1262,7 +1262,7 @@
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2022-06-05",
-      "notes": "$8 \u00b7 Rating #58",
+      "notes": "$8 · Rating #58",
       "image": {
         "src": "/ice-cream/ratings/057-img_5390.jpg",
         "alt": "Cookie Dough and Fudge and 101 Grand in a Blue Lagoon Waffle Cone from Dream Creamery"
@@ -1279,18 +1279,18 @@
     {
       "id": "059-nelsons-ice-cream-monster-cookie-and-bear-creek-caramel",
       "slug": "059-nelsons-ice-cream-monster-cookie-and-bear-creek-caramel",
-      "shop": "Nelson\u2019s Ice Cream",
+      "shop": "Nelson’s Ice Cream",
       "flavor": "Monster Cookie and Bear Creek Caramel",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2022-06-10",
-      "notes": "$5.50 \u00b7 Rating #59",
+      "notes": "$5.50 · Rating #59",
       "image": {
         "src": "/ice-cream/ratings/058-img_5408.jpg",
-        "alt": "Monster Cookie and Bear Creek Caramel from Nelson\u2019s Ice Cream"
+        "alt": "Monster Cookie and Bear Creek Caramel from Nelson’s Ice Cream"
       },
       "location": {
-        "label": "Nelson\u2019s Ice Cream",
+        "label": "Nelson’s Ice Cream",
         "latitude": 44.92772166666666,
         "longitude": -93.16681666666666,
         "precision": "photo-metadata",
@@ -1301,18 +1301,18 @@
     {
       "id": "060-tommys-tonka-trolley-sebastian-joes-pavarotti",
       "slug": "060-tommys-tonka-trolley-sebastian-joes-pavarotti",
-      "shop": "Tommy\u2019s Tonka Trolley / Sebastian Joe\u2019s",
+      "shop": "Tommy’s Tonka Trolley / Sebastian Joe’s",
       "flavor": "Pavarotti",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2022-06-12",
-      "notes": "$6 \u00b7 Rating #60",
+      "notes": "$6 · Rating #60",
       "image": {
         "src": "/ice-cream/ratings/059-img_5421.jpg",
-        "alt": "Pavarotti from Tommy\u2019s Tonka Trolley / Sebastian Joe\u2019s"
+        "alt": "Pavarotti from Tommy’s Tonka Trolley / Sebastian Joe’s"
       },
       "location": {
-        "label": "Tommy\u2019s Tonka Trolley / Sebastian Joe\u2019s",
+        "label": "Tommy’s Tonka Trolley / Sebastian Joe’s",
         "latitude": 44.9048,
         "longitude": -93.56546666666667,
         "precision": "photo-metadata",
@@ -1323,18 +1323,18 @@
     {
       "id": "061-4-queens-dairy-treat-monster-cookie-snowstorm",
       "slug": "061-4-queens-dairy-treat-monster-cookie-snowstorm",
-      "shop": "4 Queens Dairy Treat",
+      "shop": "4 Queens Dairy Cream",
       "flavor": "Monster Cookie Snowstorm",
       "score": 5.9,
       "scoreScale": 10,
       "triedAt": "2022-07-04",
-      "notes": "$4.75 \u00b7 Rating #61",
+      "notes": "$4.75 · Rating #61",
       "image": {
         "src": "/ice-cream/ratings/060-img_5522.jpg",
-        "alt": "Monster Cookie Snowstorm from 4 Queens Dairy Treat"
+        "alt": "Monster Cookie Snowstorm from 4 Queens Dairy Cream"
       },
       "location": {
-        "label": "4 Queens Dairy Treat",
+        "label": "4 Queens Dairy Cream",
         "latitude": 42.537686666666666,
         "longitude": -92.46125,
         "precision": "photo-metadata",
@@ -1345,18 +1345,18 @@
     {
       "id": "062-jenis-splendid-ice-creams-bombastix-sundae-cone-and-brown-butter-almond-brittl",
       "slug": "062-jenis-splendid-ice-creams-bombastix-sundae-cone-and-brown-butter-almond-brittl",
-      "shop": "Jeni\u2019s Splendid Ice Creams",
+      "shop": "Jeni's Splendid Ice Creams",
       "flavor": "Bombastix Sundae Cone and Brown Butter Almond Brittle",
       "score": 8.2,
       "scoreScale": 10,
       "triedAt": "2022-07-23",
-      "notes": "$8.17 \u00b7 Rating #62",
+      "notes": "$8.17 · Rating #62",
       "image": {
         "src": "/ice-cream/ratings/061-img_5596.jpg",
-        "alt": "Bombastix Sundae Cone and Brown Butter Almond Brittle from Jeni\u2019s Splendid Ice Creams"
+        "alt": "Bombastix Sundae Cone and Brown Butter Almond Brittle from Jeni's Splendid Ice Creams"
       },
       "location": {
-        "label": "Jeni\u2019s Splendid Ice Creams",
+        "label": "Jeni's Splendid Ice Creams",
         "latitude": 36.03281116666667,
         "longitude": -86.79038333333334,
         "precision": "photo-metadata",
@@ -1372,7 +1372,7 @@
       "score": 8.9,
       "scoreScale": 10,
       "triedAt": "2022-09-18",
-      "notes": "$7 \u00b7 Rating #63",
+      "notes": "$7 · Rating #63",
       "image": {
         "src": "/ice-cream/ratings/062-img_6054.jpg",
         "alt": "Oh My Gourd and Monkey Bread Praline in a waffle cone from Dream Creamery"
@@ -1389,18 +1389,18 @@
     {
       "id": "064-graeters-black-raspberry-chip",
       "slug": "064-graeters-black-raspberry-chip",
-      "shop": "Graeter\u2019s",
+      "shop": "Graeter’s",
       "flavor": "Black Raspberry Chip",
       "score": 9.7,
       "scoreScale": 10,
       "triedAt": "2022-09-29",
-      "notes": "$5.25 \u00b7 Rating #64",
+      "notes": "$5.25 · Rating #64",
       "image": {
         "src": "/ice-cream/ratings/063-img_6189.jpg",
-        "alt": "Black Raspberry Chip from Graeter\u2019s"
+        "alt": "Black Raspberry Chip from Graeter’s"
       },
       "location": {
-        "label": "Graeter\u2019s",
+        "label": "Graeter’s",
         "latitude": 39.30116666666667,
         "longitude": -84.31688666666666,
         "precision": "photo-metadata",
@@ -1411,18 +1411,18 @@
     {
       "id": "065-graeters-cookie-dough-chocolate-chip",
       "slug": "065-graeters-cookie-dough-chocolate-chip",
-      "shop": "Graeter\u2019s",
+      "shop": "Graeter’s",
       "flavor": "Cookie Dough Chocolate Chip",
       "score": 5.3,
       "scoreScale": 10,
       "triedAt": "2022-10-02",
-      "notes": "$5.25 \u00b7 Rating #65",
+      "notes": "$5.25 · Rating #65",
       "image": {
         "src": "/ice-cream/ratings/064-img_6230.jpg",
-        "alt": "Cookie Dough Chocolate Chip from Graeter\u2019s"
+        "alt": "Cookie Dough Chocolate Chip from Graeter’s"
       },
       "location": {
-        "label": "Graeter\u2019s",
+        "label": "Graeter’s",
         "latitude": 39.0561055,
         "longitude": -84.65675333333333,
         "precision": "photo-metadata",
@@ -1433,18 +1433,18 @@
     {
       "id": "066-4-queens-dairy-treat-scotcheroo-snowstorm",
       "slug": "066-4-queens-dairy-treat-scotcheroo-snowstorm",
-      "shop": "4 Queens Dairy Treat",
+      "shop": "4 Queens Dairy Cream",
       "flavor": "Scotcheroo Snowstorm",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2022-10-08",
-      "notes": "$4.75 \u00b7 Rating #66",
+      "notes": "$4.75 · Rating #66",
       "image": {
         "src": "/ice-cream/ratings/065-img_6241.jpg",
-        "alt": "Scotcheroo Snowstorm from 4 Queens Dairy Treat"
+        "alt": "Scotcheroo Snowstorm from 4 Queens Dairy Cream"
       },
       "location": {
-        "label": "4 Queens Dairy Treat",
+        "label": "4 Queens Dairy Cream",
         "latitude": 42.53765833333333,
         "longitude": -92.46125833333333,
         "precision": "photo-metadata",
@@ -1460,7 +1460,7 @@
       "score": 6.5,
       "scoreScale": 10,
       "triedAt": "2022-10-23",
-      "notes": "$14.63 \u00b7 Rating #67",
+      "notes": "$14.63 · Rating #67",
       "image": {
         "src": "/ice-cream/ratings/066-img_6320.jpg",
         "alt": "Pumkn Szn from A to Z Creamery"
@@ -1478,14 +1478,14 @@
       "id": "068-a-to-z-creamery-lets-get-knotty",
       "slug": "068-a-to-z-creamery-lets-get-knotty",
       "shop": "A to Z Creamery",
-      "flavor": "Let\u2019s Get Knotty",
+      "flavor": "Let’s Get Knotty",
       "score": 6.9,
       "scoreScale": 10,
       "triedAt": "2023-01-06",
-      "notes": "$13 \u00b7 Rating #68",
+      "notes": "$13 · Rating #68",
       "image": {
         "src": "/ice-cream/ratings/067-img_6570.jpg",
-        "alt": "Let\u2019s Get Knotty from A to Z Creamery"
+        "alt": "Let’s Get Knotty from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -1504,7 +1504,7 @@
       "score": 8.9,
       "scoreScale": 10,
       "triedAt": "2023-01-23",
-      "notes": "$13 \u00b7 Rating #69",
+      "notes": "$13 · Rating #69",
       "image": {
         "src": "/ice-cream/ratings/068-img_6833.jpg",
         "alt": "Reindeer Chow from A to Z Creamery"
@@ -1526,7 +1526,7 @@
       "score": 5.5,
       "scoreScale": 10,
       "triedAt": "2023-02-03",
-      "notes": "$14.63 \u00b7 Rating #70",
+      "notes": "$14.63 · Rating #70",
       "image": {
         "src": "/ice-cream/ratings/069-img_6861.jpg",
         "alt": "Swirly Mammoth from A to Z Creamery"
@@ -1543,18 +1543,18 @@
     {
       "id": "071-reginas-ice-cream-butterscotch-bomb",
       "slug": "071-reginas-ice-cream-butterscotch-bomb",
-      "shop": "Regina\u2019s Ice Cream",
+      "shop": "Regina’s Ice Cream",
       "flavor": "Butterscotch Bomb",
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2023-02-11",
-      "notes": "$5.52 \u00b7 Rating #71",
+      "notes": "$5.52 · Rating #71",
       "image": {
         "src": "/ice-cream/ratings/070-img_6909.jpg",
-        "alt": "Butterscotch Bomb from Regina\u2019s Ice Cream"
+        "alt": "Butterscotch Bomb from Regina’s Ice Cream"
       },
       "location": {
-        "label": "Regina\u2019s Ice Cream",
+        "label": "Regina’s Ice Cream",
         "latitude": 26.141708333333334,
         "longitude": -81.795905,
         "precision": "photo-metadata",
@@ -1565,18 +1565,18 @@
     {
       "id": "072-m-ms-cafe-sticky-fingers",
       "slug": "072-m-ms-cafe-sticky-fingers",
-      "shop": "M&M\u2019s Cafe",
+      "shop": "M&M’s Cafe",
       "flavor": "Sticky Fingers",
       "score": 7.1,
       "scoreScale": 10,
       "triedAt": "2023-02-12",
-      "notes": "$6.95 \u00b7 Rating #72",
+      "notes": "$6.95 · Rating #72",
       "image": {
         "src": "/ice-cream/ratings/071-img_6928.jpg",
-        "alt": "Sticky Fingers from M&M\u2019s Cafe"
+        "alt": "Sticky Fingers from M&M’s Cafe"
       },
       "location": {
-        "label": "M&M\u2019s Cafe",
+        "label": "M&M’s Cafe",
         "latitude": 26.141572166666666,
         "longitude": -81.79048,
         "precision": "photo-metadata",
@@ -1592,7 +1592,7 @@
       "score": 5.3,
       "scoreScale": 10,
       "triedAt": "2023-03-03",
-      "notes": "$13 \u00b7 Rating #73",
+      "notes": "$13 · Rating #73",
       "image": {
         "src": "/ice-cream/ratings/072-img_7009.jpg",
         "alt": "Dat New New from A to Z Creamery"
@@ -1609,18 +1609,18 @@
     {
       "id": "074-sebastian-joes-raspberry-chocolate-chip",
       "slug": "074-sebastian-joes-raspberry-chocolate-chip",
-      "shop": "Sebastian Joe\u2019s",
+      "shop": "Sebastian Joe’s",
       "flavor": "Raspberry Chocolate Chip",
       "score": 6.3,
       "scoreScale": 10,
       "triedAt": "2023-04-23",
-      "notes": "$5.10 \u00b7 Rating #74",
+      "notes": "$5.10 · Rating #74",
       "image": {
         "src": "/ice-cream/ratings/073-img_7402.jpg",
-        "alt": "Raspberry Chocolate Chip from Sebastian Joe\u2019s"
+        "alt": "Raspberry Chocolate Chip from Sebastian Joe’s"
       },
       "location": {
-        "label": "Sebastian Joe\u2019s",
+        "label": "Sebastian Joe’s",
         "latitude": 44.923845,
         "longitude": -93.31473666666666,
         "precision": "photo-metadata",
@@ -1633,10 +1633,10 @@
       "slug": "075-mn-nice-cream-fun-cone",
       "shop": "MN Nice Cream",
       "flavor": "Fun Cone",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2023-04-29",
-      "notes": "$6.75 \u00b7 Rating #75",
+      "notes": "$6.75 · Rating #75",
       "image": {
         "src": "/ice-cream/ratings/074-img_7417.jpg",
         "alt": "Fun Cone from MN Nice Cream"
@@ -1658,7 +1658,7 @@
       "score": 9.8,
       "scoreScale": 10,
       "triedAt": "2023-05-09",
-      "notes": "$13 \u00b7 Rating #76",
+      "notes": "$13 · Rating #76",
       "image": {
         "src": "/ice-cream/ratings/075-img_7444.jpg",
         "alt": "The American Cream from A to Z Creamery"
@@ -1680,7 +1680,7 @@
       "score": 8.1,
       "scoreScale": 10,
       "triedAt": "2023-05-22",
-      "notes": "$13 \u00b7 Rating #77",
+      "notes": "$13 · Rating #77",
       "image": {
         "src": "/ice-cream/ratings/076-img_7527.jpg",
         "alt": "Puddle of Mud from A to Z Creamery"
@@ -1699,10 +1699,10 @@
       "slug": "078-edina-creamery-sweet-salty-sundae",
       "shop": "Edina Creamery",
       "flavor": "Sweet & Salty Sundae",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2023-05-29",
-      "notes": "$10.50 \u00b7 Rating #78",
+      "notes": "$10.50 · Rating #78",
       "image": {
         "src": "/ice-cream/ratings/077-img_7556.jpg",
         "alt": "Sweet & Salty Sundae from Edina Creamery"
@@ -1724,7 +1724,7 @@
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2023-06-17",
-      "notes": "$8.95 \u00b7 Rating #79",
+      "notes": "$8.95 · Rating #79",
       "image": {
         "src": "/ice-cream/ratings/078-img_7724.jpg",
         "alt": "Marshmallow brownie nut fudge from Portland Malt Shoppe"
@@ -1746,7 +1746,7 @@
       "score": 6.8,
       "scoreScale": 10,
       "triedAt": "2023-06-19",
-      "notes": "$13 \u00b7 Rating #80",
+      "notes": "$13 · Rating #80",
       "image": {
         "src": "/ice-cream/ratings/079-img_7731.jpg",
         "alt": "Great Scoff from A to Z Creamery"
@@ -1763,18 +1763,18 @@
     {
       "id": "081-sebastian-joes-pridefetti",
       "slug": "081-sebastian-joes-pridefetti",
-      "shop": "Sebastian Joe\u2019s",
+      "shop": "Sebastian Joe’s",
       "flavor": "Pridefetti",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2023-06-23",
-      "notes": "$7.20 \u00b7 Rating #81",
+      "notes": "$7.20 · Rating #81",
       "image": {
         "src": "/ice-cream/ratings/080-img_7750.jpg",
-        "alt": "Pridefetti from Sebastian Joe\u2019s"
+        "alt": "Pridefetti from Sebastian Joe’s"
       },
       "location": {
-        "label": "Sebastian Joe\u2019s",
+        "label": "Sebastian Joe’s",
         "latitude": 44.92382,
         "longitude": -93.31477166666667,
         "precision": "photo-metadata",
@@ -1790,7 +1790,7 @@
       "score": 9.8,
       "scoreScale": 10,
       "triedAt": "2023-07-09",
-      "notes": "$9.50 \u00b7 Rating #82",
+      "notes": "$9.50 · Rating #82",
       "image": {
         "src": "/ice-cream/ratings/081-img_7849.jpg",
         "alt": "Chocolate Hazelnut Wafer Crunch from Dream Creamery"
@@ -1809,10 +1809,10 @@
       "slug": "083-blue-moon-dine-in-theater-mn-state-fair-irish-butter-ice-cream-over-brown-sugar-cinnamon-toa",
       "shop": "Blue Moon Dine-In-Theater (MN State Fair)",
       "flavor": "Irish Butter Ice Cream Over Brown Sugar Cinnamon Toast",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2023-09-02",
-      "notes": "$9 \u00b7 Rating #83",
+      "notes": "$9 · Rating #83",
       "image": {
         "src": "/ice-cream/ratings/083-img_8331.jpg",
         "alt": "Irish Butter Ice Cream Over Brown Sugar Cinnamon Toast from Blue Moon Dine-In-Theater (MN State Fair)"
@@ -1830,14 +1830,14 @@
       "id": "084-a-to-z-creamery-mn-state-fair-apple-of-grannys-eye",
       "slug": "084-a-to-z-creamery-mn-state-fair-apple-of-grannys-eye",
       "shop": "A to Z Creamery (MN State Fair)",
-      "flavor": "Apple of Granny\u2019s Eye",
-      "score": 7.0,
+      "flavor": "Apple of Granny’s Eye",
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2023-09-02",
-      "notes": "$8 \u00b7 Rating #84",
+      "notes": "$8 · Rating #84",
       "image": {
         "src": "/ice-cream/ratings/082-img_8329.jpg",
-        "alt": "Apple of Granny\u2019s Eye from A to Z Creamery (MN State Fair)"
+        "alt": "Apple of Granny’s Eye from A to Z Creamery (MN State Fair)"
       },
       "location": {
         "label": "A to Z Creamery (MN State Fair)",
@@ -1853,10 +1853,10 @@
       "slug": "085-a-to-z-creamery-aye-aye-capn",
       "shop": "A to Z Creamery",
       "flavor": "Aye Aye Capn",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2023-09-20",
-      "notes": "$13 \u00b7 Rating #85",
+      "notes": "$13 · Rating #85",
       "image": {
         "src": "/ice-cream/ratings/084-img_8363.jpg",
         "alt": "Aye Aye Capn from A to Z Creamery"
@@ -1873,18 +1873,18 @@
     {
       "id": "086-handels-ice-cream-graham-central-station-and-salty-caramel-truffle",
       "slug": "086-handels-ice-cream-graham-central-station-and-salty-caramel-truffle",
-      "shop": "Handel\u2019s Ice Cream",
+      "shop": "Handel’s Ice Cream",
       "flavor": "Graham Central Station and Salty Caramel Truffle",
       "score": 9.3,
       "scoreScale": 10,
       "triedAt": "2023-09-29",
-      "notes": "$7 \u00b7 Rating #86",
+      "notes": "$7 · Rating #86",
       "image": {
         "src": "/ice-cream/ratings/085-img_8420.jpg",
-        "alt": "Graham Central Station and Salty Caramel Truffle from Handel\u2019s Ice Cream"
+        "alt": "Graham Central Station and Salty Caramel Truffle from Handel’s Ice Cream"
       },
       "location": {
-        "label": "Handel\u2019s Ice Cream",
+        "label": "Handel’s Ice Cream",
         "latitude": 45.52813333333334,
         "longitude": -122.81507166666667,
         "precision": "photo-metadata",
@@ -1897,10 +1897,10 @@
       "slug": "087-salt-straw-the-great-candycopia-and-salted-malted-chocolate-chi",
       "shop": "Salt & Straw",
       "flavor": "The Great Candycopia and Salted, Malted, Chocolate Chip Cookie Dough",
-      "score": 10.0,
+      "score": 10,
       "scoreScale": 10,
       "triedAt": "2023-09-30",
-      "notes": "$8.10 \u00b7 Rating #87",
+      "notes": "$8.10 · Rating #87",
       "image": {
         "src": "/ice-cream/ratings/086-img_8460.jpg",
         "alt": "The Great Candycopia and Salted, Malted, Chocolate Chip Cookie Dough from Salt & Straw"
@@ -1919,10 +1919,10 @@
       "slug": "088-tin-roof-dairy-black-cherry-vanilla-soda",
       "shop": "Tin Roof Dairy",
       "flavor": "Black Cherry & Vanilla Soda",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2023-10-14",
-      "notes": "$6.15 \u00b7 Rating #88",
+      "notes": "$6.15 · Rating #88",
       "image": {
         "src": "/ice-cream/ratings/087-img_8538.jpg",
         "alt": "Black Cherry & Vanilla Soda from Tin Roof Dairy"
@@ -1944,7 +1944,7 @@
       "score": 5.1,
       "scoreScale": 10,
       "triedAt": "2023-11-04",
-      "notes": "$14 \u00b7 Rating #89",
+      "notes": "$14 · Rating #89",
       "image": {
         "src": "/ice-cream/ratings/088-img_8610.jpg",
         "alt": "Schweddy Ballz from A to Z Creamery"
@@ -1961,18 +1961,18 @@
     {
       "id": "090-amys-ice-cream-potatoes-and-molasses",
       "slug": "090-amys-ice-cream-potatoes-and-molasses",
-      "shop": "Amy\u2019s Ice Cream",
+      "shop": "Amy’s Ice Cream",
       "flavor": "Potatoes and Molasses",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2023-11-16",
       "notes": "Rating #90",
       "image": {
         "src": "/ice-cream/ratings/089-img_8730.jpg",
-        "alt": "Potatoes and Molasses from Amy\u2019s Ice Cream"
+        "alt": "Potatoes and Molasses from Amy’s Ice Cream"
       },
       "location": {
-        "label": "Amy\u2019s Ice Cream",
+        "label": "Amy’s Ice Cream",
         "latitude": 30.25107,
         "longitude": -97.74898666666667,
         "precision": "photo-metadata",
@@ -1988,7 +1988,7 @@
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2023-11-17",
-      "notes": "$6.39 \u00b7 Rating #91",
+      "notes": "$6.39 · Rating #91",
       "image": {
         "src": "/ice-cream/ratings/090-img_8770.jpg",
         "alt": "Christmas Cookie Concrete from Frozen Flamingo"
@@ -2005,18 +2005,18 @@
     {
       "id": "092-jenis-spendid-ice-creams-buckeye-frenzy-and-gooey-butter-cake",
       "slug": "092-jenis-spendid-ice-creams-buckeye-frenzy-and-gooey-butter-cake",
-      "shop": "Jeni\u2019s Spendid Ice Creams",
+      "shop": "Jeni's Splendid Ice Creams",
       "flavor": "Buckeye Frenzy and Gooey Butter Cake",
       "score": 8.8,
       "scoreScale": 10,
       "triedAt": "2023-11-19",
-      "notes": "$6.95 \u00b7 Rating #92",
+      "notes": "$6.95 · Rating #92",
       "image": {
         "src": "/ice-cream/ratings/091-img_8979.jpg",
-        "alt": "Buckeye Frenzy and Gooey Butter Cake from Jeni\u2019s Spendid Ice Creams"
+        "alt": "Buckeye Frenzy and Gooey Butter Cake from Jeni's Splendid Ice Creams"
       },
       "location": {
-        "label": "Jeni\u2019s Spendid Ice Creams",
+        "label": "Jeni's Splendid Ice Creams",
         "latitude": 30.31532,
         "longitude": -97.73349666666667,
         "precision": "photo-metadata",
@@ -2027,18 +2027,18 @@
     {
       "id": "093-cossettas-cannoli-gelato",
       "slug": "093-cossettas-cannoli-gelato",
-      "shop": "Cossetta\u2019s",
+      "shop": "Cossetta’s",
       "flavor": "Cannoli Gelato",
       "score": 8.9,
       "scoreScale": 10,
       "triedAt": "2023-11-25",
-      "notes": "$4.95 \u00b7 Rating #93",
+      "notes": "$4.95 · Rating #93",
       "image": {
         "src": "/ice-cream/ratings/092-img_9014.jpg",
-        "alt": "Cannoli Gelato from Cossetta\u2019s"
+        "alt": "Cannoli Gelato from Cossetta’s"
       },
       "location": {
-        "label": "Cossetta\u2019s",
+        "label": "Cossetta’s",
         "latitude": 44.94361333333333,
         "longitude": -93.10385,
         "precision": "photo-metadata",
@@ -2054,7 +2054,7 @@
       "score": 9.8,
       "scoreScale": 10,
       "triedAt": "2024-01-26",
-      "notes": "$14 \u00b7 Rating #94",
+      "notes": "$14 · Rating #94",
       "image": {
         "src": "/ice-cream/ratings/093-img_9256.jpg",
         "alt": "Dough Boi from A to Z Creamery"
@@ -2072,14 +2072,14 @@
       "id": "095-a-to-z-creamery-everything-and-the",
       "slug": "095-a-to-z-creamery-everything-and-the",
       "shop": "A to Z Creamery",
-      "flavor": "Everything and the\u2026",
+      "flavor": "Everything and the…",
       "score": 9.5,
       "scoreScale": 10,
       "triedAt": "2024-02-19",
-      "notes": "$14 \u00b7 Rating #95",
+      "notes": "$14 · Rating #95",
       "image": {
         "src": "/ice-cream/ratings/094-img_9314.jpg",
-        "alt": "Everything and the\u2026 from A to Z Creamery"
+        "alt": "Everything and the… from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -2098,7 +2098,7 @@
       "score": 9.7,
       "scoreScale": 10,
       "triedAt": "2024-02-24",
-      "notes": "$8 \u00b7 Rating #96",
+      "notes": "$8 · Rating #96",
       "image": {
         "src": "/ice-cream/ratings/095-img_9335.jpg",
         "alt": "Salty Dulce De Leche and Brown Sugar Cookie Dough from Dream Creamery"
@@ -2120,7 +2120,7 @@
       "score": 6.8,
       "scoreScale": 10,
       "triedAt": "2024-03-30",
-      "notes": "$4.50 \u00b7 Rating #97",
+      "notes": "$4.50 · Rating #97",
       "image": {
         "src": "/ice-cream/ratings/096-img_9438.jpg",
         "alt": "Cookie Monster Flurry from The Blast"
@@ -2139,10 +2139,10 @@
       "slug": "098-a-to-z-creamery-oreo-madness",
       "shop": "A to Z Creamery",
       "flavor": "Oreo Madness",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2024-04-07",
-      "notes": "$15 \u00b7 Rating #98",
+      "notes": "$15 · Rating #98",
       "image": {
         "src": "/ice-cream/ratings/097-img_9474.jpg",
         "alt": "Oreo Madness from A to Z Creamery"
@@ -2159,18 +2159,18 @@
     {
       "id": "099-pops-old-fashioned-ice-cream-company-peanut-butter-chocolate-pretzel-rubys-world-famous-c",
       "slug": "099-pops-old-fashioned-ice-cream-company-peanut-butter-chocolate-pretzel-rubys-world-famous-c",
-      "shop": "Pop\u2019s Old Fashioned Ice Cream Company",
-      "flavor": "Peanut butter chocolate pretzel & Ruby\u2019s world famous chocolate sprinkle",
-      "score": 8.0,
+      "shop": "Pop’s Old Fashioned Ice Cream Company",
+      "flavor": "Peanut butter chocolate pretzel & Ruby’s world famous chocolate sprinkle",
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2024-04-18",
-      "notes": "$8 \u00b7 Rating #99",
+      "notes": "$8 · Rating #99",
       "image": {
         "src": "/ice-cream/ratings/098-img_9544.jpg",
-        "alt": "Peanut butter chocolate pretzel & Ruby\u2019s world famous chocolate sprinkle from Pop\u2019s Old Fashioned Ice Cream Company"
+        "alt": "Peanut butter chocolate pretzel & Ruby’s world famous chocolate sprinkle from Pop’s Old Fashioned Ice Cream Company"
       },
       "location": {
-        "label": "Pop\u2019s Old Fashioned Ice Cream Company",
+        "label": "Pop’s Old Fashioned Ice Cream Company",
         "latitude": 38.80422,
         "longitude": -77.04042783333334,
         "precision": "photo-metadata",
@@ -2183,10 +2183,10 @@
       "slug": "100-pitango-hibiscus-blossom-and-crema",
       "shop": "Pitango",
       "flavor": "Hibiscus blossom and crema",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2024-04-20",
-      "notes": "$7.75 \u00b7 Rating #100",
+      "notes": "$7.75 · Rating #100",
       "image": {
         "src": "/ice-cream/ratings/099-img_9775.jpg",
         "alt": "Hibiscus blossom and crema from Pitango"
@@ -2208,7 +2208,7 @@
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2024-04-21",
-      "notes": "$8.99 \u00b7 Rating #101",
+      "notes": "$8.99 · Rating #101",
       "image": {
         "src": "/ice-cream/ratings/100-img_9821.jpg",
         "alt": "Cookie Monster blend in with fudge striped cookie from Thomas Sweets"
@@ -2227,10 +2227,10 @@
       "slug": "102-the-creamery-cookie-dough-and-banana-pudding",
       "shop": "The Creamery",
       "flavor": "Cookie dough and banana pudding",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2024-04-22",
-      "notes": "$7.75 \u00b7 Rating #102",
+      "notes": "$7.75 · Rating #102",
       "image": {
         "src": "/ice-cream/ratings/101-img_9929.jpg",
         "alt": "Cookie dough and banana pudding from The Creamery"
@@ -2247,18 +2247,18 @@
     {
       "id": "103-jackies-ice-cream-candy-bar-sundae",
       "slug": "103-jackies-ice-cream-candy-bar-sundae",
-      "shop": "Jackie\u2019s Ice Cream",
+      "shop": "Jackie’s Ice Cream",
       "flavor": "Candy Bar Sundae",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2024-05-10",
-      "notes": "$6.50 \u00b7 Rating #103",
+      "notes": "$6.50 · Rating #103",
       "image": {
         "src": "/ice-cream/ratings/102-img_9969.jpg",
-        "alt": "Candy Bar Sundae from Jackie\u2019s Ice Cream"
+        "alt": "Candy Bar Sundae from Jackie’s Ice Cream"
       },
       "location": {
-        "label": "Jackie\u2019s Ice Cream",
+        "label": "Jackie’s Ice Cream",
         "latitude": 42.053738833333334,
         "longitude": -90.39498,
         "precision": "photo-metadata",
@@ -2274,7 +2274,7 @@
       "score": 6.9,
       "scoreScale": 10,
       "triedAt": "2024-05-12",
-      "notes": "$4.50 \u00b7 Rating #104",
+      "notes": "$4.50 · Rating #104",
       "image": {
         "src": "/ice-cream/ratings/103-img_9975.jpg",
         "alt": "Monster cookie dough flurry from The S'Cream"
@@ -2293,10 +2293,10 @@
       "slug": "105-treats-butter-puff",
       "shop": "Treats",
       "flavor": "Butter Puff",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2024-05-18",
-      "notes": "$8.50 \u00b7 Rating #105",
+      "notes": "$8.50 · Rating #105",
       "image": {
         "src": "/ice-cream/ratings/104-img_9991.jpg",
         "alt": "Butter Puff from Treats"
@@ -2313,18 +2313,18 @@
     {
       "id": "106-picol-ferrero-rocher-popsicle",
       "slug": "106-picol-ferrero-rocher-popsicle",
-      "shop": "Picol\u00e9",
+      "shop": "Picolé",
       "flavor": "Ferrero Rocher Popsicle",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2024-05-21",
-      "notes": "$7.45 \u00b7 Rating #106",
+      "notes": "$7.45 · Rating #106",
       "image": {
         "src": "/ice-cream/ratings/105-img_0017.jpg",
-        "alt": "Ferrero Rocher Popsicle from Picol\u00e9"
+        "alt": "Ferrero Rocher Popsicle from Picolé"
       },
       "location": {
-        "label": "Picol\u00e9",
+        "label": "Picolé",
         "latitude": 32.78346666666667,
         "longitude": -96.78443833333333,
         "precision": "photo-metadata",
@@ -2335,18 +2335,18 @@
     {
       "id": "107-adeles-frozen-custard-cookie-dough-concrete",
       "slug": "107-adeles-frozen-custard-cookie-dough-concrete",
-      "shop": "Adele\u2019s Frozen Custard",
+      "shop": "Adele’s Frozen Custard",
       "flavor": "Cookie Dough Concrete",
       "score": 8.2,
       "scoreScale": 10,
       "triedAt": "2024-06-01",
-      "notes": "$6.99 \u00b7 Rating #107",
+      "notes": "$6.99 · Rating #107",
       "image": {
         "src": "/ice-cream/ratings/106-img_0077.jpg",
-        "alt": "Cookie Dough Concrete from Adele\u2019s Frozen Custard"
+        "alt": "Cookie Dough Concrete from Adele’s Frozen Custard"
       },
       "location": {
-        "label": "Adele\u2019s Frozen Custard",
+        "label": "Adele’s Frozen Custard",
         "latitude": 44.902405,
         "longitude": -93.55784666666666,
         "precision": "photo-metadata",
@@ -2357,18 +2357,18 @@
     {
       "id": "108-nelsons-ice-cream-monkey-business-and-elephant-tracks",
       "slug": "108-nelsons-ice-cream-monkey-business-and-elephant-tracks",
-      "shop": "Nelson\u2019s Ice Cream",
+      "shop": "Nelson’s Ice Cream",
       "flavor": "Monkey business and elephant tracks",
       "score": 8.1,
       "scoreScale": 10,
       "triedAt": "2024-06-09",
-      "notes": "$5.69 \u00b7 Rating #108",
+      "notes": "$5.69 · Rating #108",
       "image": {
         "src": "/ice-cream/ratings/107-img_0137.jpg",
-        "alt": "Monkey business and elephant tracks from Nelson\u2019s Ice Cream"
+        "alt": "Monkey business and elephant tracks from Nelson’s Ice Cream"
       },
       "location": {
-        "label": "Nelson\u2019s Ice Cream",
+        "label": "Nelson’s Ice Cream",
         "latitude": 44.92772,
         "longitude": -93.16665,
         "precision": "photo-metadata",
@@ -2384,7 +2384,7 @@
       "score": 5.6,
       "scoreScale": 10,
       "triedAt": "2024-06-11",
-      "notes": "$15 \u00b7 Rating #109",
+      "notes": "$15 · Rating #109",
       "image": {
         "src": "/ice-cream/ratings/108-img_0145.jpg",
         "alt": "Friez B4 Guyz from A to Z Creamery"
@@ -2406,7 +2406,7 @@
       "score": 8.4,
       "scoreScale": 10,
       "triedAt": "2024-06-22",
-      "notes": "$9.45 \u00b7 Rating #110",
+      "notes": "$9.45 · Rating #110",
       "image": {
         "src": "/ice-cream/ratings/109-img_0191.jpg",
         "alt": "Peanut butter moose tracks from Portland Malt Shoppe"
@@ -2424,14 +2424,14 @@
       "id": "111-a-to-z-creamery-whats-poppin",
       "slug": "111-a-to-z-creamery-whats-poppin",
       "shop": "A to Z Creamery",
-      "flavor": "What\u2019s Poppin",
+      "flavor": "What’s Poppin",
       "score": 7.9,
       "scoreScale": 10,
       "triedAt": "2024-06-25",
-      "notes": "$15 \u00b7 Rating #111",
+      "notes": "$15 · Rating #111",
       "image": {
         "src": "/ice-cream/ratings/110-img_0282.jpg",
-        "alt": "What\u2019s Poppin from A to Z Creamery"
+        "alt": "What’s Poppin from A to Z Creamery"
       },
       "location": {
         "label": "A to Z Creamery",
@@ -2445,18 +2445,18 @@
     {
       "id": "112-bavettes-bar-and-boeuf-ice-cream-sundae-royal",
       "slug": "112-bavettes-bar-and-boeuf-ice-cream-sundae-royal",
-      "shop": "Bavette\u2019s Bar & Boeuf",
+      "shop": "Bavette’s Bar & Boeuf",
       "flavor": "Ice cream sundae Royal",
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2024-06-28",
-      "notes": "$19 \u00b7 Rating #112",
+      "notes": "$19 · Rating #112",
       "image": {
         "src": "/ice-cream/ratings/111-img_0313.jpg",
-        "alt": "Ice cream sundae Royal from Bavette\u2019s Bar & Boeuf"
+        "alt": "Ice cream sundae Royal from Bavette’s Bar & Boeuf"
       },
       "location": {
-        "label": "Bavette\u2019s Bar & Boeuf",
+        "label": "Bavette’s Bar & Boeuf",
         "latitude": 41.889091666666666,
         "longitude": -87.63472833333333,
         "precision": "photo-metadata",
@@ -2467,18 +2467,18 @@
     {
       "id": "113-margies-candies-jumbo-hot-fudge-sundae",
       "slug": "113-margies-candies-jumbo-hot-fudge-sundae",
-      "shop": "Margie\u2019s Candies",
+      "shop": "Margie’s Candies",
       "flavor": "Jumbo hot fudge sundae",
       "score": 9.4,
       "scoreScale": 10,
       "triedAt": "2024-06-29",
-      "notes": "$14.95 \u00b7 Rating #113",
+      "notes": "$14.95 · Rating #113",
       "image": {
         "src": "/ice-cream/ratings/112-img_0343.jpg",
-        "alt": "Jumbo hot fudge sundae from Margie\u2019s Candies"
+        "alt": "Jumbo hot fudge sundae from Margie’s Candies"
       },
       "location": {
-        "label": "Margie\u2019s Candies",
+        "label": "Margie’s Candies",
         "latitude": 41.91750833333333,
         "longitude": -87.68758333333334,
         "precision": "photo-metadata",
@@ -2494,7 +2494,7 @@
       "score": 5.6,
       "scoreScale": 10,
       "triedAt": "2024-07-04",
-      "notes": "$5.20 \u00b7 Rating #114",
+      "notes": "$5.20 · Rating #114",
       "image": {
         "src": "/ice-cream/ratings/113-img_0380.jpg",
         "alt": "Chocolate chip cookie frost bite from North End Dairy Treat"
@@ -2516,7 +2516,7 @@
       "score": 8.4,
       "scoreScale": 10,
       "triedAt": "2024-07-11",
-      "notes": "$5.50 \u00b7 Rating #115",
+      "notes": "$5.50 · Rating #115",
       "image": {
         "src": "/ice-cream/ratings/114-img_0538.jpg",
         "alt": "Jumping Jersey Cow and Muddy Boots extra credit from Schoolhouse Scoop"
@@ -2533,18 +2533,18 @@
     {
       "id": "116-honey-mackeys-velvet-oreo-and-candy-bar-mix-up",
       "slug": "116-honey-mackeys-velvet-oreo-and-candy-bar-mix-up",
-      "shop": "Honey & Mackey\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Velvet Oreo and Candy Bar Mix-Up",
-      "score": 9.0,
+      "score": 9,
       "scoreScale": 10,
       "triedAt": "2024-07-21",
-      "notes": "$6.35 \u00b7 Rating #116",
+      "notes": "$6.35 · Rating #116",
       "image": {
         "src": "/ice-cream/ratings/115-img_0595.jpg",
-        "alt": "Velvet Oreo and Candy Bar Mix-Up from Honey & Mackey\u2019s"
+        "alt": "Velvet Oreo and Candy Bar Mix-Up from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey & Mackey\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.0197305,
         "longitude": -93.493545,
         "precision": "photo-metadata",
@@ -2560,7 +2560,7 @@
       "score": 6.5,
       "scoreScale": 10,
       "triedAt": "2024-08-09",
-      "notes": "$8.95 \u00b7 Rating #117",
+      "notes": "$8.95 · Rating #117",
       "image": {
         "src": "/ice-cream/ratings/116-img_0850.jpg",
         "alt": "Fluffer Nutter Split from Two Scoops"
@@ -2577,18 +2577,18 @@
     {
       "id": "118-honey-and-mackies-waffle-cone-crunch-and-rice-krispies",
       "slug": "118-honey-and-mackies-waffle-cone-crunch-and-rice-krispies",
-      "shop": "Honey and Mackie\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Waffle Cone Crunch and Rice Krispies",
       "score": 9.2,
       "scoreScale": 10,
       "triedAt": "2024-09-21",
-      "notes": "$7.25 \u00b7 Rating #118",
+      "notes": "$7.25 · Rating #118",
       "image": {
         "src": "/ice-cream/ratings/117-img_0009.jpg",
-        "alt": "Waffle Cone Crunch and Rice Krispies from Honey and Mackie\u2019s"
+        "alt": "Waffle Cone Crunch and Rice Krispies from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey and Mackie\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.01978616666667,
         "longitude": -93.49355333333334,
         "precision": "photo-metadata",
@@ -2599,18 +2599,18 @@
     {
       "id": "119-honey-and-mackies-sweet-elvis-and-chocolate-gold",
       "slug": "119-honey-and-mackies-sweet-elvis-and-chocolate-gold",
-      "shop": "Honey and Mackie\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Sweet Elvis and Chocolate Gold",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2024-09-27",
-      "notes": "$7.25 \u00b7 Rating #119",
+      "notes": "$7.25 · Rating #119",
       "image": {
         "src": "/ice-cream/ratings/118-img_0044.jpg",
-        "alt": "Sweet Elvis and Chocolate Gold from Honey and Mackie\u2019s"
+        "alt": "Sweet Elvis and Chocolate Gold from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey and Mackie\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.01976666666667,
         "longitude": -93.49372833333334,
         "precision": "photo-metadata",
@@ -2623,10 +2623,10 @@
       "slug": "120-red-barn-farm-maple-nut-sundae",
       "shop": "Red Barn Farm",
       "flavor": "Maple Nut Sundae",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2024-10-20",
-      "notes": "$5 \u00b7 Rating #120",
+      "notes": "$5 · Rating #120",
       "image": {
         "src": "/ice-cream/ratings/119-img_0517.jpg",
         "alt": "Maple Nut Sundae from Red Barn Farm"
@@ -2648,7 +2648,7 @@
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2024-11-04",
-      "notes": "$15 \u00b7 Rating #121",
+      "notes": "$15 · Rating #121",
       "image": {
         "src": "/ice-cream/ratings/120-img_0596.jpg",
         "alt": "Baked Banana from A to Z Creamery"
@@ -2665,18 +2665,18 @@
     {
       "id": "122-honey-mackies-nutella-graham-and-hot-chocolate",
       "slug": "122-honey-mackies-nutella-graham-and-hot-chocolate",
-      "shop": "Honey & Mackie\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Nutella Graham and Hot Chocolate",
       "score": 8.8,
       "scoreScale": 10,
       "triedAt": "2024-12-01",
-      "notes": "$7.35 \u00b7 Rating #122",
+      "notes": "$7.35 · Rating #122",
       "image": {
         "src": "/ice-cream/ratings/121-img_0768.jpg",
-        "alt": "Nutella Graham and Hot Chocolate from Honey & Mackie\u2019s"
+        "alt": "Nutella Graham and Hot Chocolate from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey & Mackie\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.01987783333333,
         "longitude": -93.493605,
         "precision": "photo-metadata",
@@ -2687,18 +2687,18 @@
     {
       "id": "123-ululanis-hawaiian-shave-ice-sunset-beach-with-macadamia-nut-ice-cream-and-snow-c",
       "slug": "123-ululanis-hawaiian-shave-ice-sunset-beach-with-macadamia-nut-ice-cream-and-snow-c",
-      "shop": "Ululani\u2019s Hawaiian Shave Ice",
+      "shop": "Ululani’s Hawaiian Shave Ice",
       "flavor": "Sunset Beach with Macadamia Nut Ice Cream and Snow Cap",
       "score": 9.7,
       "scoreScale": 10,
       "triedAt": "2025-01-09",
-      "notes": "$11.49 \u00b7 Rating #123",
+      "notes": "$11.49 · Rating #123",
       "image": {
         "src": "/ice-cream/ratings/122-img_0984.jpg",
-        "alt": "Sunset Beach with Macadamia Nut Ice Cream and Snow Cap from Ululani\u2019s Hawaiian Shave Ice"
+        "alt": "Sunset Beach with Macadamia Nut Ice Cream and Snow Cap from Ululani’s Hawaiian Shave Ice"
       },
       "location": {
-        "label": "Ululani\u2019s Hawaiian Shave Ice",
+        "label": "Ululani’s Hawaiian Shave Ice",
         "latitude": 20.781808333333334,
         "longitude": -156.462525,
         "precision": "photo-metadata",
@@ -2709,18 +2709,18 @@
     {
       "id": "124-lapperts-ube-haupia",
       "slug": "124-lapperts-ube-haupia",
-      "shop": "Lappert\u2019s",
+      "shop": "Lappert’s",
       "flavor": "Ube Haupia",
       "score": 9.3,
       "scoreScale": 10,
       "triedAt": "2025-01-11",
-      "notes": "$7.58 \u00b7 Rating #124",
+      "notes": "$7.58 · Rating #124",
       "image": {
         "src": "/ice-cream/ratings/123-img_1152.jpg",
-        "alt": "Ube Haupia from Lappert\u2019s"
+        "alt": "Ube Haupia from Lappert’s"
       },
       "location": {
-        "label": "Lappert\u2019s",
+        "label": "Lappert’s",
         "latitude": 20.686911666666667,
         "longitude": -156.44059666666666,
         "precision": "photo-metadata",
@@ -2736,7 +2736,7 @@
       "score": 8.7,
       "scoreScale": 10,
       "triedAt": "2025-01-12",
-      "notes": "$5.50 \u00b7 Rating #125",
+      "notes": "$5.50 · Rating #125",
       "image": {
         "src": "/ice-cream/ratings/124-img_1180.jpg",
         "alt": "Banana Mac Crunch from Roselani"
@@ -2753,18 +2753,18 @@
     {
       "id": "126-lapperts-caramel-coconut-macadamia-nut",
       "slug": "126-lapperts-caramel-coconut-macadamia-nut",
-      "shop": "Lappert\u2019s",
+      "shop": "Lappert’s",
       "flavor": "Caramel Coconut Macadamia Nut",
       "score": 9.5,
       "scoreScale": 10,
       "triedAt": "2025-01-13",
-      "notes": "$5.99 \u00b7 Rating #126",
+      "notes": "$5.99 · Rating #126",
       "image": {
         "src": "/ice-cream/ratings/125-img_1412.jpg",
-        "alt": "Caramel Coconut Macadamia Nut from Lappert\u2019s"
+        "alt": "Caramel Coconut Macadamia Nut from Lappert’s"
       },
       "location": {
-        "label": "Lappert\u2019s",
+        "label": "Lappert’s",
         "latitude": 21.883488333333332,
         "longitude": -159.46920833333334,
         "precision": "photo-metadata",
@@ -2775,18 +2775,18 @@
     {
       "id": "127-uncles-shaved-ice-island-nectar",
       "slug": "127-uncles-shaved-ice-island-nectar",
-      "shop": "Uncle\u2019s Shaved Ice",
+      "shop": "Uncle’s Shaved Ice",
       "flavor": "Island Nectar",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2025-01-14",
-      "notes": "$10 \u00b7 Rating #127",
+      "notes": "$10 · Rating #127",
       "image": {
         "src": "/ice-cream/ratings/126-img_1542.jpg",
-        "alt": "Island Nectar from Uncle\u2019s Shaved Ice"
+        "alt": "Island Nectar from Uncle’s Shaved Ice"
       },
       "location": {
-        "label": "Uncle\u2019s Shaved Ice",
+        "label": "Uncle’s Shaved Ice",
         "latitude": 21.968886666666666,
         "longitude": -159.38774166666667,
         "precision": "photo-metadata",
@@ -2799,10 +2799,10 @@
       "slug": "128-papalani-gelato-kauai-crunch-and-haupia",
       "shop": "Papalani Gelato",
       "flavor": "Kauai Crunch and Haupia",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2025-01-16",
-      "notes": "$9.49 \u00b7 Rating #128",
+      "notes": "$9.49 · Rating #128",
       "image": {
         "src": "/ice-cream/ratings/127-img_1638.jpg",
         "alt": "Kauai Crunch and Haupia from Papalani Gelato"
@@ -2819,18 +2819,18 @@
     {
       "id": "129-lapperts-heavenly-hana-and-mauna-keas-secret",
       "slug": "129-lapperts-heavenly-hana-and-mauna-keas-secret",
-      "shop": "Lappert\u2019s",
-      "flavor": "Heavenly Hana and Mauna Kea\u2019s Secret",
+      "shop": "Lappert’s",
+      "flavor": "Heavenly Hana and Mauna Kea’s Secret",
       "score": 7.2,
       "scoreScale": 10,
       "triedAt": "2025-01-18",
-      "notes": "$10.58 \u00b7 Rating #129",
+      "notes": "$10.58 · Rating #129",
       "image": {
         "src": "/ice-cream/ratings/128-img_1767.jpg",
-        "alt": "Heavenly Hana and Mauna Kea\u2019s Secret from Lappert\u2019s"
+        "alt": "Heavenly Hana and Mauna Kea’s Secret from Lappert’s"
       },
       "location": {
-        "label": "Lappert\u2019s",
+        "label": "Lappert’s",
         "latitude": 21.883486666666666,
         "longitude": -159.46933,
         "precision": "photo-metadata",
@@ -2841,18 +2841,18 @@
     {
       "id": "130-skinny-mikes-ice-cream-and-shave-ice-kauai-sunset",
       "slug": "130-skinny-mikes-ice-cream-and-shave-ice-kauai-sunset",
-      "shop": "Skinny Mike\u2019s Ice Cream and Shave Ice",
+      "shop": "Skinny Mike’s Ice Cream and Shave Ice",
       "flavor": "Kauai Sunset",
       "score": 8.3,
       "scoreScale": 10,
       "triedAt": "2025-01-19",
-      "notes": "$10.24 \u00b7 Rating #130",
+      "notes": "$10.24 · Rating #130",
       "image": {
         "src": "/ice-cream/ratings/129-img_1812.jpg",
-        "alt": "Kauai Sunset from Skinny Mike\u2019s Ice Cream and Shave Ice"
+        "alt": "Kauai Sunset from Skinny Mike’s Ice Cream and Shave Ice"
       },
       "location": {
-        "label": "Skinny Mike\u2019s Ice Cream and Shave Ice",
+        "label": "Skinny Mike’s Ice Cream and Shave Ice",
         "latitude": 21.961463333333334,
         "longitude": -159.353225,
         "precision": "photo-metadata",
@@ -2865,10 +2865,10 @@
       "slug": "131-salt-straw-pots-of-gold-rainbows-and-milk-chocolate-fudge-with-",
       "shop": "Salt & Straw",
       "flavor": "Pots of Gold & Rainbows and Milk Chocolate Fudge with Candied Macadamia Nuts in a Salted Brownie Waffle Cone",
-      "score": 10.0,
+      "score": 10,
       "scoreScale": 10,
       "triedAt": "2025-03-29",
-      "notes": "$8.10 \u00b7 Rating #131",
+      "notes": "$8.10 · Rating #131",
       "image": {
         "src": "/ice-cream/ratings/130-img_2111.jpg",
         "alt": "Pots of Gold & Rainbows and Milk Chocolate Fudge with Candied Macadamia Nuts in a Salted Brownie Waffle Cone from Salt & Straw"
@@ -2890,7 +2890,7 @@
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2025-04-19",
-      "notes": "$5.75 \u00b7 Rating #132",
+      "notes": "$5.75 · Rating #132",
       "image": {
         "src": "/ice-cream/ratings/131-img_2179.jpg",
         "alt": "Cadburry Egg Flurry from The Blast"
@@ -2907,18 +2907,18 @@
     {
       "id": "133-honey-mackies-banana-oreo-and-kit-kat",
       "slug": "133-honey-mackies-banana-oreo-and-kit-kat",
-      "shop": "Honey & Mackie\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Banana Oreo and Kit Kat",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2025-05-03",
-      "notes": "$8 \u00b7 Rating #133",
+      "notes": "$8 · Rating #133",
       "image": {
         "src": "/ice-cream/ratings/132-img_2215.jpg",
-        "alt": "Banana Oreo and Kit Kat from Honey & Mackie\u2019s"
+        "alt": "Banana Oreo and Kit Kat from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey & Mackie\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.01986383333333,
         "longitude": -93.49369166666666,
         "precision": "photo-metadata",
@@ -2934,7 +2934,7 @@
       "score": 8.8,
       "scoreScale": 10,
       "triedAt": "2025-05-08",
-      "notes": "$13 \u00b7 Rating #134",
+      "notes": "$13 · Rating #134",
       "image": {
         "src": "/ice-cream/ratings/133-img_2227.jpg",
         "alt": "Udderly Soaked from A to Z Creamery"
@@ -2951,18 +2951,18 @@
     {
       "id": "135-honey-mackies-smores-and-timberwolves",
       "slug": "135-honey-mackies-smores-and-timberwolves",
-      "shop": "Honey & Mackie\u2019s",
+      "shop": "Honey & Mackie's",
       "flavor": "Smores and Timberwolves",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2025-05-17",
-      "notes": "$8 \u00b7 Rating #135",
+      "notes": "$8 · Rating #135",
       "image": {
         "src": "/ice-cream/ratings/134-img_2273.jpg",
-        "alt": "Smores and Timberwolves from Honey & Mackie\u2019s"
+        "alt": "Smores and Timberwolves from Honey & Mackie's"
       },
       "location": {
-        "label": "Honey & Mackie\u2019s",
+        "label": "Honey & Mackie's",
         "latitude": 45.0197445,
         "longitude": -93.49372833333334,
         "precision": "photo-metadata",
@@ -2975,10 +2975,10 @@
       "slug": "136-wells-roadside-hot-fudge-shake",
       "shop": "Wells Roadside",
       "flavor": "Hot fudge shake",
-      "score": 5.0,
+      "score": 5,
       "scoreScale": 10,
       "triedAt": "2025-05-29",
-      "notes": "$5.99 \u00b7 Rating #136",
+      "notes": "$5.99 · Rating #136",
       "image": {
         "src": "/ice-cream/ratings/135-img_2308.jpg",
         "alt": "Hot fudge shake from Wells Roadside"
@@ -2995,18 +2995,18 @@
     {
       "id": "137-bridgemans-peanut-butter-banana-marshmallow",
       "slug": "137-bridgemans-peanut-butter-banana-marshmallow",
-      "shop": "Bridgeman\u2019s",
+      "shop": "Bridgeman’s",
       "flavor": "Peanut butter banana marshmallow",
       "score": 6.6,
       "scoreScale": 10,
       "triedAt": "2025-06-19",
-      "notes": "$6.99 \u00b7 Rating #137",
+      "notes": "$6.99 · Rating #137",
       "image": {
         "src": "/ice-cream/ratings/136-img_2412.jpg",
-        "alt": "Peanut butter banana marshmallow from Bridgeman\u2019s"
+        "alt": "Peanut butter banana marshmallow from Bridgeman’s"
       },
       "location": {
-        "label": "Bridgeman\u2019s",
+        "label": "Bridgeman’s",
         "latitude": 46.805661666666666,
         "longitude": -92.16535283333333,
         "precision": "photo-metadata",
@@ -3022,7 +3022,7 @@
       "score": 8.5,
       "scoreScale": 10,
       "triedAt": "2025-06-21",
-      "notes": "$9.95 \u00b7 Rating #138",
+      "notes": "$9.95 · Rating #138",
       "image": {
         "src": "/ice-cream/ratings/137-img_2425.jpg",
         "alt": "Caramel cookies and cream malt from Portland Malt Shoppe"
@@ -3040,14 +3040,14 @@
       "id": "139-wilky-wilty-reeses-pieces-of-heaven",
       "slug": "139-wilky-wilty-reeses-pieces-of-heaven",
       "shop": "Wilky Wilty",
-      "flavor": "Reese\u2019s pieces of heaven",
+      "flavor": "Reese’s pieces of heaven",
       "score": 6.7,
       "scoreScale": 10,
       "triedAt": "2025-06-28",
-      "notes": "$4.89 \u00b7 Rating #139",
+      "notes": "$4.89 · Rating #139",
       "image": {
         "src": "/ice-cream/ratings/138-img_2439.jpg",
-        "alt": "Reese\u2019s pieces of heaven from Wilky Wilty"
+        "alt": "Reese’s pieces of heaven from Wilky Wilty"
       },
       "location": {
         "label": "Wilky Wilty",
@@ -3066,7 +3066,7 @@
       "score": 6.5,
       "scoreScale": 10,
       "triedAt": "2025-07-24",
-      "notes": "$4.35 \u00b7 Rating #140",
+      "notes": "$4.35 · Rating #140",
       "image": {
         "src": "/ice-cream/ratings/139-img_2540.jpg",
         "alt": "Cookie Dough from The Blast"
@@ -3085,10 +3085,10 @@
       "slug": "141-la-michoacana-owatonna-three-milk-cake",
       "shop": "La Michoacana Owatonna",
       "flavor": "Three Milk Cake",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2025-07-26",
-      "notes": "$4.75 \u00b7 Rating #141",
+      "notes": "$4.75 · Rating #141",
       "image": {
         "src": "/ice-cream/ratings/140-img_2549.jpg",
         "alt": "Three Milk Cake from La Michoacana Owatonna"
@@ -3107,10 +3107,10 @@
       "slug": "142-the-blast-cookies-and-cream-pie-with-cookie-dough-on-top",
       "shop": "The Blast",
       "flavor": "Cookies and cream pie with cookie dough on top",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2025-07-26",
-      "notes": "$6.50 \u00b7 Rating #142",
+      "notes": "$6.50 · Rating #142",
       "image": {
         "src": "/ice-cream/ratings/141-img_2550.jpg",
         "alt": "Cookies and cream pie with cookie dough on top from The Blast"
@@ -3132,7 +3132,7 @@
       "score": 5.5,
       "scoreScale": 10,
       "triedAt": "2025-08-02",
-      "notes": "$5.38 \u00b7 Rating #143",
+      "notes": "$5.38 · Rating #143",
       "image": {
         "src": "/ice-cream/ratings/142-img_2582.jpg",
         "alt": "Nutty Banana Bash from Historic Moorhead Dairy Queen"
@@ -3154,7 +3154,7 @@
       "score": 6.9,
       "scoreScale": 10,
       "triedAt": "2025-08-03",
-      "notes": "$5.00 \u00b7 Rating #144",
+      "notes": "$5.00 · Rating #144",
       "image": {
         "src": "/ice-cream/ratings/143-img_2639.jpg",
         "alt": "Marionberry Pie from Daytripper Sips & Scoops"
@@ -3171,18 +3171,18 @@
     {
       "id": "145-fletchers-ice-cream-cafe-baja-blast-and-blood-orange-sorbet",
       "slug": "145-fletchers-ice-cream-cafe-baja-blast-and-blood-orange-sorbet",
-      "shop": "Fletcher\u2019s Ice Cream & Cafe",
+      "shop": "Fletcher’s Ice Cream & Cafe",
       "flavor": "Baja Blast and Blood Orange Sorbet",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2025-10-11",
-      "notes": "$6.20 \u00b7 Rating #145",
+      "notes": "$6.20 · Rating #145",
       "image": {
         "src": "/ice-cream/ratings/144-img_3095.jpg",
-        "alt": "Baja Blast and Blood Orange Sorbet from Fletcher\u2019s Ice Cream & Cafe"
+        "alt": "Baja Blast and Blood Orange Sorbet from Fletcher’s Ice Cream & Cafe"
       },
       "location": {
-        "label": "Fletcher\u2019s Ice Cream & Cafe",
+        "label": "Fletcher’s Ice Cream & Cafe",
         "latitude": 44.98804166666667,
         "longitude": -93.255945,
         "precision": "photo-metadata",
@@ -3194,14 +3194,14 @@
       "id": "146-sweets-on-third-party-animal-and-halleys-comet",
       "slug": "146-sweets-on-third-party-animal-and-halleys-comet",
       "shop": "Sweets on Third",
-      "flavor": "Party Animal and Halley\u2019s Comet",
+      "flavor": "Party Animal and Halley’s Comet",
       "score": 6.7,
       "scoreScale": 10,
       "triedAt": "2025-10-18",
-      "notes": "$5.80 \u00b7 Rating #146",
+      "notes": "$5.80 · Rating #146",
       "image": {
         "src": "/ice-cream/ratings/145-img_3297.jpg",
-        "alt": "Party Animal and Halley\u2019s Comet from Sweets on Third"
+        "alt": "Party Animal and Halley’s Comet from Sweets on Third"
       },
       "location": {
         "label": "Sweets on Third",
@@ -3217,10 +3217,10 @@
       "slug": "147-gelato-isla-mujeres-kinder-and-dulce-de-leche-y-chocolate",
       "shop": "Gelato Isla Mujeres",
       "flavor": "Kinder and Dulce de leche y chocolate",
-      "score": 7.0,
+      "score": 7,
       "scoreScale": 10,
       "triedAt": "2025-11-07",
-      "notes": "$130 MXN \u00b7 Rating #147",
+      "notes": "$130 MXN · Rating #147",
       "image": {
         "src": "/ice-cream/ratings/146-img_3489.jpg",
         "alt": "Kinder and Dulce de leche y chocolate from Gelato Isla Mujeres"
@@ -3237,18 +3237,18 @@
     {
       "id": "148-aldos-gelato-cancun-dubai-chocolate",
       "slug": "148-aldos-gelato-cancun-dubai-chocolate",
-      "shop": "Aldo\u2019s Gelato Cancun",
+      "shop": "Aldo’s Gelato Cancun",
       "flavor": "Dubai Chocolate",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2025-11-08",
-      "notes": "$110 MXN \u00b7 Rating #148",
+      "notes": "$110 MXN · Rating #148",
       "image": {
         "src": "/ice-cream/ratings/147-img_3537.jpg",
-        "alt": "Dubai Chocolate from Aldo\u2019s Gelato Cancun"
+        "alt": "Dubai Chocolate from Aldo’s Gelato Cancun"
       },
       "location": {
-        "label": "Aldo\u2019s Gelato Cancun",
+        "label": "Aldo’s Gelato Cancun",
         "latitude": 21.110527833333332,
         "longitude": -86.764655,
         "precision": "photo-metadata",
@@ -3261,10 +3261,10 @@
       "slug": "149-sweet-saint-gallete-des-rois",
       "shop": "Sweet Saint",
       "flavor": "Gallete des Rois",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2026-02-20",
-      "notes": "$5.99 \u00b7 Rating #149",
+      "notes": "$5.99 · Rating #149",
       "image": {
         "src": "/ice-cream/ratings/148-img_4374.jpg",
         "alt": "Gallete des Rois from Sweet Saint"
@@ -3283,10 +3283,10 @@
       "slug": "150-north-end-dairy-treat-chips-ahoy-frost-bite",
       "shop": "North End Dairy Treat",
       "flavor": "Chips Ahoy Frost Bite",
-      "score": 6.0,
+      "score": 6,
       "scoreScale": 10,
       "triedAt": "2026-05-21",
-      "notes": "$5.25 \u00b7 Rating #150",
+      "notes": "$5.25 · Rating #150",
       "image": {
         "src": "/ice-cream/ratings/149-img_4957.jpg",
         "alt": "Chips Ahoy Frost Bite from North End Dairy Treat"
@@ -3303,18 +3303,18 @@
     {
       "id": "151-armadillos-ice-cream-shoppe-bananarama-shake",
       "slug": "151-armadillos-ice-cream-shoppe-bananarama-shake",
-      "shop": "Armadillo\u2019s Ice Cream Shoppe",
+      "shop": "Armadillo’s Ice Cream Shoppe",
       "flavor": "Bananarama Shake",
       "score": 6.8,
       "scoreScale": 10,
       "triedAt": "2026-05-27",
-      "notes": "$7.50 \u00b7 Rating #151",
+      "notes": "$7.50 · Rating #151",
       "image": {
         "src": "/ice-cream/ratings/150-img_5054.jpg",
-        "alt": "Bananarama Shake from Armadillo\u2019s Ice Cream Shoppe"
+        "alt": "Bananarama Shake from Armadillo’s Ice Cream Shoppe"
       },
       "location": {
-        "label": "Armadillo\u2019s Ice Cream Shoppe",
+        "label": "Armadillo’s Ice Cream Shoppe",
         "latitude": 44.079966666666664,
         "longitude": -103.219155,
         "precision": "photo-metadata",
@@ -3330,7 +3330,7 @@
       "score": 6.6,
       "scoreScale": 10,
       "triedAt": "2026-05-28",
-      "notes": "$4.99 \u00b7 Rating #152",
+      "notes": "$4.99 · Rating #152",
       "image": {
         "src": "/ice-cream/ratings/151-img_5073.jpg",
         "alt": "Hook, Line & Sinker and Tipsy Banana from Deadwood Ice Cream Company"
@@ -3347,18 +3347,18 @@
     {
       "id": "153-nelsons-ice-cream-rich-and-famous-and-elephant-tracks",
       "slug": "153-nelsons-ice-cream-rich-and-famous-and-elephant-tracks",
-      "shop": "Nelson\u2019s Ice Cream",
+      "shop": "Nelson’s Ice Cream",
       "flavor": "Rich and Famous and Elephant Tracks",
       "score": 8.8,
       "scoreScale": 10,
       "triedAt": "2026-06-07",
-      "notes": "$6.14 \u00b7 Rating #153",
+      "notes": "$6.14 · Rating #153",
       "image": {
         "src": "/ice-cream/ratings/152-img_5186.jpg",
-        "alt": "Rich and Famous and Elephant Tracks from Nelson\u2019s Ice Cream"
+        "alt": "Rich and Famous and Elephant Tracks from Nelson’s Ice Cream"
       },
       "location": {
-        "label": "Nelson\u2019s Ice Cream",
+        "label": "Nelson’s Ice Cream",
         "latitude": 44.927791666666664,
         "longitude": -93.16674166666667,
         "precision": "photo-metadata",
@@ -3371,10 +3371,10 @@
       "slug": "154-portland-malt-shoppe-butterscotch-moose-tracks",
       "shop": "Portland Malt Shoppe",
       "flavor": "Butterscotch Moose Tracks",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2026-06-20",
-      "notes": "$10.50 \u00b7 Rating #154",
+      "notes": "$10.50 · Rating #154",
       "image": {
         "src": "/ice-cream/ratings/153-img_5271.jpg",
         "alt": "Butterscotch Moose Tracks from Portland Malt Shoppe"
@@ -3393,10 +3393,10 @@
       "slug": "155-the-blast-puppy-chow-flurry",
       "shop": "The Blast",
       "flavor": "Puppy Chow Flurry",
-      "score": 8.0,
+      "score": 8,
       "scoreScale": 10,
       "triedAt": "2026-06-26",
-      "notes": "$5.50 \u00b7 Rating #155",
+      "notes": "$5.50 · Rating #155",
       "image": {
         "src": "/ice-cream/ratings/154-img_5362.jpg",
         "alt": "Puppy Chow Flurry from The Blast"
@@ -3437,11 +3437,11 @@
       "madeAt": "2024-11-05",
       "base": "Peanut butter ice cream",
       "mixIns": [
-        "Reese\u2019s Puffs",
+        "Reese’s Puffs",
         "Chocolate swirl",
         "Salted peanuts"
       ],
-      "description": "Peanut butter ice cream, Reese\u2019s Puffs cereal with a chocolate swirl and salted peanuts",
+      "description": "Peanut butter ice cream, Reese’s Puffs cereal with a chocolate swirl and salted peanuts",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3476,48 +3476,48 @@
     {
       "id": "reeses-peanut-butter-cup-and-butterfinger",
       "slug": "reeses-peanut-butter-cup-and-butterfinger",
-      "name": "Reese\u2019s Peanut Butter Cup and Butterfinger",
+      "name": "Reese’s Peanut Butter Cup and Butterfinger",
       "madeAt": "2025-05-30",
       "base": "Vanilla ice cream",
       "mixIns": [
         "Butterfinger",
-        "Reese\u2019s Peanut Butter Cups",
+        "Reese’s Peanut Butter Cups",
         "Chocolate swirl"
       ],
-      "description": "Vanilla ice cream, crushed Butterfinger and Reese\u2019s Peanut Butter Cups with chocolate swirl",
+      "description": "Vanilla ice cream, crushed Butterfinger and Reese’s Peanut Butter Cups with chocolate swirl",
       "wouldMakeAgain": true,
       "images": [
         {
           "src": "/ice-cream/made-by-mitch/reeses-peanut-butter-cup-and-butterfinger-2-img_2310.jpg",
-          "alt": "Reese\u2019s Peanut Butter Cup and Butterfinger homemade ice cream"
+          "alt": "Reese’s Peanut Butter Cup and Butterfinger homemade ice cream"
         },
         {
           "src": "/ice-cream/made-by-mitch/reeses-peanut-butter-cup-and-butterfinger-1-img_2309.jpg",
-          "alt": "Reese\u2019s Peanut Butter Cup and Butterfinger homemade ice cream"
+          "alt": "Reese’s Peanut Butter Cup and Butterfinger homemade ice cream"
         }
       ]
     },
     {
       "id": "flossys-nutty-chocolate-swirl",
       "slug": "flossys-nutty-chocolate-swirl",
-      "name": "Flossy\u2019s Nutty Chocolate Swirl",
+      "name": "Flossy’s Nutty Chocolate Swirl",
       "madeAt": "2025-07-12",
       "base": "Vanilla ice cream",
       "mixIns": [
-        "Grandma\u2019s chocolate sauce",
+        "Grandma’s chocolate sauce",
         "Peanuts",
         "Crunchy bits"
       ],
-      "description": "Vanilla ice cream, Grandma\u2019s chocolate sauce swirl, chopped peanuts, crunchy bits",
+      "description": "Vanilla ice cream, Grandma’s chocolate sauce swirl, chopped peanuts, crunchy bits",
       "wouldMakeAgain": true,
       "images": [
         {
           "src": "/ice-cream/made-by-mitch/flossys-nutty-chocolate-swirl-1-img_2489.jpg",
-          "alt": "Flossy\u2019s Nutty Chocolate Swirl homemade ice cream"
+          "alt": "Flossy’s Nutty Chocolate Swirl homemade ice cream"
         },
         {
           "src": "/ice-cream/made-by-mitch/flossys-nutty-chocolate-swirl-2-img_2491.jpg",
-          "alt": "Flossy\u2019s Nutty Chocolate Swirl homemade ice cream"
+          "alt": "Flossy’s Nutty Chocolate Swirl homemade ice cream"
         }
       ]
     },
@@ -3528,10 +3528,10 @@
       "madeAt": "2025-07-14",
       "base": "Oreo ice cream",
       "mixIns": [
-        "Grandma\u2019s chocolate sauce",
+        "Grandma’s chocolate sauce",
         "Salted peanuts"
       ],
-      "description": "Oreo ice cream, layers of Grandma\u2019s chocolate sauce and crushed salted peanuts",
+      "description": "Oreo ice cream, layers of Grandma’s chocolate sauce and crushed salted peanuts",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3551,11 +3551,11 @@
       "madeAt": "2025-07-20",
       "base": "Peanut butter ice cream",
       "mixIns": [
-        "Grandma\u2019s chocolate sauce",
+        "Grandma’s chocolate sauce",
         "Butterscotch",
         "Rice Krispies"
       ],
-      "description": "Peanut butter ice cream, Grandma\u2019s chocolate sauce, and clusters of butterscotch, peanut butter, and Rice Krispies",
+      "description": "Peanut butter ice cream, Grandma’s chocolate sauce, and clusters of butterscotch, peanut butter, and Rice Krispies",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3572,11 +3572,11 @@
       "base": "Vanilla ice cream",
       "mixIns": [
         "Chocolate shavings",
-        "Grandma\u2019s chocolate sauce",
+        "Grandma’s chocolate sauce",
         "Marshmallow cream",
         "Cookie dough balls"
       ],
-      "description": "Vanilla ice cream with semi-sweet chocolate shavings, swirls of Grandma\u2019s chocolate sauce and marshmallow cream, and movie theater cookie dough balls",
+      "description": "Vanilla ice cream with semi-sweet chocolate shavings, swirls of Grandma’s chocolate sauce and marshmallow cream, and movie theater cookie dough balls",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3596,11 +3596,11 @@
       "madeAt": "2025-08-31",
       "base": "Oreo ice cream",
       "mixIns": [
-        "Grandma\u2019s chocolate sauce",
+        "Grandma’s chocolate sauce",
         "M&Ms",
-        "Reese\u2019s Peanut Butter Cups"
+        "Reese’s Peanut Butter Cups"
       ],
-      "description": "Oreo ice cream, swirls of Grandma\u2019s chocolate sauce, crushed M&Ms, and Reese\u2019s Peanut Butter Cups",
+      "description": "Oreo ice cream, swirls of Grandma’s chocolate sauce, crushed M&Ms, and Reese’s Peanut Butter Cups",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3624,7 +3624,7 @@
         "Strawberry topping",
         "Marshmallow topping"
       ],
-      "description": "Vanilla ice cream, shortbread cookie chunks, and swirls of Smucker\u2019s strawberry and marshmallow topping",
+      "description": "Vanilla ice cream, shortbread cookie chunks, and swirls of Smucker’s strawberry and marshmallow topping",
       "wouldMakeAgain": true,
       "images": [
         {
@@ -3704,7 +3704,7 @@
     {
       "id": "qs-sprinkles",
       "slug": "qs-sprinkles",
-      "name": "Q\u2019s Sprinkles",
+      "name": "Q’s Sprinkles",
       "madeAt": "2026-02-28",
       "base": "Cookies & cream ice cream",
       "mixIns": [
@@ -3715,7 +3715,7 @@
       "images": [
         {
           "src": "/ice-cream/made-by-mitch/qs-sprinkles-1-img_4529.jpg",
-          "alt": "Q\u2019s Sprinkles homemade ice cream"
+          "alt": "Q’s Sprinkles homemade ice cream"
         }
       ]
     },

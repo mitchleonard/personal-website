@@ -144,11 +144,11 @@
     "source": "location-research"
   },
   "019-bebe-zito-dat-malt-dough": {
-    "id": "Bebe Zito — A to Z collaboration pickup|703 Mainstreet, Hopkins, MN 55343",
-    "label": "Bebe Zito — A to Z collaboration pickup",
-    "address": "703 Mainstreet, Hopkins, MN 55343",
-    "latitude": 44.924466602149,
-    "longitude": -93.408919429464,
+    "id": "Bebe Zito — Uptown|704 W 22nd St, Minneapolis, MN 55405",
+    "label": "Bebe Zito — Uptown",
+    "address": "704 W 22nd St, Minneapolis, MN 55405",
+    "latitude": 44.96097130639,
+    "longitude": -93.288137719997,
     "source": "location-research"
   },
   "020-a-to-z-creamery-its-gettin-hot-in-here": {
@@ -248,8 +248,8 @@
     "source": "location-research"
   },
   "032-4-queens-dairy-cream-surprise-snowstorm": {
-    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
-    "label": "4 Queens Dairy Treat",
+    "id": "4 Queens Dairy Cream|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Cream",
     "address": "1310 W 1st St, Cedar Falls, IA 50613",
     "latitude": 42.537788405112,
     "longitude": -92.460892846993,
@@ -336,8 +336,8 @@
     "source": "location-research"
   },
   "043-honey-mackies-kit-kat-and-salted-caramel-with-peanuts-in-a-homemad": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -480,16 +480,16 @@
     "source": "location-research"
   },
   "061-4-queens-dairy-treat-monster-cookie-snowstorm": {
-    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
-    "label": "4 Queens Dairy Treat",
+    "id": "4 Queens Dairy Cream|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Cream",
     "address": "1310 W 1st St, Cedar Falls, IA 50613",
     "latitude": 42.537788405112,
     "longitude": -92.460892846993,
     "source": "location-research"
   },
   "062-jenis-splendid-ice-creams-bombastix-sundae-cone-and-brown-butter-almond-brittl": {
-    "id": "Jeni’s Splendid Ice Creams — Brentwood|211 Franklin Rd, Suite 100, Brentwood, TN 37027",
-    "label": "Jeni’s Splendid Ice Creams — Brentwood",
+    "id": "Jeni's Splendid Ice Creams — Brentwood|211 Franklin Rd, Suite 100, Brentwood, TN 37027",
+    "label": "Jeni's Splendid Ice Creams — Brentwood",
     "address": "211 Franklin Rd, Suite 100, Brentwood, TN 37027",
     "latitude": 36.032651997509,
     "longitude": -86.789193805875,
@@ -520,8 +520,8 @@
     "source": "location-research"
   },
   "066-4-queens-dairy-treat-scotcheroo-snowstorm": {
-    "id": "4 Queens Dairy Treat|1310 W 1st St, Cedar Falls, IA 50613",
-    "label": "4 Queens Dairy Treat",
+    "id": "4 Queens Dairy Cream|1310 W 1st St, Cedar Falls, IA 50613",
+    "label": "4 Queens Dairy Cream",
     "address": "1310 W 1st St, Cedar Falls, IA 50613",
     "latitude": 42.537788405112,
     "longitude": -92.460892846993,
@@ -624,8 +624,8 @@
     "source": "location-research"
   },
   "079-portland-malt-shoppe-marshmallow-brownie-nut-fudge": {
-    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
-    "label": "The PortLand Malt Shoppe",
+    "id": "Portland Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "Portland Malt Shoppe",
     "address": "706 E Superior St, Duluth, MN 55802",
     "latitude": 46.793831933097,
     "longitude": -92.089171460695,
@@ -728,8 +728,8 @@
     "source": "location-research"
   },
   "092-jenis-spendid-ice-creams-buckeye-frenzy-and-gooey-butter-cake": {
-    "id": "Jeni’s Splendid Ice Creams — The Triangle|4616 Triangle Ave, Suite 200, Austin, TX 78751",
-    "label": "Jeni’s Splendid Ice Creams — The Triangle",
+    "id": "Jeni's Splendid Ice Creams — The Triangle|4616 Triangle Ave, Suite 200, Austin, TX 78751",
+    "label": "Jeni's Splendid Ice Creams — The Triangle",
     "address": "4616 Triangle Ave, Suite 200, Austin, TX 78751",
     "latitude": 30.314302715623,
     "longitude": -97.734081112101,
@@ -872,8 +872,8 @@
     "source": "location-research"
   },
   "110-portland-malt-shoppe-peanut-butter-moose-tracks": {
-    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
-    "label": "The PortLand Malt Shoppe",
+    "id": "Portland Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "Portland Malt Shoppe",
     "address": "706 E Superior St, Duluth, MN 55802",
     "latitude": 46.793831933097,
     "longitude": -92.089171460695,
@@ -920,8 +920,8 @@
     "source": "location-research"
   },
   "116-honey-mackeys-velvet-oreo-and-candy-bar-mix-up": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -936,16 +936,16 @@
     "source": "location-research"
   },
   "118-honey-and-mackies-waffle-cone-crunch-and-rice-krispies": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
     "source": "location-research"
   },
   "119-honey-and-mackies-sweet-elvis-and-chocolate-gold": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -968,8 +968,8 @@
     "source": "location-research"
   },
   "122-honey-mackies-nutella-graham-and-hot-chocolate": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -1056,8 +1056,8 @@
     "source": "location-research"
   },
   "133-honey-mackies-banana-oreo-and-kit-kat": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -1072,8 +1072,8 @@
     "source": "location-research"
   },
   "135-honey-mackies-smores-and-timberwolves": {
-    "id": "Honey & Mackie’s|16725 County Road 24, Suite 106, Plymouth, MN 55447",
-    "label": "Honey & Mackie’s",
+    "id": "Honey & Mackie's|16725 County Road 24, Suite 106, Plymouth, MN 55447",
+    "label": "Honey & Mackie's",
     "address": "16725 County Road 24, Suite 106, Plymouth, MN 55447",
     "latitude": 45.021148307682,
     "longitude": -93.493972613457,
@@ -1096,8 +1096,8 @@
     "source": "location-research"
   },
   "138-portland-malt-shoppe-caramel-cookies-and-cream-malt": {
-    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
-    "label": "The PortLand Malt Shoppe",
+    "id": "Portland Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "Portland Malt Shoppe",
     "address": "706 E Superior St, Duluth, MN 55802",
     "latitude": 46.793831933097,
     "longitude": -92.089171460695,
@@ -1224,8 +1224,8 @@
     "source": "location-research"
   },
   "154-portland-malt-shoppe-butterscotch-moose-tracks": {
-    "id": "The PortLand Malt Shoppe|706 E Superior St, Duluth, MN 55802",
-    "label": "The PortLand Malt Shoppe",
+    "id": "Portland Malt Shoppe|706 E Superior St, Duluth, MN 55802",
+    "label": "Portland Malt Shoppe",
     "address": "706 E Superior St, Duluth, MN 55802",
     "latitude": 46.793831933097,
     "longitude": -92.089171460695,
