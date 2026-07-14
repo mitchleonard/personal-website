@@ -39,10 +39,7 @@ export default function IceCreamImageLightbox({ images, initialIndex, title, onC
         <button type="button" className="ice-lightbox__close" onClick={onClose} aria-label="Close image viewer">×</button>
         <div className="ice-lightbox__image-wrap">
           <Image src={image.src} alt={image.alt} width={1600} height={1600} unoptimized className="ice-lightbox__image" sizes="(max-width: 900px) 94vw, 78vw" />
-        </div>
-        <div className="ice-lightbox__footer">
-          <div><p>{title}</p>{hasGallery && <span>{index + 1} of {images.length}</span>}</div>
-          {hasGallery && <div className="ice-lightbox__controls">
+          {hasGallery && <div className="ice-lightbox__controls" aria-label={`${title} photo navigation`}>
             <button type="button" onClick={() => setIndex((current) => (current - 1 + images.length) % images.length)} aria-label="Previous photo">←</button>
             <button type="button" onClick={() => setIndex((current) => (current + 1) % images.length)} aria-label="Next photo">→</button>
           </div>}

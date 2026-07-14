@@ -8,6 +8,7 @@ import type { HomemadePint, IceCreamRating } from '@/data/iceCream'
 import { useIceCreamMode } from '@/lib/useIceCreamMode'
 import IceCreamToggle from './IceCreamToggle'
 import IceCreamImageLightbox, { type LightboxImage } from './IceCreamImageLightbox'
+import ScrollToTop from './ScrollToTop'
 
 type SortMode = 'recent' | 'top' | 'shop'
 
@@ -152,6 +153,7 @@ export default function IceCreamShoppe({ ratings, homemade, expectedRatings, isD
         <Link href="/">Return to the portfolio →</Link>
       </footer>
       {lightbox && <IceCreamImageLightbox images={lightbox.images} initialIndex={lightbox.initialIndex} title={lightbox.title} onClose={() => setLightbox(null)} />}
+      <ScrollToTop />
     </main>
   )
 }

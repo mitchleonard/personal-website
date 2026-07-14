@@ -31,6 +31,6 @@ const destinationCount = (label) => [...points.entries()]
 
 if (destinationCount('4 Queens Dairy Treat') !== 3) fail('4 Queens Dairy Treat should contain 3 ratings')
 if (destinationCount('Honey & Mackie’s') !== 7) fail('Honey & Mackie’s should contain 7 ratings')
-if (destinationCount('The Depot') !== 1) fail('The Depot should contain 1 rating')
+if (destinationCount('Deadwood Ice Cream Company') !== 1) fail('Deadwood Ice Cream Company should contain 1 rating')
 
 console.log(`Map QA passed: ${ratings.length} ratings across ${points.size} map destinations.`)

@@ -2269,7 +2269,7 @@
     {
       "id": "104-the-scream-monster-cookie-dough-flurry",
       "slug": "104-the-scream-monster-cookie-dough-flurry",
-      "shop": "The Scream",
+      "shop": "The S'Cream",
       "flavor": "Monster cookie dough flurry",
       "score": 6.9,
       "scoreScale": 10,
@@ -2277,10 +2277,10 @@
       "notes": "$4.50 \u00b7 Rating #104",
       "image": {
         "src": "/ice-cream/ratings/103-img_9975.jpg",
-        "alt": "Monster cookie dough flurry from The Scream"
+        "alt": "Monster cookie dough flurry from The S'Cream"
       },
       "location": {
-        "label": "The Scream",
+        "label": "The S'Cream",
         "latitude": 44.08251666666666,
         "longitude": -93.228295,
         "precision": "photo-metadata",
@@ -2445,7 +2445,7 @@
     {
       "id": "112-bavettes-bar-and-boeuf-ice-cream-sundae-royal",
       "slug": "112-bavettes-bar-and-boeuf-ice-cream-sundae-royal",
-      "shop": "Bavette\u2019s bar and boeuf",
+      "shop": "Bavette\u2019s Bar & Boeuf",
       "flavor": "Ice cream sundae Royal",
       "score": 9.2,
       "scoreScale": 10,
@@ -2453,10 +2453,10 @@
       "notes": "$19 \u00b7 Rating #112",
       "image": {
         "src": "/ice-cream/ratings/111-img_0313.jpg",
-        "alt": "Ice cream sundae Royal from Bavette\u2019s bar and boeuf"
+        "alt": "Ice cream sundae Royal from Bavette\u2019s Bar & Boeuf"
       },
       "location": {
-        "label": "Bavette\u2019s bar and boeuf",
+        "label": "Bavette\u2019s Bar & Boeuf",
         "latitude": 41.889091666666666,
         "longitude": -87.63472833333333,
         "precision": "photo-metadata",
@@ -3325,7 +3325,7 @@
     {
       "id": "152-deadwood-hook-line-sinker-and-tipsy-banana",
       "slug": "152-deadwood-hook-line-sinker-and-tipsy-banana",
-      "shop": "The Depot",
+      "shop": "Deadwood Ice Cream Company",
       "flavor": "Hook, Line & Sinker and Tipsy Banana",
       "score": 6.6,
       "scoreScale": 10,
@@ -3333,10 +3333,10 @@
       "notes": "$4.99 \u00b7 Rating #152",
       "image": {
         "src": "/ice-cream/ratings/151-img_5073.jpg",
-        "alt": "Hook, Line & Sinker and Tipsy Banana from The Depot"
+        "alt": "Hook, Line & Sinker and Tipsy Banana from Deadwood Ice Cream Company"
       },
       "location": {
-        "label": "The Depot",
+        "label": "Deadwood Ice Cream Company",
         "latitude": 44.376666666666665,
         "longitude": -103.73048333333334,
         "precision": "photo-metadata",
