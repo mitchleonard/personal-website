@@ -1,58 +1,74 @@
-# Ice Cream Shoppe Content Workflow
+# Ice Cream Shoppe content workflow
 
-## Recommended model
+## The intentionally small stack
 
-Build a private, mobile-first **Behind the Counter** capture flow inside the Shoppe. It should be the source of truth for new ratings and homemade pints. AI can help turn a photo and shorthand notes into a draft, but it should not be the only intake path or the publishing system.
+The Shoppe has one home for media and one home for workflow data:
 
-Why: a native web form gives the archive a durable schema, a review queue, a clear audit trail, and a repeatable publishing loop. It also makes a stronger project story than manually pasting each entry into a chat.
+| Concern | System | Why |
+| --- | --- | --- |
+| Photos and videos | **Vercel Blob** | The website already uses Vercel storage. A new upload gets one Blob URL; it is never copied into Supabase Storage. |
+| Private sign-in, drafts, review state, canonical shops | **Supabase Auth + Postgres** | Structured records, a private queue, and a durable audit trail without putting the archive logic into a chat. |
+| Public archive and map | **This Next.js site** | Records reach the live JSON/map only after the release checks pass. |
 
-## Mobile capture flow
+This is deliberately not a second media backend. Supabase holds the URL and the submission metadata, not a duplicate original image.
 
-1. Open a private `/ice-cream/counter` page from the iPhone home screen.
+## The normal, phone-first loop
+
+1. From the iPhone, open the private **Behind the Counter** page (saved to the home screen).
 2. Choose **New rating** or **Made by Mitch pint**.
-3. Add one or more photos directly from the camera roll.
-4. Fill only the required fields:
-   - Rating: shop, flavor, score, visit date, price/currency, and optional note.
-   - Pint: name, base, mix-ins, and optional note.
-5. Use **Find the shop** to select an existing canonical shop or add a new one with an address. The app proposes a location but requires review before it becomes a map pin.
-6. Save as draft or submit for review. The user sees the uploaded photos and a card preview immediately.
+3. Select up to four photos. Each uploads directly to Vercel Blob. Do not send the originals to chat first.
+4. Enter the short structured details:
+   - **Rating:** shop, item/flavor, 0–10 score, tasting date, and an existing verified shop address. Price and note are optional.
+   - **Pint:** pint name, base/description, photo, and optional mix-ins/note. Pints have no public date requirement.
+5. Save a draft when moving quickly. Submit only when the screen reports **Ready for review**.
+6. In the review queue, confirm the canonical shop spelling, exact address/map pin, price format, and photo/card preview.
+7. Run the archive and map checks, then publish through the site release.
 
-## Publish workflow
+ChatGPT or Claude can be used to turn a photo and shorthand note into a **draft**. The private form remains the source of truth and the only way an entry advances to review.
 
-```text
-Phone capture → draft record + image storage → review queue
-  → canonical shop/address check → generated card/map preview → publish
-```
+## Required gates — no bypasses
 
-- **Draft:** fast capture; nothing public yet.
-- **Review:** resolve shop aliases, branch/address, price formatting, and image alt text.
-- **Publish:** validates the same archive checks that protect the current 155 ratings, adds the rating/pint, refreshes the map, and publishes the site.
+The database migration at `supabase/migrations/20260714183141_shoppe_content_workflow.sql` enforces these rules even if someone skips the UI:
 
-## Technical shape
+| Transition | Required | What happens if it is missing |
+| --- | --- | --- |
+| Draft | Nothing beyond the entry type | Saved privately so quick capture is never lost. |
+| Ready for review (rating) | Blob photo, shop, item, score, date, and a **verified** canonical address | The status change is rejected with the exact missing fields. The record stays out of the review/publish path. |
+| Ready for review (pint) | Blob photo, pint name, and base/description | The status change is rejected with the exact missing fields. |
+| Approved | A complete review-ready record | Reviewer marks the record approved. |
+| Published | An approved record plus the site’s import/map/build checks | Database rejects a direct draft-to-published jump; the release is blocked until checks pass. |
 
-- **Private app surface:** Next.js route protected by owner authentication (magic link is sufficient for one editor).
-- **Content database:** Supabase Postgres for ratings, pints, shops, locations, and workflow status.
-- **Photo storage:** Supabase Storage, keeping original images and web-ready display versions together.
-- **Map safety:** a shop-location record is separate from a photo's EXIF coordinates. A new shop cannot publish until its canonical address or map pin is reviewed.
-- **Publishing:** read public records from the database with on-demand revalidation. Keep the current JSON archive as the migration source and export fallback during the transition.
+The critical map rule: photo GPS is never a publishing source. A rating must link to a separately reviewed storefront address before it can advance. That keeps a photo taken elsewhere from creating a bad map pin.
 
-## AI's role
+## Release checklist
 
-Use ChatGPT or Claude as a **draft assistant**, not the archive database:
+Run this checklist for every approved entry before it appears on the public Shoppe:
 
-- Good: extract fields from a receipt/photo, suggest a flavor description, detect duplicate shop spellings, or prepare a new-shop location research brief.
-- Not sufficient: own uploaded images, determine an address from noisy photo GPS, or publish straight to the public collection without review.
+1. Confirm the uploaded image URL is a Vercel Blob URL and the full image looks correct in the lightbox.
+2. Confirm the canonical shop name and exact address. For a new or ambiguous shop, keep it blocked and research the branch first.
+3. Export the approved record into `data/ice-cream-inbox.csv`.
+4. Run `npm run ice-cream:check`.
+5. Run `npm run ice-cream:import`.
+6. Run `npm run ice-cream:map-locations` and `npm run ice-cream:map-check`.
+7. Review the new card, the full-size image, and its storefront map marker locally.
+8. Run `npx tsc --noEmit` and `npm run build` before committing/deploying.
 
-The best convenience layer is an optional iOS Shortcut: share a photo from Photos, choose “Add to Shoppe,” and open the prefilled private form. The form remains the final review and publish surface.
+Any failed command is a publishing blocker, not a warning. Correct the source record, rerun the failed check, and only then continue. This keeps the current JSON archive as a portable, reviewable fallback while the private counter is introduced.
 
-## Build sequence
+## Free-tier guardrails
 
-1. Add the private rating/pint capture form and Supabase tables/storage.
-2. Add photo upload, draft save, and mobile card preview.
-3. Add canonical shop selection and new-location review.
-4. Add the review queue and publish action with archive/map validation.
-5. Migrate the existing JSON archive to the database, then update the Shoppe read path.
+- Keep uploaded media on Vercel Blob only. The form limits a submission to four images; the client should reject files above the configured upload limit before it creates a draft.
+- Store only structured text, timestamps, IDs, and Blob URLs in Supabase. Do not add Supabase Storage buckets for Shoppe media.
+- The Supabase free project is suitable for the small private queue, but it may pause after a period of inactivity. The counter must show a clear unavailable/setup message rather than silently accepting an entry it cannot save.
+- Vercel Blob has free-tier storage, transfer, and operation caps. If the account hits a cap, stop before creating a dangling submission and show a retry message; do not fall back to a second image host.
 
-## Required decision before implementation
+## One-time setup
 
-Approve Supabase as the private database, authentication, and image-storage provider. This introduces a new external account/project and environment variables, so it should be connected intentionally rather than assumed.
+1. Create or choose the free Supabase project.
+2. Add `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `SHOPPE_EDITOR_EMAIL` to Vercel. `BLOB_READ_WRITE_TOKEN` remains the server-only Vercel media credential.
+3. Link the CLI to that project and push the migration in `supabase/migrations/`.
+4. Enable the email magic-link provider in Supabase Auth and sign in once with the editor email.
+5. Add that auth user’s ID to `public.shoppe_editors` in the Supabase SQL editor. This is the intentional owner allowlist; no public sign-up becomes an editor automatically.
+6. Test one draft, one blocked rating (no verified location), and one valid review-ready pint before enabling the Counter link.
+
+No service-role secret belongs in the browser, in a committed env file, or in this workflow. Owner access is enforced by Supabase row-level security, and the release checks remain the final public guard.
