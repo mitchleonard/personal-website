@@ -72,7 +72,7 @@ html[data-ice-cream-mode='on'] .ice-mode-toggle > span:first-child { display:inl
 .sprinkle { position:absolute; top:0; animation:sprinkle-fall linear infinite; }
 .sprinkle-piece { display:block; width:5px; height:15px; border-radius:9999px; animation:sprinkle-sway ease-in-out infinite; }
 .sprinkle-dot { width:7px; height:7px; }
-@keyframes sprinkle-fall { from { transform:translateY(-8vh) } to { transform:translateY(160vh) } }
+@keyframes sprinkle-fall { from { transform:translateY(-10vh) } to { transform:translateY(calc(60vh + 80vmax)) } }
 @keyframes sprinkle-sway { 0%,100% { transform:translateX(-7px) rotate(35deg) } 50% { transform:translateX(7px) rotate(215deg) } }
 .sprinkle-burst-piece { position:absolute; border-radius:9999px; animation:sprinkle-burst .7s ease-out forwards; }
 @keyframes sprinkle-burst { from { transform:translate(0,0) rotate(0); opacity:1 } to { transform:translate(var(--dx),var(--dy)) rotate(var(--rot)); opacity:0 } }
@@ -454,11 +454,14 @@ html[data-icecream] .ic-cone {
 }
 
 /* Fall and sway both animate transform, so they live on nested elements.
-   The field top sits above the viewport, so this carries a sprinkle from just
-   overhead down through the screen and off the bottom before it loops. */
+   The field (.sprinkle-tilt) is sized/centered in vmax, so its top sits at
+   50vh - 75vmax — far above the viewport on wide screens. The travel must be
+   measured in the same vmax unit (not vh) or sprinkles stop short of the
+   bottom on landscape/large displays. calc(60vh + 80vmax) always carries a
+   sprinkle from above the top past the viewport bottom, at any aspect ratio. */
 @keyframes sprinkle-fall {
-  from { transform: translateY(-8vh); }
-  to   { transform: translateY(160vh); }
+  from { transform: translateY(-10vh); }
+  to   { transform: translateY(calc(60vh + 80vmax)); }
 }
 
 @keyframes sprinkle-sway {
