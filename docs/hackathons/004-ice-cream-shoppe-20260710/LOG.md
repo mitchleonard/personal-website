@@ -79,3 +79,8 @@
   why: The completed shop-location research makes the archive ready for a useful, destination-level map rather than a decorative GPS field.
   did: Replaced the static coordinate plot with an OpenStreetMap-powered pan/zoom map that groups repeat tastings into clickable cherry markers, exposes ratings and top flavors in popups, and links each stop to directions. The private route gate remains in place for review.
   next: Review marker placement against the researched shop addresses, then make the Shoppe public when the map is approved.
+
+[+26:42] Unlisted map-review deployment enabled
+  why: The interactive map needs a reviewable URL without making the Shoppe discoverable on the production site.
+  did: Allowed the route only on Vercel preview deployments. The production visibility flag, navigation, sitemap exclusion, and production 404 remain unchanged.
+  next: Review the preview map, then remove the preview exception when the Shoppe launches publicly.
