@@ -104,3 +104,8 @@
   why: The full archive, destination map, and image viewing pass are ready to become a useful public recommendation resource rather than a private preview.
   did: Opened the Shoppe route, navigation entry, sitemap listing, and indexing; added the Ice Cream Shoppe as a substantial Digital Archive project with its own case study; and removed the Hackathon classification from the project.
   next: Add new tastings through the import workflow as they happen, keeping the archive current.
+
+[+28:10] Related projects distinguished
+  why: Ice Cream Mode shares the theme and can lead visitors to the Shoppe, but its small Hackathon experiment and the ongoing archive are different projects.
+  did: Clarified both case studies: Ice Cream Mode remains the standalone Hackathon interaction experiment; Ice Cream Shoppe remains the standalone Digital Archive project.
+  next: Keep future archive updates separate from the Ice Cream Mode project history.
