@@ -57,18 +57,14 @@ Any failed command is a publishing blocker, not a warning. Correct the source re
 
 ## Free-tier guardrails
 
-- Keep uploaded media on Vercel Blob only. The form limits a submission to four images; the client should reject files above the configured upload limit before it creates a draft.
+- Keep uploaded media on Vercel Blob only. The Counter limits a submission to four JPEG, PNG, or WebP images, and rejects files over 12 MB before it creates a draft.
 - Store only structured text, timestamps, IDs, and Blob URLs in Supabase. Do not add Supabase Storage buckets for Shoppe media.
 - The Supabase free project is suitable for the small private queue, but it may pause after a period of inactivity. The counter must show a clear unavailable/setup message rather than silently accepting an entry it cannot save.
 - Vercel Blob has free-tier storage, transfer, and operation caps. If the account hits a cap, stop before creating a dangling submission and show a retry message; do not fall back to a second image host.
 
 ## One-time setup
 
-1. Create or choose the free Supabase project.
-2. Add `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `SHOPPE_EDITOR_EMAIL` to Vercel. `BLOB_READ_WRITE_TOKEN` remains the server-only Vercel media credential.
-3. Link the CLI to that project and push the migration in `supabase/migrations/`.
-4. Enable the email magic-link provider in Supabase Auth and sign in once with the editor email.
-5. Add that auth user’s ID to `public.shoppe_editors` in the Supabase SQL editor. This is the intentional owner allowlist; no public sign-up becomes an editor automatically.
-6. Test one draft, one blocked rating (no verified location), and one valid review-ready pint before enabling the Counter link.
+1. Follow [the Counter setup checklist](./ice-cream-counter-setup.md).
+2. Test one draft, one blocked rating (no verified location), and one valid review-ready pint before enabling the Counter link.
 
 No service-role secret belongs in the browser, in a committed env file, or in this workflow. Owner access is enforced by Supabase row-level security, and the release checks remain the final public guard.
