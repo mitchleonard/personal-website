@@ -86,12 +86,11 @@ export const demoHomemadePints: HomemadePint[] = [
 export const ICE_CREAM_DATA_STATUS = {
   isDemo: true,
   trackedSince: 2020,
-  expectedRatings: 150,
+  expectedRatings: 155,
 } as const
 
-// Keep the collection local-only while its map data is being verified. Flip to
-// true when the route, navigation entries, and sitemap listing are ready again.
-export const ICE_CREAM_SHOPPE_PUBLIC = false
+// The public collection powers the Shoppe route, navigation entry, and sitemap.
+export const ICE_CREAM_SHOPPE_PUBLIC = true
 
 export const importedRatings = importedData.ratings as IceCreamRating[]
 export const importedHomemadePints = importedData.homemade as HomemadePint[]

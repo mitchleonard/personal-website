@@ -99,3 +99,8 @@
   why: Desktop review showed portrait photos being forced into a landscape frame, which cropped the full scoop or pint composition.
   did: Replaced the fixed-ratio image rendering with a native-dimension viewer that constrains each photo only to the available viewport, keeping the viewer image-only while retaining overlay controls for multi-photo pints.
   next: Recheck both portrait and landscape photos in the private preview before publishing the Shoppe.
+
+[+28:02] Ice Cream Shoppe launched publicly
+  why: The full archive, destination map, and image viewing pass are ready to become a useful public recommendation resource rather than a private preview.
+  did: Opened the Shoppe route, navigation entry, sitemap listing, and indexing; added the Ice Cream Shoppe as a substantial Digital Archive project with its own case study; and removed the Hackathon classification from the project.
+  next: Add new tastings through the import workflow as they happen, keeping the archive current.
