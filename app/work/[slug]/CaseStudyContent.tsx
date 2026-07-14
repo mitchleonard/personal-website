@@ -22,12 +22,18 @@ type Visual = {
   tall?: boolean
   section?: string
   gridLayout?: boolean
+  // Side-by-side off/on comparison row
+  compare?: boolean
+  label?: string
+  off?: string
+  on?: string
 }
 
 type VisualGroup =
   | { kind: 'full'; item: Visual }
   | { kind: 'masonry'; items: Visual[] }
   | { kind: 'split'; item: Visual; index: number }
+  | { kind: 'compare'; item: Visual }
 
 // ─────────────────────────────────────────────────────────────
 // Color maps
@@ -222,6 +228,45 @@ function SplitMedia({ item, index }: { item: Visual; index: number }) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// ComparisonRow — labelled off/on pair, side by side
+// ─────────────────────────────────────────────────────────────
+function ComparisonRow({ item }: { item: Visual }) {
+  return (
+    <div>
+      {item.label && (
+        <p className="font-serif text-xl md:text-2xl text-near-black mb-4">{item.label}</p>
+      )}
+      <div className="grid grid-cols-2 gap-3 md:gap-5 items-start">
+        <div>
+          <span className="inline-block mb-2 font-sans text-[11px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-near-black/[0.06] text-near-black/50">
+            Off
+          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={item.off}
+            alt={`${item.label ?? ''} — off`}
+            loading="lazy"
+            className="w-full rounded-xl border border-near-black/10"
+          />
+        </div>
+        <div>
+          <span className="inline-block mb-2 font-sans text-[11px] font-semibold uppercase tracking-widest px-3 py-1 rounded-full bg-[#c8134a] text-off-white">
+            On
+          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={item.on}
+            alt={`${item.label ?? ''} — on`}
+            loading="lazy"
+            className="w-full rounded-xl border border-near-black/10"
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ─────────────────────────────────────────────────────────────
 // groupItems — all consecutive portrait items form one masonry block,
 // regardless of media type, so no gap appears between videos and images
 // ─────────────────────────────────────────────────────────────
@@ -230,7 +275,10 @@ function groupItems(items: Visual[]): VisualGroup[] {
   let i = 0
   let splitCount = 0
   while (i < items.length) {
-    if (items[i].annotated) {
+    if (items[i].compare) {
+      groups.push({ kind: 'compare', item: items[i] })
+      i++
+    } else if (items[i].annotated) {
       groups.push({ kind: 'split', item: items[i], index: splitCount++ })
       i++
     } else if (!items[i].portrait) {
@@ -351,7 +399,9 @@ function VisualsGallery({ visuals, showWorkLabel = true }: { visuals: Visual[]; 
             <div className="space-y-10">
               {groups.map((group, idx) => (
                 <AnimateIn key={idx} delay={30}>
-                  {group.kind === 'split' ? (
+                  {group.kind === 'compare' ? (
+                    <ComparisonRow item={group.item} />
+                  ) : group.kind === 'split' ? (
                     <SplitMedia item={group.item} index={group.index} />
                   ) : group.kind === 'masonry' ? (
                     <MasonryGrid items={group.items} />
