@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { CircleMarker, MapContainer, Popup, TileLayer } from 'react-leaflet'
 import type { IceCreamRating } from '@/data/iceCream'
+import locationAliases from '@/data/iceCream.mapAliases.json'
 
 type MapPoint = {
   id: string
@@ -25,14 +26,17 @@ function mapPoints(ratings: IceCreamRating[]) {
 
     // A photo can be taken a few feet from the counter on each visit. Rounding
     // keeps repeated visits at the same shop as one useful map destination.
-    const key = `${rating.location.label}:${latitude.toFixed(3)}:${longitude.toFixed(3)}`
+    const label = locationAliases[rating.location.label as keyof typeof locationAliases] ?? rating.location.label
+    const key = `${label}:${latitude.toFixed(3)}:${longitude.toFixed(3)}`
     groups.set(key, [...(groups.get(key) ?? []), rating])
   }
 
   return Array.from(groups, ([id, groupedRatings]) => {
     const latitude = groupedRatings.reduce((sum, rating) => sum + (rating.location.latitude ?? 0), 0) / groupedRatings.length
     const longitude = groupedRatings.reduce((sum, rating) => sum + (rating.location.longitude ?? 0), 0) / groupedRatings.length
-    return { id, label: groupedRatings[0].location.label, latitude, longitude, ratings: groupedRatings }
+    const sourceLabel = groupedRatings[0].location.label
+    const label = locationAliases[sourceLabel as keyof typeof locationAliases] ?? sourceLabel
+    return { id, label, latitude, longitude, ratings: groupedRatings }
   }).sort((a, b) => b.ratings.length - a.ratings.length || a.label.localeCompare(b.label))
 }
 
@@ -55,10 +59,10 @@ export default function ShoppeMap({ ratings }: { ratings: IceCreamRating[] }) {
   return (
     <div className="shoppe-map-shell">
       <div className="shoppe-map__toolbar">
-        <p><strong>{points.length}</strong> places on the map</p>
-        <p>Tap a cherry to see what I ordered.</p>
+        <p><strong>{ratings.length}</strong> ratings across {points.length} places</p>
+        <p>Every rating is included. Tap a cherry to see what I ordered.</p>
       </div>
-      <div className="shoppe-map" aria-label={`Interactive map with ${points.length} ice cream destinations.`}>
+      <div className="shoppe-map" aria-label={`Interactive map with ${ratings.length} ice cream ratings across ${points.length} destinations.`}>
         <MapContainer center={[39.4, -96.2]} zoom={4} minZoom={3} maxZoom={18} scrollWheelZoom={false} className="shoppe-leaflet-map">
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

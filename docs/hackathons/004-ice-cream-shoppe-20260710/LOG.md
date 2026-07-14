@@ -84,3 +84,8 @@
   why: The interactive map needs a reviewable URL without making the Shoppe discoverable on the production site.
   did: Allowed the route only on Vercel preview deployments. The production visibility flag, navigation, sitemap exclusion, and production 404 remain unchanged.
   next: Review the preview map, then remove the preview exception when the Shoppe launches publicly.
+
+[+26:58] Map data integrity pass added
+  why: Similar shop names and two missing photo geotags caused the interactive map to split repeat visits and silently omit ratings.
+  did: Added a reusable map audit that requires all 155 ratings to resolve to valid coordinates and verifies the multi-visit 4 Queens and Honey & Mackie’s destinations. Resolved the two missing coordinates from the completed location research and applied the Deadwood correction to The Depot.
+  next: Rebuild the preview and verify every destination marker against the shop-location research before launch.

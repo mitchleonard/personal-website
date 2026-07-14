@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "ice-cream:check": "node scripts/import-ice-cream.mjs",
-    "ice-cream:import": "node scripts/import-ice-cream.mjs --write"
+    "ice-cream:import": "node scripts/import-ice-cream.mjs --write",
+    "ice-cream:map-check": "node scripts/check-ice-cream-map.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.0",

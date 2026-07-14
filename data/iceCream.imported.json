@@ -917,10 +917,10 @@
       },
       "location": {
         "label": "Cereal Killerz",
-        "latitude": null,
-        "longitude": null,
-        "precision": "unknown",
-        "source": "photo-metadata"
+        "latitude": 36.0673523,
+        "longitude": -115.0426491,
+        "precision": "shop-location",
+        "source": "location-research"
       },
       "status": "published"
     },
@@ -1181,10 +1181,10 @@
       },
       "location": {
         "label": "Heritage Creamery",
-        "latitude": null,
-        "longitude": null,
-        "precision": "unknown",
-        "source": "photo-metadata"
+        "latitude": 31.5462854,
+        "longitude": -97.1247619,
+        "precision": "shop-location",
+        "source": "location-research"
       },
       "status": "published"
     },
@@ -3325,7 +3325,7 @@
     {
       "id": "152-deadwood-hook-line-sinker-and-tipsy-banana",
       "slug": "152-deadwood-hook-line-sinker-and-tipsy-banana",
-      "shop": "Deadwood",
+      "shop": "The Depot",
       "flavor": "Hook, Line & Sinker and Tipsy Banana",
       "score": 6.6,
       "scoreScale": 10,
@@ -3333,10 +3333,10 @@
       "notes": "$4.99 \u00b7 Rating #152",
       "image": {
         "src": "/ice-cream/ratings/151-img_5073.jpg",
-        "alt": "Hook, Line & Sinker and Tipsy Banana from Deadwood"
+        "alt": "Hook, Line & Sinker and Tipsy Banana from The Depot"
       },
       "location": {
-        "label": "Deadwood",
+        "label": "The Depot",
         "latitude": 44.376666666666665,
         "longitude": -103.73048333333334,
         "precision": "photo-metadata",
