@@ -9,13 +9,13 @@ interface Result {
 
 function parseResultValue(value: string) {
   const match = value.match(/^([+<>~$]*)([\d,]+(?:\.\d+)?)(.*?)$/)
-  if (!match) return { prefix: '', num: 0, suffix: value, decimals: 0, hasCommas: false }
+  if (!match) return { prefix: '', num: 0, suffix: value, decimals: 0, hasCommas: false, hasNumber: false }
   const [, prefix, rawNum, suffix] = match
   const hasCommas = rawNum.includes(',')
   const cleaned = rawNum.replace(/,/g, '')
   const num = parseFloat(cleaned)
   const decimals = cleaned.includes('.') ? cleaned.split('.')[1].length : 0
-  return { prefix, num, suffix, decimals, hasCommas }
+  return { prefix, num, suffix, decimals, hasCommas, hasNumber: true }
 }
 
 function formatNum(current: number, decimals: number, hasCommas: boolean): string {
@@ -26,12 +26,12 @@ function formatNum(current: number, decimals: number, hasCommas: boolean): strin
 }
 
 function AnimatedNumber({ value, delay, active }: { value: string; delay: number; active: boolean }) {
-  const { prefix, num, suffix, decimals, hasCommas } = parseResultValue(value)
+  const { prefix, num, suffix, decimals, hasCommas, hasNumber } = parseResultValue(value)
   const [current, setCurrent] = useState(0)
   const rafRef = useRef<number | null>(null)
 
   useEffect(() => {
-    if (!active) return
+    if (!active || !hasNumber) return
     const timeout = setTimeout(() => {
       const duration = 1600
       const start = performance.now()
@@ -48,7 +48,9 @@ function AnimatedNumber({ value, delay, active }: { value: string; delay: number
       clearTimeout(timeout)
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
     }
-  }, [active, num, delay])
+  }, [active, num, delay, hasNumber])
+
+  if (!hasNumber) return <span>{suffix}</span>
 
   return <span>{prefix}{formatNum(current, decimals, hasCommas)}{suffix}</span>
 }
