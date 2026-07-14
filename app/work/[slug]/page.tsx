@@ -6,12 +6,12 @@ import { caseStudies, getCaseStudy, getAdjacentCaseStudy } from '@/data/caseStud
 import CaseStudyContent from './CaseStudyContent'
 
 export async function generateStaticParams() {
-  return caseStudies.map((cs) => ({ slug: cs.slug }))
+  return caseStudies.filter((cs) => cs.published !== false).map((cs) => ({ slug: cs.slug }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const cs = getCaseStudy(params.slug) as any
-  if (!cs) return {}
+  if (!cs || cs.published === false) return {}
   const ogImage = cs.ogImage || '/og-default.png'
   const url = `https://www.mitchleonard.com/work/${cs.slug}`
   return {
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
   const cs = getCaseStudy(params.slug)
-  if (!cs) notFound()
+  if (!cs || cs.published === false) notFound()
 
   const next = getAdjacentCaseStudy(params.slug)
 

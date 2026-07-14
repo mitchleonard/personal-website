@@ -490,6 +490,7 @@ export const caseStudies = [
   },
   {
     slug: 'ice-cream-shoppe',
+    published: false,
     title: 'Ice Cream Shoppe',
     subtitle: 'A shareable, map-backed archive of 155 ice cream ratings — plus the pints coming out of my own kitchen.',
     description: 'A personal ice cream archive built to turn a private Apple Note and photo album into useful recommendations anyone can browse.',

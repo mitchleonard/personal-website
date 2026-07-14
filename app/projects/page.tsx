@@ -14,7 +14,7 @@ const PERSONAL_SLUGS = ['ice-cream-shoppe', 'ice-cream-mode', 'fever-hq', 'strav
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const personalProjects: any[] = PERSONAL_SLUGS.flatMap((slug) => {
   const cs = caseStudies.find((c: any) => c.slug === slug)
-  return cs ? [cs] : []
+  return cs && cs.published !== false ? [cs] : []
 })
 
 export default function ProjectsPage() {
