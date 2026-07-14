@@ -342,7 +342,7 @@ export const caseStudies = [
     slug: 'ice-cream-mode',
     title: 'Ice Cream Mode',
     subtitle: 'An easter-egg toggle that turns my portfolio into a sprinkle-filled ice cream sundae.',
-    description: 'A little whimsy for the portfolio and a real test of Claude Fable 5: tap the 🍦 and the whole site flips into a dessert world — sprinkles, waffle-cone textures, and gyroscope tilt on mobile.',
+    description: 'Adding a bit of whimsy by turning my portfolio into a sprinkle-filled ice cream world.',
     company: null,
     client: null,
     tags: ['Hackathon', 'Interaction Design', 'Front-End'],
