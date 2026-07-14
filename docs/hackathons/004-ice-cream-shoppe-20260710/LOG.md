@@ -74,3 +74,8 @@
   why: The location experience needs a verified shop-level data pass before the collection is ready for public recommendations.
   did: Updated the storefront copy, normalized Mexican peso prices to MXN, and introduced a single Shoppe visibility flag. While off, the route resolves to not found and is removed from the navigation and sitemap, while the rest of Ice Cream Mode remains available across the site.
   next: Complete the separate shop-location research pass, validate the map, then re-enable the public route.
+
+[+26:37] Interactive scoop map added for private review
+  why: The completed shop-location research makes the archive ready for a useful, destination-level map rather than a decorative GPS field.
+  did: Replaced the static coordinate plot with an OpenStreetMap-powered pan/zoom map that groups repeat tastings into clickable cherry markers, exposes ratings and top flavors in popups, and links each stop to directions. The private route gate remains in place for review.
+  next: Review marker placement against the researched shop addresses, then make the Shoppe public when the map is approved.
