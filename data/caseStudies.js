@@ -366,7 +366,7 @@ export const caseStudies = [
     showWorkLabel: false,
     visuals: [
       { type: 'image', src: '/ice-cream-mode/prompt.svg', section: 'From prompt to parlor', caption: 'The one prompt I gave Claude Fable 5 to kick it off.' },
-      { type: 'image', src: '/ice-cream-mode/process.svg', section: 'From prompt to parlor', caption: 'How it actually went — v1 was live in ~15 minutes, then an hour of iteration: small animations, textures, the gyroscope pivot from a snappy clamp to a fluid gravity angle, and four passes on the toggle.' },
+      { type: 'image', src: '/ice-cream-mode/process.svg', section: 'From prompt to parlor', caption: 'v1 shipped in ~15 minutes; the rest was iteration — animations, textures, the gyroscope pivot, and four toggle redesigns.' },
       { type: 'gif', src: '/ice-cream-mode/sprinkle-tap.gif', section: 'In motion', annotated: true, caption: 'A tap or click bursts with sprinkles.', description: `A tap or click bursts with sprinkles.` },
       { type: 'video', src: '/ice-cream-mode/toggle-flip-mobile-menu.mp4', section: 'In motion', annotated: true, silent: true, caption: 'Gyroscope tilt on mobile.', description: `On mobile, the gyroscope maps how sprinkles fall to align with actual gravity, just like they'd fall in real life.` },
       { type: 'video', src: '/ice-cream-mode/mobile-scroll-icecream.mp4', section: 'In motion', annotated: true, silent: true, caption: 'The palette holds as you scroll.', description: `No matter the page, Ice Cream Mode persists with the new dessert palette reflected as you scroll.` },
