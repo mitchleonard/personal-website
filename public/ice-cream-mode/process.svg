@@ -36,8 +36,8 @@
   <!-- 4 -->
   <circle cx="110" cy="704" r="13" fill="#f56e3d"/>
   <text x="150" y="698" class="step">Pivot · the gyroscope</text>
-  <text x="150" y="734" class="body">Mobile tilt started snappy and clamped; reworked it into a fluid atan2</text>
-  <text x="150" y="762" class="body">gravity angle. Flip the phone and the sprinkles fall upward.</text>
+  <text x="150" y="734" class="body">Mobile tilt started snappy and clamped; reworked it into a smooth,</text>
+  <text x="150" y="762" class="body">continuous gravity angle. Flip the phone and the sprinkles fall upward.</text>
 
   <!-- 5 -->
   <circle cx="110" cy="848" r="13" fill="#9bc53d"/>
