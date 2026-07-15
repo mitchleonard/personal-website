@@ -18,7 +18,7 @@ This is deliberately not a second media backend. Supabase holds the URL and the 
 2. Choose **New rating** or **Made by Mitch pint**.
 3. Select up to four photos. Each uploads directly to Vercel Blob. Do not send the originals to chat first.
 4. Enter the short structured details:
-   - **Rating:** shop, item/flavor, 0–10 score, tasting date, and an existing verified shop address. Price and note are optional.
+   - **Rating:** start typing the shop. Select a matching storefront when it appears. For a new shop, enter its full address, choose the map result, open the pin if needed, and explicitly confirm it is the storefront visited. Price and note are optional.
    - **Pint:** pint name, base/description, photo, and optional mix-ins/note. Pints have no public date requirement.
 5. Save a draft when moving quickly. Submit only when the screen reports **Ready for review**.
 6. In the review queue, confirm the canonical shop spelling, exact address/map pin, price format, and photo/card preview.
@@ -38,14 +38,14 @@ The database migration at `supabase/migrations/20260714183141_shoppe_content_wor
 | Approved | A complete review-ready record | Reviewer marks the record approved. |
 | Published | An approved record plus the site’s import/map/build checks | Database rejects a direct draft-to-published jump; the release is blocked until checks pass. |
 
-The critical map rule: photo GPS is never a publishing source. A rating must link to a separately reviewed storefront address before it can advance. That keeps a photo taken elsewhere from creating a bad map pin.
+The critical map rule: photo GPS is never a publishing source. A rating must link to a separately confirmed storefront address before it can advance. The new-shop flow uses an address lookup plus an explicit owner confirmation; it never converts photo metadata into a map pin.
 
 ## Release checklist
 
 Run this checklist for every approved entry before it appears on the public Shoppe:
 
 1. Confirm the uploaded image URL is a Vercel Blob URL and the full image looks correct in the lightbox.
-2. Confirm the canonical shop name and exact address. For a new or ambiguous shop, keep it blocked and research the branch first.
+2. Confirm the canonical shop name and exact address. For a new or ambiguous shop, compare the selected map result against the storefront before continuing.
 3. Export the approved record into `data/ice-cream-inbox.csv`.
 4. Run `npm run ice-cream:check`.
 5. Run `npm run ice-cream:import`.
