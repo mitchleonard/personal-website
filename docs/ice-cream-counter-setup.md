@@ -54,9 +54,10 @@ Reload the Counter. Only this account can now read or write Shoppe drafts. The e
 ## 5. Acceptance test before using it for real
 
 1. Save a draft with only a title. It should remain private.
-2. Try to submit a rating without choosing a verified address. It must be blocked with a clear reason.
-3. Submit a pint with a JPEG photo, name, and description. It should become **ready for review**, never public.
-4. Confirm the photo uploaded to the existing Vercel Blob store and no Supabase Storage bucket exists.
-5. Follow [the release checklist](./ice-cream-content-workflow.md#release-checklist) before any review-ready entry reaches `data/ice-cream-inbox.csv` or the public map.
+2. Try to submit a rating without choosing or confirming a storefront. It must be blocked with a clear reason.
+3. Type an existing shop name and select the matching address from the short type-ahead list. Then test a new shop: enter its full address, choose the lookup result, and confirm the pin before review.
+4. Submit a pint with a JPEG photo, name, and description. It should become **ready for review**, never public.
+5. Confirm the photo uploaded to the existing Vercel Blob store and no Supabase Storage bucket exists.
+6. Follow [the release checklist](./ice-cream-content-workflow.md#release-checklist) before any review-ready entry reaches `data/ice-cream-inbox.csv` or the public map.
 
 If any of those behaviors fails, keep the Counter private and fix the source setup before adding real content.

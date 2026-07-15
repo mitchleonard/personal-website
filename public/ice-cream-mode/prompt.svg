@@ -1,0 +1,22 @@
+<svg viewBox="0 0 880 430" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .sans{font-family:Roboto,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+    </style>
+  </defs>
+  <rect width="880" height="430" fill="#f7f5f2"/>
+
+  <!-- prompt card, tight to the text -->
+  <rect x="28" y="28" width="824" height="374" rx="20" fill="#ffffff" stroke="#e7e2dc" stroke-width="1.5"/>
+  <text x="60" y="78" class="sans" font-size="15" letter-spacing="1.5" fill="#006fab">ME  →  CLAUDE (FABLE 5)</text>
+
+  <g class="sans" font-size="25" fill="#0f0f0f">
+    <text x="60" y="130">As a hackathon project, build me an “ice cream</text>
+    <text x="60" y="167">mode” for my personal website. When triggered, the</text>
+    <text x="60" y="204">whimsy of the site should turn into ice cream pieces —</text>
+    <text x="60" y="241"><tspan font-weight="700">sprinkles falling from the top</tspan>, <tspan font-weight="700">bright colors</tspan> instead of</text>
+    <text x="60" y="278">what’s used now, and <tspan font-weight="700">waffle-cone and ice cream</tspan></text>
+    <text x="60" y="315"><tspan font-weight="700">textures</tspan>. Trigger it from an ice cream icon in the menu</text>
+    <text x="60" y="352">and the “Powered by 🍦” button.</text>
+  </g>
+</svg>
