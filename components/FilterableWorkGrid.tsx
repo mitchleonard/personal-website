@@ -18,17 +18,20 @@ export function FilterableWorkGrid({ items }: { items: WorkItem[] }) {
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
       {items.map((item) => {
         const isExternal = item.type === 'project' && /^https?:/.test(item.href)
+        const isHackathon = item.type === 'project' && item.tags?.includes('Hackathon')
+        const badgeLabel = item.type === 'case-study' ? 'Case Study' : isHackathon ? 'Hackathon' : 'Personal Project'
+        const badgeClass = item.type === 'case-study'
+          ? 'bg-frozen-lake/40 text-cornflower'
+          : isHackathon
+          ? 'bg-tangerine/25 text-near-black/70'
+          : 'bg-banana/50 text-near-black/70'
         const cardContent = (
           <div className="bg-white rounded-xl border border-near-black/8 p-5 hover:border-near-black/20 transition-all h-full flex flex-col group">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-3">
               <span
-                className={`font-sans text-xs font-medium px-3 py-1 rounded-full ${
-                  item.type === 'case-study'
-                    ? 'bg-frozen-lake/40 text-cornflower'
-                    : 'bg-banana/50 text-near-black/70'
-                }`}
+                className={`font-sans text-xs font-medium px-3 py-1 rounded-full ${badgeClass}`}
               >
-                {item.type === 'case-study' ? 'Case Study' : 'Project'}
+                {badgeLabel}
               </span>
               {item.company && (
                 <span className="font-sans text-xs text-near-black/40">{item.company}</span>

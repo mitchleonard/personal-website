@@ -45,6 +45,10 @@ const highlightClass: Record<'banana' | 'frozen-lake', string> = {
 // Ordered, published-only work feed
 const WORK_ORDER = [
   'ai-at-rtx',
+  'ice-cream-mode',
+  'fever-hq',
+  'strava-dashboard',
+  'hackathon-skill',
   'ice-cream-shoppe',
   'daily',
   'pebble-path',
@@ -57,7 +61,17 @@ const WORK_ORDER = [
   'baking-day',
 ]
 
-const PERSONAL_SLUGS = new Set(['ice-cream-shoppe', 'daily', 'pebble-path', 'astro-jump', 'baking-day'])
+const PERSONAL_SLUGS = new Set([
+  'ice-cream-shoppe',
+  'ice-cream-mode',
+  'fever-hq',
+  'strava-dashboard',
+  'hackathon-skill',
+  'daily',
+  'pebble-path',
+  'astro-jump',
+  'baking-day',
+])
 
 const csBySlug = Object.fromEntries(
   caseStudies.filter((cs) => cs.published !== false).map((cs) => [cs.slug, cs])

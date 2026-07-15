@@ -479,6 +479,7 @@ function QuickReadCollapsed({
 // ─────────────────────────────────────────────────────────────
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
+  const isProject = !cs.company
   const [quickRead, setQuickRead] = useState(false)
   // Track which hidden sections have been individually restored
   const [restoredSections, setRestoredSections] = useState<Set<string>>(new Set())
@@ -511,10 +512,10 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
         {/* Back link */}
         <AnimateIn>
           <Link
-            href="/#work"
+            href={isProject ? '/projects' : '/#work'}
             className="font-sans text-sm text-near-black/40 hover:text-near-black transition-colors inline-flex items-center gap-2 mb-14"
           >
-            ← Work
+            ← {isProject ? 'Projects' : 'Work'}
           </Link>
         </AnimateIn>
 
