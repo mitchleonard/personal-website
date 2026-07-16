@@ -94,3 +94,7 @@ export const ICE_CREAM_SHOPPE_PUBLIC = true
 
 export const importedRatings = importedData.ratings as IceCreamRating[]
 export const importedHomemadePints = importedData.homemade as HomemadePint[]
+
+// The published archive is the source of truth for any sitewide rating total.
+// Drafts and review submissions deliberately do not increment this number.
+export const publishedRatingCount = importedRatings.filter((rating) => rating.status === 'published').length

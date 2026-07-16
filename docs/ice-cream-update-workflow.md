@@ -14,6 +14,7 @@ The published site reads from `data/iceCream.imported.json`. The CSV inbox makes
 5. Set `image_src` to a public path such as `/ice-cream/ratings/my-photo.jpg`.
 6. Run `npm run ice-cream:check` to catch missing or malformed fields.
 7. Run `npm run ice-cream:import` to generate the published data. Established aliases are normalized automatically (for example, Honey & Mackie's and 4 Queens Dairy Cream).
+   The About-page total is derived from this published dataset, so do not edit its ice-cream number manually.
 8. Run `npm run ice-cream:map-locations`, then `npm run ice-cream:map-check`, to create and validate the storefront pin for the new rating.
 9. Run the site and review the new card, full-size image, and map pin before committing.
 

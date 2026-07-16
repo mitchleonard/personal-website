@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import { publishedRatingCount } from '@/data/iceCream'
 
 export const metadata = {
   title: 'About — Mitch Leonard',
@@ -9,6 +10,8 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  const ratingCount = publishedRatingCount.toLocaleString('en-US')
+
   return (
     <main className="bg-off-white">
       <Nav />
@@ -87,13 +90,13 @@ export default function AboutPage() {
           <div>
             <p className="font-sans text-xs uppercase tracking-widest text-near-black/30 mb-6">Off the clock</p>
             <p className="font-sans text-lg md:text-xl text-near-black/75 leading-relaxed mb-10">
-              When I&apos;m not heads deep in my work, you can find me adding ratings to my list of more than{' '}
-              <span className="font-medium text-near-black">145 ice cream delicacies</span>, running around the Twin Cities, or putting together a puzzle or LEGO model.
+              When I&apos;m not heads deep in my work, you can find me adding ratings to my list of{' '}
+              <span className="font-medium text-near-black">{ratingCount} ice creams</span>, running around the Twin Cities, or putting together a puzzle or LEGO model.
             </p>
 
             <div className="flex flex-wrap gap-3">
               {[
-                { emoji: '🍦', label: '145+ ice creams rated', color: 'bg-banana/50 border-banana' },
+                { emoji: '🍦', label: `${ratingCount} ice creams rated`, color: 'bg-banana/50 border-banana' },
                 { emoji: '🏃', label: 'Twin Cities runner', color: 'bg-yellow-green/20 border-yellow-green/40' },
                 { emoji: '🧩', label: 'Puzzle builder', color: 'bg-frozen-lake/30 border-frozen-lake/60' },
                 { emoji: '🧱', label: 'LEGO collector', color: 'bg-tangerine/15 border-tangerine/40' },
