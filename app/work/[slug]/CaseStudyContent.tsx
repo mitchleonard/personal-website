@@ -204,9 +204,9 @@ function VisualMedia({ item, className = '' }: { item: Visual; className?: strin
 function SplitMedia({ item, index }: { item: Visual; index: number }) {
   const imageRight = index % 2 !== 0
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
+    <div className="grid grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:grid-cols-2 gap-4 md:gap-12 items-center">
       {imageRight && (
-        <p className="font-sans text-lg text-near-black/65 leading-relaxed hidden md:block">
+        <p className="font-sans text-sm md:text-lg text-near-black/65 leading-relaxed">
           {item.description}
         </p>
       )}
@@ -214,12 +214,7 @@ function SplitMedia({ item, index }: { item: Visual; index: number }) {
         <VisualMedia item={item} />
       </div>
       {!imageRight && (
-        <p className="font-sans text-lg text-near-black/65 leading-relaxed">
-          {item.description}
-        </p>
-      )}
-      {imageRight && (
-        <p className="font-sans text-lg text-near-black/65 leading-relaxed md:hidden">
+        <p className="font-sans text-sm md:text-lg text-near-black/65 leading-relaxed">
           {item.description}
         </p>
       )}
@@ -562,7 +557,7 @@ export default function CaseStudyContent({ cs, next }: { cs: any; next: any }) {
                     href={cs.url}
                     className="font-sans text-sm font-medium bg-near-black text-off-white px-5 py-2.5 rounded-full border border-near-black transition-colors inline-flex items-center gap-2"
                   >
-                    Visit live site →
+                    {cs.linkLabel ?? 'Visit live site'} →
                   </RandomHoverButton>
                 )}
                 {cs.downloadUrl && (
