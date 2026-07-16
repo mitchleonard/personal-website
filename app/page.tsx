@@ -45,11 +45,11 @@ const highlightClass: Record<'banana' | 'frozen-lake', string> = {
 // Ordered, published-only work feed
 const WORK_ORDER = [
   'ai-at-rtx',
+  'ice-cream-shoppe',
   'ice-cream-mode',
   'fever-hq',
   'strava-dashboard',
   'hackathon-skill',
-  'ice-cream-shoppe',
   'daily',
   'pebble-path',
   'global-aerospace-summit',
