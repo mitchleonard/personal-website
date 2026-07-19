@@ -21,8 +21,8 @@ This is deliberately not a second media backend. Supabase holds the URL and the 
    - **Rating:** start typing the shop. Select a matching storefront when it appears. For a new shop, enter its full address, choose the map result, open the pin if needed, and explicitly confirm it is the storefront visited. Price and note are optional.
    - **Pint:** pint name, base/description, photo, and optional mix-ins/note. Pints have no public date requirement.
 5. Save a draft when moving quickly. Submit only when the screen reports **Ready for review**.
-6. In the review queue, confirm the canonical shop spelling, exact address/map pin, price format, and photo/card preview.
-7. Run the archive and map checks, then publish through the site release.
+6. Tap the capture in **Recent captures** to open its review page. Confirm the canonical shop spelling, exact address/map pin, price format, and photo/card preview, then approve it.
+7. Download its import row, add that row to `data/ice-cream-inbox.csv`, and run the archive and map checks before publishing through the site release.
 
 ChatGPT or Claude can be used to turn a photo and shorthand note into a **draft**. The private form remains the source of truth and the only way an entry advances to review.
 
@@ -34,7 +34,7 @@ The database migration at `supabase/migrations/20260714183141_shoppe_content_wor
 | --- | --- | --- |
 | Draft | Nothing beyond the entry type | Saved privately so quick capture is never lost. |
 | Ready for review (rating) | Blob photo, shop, item, score, date, and a **verified** canonical address | The status change is rejected with the exact missing fields. The record stays out of the review/publish path. |
-| Ready for review (pint) | Blob photo, pint name, and base/description | The status change is rejected with the exact missing fields. |
+| Ready for review (pint) | Blob photo, pint name, made date, and base/description | The status change is rejected with the exact missing fields. |
 | Approved | A complete review-ready record | Reviewer marks the record approved. |
 | Published | An approved record plus the site’s import/map/build checks | Database rejects a direct draft-to-published jump; the release is blocked until checks pass. |
 

@@ -56,6 +56,7 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
       price_amount: isRating && form.get('price_amount') ? Number(form.get('price_amount')) : null,
       price_currency: isRating && form.get('price_amount') ? String(form.get('price_currency') || 'USD') : null,
       pint_name: isRating ? null : String(form.get('pint_name') || '').trim() || null,
+      made_at: isRating ? null : String(form.get('made_at') || '').trim() || null,
       base_or_description: isRating ? null : String(form.get('base_or_description') || '').trim() || null,
       mix_ins: isRating ? [] : String(form.get('mix_ins') || '').split(',').map((value) => value.trim()).filter(Boolean),
     }
@@ -149,6 +150,7 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
         <div className="grid min-w-0 grid-cols-[minmax(0,1fr)_5.5rem] gap-3"><label className="grid min-w-0 gap-2 text-sm font-bold">Price <span className="font-normal text-[#382721]/60">Optional</span><input name="price_amount" type="number" min="0" step="0.01" className={fieldClass} placeholder="6.50" /></label><label className="grid min-w-0 gap-2 text-sm font-bold">Currency<select name="price_currency" defaultValue="USD" className={fieldClass}><option>USD</option><option>MXN</option></select></label></div>
       </div> : <div className="grid min-w-0 gap-4">
         <label className="grid gap-2 text-sm font-bold">Pint name<input name="pint_name" className={fieldClass} placeholder="Pumpkin Pie" /></label>
+        <label className="grid gap-2 text-sm font-bold">Made date<input name="made_at" type="date" defaultValue={new Date().toISOString().slice(0, 10)} className={fieldClass} /></label>
         <label className="grid gap-2 text-sm font-bold">Base or short description<textarea name="base_or_description" rows={3} className={fieldClass} placeholder="Pumpkin ice cream with a caramel swirl" /></label>
         <label className="grid gap-2 text-sm font-bold">Mix-ins <span className="font-normal text-[#382721]/60">Optional, comma-separated</span><input name="mix_ins" className={fieldClass} placeholder="Caramel swirl, graham cracker" /></label>
       </div>}
