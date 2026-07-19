@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 
 export default function IceCreamPage() {
   const hasImportedRatings = importedRatings.length > 0
-  return <IceCreamShoppe ratings={hasImportedRatings ? importedRatings : demoRatings} homemade={importedHomemadePints.length ? importedHomemadePints : demoHomemadePints} expectedRatings={ICE_CREAM_DATA_STATUS.expectedRatings} isDemo={!hasImportedRatings} />
+  return <IceCreamShoppe ratings={hasImportedRatings ? importedRatings : demoRatings} homemade={importedHomemadePints.length ? importedHomemadePints : demoHomemadePints} expectedRatings={ICE_CREAM_DATA_STATUS.expectedRatings} isDemo={!hasImportedRatings} layout="guided-preview" />
 }
