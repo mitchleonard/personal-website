@@ -110,7 +110,7 @@ const datedLocations = {
 }
 
 const directCoordinates = {
-  'Blast Soft Serve': { latitude: 44.088083, longitude: -93.2282628 },
+  'The Blast': { latitude: 44.088083, longitude: -93.2282628 },
   "The S'Cream": { latitude: 44.082517, longitude: -93.2282716 },
   'Tommy’s Tonka Trolley': { latitude: 44.9047737, longitude: -93.5654459 },
   'Mary Gibbs Cafe — Itasca State Park': { latitude: 47.1881825, longitude: -95.2196055 },
@@ -120,7 +120,7 @@ const directCoordinates = {
 }
 
 function locationFor(rating) {
-  if (rating.shop === 'The Blast') return ['Blast Soft Serve', 'Owatonna, Minnesota']
+  if (rating.shop === 'The Blast') return ['The Blast', 'Owatonna, MN']
   if (rating.shop === "The S'Cream") return ["The S'Cream", 'Owatonna, Minnesota']
   if (rating.shop === 'Tommy’s Tonka Trolley / Sebastian Joe’s') return ['Tommy’s Tonka Trolley', 'Excelsior, Minnesota']
   return datedLocations[`${rating.shop}|${rating.triedAt}`] ?? locations[rating.shop]

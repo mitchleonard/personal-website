@@ -57,10 +57,10 @@ export default async function ShoppeCounterPage() {
           <p className="text-xs font-bold uppercase tracking-[.2em] text-[#d84e72]">Recent captures</p>
           <div className="mt-4 grid gap-3">
             {(submissions ?? []).length ? (submissions as Submission[]).map((submission) => (
-              <div key={submission.id} className="flex items-center justify-between gap-4 rounded-xl bg-white px-4 py-3 text-sm shadow-sm">
+              <Link key={submission.id} href={`/ice-cream/counter/${submission.id}`} className="flex items-center justify-between gap-4 rounded-xl bg-white px-4 py-3 text-sm shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d84e72]">
                 <span><strong>{submission.kind === 'rating' ? submission.flavor_or_item || 'Untitled rating' : submission.pint_name || 'Untitled pint'}</strong><span className="ml-2 text-[#382721]/55">{submission.kind}</span></span>
-                <span className="rounded-full bg-[#f8ecdf] px-2.5 py-1 text-xs font-bold">{submission.status.replaceAll('_', ' ')}</span>
-              </div>
+                <span className="flex items-center gap-2"><span className="rounded-full bg-[#f8ecdf] px-2.5 py-1 text-xs font-bold">{submission.status.replaceAll('_', ' ')}</span><span className="font-bold text-[#d84e72]" aria-hidden="true">→</span></span>
+              </Link>
             )) : <p className="text-sm leading-6 text-[#382721]/65">Your drafts and review-ready entries will appear here.</p>}
           </div>
         </section>
