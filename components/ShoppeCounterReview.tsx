@@ -24,28 +24,10 @@ export type CounterSubmission = {
   price_amount: number | null
   price_currency: string | null
   base_or_description: string | null
-  mix_ins: string[]
   notes: string | null
   image_urls: string[]
   validation_errors: string[]
   created_at: string
-}
-
-function csvValue(value: string | number | null | undefined) {
-  const text = String(value ?? '')
-  return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text
-}
-
-function locationParts(location: Location | null) {
-  if (!location) return { city: '', region: '', latitude: '', longitude: '' }
-  const parts = location.address.split(',').map((part) => part.trim()).filter(Boolean)
-  const regionIndex = parts.findIndex((part) => /^[A-Z]{2}(?:\s+\d{5}(?:-\d{4})?)?$/.test(part))
-  return {
-    city: regionIndex > 0 ? parts[regionIndex - 1] : '',
-    region: regionIndex >= 0 ? parts[regionIndex].match(/^[A-Z]{2}/)?.[0] ?? '' : '',
-    latitude: location.latitude ?? '',
-    longitude: location.longitude ?? '',
-  }
 }
 
 function formatMoney(amount: number | null, currency: string | null) {
@@ -70,28 +52,12 @@ export default function ShoppeCounterReview({ submission, location }: { submissi
       const { error } = await supabase.from('shoppe_submissions').update({ status: 'approved', reviewed_at: now, approved_at: now }).eq('id', submission.id)
       if (error) throw error
       setStatus('approved')
-      setMessage('Approved. Download the import row when you are ready to add it to the public archive.')
+      setMessage('Approved and queued for the protected publishing release. No CSV download or re-upload is needed.')
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Unable to approve this entry.')
     } finally {
       setSaving(false)
     }
-  }
-
-  function downloadImportRow() {
-    const fields = ['type', 'shop_or_name', 'flavor_or_base', 'score', 'date', 'city', 'region', 'notes', 'mix_ins', 'image_src', 'latitude', 'longitude']
-    const locationData = locationParts(location)
-    const values = submission.kind === 'rating'
-      ? ['rating', submission.shop_display_name || location?.display_name, submission.flavor_or_item, submission.score, submission.tasted_at, locationData.city, locationData.region, submission.notes, '', submission.image_urls[0], locationData.latitude, locationData.longitude]
-      : ['homemade', submission.pint_name, submission.base_or_description, '', submission.made_at, '', '', submission.notes, submission.mix_ins.join('|'), submission.image_urls[0], '', '']
-    const contents = `${fields.map(csvValue).join(',')}\n${values.map(csvValue).join(',')}\n`
-    const url = URL.createObjectURL(new Blob([contents], { type: 'text/csv;charset=utf-8' }))
-    const link = document.createElement('a')
-    link.href = url
-    link.download = `${submission.kind}-${submission.id}.csv`
-    link.click()
-    URL.revokeObjectURL(url)
-    setMessage('Import row downloaded. Add it to the Inbox, run the normal checks, then deploy the reviewed change.')
   }
 
   return (
@@ -110,8 +76,7 @@ export default function ShoppeCounterReview({ submission, location }: { submissi
           <div><dt className="font-bold text-[#382721]/55">Storefront</dt><dd>{location?.address || 'Not confirmed'}</dd></div>
           <div><dt className="font-bold text-[#382721]/55">Price</dt><dd>{formatMoney(submission.price_amount, submission.price_currency) || 'Not recorded'}</dd></div>
         </> : <>
-          <div><dt className="font-bold text-[#382721]/55">Base / description</dt><dd>{submission.base_or_description || 'Not set'}</dd></div>
-          <div><dt className="font-bold text-[#382721]/55">Mix-ins</dt><dd>{submission.mix_ins.length ? submission.mix_ins.join(', ') : 'None recorded'}</dd></div>
+          <div className="sm:col-span-2"><dt className="font-bold text-[#382721]/55">Description</dt><dd>{submission.base_or_description || 'Not set'}</dd></div>
         </>}
         <div><dt className="font-bold text-[#382721]/55">{submission.kind === 'rating' ? 'Tasted' : 'Made'}</dt><dd>{submissionDate || 'Not set'}</dd></div>
         <div><dt className="font-bold text-[#382721]/55">Note</dt><dd>{submission.notes || 'None recorded'}</dd></div>
@@ -120,11 +85,10 @@ export default function ShoppeCounterReview({ submission, location }: { submissi
       {submission.validation_errors.length > 0 && <div className="rounded-2xl border border-[#d84e72]/30 bg-[#fff7f8] p-5 text-sm leading-6"><strong>Still needs attention</strong><ul className="mt-2 list-disc space-y-1 pl-5">{submission.validation_errors.map((error) => <li key={error}>{error}</li>)}</ul></div>}
 
       <div className="rounded-2xl border border-[#382721]/15 p-5">
-        <h2 className="font-serif text-3xl">Finish the handoff</h2>
-        <p className="mt-2 text-sm leading-6 text-[#382721]/70">Approval keeps this private entry intentional. The download creates a ready-to-import row for the existing public archive workflow; it does not put an unreviewed entry live.</p>
+        <h2 className="font-serif text-3xl">Review and approve</h2>
+        <p className="mt-2 text-sm leading-6 text-[#382721]/70">Approval keeps this private entry intentional and queues it for the protected publishing release. Nothing is made public from this screen.</p>
         <div className="mt-5 flex flex-wrap gap-3">
           {canApprove && <button type="button" onClick={approve} disabled={saving} className="rounded-full bg-[#d84e72] px-5 py-3 text-sm font-bold text-white disabled:opacity-60">{saving ? 'Approving…' : 'Approve entry'}</button>}
-          {status === 'approved' && <button type="button" onClick={downloadImportRow} className="rounded-full bg-[#382721] px-5 py-3 text-sm font-bold text-white">Download import row</button>}
         </div>
         {status === 'draft' && <p className="mt-4 text-sm leading-6 text-[#382721]/70">This is still a draft. Add the missing details from the Counter before it can enter review.</p>}
         {status === 'ready_for_review' && !canApprove && <p className="mt-4 text-sm leading-6 text-[#382721]/70">Resolve the items above before approving this entry.</p>}
