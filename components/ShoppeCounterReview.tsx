@@ -41,20 +41,20 @@ export default function ShoppeCounterReview({ submission, location }: { submissi
   const [saving, setSaving] = useState(false)
   const title = submission.kind === 'rating' ? submission.flavor_or_item || 'Untitled rating' : submission.pint_name || 'Untitled pint'
   const submissionDate = submission.kind === 'rating' ? submission.tasted_at : submission.made_at
-  const canApprove = status === 'ready_for_review' && submission.validation_errors.length === 0
+  const canPublish = (status === 'ready_for_review' || status === 'approved') && submission.validation_errors.length === 0
 
-  async function approve() {
+  async function publish() {
     setSaving(true)
-    setMessage('Approving this entry…')
+    setMessage('Publishing this entry to the Shoppe…')
     try {
       const supabase = createClient()
       const now = new Date().toISOString()
-      const { error } = await supabase.from('shoppe_submissions').update({ status: 'approved', reviewed_at: now, approved_at: now }).eq('id', submission.id)
+      const { error } = await supabase.from('shoppe_submissions').update({ status: 'published', reviewed_at: now, approved_at: now, published_at: now }).eq('id', submission.id)
       if (error) throw error
-      setStatus('approved')
-      setMessage('Approved and queued for the protected publishing release. No CSV download or re-upload is needed.')
+      setStatus('published')
+      setMessage('Published to the Shoppe. No CSV download or re-upload is needed.')
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'Unable to approve this entry.')
+      setMessage(error instanceof Error ? error.message : 'Unable to publish this entry.')
     } finally {
       setSaving(false)
     }
@@ -85,13 +85,13 @@ export default function ShoppeCounterReview({ submission, location }: { submissi
       {submission.validation_errors.length > 0 && <div className="rounded-2xl border border-[#d84e72]/30 bg-[#fff7f8] p-5 text-sm leading-6"><strong>Still needs attention</strong><ul className="mt-2 list-disc space-y-1 pl-5">{submission.validation_errors.map((error) => <li key={error}>{error}</li>)}</ul></div>}
 
       <div className="rounded-2xl border border-[#382721]/15 p-5">
-        <h2 className="font-serif text-3xl">Review and approve</h2>
-        <p className="mt-2 text-sm leading-6 text-[#382721]/70">Approval keeps this private entry intentional and queues it for the protected publishing release. Nothing is made public from this screen.</p>
+        <h2 className="font-serif text-3xl">Review and publish</h2>
+        <p className="mt-2 text-sm leading-6 text-[#382721]/70">This page stays private until you approve it. Approving now publishes the finished entry to the public Shoppe.</p>
         <div className="mt-5 flex flex-wrap gap-3">
-          {canApprove && <button type="button" onClick={approve} disabled={saving} className="rounded-full bg-[#d84e72] px-5 py-3 text-sm font-bold text-white disabled:opacity-60">{saving ? 'Approving…' : 'Approve entry'}</button>}
+          {canPublish && <button type="button" onClick={publish} disabled={saving} className="rounded-full bg-[#d84e72] px-5 py-3 text-sm font-bold text-white disabled:opacity-60">{saving ? 'Publishing…' : 'Approve and publish'}</button>}
         </div>
         {status === 'draft' && <p className="mt-4 text-sm leading-6 text-[#382721]/70">This is still a draft. Add the missing details from the Counter before it can enter review.</p>}
-        {status === 'ready_for_review' && !canApprove && <p className="mt-4 text-sm leading-6 text-[#382721]/70">Resolve the items above before approving this entry.</p>}
+        {status === 'ready_for_review' && !canPublish && <p className="mt-4 text-sm leading-6 text-[#382721]/70">Resolve the items above before publishing this entry.</p>}
         {message && <p role="status" className="mt-4 text-sm font-medium leading-6">{message}</p>}
       </div>
     </section>

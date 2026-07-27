@@ -26,7 +26,18 @@ function mapPoints(ratings: IceCreamRating[]) {
   const groups = new Map<string, { location: StorefrontLocation, ratings: IceCreamRating[] }>()
 
   for (const rating of ratings) {
-    const location = storefronts[rating.id]
+    const location = storefronts[rating.id] ?? (
+      rating.location.latitude !== undefined && rating.location.longitude !== undefined
+        ? {
+            id: rating.location.label,
+            label: rating.location.label,
+            address: rating.location.address || [rating.location.city, rating.location.region].filter(Boolean).join(', '),
+            latitude: rating.location.latitude,
+            longitude: rating.location.longitude,
+            source: 'location-research' as const,
+          }
+        : undefined
+    )
     if (!location) continue
     const group = groups.get(location.id) ?? { location, ratings: [] }
     group.ratings.push(rating)

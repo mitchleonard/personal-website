@@ -51,20 +51,6 @@ body {
   background: var(--color-off-white);
 }
 
-/* Native iOS date controls have a large intrinsic minimum width.  Let them
-   shrink inside their grid cell instead of forcing a mobile page overflow. */
-.shoppe-counter-date {
-  inline-size: 100%;
-  min-inline-size: 0;
-  max-inline-size: 100%;
-  overflow: hidden;
-}
-
-.shoppe-counter-date::-webkit-date-and-time-value {
-  min-inline-size: 0;
-  text-align: left;
-}
-
 html[data-ice-cream-mode='on'] {
   --color-off-white: #fff8e8;
   --color-accent: #d84e72;
