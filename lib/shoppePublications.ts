@@ -1,6 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
 import type { HomemadePint, IceCreamRating } from '@/data/iceCream'
-import { isSupabaseConfigured } from '@/lib/supabase/config'
 
 type PublicationRow = {
   submission_id: string
@@ -50,31 +48,40 @@ function priceNote(amount: number | undefined, currency: string | null) {
   }
 }
 
-function publicClient() {
-  if (!isSupabaseConfigured()) return null
+async function loadPublicationRows(): Promise<PublicationRow[]> {
+  const baseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  if (!baseUrl || !publishableKey) return []
 
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
-    { auth: { autoRefreshToken: false, persistSession: false } },
-  )
+  const endpoint = new URL('/rest/v1/shoppe_publications', baseUrl)
+  endpoint.search = new URLSearchParams({
+    select: 'submission_id, kind, shop_display_name, flavor_or_item, score, tasted_at, price_amount, price_currency, pint_name, made_at, description, notes, image_urls, location_label, location_address, location_city, location_region, latitude, longitude',
+    order: 'published_at.desc',
+  }).toString()
+
+  try {
+    const response = await fetch(endpoint, {
+      cache: 'no-store',
+      headers: {
+        apikey: publishableKey,
+        Authorization: `Bearer ${publishableKey}`,
+      },
+    })
+    if (!response.ok) {
+      console.error('Unable to load published Shoppe entries:', response.status, await response.text())
+      return []
+    }
+    const data: unknown = await response.json()
+    return Array.isArray(data) ? data as PublicationRow[] : []
+  } catch (error) {
+    console.error('Unable to load published Shoppe entries:', error)
+    return []
+  }
 }
 
 export async function getLiveShoppeEntries(): Promise<LiveShoppeEntries> {
-  const supabase = publicClient()
-  if (!supabase) return emptyEntries
-
-  const { data, error } = await supabase
-    .from('shoppe_publications')
-    .select('submission_id, kind, shop_display_name, flavor_or_item, score, tasted_at, price_amount, price_currency, pint_name, made_at, description, notes, image_urls, location_label, location_address, location_city, location_region, latitude, longitude')
-    .order('published_at', { ascending: false })
-
-  if (error) {
-    console.error('Unable to load published Shoppe entries:', error.message)
-    return emptyEntries
-  }
-
-  const rows = (data ?? []) as PublicationRow[]
+  const rows = await loadPublicationRows()
+  if (!rows.length) return emptyEntries
   const ratings: IceCreamRating[] = []
   const homemade: HomemadePint[] = []
 
