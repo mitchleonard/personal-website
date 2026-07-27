@@ -3,14 +3,18 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import { publishedRatingCount } from '@/data/iceCream'
+import { getLiveShoppeEntries } from '@/lib/shoppePublications'
 
 export const metadata = {
   title: 'About — Mitch Leonard',
   description: 'Strategist, communicator, builder, and ice cream aficionado based in Minneapolis.',
 }
 
-export default function AboutPage() {
-  const ratingCount = publishedRatingCount.toLocaleString('en-US')
+export const dynamic = 'force-dynamic'
+
+export default async function AboutPage() {
+  const { ratings } = await getLiveShoppeEntries()
+  const ratingCount = (publishedRatingCount + ratings.length).toLocaleString('en-US')
 
   return (
     <main className="bg-off-white">

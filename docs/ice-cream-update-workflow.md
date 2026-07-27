@@ -1,23 +1,17 @@
 # Updating the Ice Cream Shoppe
 
-> New entries begin and are approved in the private, phone-friendly Behind the
-> Counter flow described in [the content workflow](./ice-cream-content-workflow.md).
-> The CSV is a release-maintenance format, not a file a Counter user needs to
-> download or upload on mobile.
+> New entries are published from the private, phone-friendly Behind the Counter
+> flow described in [the content workflow](./ice-cream-content-workflow.md).
+> The CSV is retained only for historic-archive maintenance, not as a file a
+> Counter user needs to download or upload on mobile.
 
-The published site reads from `data/iceCream.imported.json`. The CSV inbox makes adding records possible without touching application code.
+The published site combines the historic `data/iceCream.imported.json` archive with the public Shoppe projection. Approving a reviewed Counter entry publishes it right away; the CSV inbox remains available for bulk historic-import maintenance.
 
 ## Release an approved rating
 
-1. Review and approve the private Counter mockup. It preserves the structured entry and Blob photo without a mobile download step.
-2. During the protected site release, add the approved record to `data/ice-cream-inbox.csv` with `type` set to `rating`.
-3. Use a score from 0–10 and a date in `YYYY-MM-DD` format.
-4. Set `image_src` to a public path such as `/ice-cream/ratings/my-photo.jpg`.
-6. Run `npm run ice-cream:check` to catch missing or malformed fields.
-7. Run `npm run ice-cream:import` to generate the published data. Established aliases are normalized automatically (for example, Honey & Mackie's and 4 Queens Dairy Cream).
-   The About-page total is derived from this published dataset, so do not edit its ice-cream number manually.
-8. Run `npm run ice-cream:map-locations`, then `npm run ice-cream:map-check`, to create and validate the storefront pin for the new rating.
-9. Run the site and review the new card, full-size image, and map pin before committing.
+1. Review the private Counter mockup, then choose **Approve and publish**.
+2. The public Shoppe card, map marker, and About-page count update on the next visit or refresh. No CSV download, import, commit, or deploy is needed for a new Counter entry.
+3. Use the CSV only when adding or correcting a historic batch outside the Counter.
 
 ## Release an approved homemade pint
 
