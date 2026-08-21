@@ -86,7 +86,7 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
   const [shopQuery, setShopQuery] = useState('')
   const [selectedLocationId, setSelectedLocationId] = useState('')
   const [newShop, setNewShop] = useState(false)
-  const [addressQuery, setAddressQuery] = useState('')
+  const [locationQuery, setLocationQuery] = useState('')
   const [mapResults, setMapResults] = useState<MapResult[]>([])
   const [selectedMapResult, setSelectedMapResult] = useState<MapResult | null>(null)
   const [locationConfirmed, setLocationConfirmed] = useState(false)
@@ -178,7 +178,7 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
   }
 
   function resetRatingLocation() {
-    setShopQuery(''); setSelectedLocationId(''); setNewShop(false); setAddressQuery(''); setMapResults([]); setSelectedMapResult(null); setLocationConfirmed(false)
+    setShopQuery(''); setSelectedLocationId(''); setNewShop(false); setLocationQuery(''); setMapResults([]); setSelectedMapResult(null); setLocationConfirmed(false)
   }
 
   function chooseExisting(location: Location) {
@@ -186,13 +186,14 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
   }
 
   async function searchMap() {
-    if (!shopQuery.trim() || !addressQuery.trim()) { setStatus('Enter the shop name and its full address first.'); return }
+    const query = locationQuery.trim() || shopQuery.trim()
+    if (query.length < 3) { setStatus('Search with a shop, vendor, venue, or address.'); return }
     setSearchingMap(true); setStatus('Looking up the storefront…'); setSelectedMapResult(null); setLocationConfirmed(false)
     try {
-      const response = await fetch(`/api/shoppe/location-search?q=${encodeURIComponent(`${shopQuery} ${addressQuery}`)}`)
+      const response = await fetch(`/api/shoppe/location-search?q=${encodeURIComponent(query)}`)
       const result = await response.json() as { results?: MapResult[]; error?: string }
       if (!response.ok) throw new Error(result.error || 'The map lookup did not return a result.')
-      setMapResults(result.results ?? []); setStatus(result.results?.length ? 'Choose the storefront that matches your visit.' : 'No storefront found. Check the address, then save a draft rather than approving it.')
+      setMapResults(result.results ?? []); setStatus(result.results?.length ? 'Choose the storefront or map pin that matches your visit.' : 'No result yet. Try the business, vendor, venue, city, or street address.')
     } catch (error) { setStatus(error instanceof Error ? error.message : 'Unable to look up that address.') } finally { setSearchingMap(false) }
   }
 
@@ -200,7 +201,7 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
     if (!selectedMapResult || !locationConfirmed) { setStatus('Choose the map result and confirm it before continuing.'); return }
     setSavingLocation(true); setStatus('Saving the confirmed storefront…')
     try {
-      const response = await fetch('/api/shoppe/location-search', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...selectedMapResult, displayName: shopQuery.trim() }) })
+      const response = await fetch('/api/shoppe/location-search', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...selectedMapResult, displayName: shopQuery.trim() || selectedMapResult.displayName }) })
       const result = await response.json() as { location?: Location; error?: string }
       if (!response.ok || !result.location) throw new Error(result.error || 'Unable to save the confirmed storefront.')
       chooseExisting(result.location); setStatus('Storefront confirmed. Save the draft when you are ready to review it.')
@@ -230,16 +231,17 @@ export default function ShoppeCounterForm({ ownerId, locations }: { ownerId: str
           <input id="shop-search" value={shopQuery} onChange={(event) => { setShopQuery(event.target.value); setSelectedLocationId(''); setNewShop(false) }} className={fieldClass} placeholder="Start typing a shop name" autoComplete="off" />
           {selectedLocation && <div className="rounded-xl bg-[#e7f3eb] px-4 py-3 text-sm font-normal text-[#235437]"><strong>{selectedLocation.display_name}</strong><br />{selectedLocation.address}</div>}
           {!selectedLocation && matches.length > 0 && <div className="overflow-hidden rounded-xl border border-[#382721]/15 bg-white font-normal shadow-sm">{matches.map((location) => <button key={location.id} type="button" onClick={() => chooseExisting(location)} className="block w-full border-b border-[#382721]/10 px-4 py-3 text-left text-sm last:border-0 hover:bg-[#fff8e8]"><strong>{location.display_name}</strong><span className="mt-1 block text-[#382721]/65">{location.address}</span></button>)}</div>}
-          {!selectedLocation && <button type="button" onClick={() => { setNewShop(true); setMapResults([]); setStatus('') }} className="w-fit text-sm font-bold text-[#d84e72] underline underline-offset-4">Can’t find it? Add a new storefront</button>}
+          {!selectedLocation && <button type="button" onClick={() => { setNewShop(true); setLocationQuery((query) => query || shopQuery); setMapResults([]); setStatus('') }} className="w-fit text-sm font-bold text-[#d84e72] underline underline-offset-4">Can’t find it? Search for a new storefront</button>}
         </div>
 
         {newShop && !selectedLocation && <div className="grid min-w-0 gap-3 rounded-2xl border border-[#d84e72]/25 bg-[#fff7f8] p-4">
-          <p className="text-sm leading-6 text-[#382721]/75">Enter the full street address, then confirm the result shown on the map. This creates the Shoppe’s map pin—not the photo’s GPS location.</p>
-          <label className="grid gap-2 text-sm font-bold">Full storefront address
-            <input value={addressQuery} onChange={(event) => setAddressQuery(event.target.value)} className={fieldClass} placeholder="123 Main St, City, State" autoComplete="street-address" />
+          <p className="text-sm leading-6 text-[#382721]/75">Search by business, vendor, venue, city, or address—no separate street-address lookup needed. For a vendor inside a shared venue, keep its name in the shop field above and search for the venue or address here.</p>
+          <label className="grid gap-2 text-sm font-bold">Find this place
+            <input value={locationQuery} onChange={(event) => setLocationQuery(event.target.value)} className={fieldClass} placeholder="Great Scoff at Delano Days, or 115 Babcock Blvd" autoComplete="street-address" />
           </label>
           <button type="button" onClick={searchMap} disabled={searchingMap} className="w-full rounded-full border border-[#382721]/25 px-5 py-3 font-bold disabled:opacity-60">{searchingMap ? 'Looking up…' : 'Find it on the map'}</button>
-          <p className="text-xs leading-5 text-[#382721]/55">Search results are powered by OpenStreetMap. Confirm the selected pin before saving.</p>
+          {(locationQuery.trim() || shopQuery.trim()) && <a className="w-fit text-sm font-bold text-[#d84e72] underline underline-offset-4" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(locationQuery.trim() || shopQuery.trim())}`} target="_blank" rel="noreferrer">Search this in Google Maps ↗</a>}
+          <p className="text-xs leading-5 text-[#382721]/55">Search results are powered by OpenStreetMap. Use Google Maps if you want a second look, then choose the matching pin here.</p>
           {mapResults.length > 0 && <div className="grid gap-2">{mapResults.map((result) => <button key={`${result.latitude}-${result.longitude}`} type="button" onClick={() => { setSelectedMapResult(result); setLocationConfirmed(false) }} className={`w-full rounded-xl border px-4 py-3 text-left text-sm ${selectedMapResult === result ? 'border-[#d84e72] bg-white' : 'border-[#382721]/15 bg-white'}`}><strong>{result.displayName}</strong><span className="mt-1 block text-[#382721]/65">{result.address}</span></button>)}</div>}
           {selectedMapResult && <><a className="w-fit text-sm font-bold text-[#d84e72] underline underline-offset-4" href={`https://www.google.com/maps/search/?api=1&query=${selectedMapResult.latitude},${selectedMapResult.longitude}`} target="_blank" rel="noreferrer">Open this pin in Maps ↗</a><label className="flex gap-3 text-sm font-normal leading-5"><input type="checkbox" checked={locationConfirmed} onChange={(event) => setLocationConfirmed(event.target.checked)} className="mt-1 size-4 shrink-0" />I confirmed this is the exact storefront I visited.</label><button type="button" onClick={confirmNewLocation} disabled={!locationConfirmed || savingLocation} className="w-full rounded-full bg-[#382721] px-5 py-3 font-bold text-white disabled:opacity-50">{savingLocation ? 'Saving storefront…' : 'Use confirmed storefront'}</button></>}
         </div>}
