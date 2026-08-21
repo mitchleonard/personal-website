@@ -34,10 +34,10 @@ export async function GET(request: NextRequest) {
   if ('error' in auth) return auth.error
 
   const query = clean(request.nextUrl.searchParams.get('q'))
-  if (query.length < 5) return NextResponse.json({ error: 'Enter a shop name and full address before looking it up.' }, { status: 400 })
+  if (query.length < 3) return NextResponse.json({ error: 'Enter a shop, vendor, venue, or address before looking it up.' }, { status: 400 })
 
   try {
-    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=5&q=${encodeURIComponent(query)}`, {
+    const response = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&dedupe=1&limit=8&q=${encodeURIComponent(query)}`, {
       headers: { 'User-Agent': 'MitchLeonardIceCreamShoppe/1.0 (+https://mitchleonard.com)' },
       next: { revalidate: 0 },
     })
