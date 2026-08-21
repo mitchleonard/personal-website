@@ -18,7 +18,7 @@ This is deliberately not a second media backend. Supabase holds the URL and the 
 2. Choose **New rating** or **Made by Mitch pint**.
 3. Select up to four photos. Each uploads directly to Vercel Blob. Do not send the originals to chat first.
 4. Enter the short structured details:
-   - **Rating:** start typing the shop. Select a matching storefront when it appears. For a new shop, search by business, vendor, venue, city, or address; choose the map result, open it in Google Maps if helpful, and explicitly confirm the storefront visited. A vendor can share an address with other shops while retaining its own name. Price and note are optional.
+   - **Rating:** start typing the shop. Select a matching storefront when it appears. For a new shop, search by business, vendor, venue, city, or address; matching map results appear as you type. Choose one, open it in Google Maps if helpful, and explicitly confirm the storefront visited. A vendor can share an address with other shops while retaining its own name. Price and note are optional.
    - **Pint:** pint name, made date, one free-form description, photo, and optional note. Put mix-ins in the description rather than maintaining a second field.
 5. Choose **Save draft and review**. The entry and its photos save privately, then the Counter shows a compact card mockup on the same phone screen.
 6. Choose **Edit and fix** to return to the draft, or **Approve and publish** when the mockup, canonical shop spelling, exact address/map pin, price format, and photo all look right.
